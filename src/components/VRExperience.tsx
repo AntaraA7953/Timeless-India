@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Camera, VrHeadset, Smartphone, Eye, Download, Share } from 'lucide-react';
+import { Camera, Headset, Smartphone, Eye, Download, Share } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -90,7 +89,7 @@ const VRExperience = () => {
                   : 'text-gray-600 hover:text-blue-600'
               }`}
             >
-              <VrHeadset size={20} />
+              <Headset size={20} />
               <span>Virtual Reality</span>
             </button>
             <button
@@ -160,7 +159,7 @@ const VRExperience = () => {
                       className={`flex-1 bg-gradient-to-r ${experience.color} 
                         text-white hover:opacity-90 hover-scale`}
                     >
-                      <VrHeadset className="mr-2 h-4 w-4" />
+                      <Headset className="mr-2 h-4 w-4" />
                       Enter VR
                     </Button>
                     <Button 
@@ -180,7 +179,7 @@ const VRExperience = () => {
           <Card className="border-0 shadow-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
             <CardContent className="py-8">
               <div className="text-center mb-6">
-                <VrHeadset className="mx-auto mb-3 animate-float" size={48} />
+                <Headset className="mx-auto mb-3 animate-float" size={48} />
                 <h3 className="text-2xl font-bold mb-2">VR Requirements</h3>
                 <p className="opacity-90">
                   Compatible with major VR headsets and mobile VR solutions

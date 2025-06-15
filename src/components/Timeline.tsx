@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Clock, ChevronRight, Star, Crown, Temple, Scroll } from 'lucide-react';
+import { Clock, ChevronRight, Star, Crown, Building2, Scroll } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -13,7 +12,7 @@ const Timeline = () => {
       title: "Indus Valley Civilization",
       description: "One of the world's earliest urban civilizations with advanced drainage systems and standardized weights.",
       highlights: ["Harappa & Mohenjo-daro", "Urban Planning", "Trade Networks"],
-      icon: Temple,
+      icon: Building2,
       color: "from-amber-400 to-orange-500"
     },
     {
