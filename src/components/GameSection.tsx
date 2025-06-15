@@ -1,11 +1,16 @@
 
 import React, { useState } from 'react';
-import { Trophy, Gamepad2, Brain, Star, Timer, Users } from 'lucide-react';
+import { Trophy, Gamepad2, Brain, Star, Timer, Users, ArrowLeft } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import HeritageQuiz from './games/HeritageQuiz';
+import CulturalExplorer from './games/CulturalExplorer';
+import FestivalMatcher from './games/FestivalMatcher';
+import MonumentBuilder from './games/MonumentBuilder';
 
 const GameSection = () => {
-  const [selectedGame, setSelectedGame] = useState(null);
+  const [selectedGame, setSelectedGame] = useState<string | null>(null);
+  const [playerScores, setPlayerScores] = useState<{[key: string]: number}>({});
 
   const games = [
     {
@@ -17,7 +22,7 @@ const GameSection = () => {
       players: '1-4',
       duration: '10-15 min',
       color: 'from-blue-400 to-indigo-500',
-      features: ['Multiple Choice', 'Image Recognition', 'Leaderboard']
+      features: ['Multiple Choice', 'Timer Challenge', 'Explanations']
     },
     {
       id: 'cultural-explorer',
@@ -62,6 +67,63 @@ const GameSection = () => {
     { name: 'Rahul Gupta', score: 2490, level: 'Tradition Keeper' }
   ];
 
+  const handleGameSelect = (gameId: string) => {
+    setSelectedGame(gameId);
+  };
+
+  const handleGameComplete = (gameId: string, score: number) => {
+    setPlayerScores({ ...playerScores, [gameId]: score });
+    setSelectedGame(null);
+  };
+
+  const handleBackToGames = () => {
+    setSelectedGame(null);
+  };
+
+  // Render individual game components
+  if (selectedGame) {
+    switch (selectedGame) {
+      case 'heritage-quiz':
+        return (
+          <div className="container mx-auto px-4 py-8">
+            <HeritageQuiz 
+              onBack={handleBackToGames}
+              onComplete={(score) => handleGameComplete('heritage-quiz', score)}
+            />
+          </div>
+        );
+      case 'cultural-explorer':
+        return (
+          <div className="container mx-auto px-4 py-8">
+            <CulturalExplorer 
+              onBack={handleBackToGames}
+              onComplete={(score) => handleGameComplete('cultural-explorer', score)}
+            />
+          </div>
+        );
+      case 'festival-matcher':
+        return (
+          <div className="container mx-auto px-4 py-8">
+            <FestivalMatcher 
+              onBack={handleBackToGames}
+              onComplete={(score) => handleGameComplete('festival-matcher', score)}
+            />
+          </div>
+        );
+      case 'monument-builder':
+        return (
+          <div className="container mx-auto px-4 py-8">
+            <MonumentBuilder 
+              onBack={handleBackToGames}
+              onComplete={(score) => handleGameComplete('monument-builder', score)}
+            />
+          </div>
+        );
+      default:
+        return null;
+    }
+  }
+
   return (
     <div className="container mx-auto px-4">
       <div className="text-center mb-12">
@@ -79,14 +141,12 @@ const GameSection = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {games.map((game, index) => {
               const Icon = game.icon;
-              const isSelected = selectedGame?.id === game.id;
+              const playerScore = playerScores[game.id];
               
               return (
                 <Card 
                   key={game.id}
-                  className={`border-0 shadow-xl cursor-pointer transform transition-all duration-500 hover:scale-105
-                    ${isSelected ? 'animate-glow bg-gradient-to-br from-white to-emerald-50' : 'bg-white hover:shadow-2xl'}`}
-                  onClick={() => setSelectedGame(selectedGame?.id === game.id ? null : game)}
+                  className="border-0 shadow-xl cursor-pointer transform transition-all duration-500 hover:scale-105 bg-white hover:shadow-2xl"
                 >
                   <CardHeader className="pb-4">
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${game.color} 
@@ -96,6 +156,14 @@ const GameSection = () => {
                     <CardTitle className="text-xl font-bold text-gray-800">
                       {game.title}
                     </CardTitle>
+                    {playerScore && (
+                      <div className="flex items-center space-x-2">
+                        <Star className="text-yellow-500" size={16} />
+                        <span className="text-sm font-medium text-green-600">
+                          Best Score: {playerScore}
+                        </span>
+                      </div>
+                    )}
                   </CardHeader>
                   
                   <CardContent>
@@ -123,41 +191,29 @@ const GameSection = () => {
                       </div>
                     </div>
 
-                    {isSelected && (
-                      <div className="animate-fade-in-up space-y-4">
-                        <div>
-                          <h4 className="font-semibold text-gray-800 mb-2">Features:</h4>
-                          <div className="flex flex-wrap gap-1">
-                            {game.features.map((feature, featureIndex) => (
-                              <span
-                                key={featureIndex}
-                                className="px-2 py-1 bg-gradient-to-r from-saffron-100 to-orange-100 
-                                  text-saffron-700 rounded-full text-xs font-medium"
-                              >
-                                {feature}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
-                        <Button 
-                          className={`w-full bg-gradient-to-r ${game.color} 
-                            text-white hover:opacity-90 hover-scale`}
-                        >
-                          <Gamepad2 className="mr-2 h-4 w-4" />
-                          Play Now
-                        </Button>
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-gray-800 mb-2">Features:</h4>
+                      <div className="flex flex-wrap gap-1">
+                        {game.features.map((feature, featureIndex) => (
+                          <span
+                            key={featureIndex}
+                            className="px-2 py-1 bg-gradient-to-r from-saffron-100 to-orange-100 
+                              text-saffron-700 rounded-full text-xs font-medium"
+                          >
+                            {feature}
+                          </span>
+                        ))}
                       </div>
-                    )}
+                    </div>
 
-                    {!isSelected && (
-                      <Button 
-                        variant="outline"
-                        className="w-full border-emerald-200 text-emerald-700 hover:bg-emerald-50 hover-scale"
-                      >
-                        View Details
-                      </Button>
-                    )}
+                    <Button 
+                      onClick={() => handleGameSelect(game.id)}
+                      className={`w-full bg-gradient-to-r ${game.color} 
+                        text-white hover:opacity-90 hover-scale`}
+                    >
+                      <Gamepad2 className="mr-2 h-4 w-4" />
+                      Play Now
+                    </Button>
                   </CardContent>
                 </Card>
               );
