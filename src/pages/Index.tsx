@@ -152,7 +152,7 @@ const Index = () => {
           </div>
           
           <div className="mt-12 pt-8 border-t border-orange-800 text-center text-orange-300">
-            <p>&copy; 2024 Timeless India. Preserving heritage, inspiring futures.</p>
+            <p>&copy; 2025 Timeless India. Preserving heritage, inspiring futures.</p>
           </div>
         </div>
       </footer>
