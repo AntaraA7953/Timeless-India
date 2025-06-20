@@ -8,12 +8,12 @@ const InteractiveMap = () => {
   const [selectedState, setSelectedState] = useState(null);
 
   const states = [
-    // Northern States
+    // Northern States - Repositioned accurately
     {
       id: 'jammu-kashmir',
       name: 'Jammu & Kashmir',
       capital: 'Srinagar (Summer), Jammu (Winter)',
-      position: { top: '8%', left: '25%' },
+      position: { top: '15%', left: '25%' },
       culture: 'Himalayan Culture & Sufi Heritage',
       highlights: ['Kashmiri Handicrafts', 'Sufi Music', 'Alpine Beauty'],
       color: 'from-blue-400 to-indigo-500'
@@ -22,7 +22,7 @@ const InteractiveMap = () => {
       id: 'ladakh',
       name: 'Ladakh',
       capital: 'Leh',
-      position: { top: '12%', left: '35%' },
+      position: { top: '18%', left: '35%' },
       culture: 'Buddhist Monasteries & High Altitude Culture',
       highlights: ['Monasteries', 'Buddhist Art', 'Mountain Culture'],
       color: 'from-purple-400 to-blue-500'
@@ -31,7 +31,7 @@ const InteractiveMap = () => {
       id: 'himachal-pradesh',
       name: 'Himachal Pradesh',
       capital: 'Shimla',
-      position: { top: '18%', left: '28%' },
+      position: { top: '22%', left: '30%' },
       culture: 'Hill Station Heritage & Pahari Culture',
       highlights: ['Hill Stations', 'Folk Dance', 'Apple Orchards'],
       color: 'from-green-400 to-teal-500'
@@ -40,7 +40,7 @@ const InteractiveMap = () => {
       id: 'punjab',
       name: 'Punjab',
       capital: 'Chandigarh',
-      position: { top: '20%', left: '25%' },
+      position: { top: '25%', left: '28%' },
       culture: 'Sikh Heritage & Agricultural Prosperity',
       highlights: ['Bhangra', 'Golden Temple', 'Farming Culture'],
       color: 'from-yellow-400 to-orange-500'
@@ -49,7 +49,7 @@ const InteractiveMap = () => {
       id: 'haryana',
       name: 'Haryana',
       capital: 'Chandigarh',
-      position: { top: '25%', left: '28%' },
+      position: { top: '28%', left: '30%' },
       culture: 'Ancient Civilization & Modern Agriculture',
       highlights: ['Kurukshetra', 'Wrestling', 'Folk Music'],
       color: 'from-amber-400 to-yellow-500'
@@ -58,7 +58,7 @@ const InteractiveMap = () => {
       id: 'uttarakhand',
       name: 'Uttarakhand',
       capital: 'Dehradun',
-      position: { top: '22%', left: '32%' },
+      position: { top: '25%', left: '33%' },
       culture: 'Spiritual Centers & Mountain Culture',
       highlights: ['Yoga Centers', 'Pilgrimage Sites', 'Hill Culture'],
       color: 'from-emerald-400 to-green-500'
@@ -76,18 +76,18 @@ const InteractiveMap = () => {
       id: 'delhi',
       name: 'Delhi',
       capital: 'New Delhi',
-      position: { top: '28%', left: '30%' },
+      position: { top: '29%', left: '31%' },
       culture: 'Capital Heritage & Cosmopolitan Culture',
       highlights: ['Red Fort', 'Street Food', 'Modern Arts'],
       color: 'from-red-400 to-pink-500'
     },
 
-    // Eastern States
+    // Eastern States - Repositioned accurately
     {
       id: 'bihar',
       name: 'Bihar',
       capital: 'Patna',
-      position: { top: '38%', left: '45%' },
+      position: { top: '36%', left: '43%' },
       culture: 'Ancient Learning & Buddhist Heritage',
       highlights: ['Nalanda', 'Madhubani Art', 'Buddhist Sites'],
       color: 'from-orange-400 to-red-500'
@@ -96,7 +96,7 @@ const InteractiveMap = () => {
       id: 'jharkhand',
       name: 'Jharkhand',
       capital: 'Ranchi',
-      position: { top: '45%', left: '45%' },
+      position: { top: '42%', left: '43%' },
       culture: 'Tribal Heritage & Mineral Wealth',
       highlights: ['Tribal Art', 'Folk Dance', 'Handicrafts'],
       color: 'from-teal-400 to-cyan-500'
@@ -105,7 +105,7 @@ const InteractiveMap = () => {
       id: 'west-bengal',
       name: 'West Bengal',
       capital: 'Kolkata',
-      position: { top: '40%', left: '50%' },
+      position: { top: '38%', left: '48%' },
       culture: 'Literature & Intellectual Renaissance',
       highlights: ['Durga Puja', 'Literature', 'Sweets'],
       color: 'from-pink-400 to-purple-500'
@@ -114,18 +114,18 @@ const InteractiveMap = () => {
       id: 'odisha',
       name: 'Odisha',
       capital: 'Bhubaneswar',
-      position: { top: '50%', left: '48%' },
+      position: { top: '45%', left: '45%' },
       culture: 'Temple Architecture & Classical Dance',
       highlights: ['Jagannath Temple', 'Odissi Dance', 'Sand Art'],
       color: 'from-indigo-400 to-purple-500'
     },
 
-    // Northeastern States
+    // Northeastern States - Repositioned accurately
     {
       id: 'sikkim',
       name: 'Sikkim',
       capital: 'Gangtok',
-      position: { top: '35%', left: '52%' },
+      position: { top: '30%', left: '50%' },
       culture: 'Buddhist Culture & Organic Farming',
       highlights: ['Monasteries', 'Organic Produce', 'Mountain Culture'],
       color: 'from-cyan-400 to-blue-500'
@@ -134,7 +134,7 @@ const InteractiveMap = () => {
       id: 'assam',
       name: 'Assam',
       capital: 'Dispur',
-      position: { top: '35%', left: '60%' },
+      position: { top: '33%', left: '55%' },
       culture: 'Tea Gardens & Assamese Culture',
       highlights: ['Tea Culture', 'Bihu Dance', 'Silk Weaving'],
       color: 'from-green-400 to-emerald-500'
@@ -143,7 +143,7 @@ const InteractiveMap = () => {
       id: 'arunachal-pradesh',
       name: 'Arunachal Pradesh',
       capital: 'Itanagar',
-      position: { top: '30%', left: '65%' },
+      position: { top: '27%', left: '60%' },
       culture: 'Tribal Diversity & Buddhist Influence',
       highlights: ['Tribal Culture', 'Buddhist Monasteries', 'Handicrafts'],
       color: 'from-blue-400 to-indigo-500'
@@ -152,7 +152,7 @@ const InteractiveMap = () => {
       id: 'nagaland',
       name: 'Nagaland',
       capital: 'Kohima',
-      position: { top: '37%', left: '62%' },
+      position: { top: '32%', left: '58%' },
       culture: 'Warrior Tribes & Hornbill Festival',
       highlights: ['Hornbill Festival', 'Tribal Art', 'Warrior Culture'],
       color: 'from-red-400 to-orange-500'
@@ -161,7 +161,7 @@ const InteractiveMap = () => {
       id: 'manipur',
       name: 'Manipur',
       capital: 'Imphal',
-      position: { top: '40%', left: '62%' },
+      position: { top: '35%', left: '58%' },
       culture: 'Classical Dance & Martial Arts',
       highlights: ['Manipuri Dance', 'Polo Sport', 'Handloom'],
       color: 'from-purple-400 to-pink-500'
@@ -170,7 +170,7 @@ const InteractiveMap = () => {
       id: 'mizoram',
       name: 'Mizoram',
       capital: 'Aizawl',
-      position: { top: '43%', left: '60%' },
+      position: { top: '38%', left: '56%' },
       culture: 'Mizo Culture & Bamboo Crafts',
       highlights: ['Bamboo Crafts', 'Folk Songs', 'Mizo Culture'],
       color: 'from-emerald-400 to-teal-500'
@@ -179,7 +179,7 @@ const InteractiveMap = () => {
       id: 'tripura',
       name: 'Tripura',
       capital: 'Agartala',
-      position: { top: '42%', left: '58%' },
+      position: { top: '40%', left: '53%' },
       culture: 'Royal Heritage & Tribal Culture',
       highlights: ['Ujjayanta Palace', 'Tribal Dance', 'Handloom'],
       color: 'from-amber-400 to-orange-500'
@@ -188,18 +188,18 @@ const InteractiveMap = () => {
       id: 'meghalaya',
       name: 'Meghalaya',
       capital: 'Shillong',
-      position: { top: '38%', left: '58%' },
+      position: { top: '35%', left: '53%' },
       culture: 'Living Root Bridges & Matrilineal Society',
       highlights: ['Living Bridges', 'Music Culture', 'Matrilineal Society'],
       color: 'from-teal-400 to-green-500'
     },
 
-    // Western States
+    // Western States - Repositioned accurately
     {
       id: 'rajasthan',
       name: 'Rajasthan',
       capital: 'Jaipur',
-      position: { top: '35%', left: '20%' },
+      position: { top: '32%', left: '25%' },
       culture: 'Desert Culture & Royal Heritage',
       highlights: ['Palaces', 'Folk Music', 'Desert Culture'],
       color: 'from-orange-400 to-red-500'
@@ -208,7 +208,7 @@ const InteractiveMap = () => {
       id: 'gujarat',
       name: 'Gujarat',
       capital: 'Gandhinagar',
-      position: { top: '42%', left: '18%' },
+      position: { top: '38%', left: '22%' },
       culture: 'Business Acumen & Gandhian Philosophy',
       highlights: ['Garba Dance', 'Business Culture', 'Handicrafts'],
       color: 'from-yellow-400 to-amber-500'
@@ -217,7 +217,7 @@ const InteractiveMap = () => {
       id: 'maharashtra',
       name: 'Maharashtra',
       capital: 'Mumbai',
-      position: { top: '50%', left: '25%' },
+      position: { top: '45%', left: '28%' },
       culture: 'Bollywood & Marathi Heritage',
       highlights: ['Bollywood', 'Ganpati Festival', 'Marathi Theatre'],
       color: 'from-blue-400 to-purple-500'
@@ -226,18 +226,18 @@ const InteractiveMap = () => {
       id: 'goa',
       name: 'Goa',
       capital: 'Panaji',
-      position: { top: '58%', left: '22%' },
+      position: { top: '52%', left: '26%' },
       culture: 'Portuguese Heritage & Beach Culture',
       highlights: ['Portuguese Architecture', 'Beach Culture', 'Carnival'],
       color: 'from-cyan-400 to-blue-500'
     },
 
-    // Central States
+    // Central States - Repositioned accurately
     {
       id: 'madhya-pradesh',
       name: 'Madhya Pradesh',
       capital: 'Bhopal',
-      position: { top: '45%', left: '30%' },
+      position: { top: '40%', left: '33%' },
       culture: 'Heart of India & Ancient Temples',
       highlights: ['Khajuraho Temples', 'Tribal Art', 'Wildlife'],
       color: 'from-green-400 to-teal-500'
@@ -246,18 +246,18 @@ const InteractiveMap = () => {
       id: 'chhattisgarh',
       name: 'Chhattisgarh',
       capital: 'Raipur',
-      position: { top: '48%', left: '38%' },
+      position: { top: '43%', left: '38%' },
       culture: 'Tribal Heritage & Folk Arts',
       highlights: ['Tribal Dance', 'Folk Music', 'Handicrafts'],
       color: 'from-emerald-400 to-green-500'
     },
 
-    // Southern States
+    // Southern States - Repositioned accurately
     {
       id: 'telangana',
       name: 'Telangana',
       capital: 'Hyderabad',
-      position: { top: '58%', left: '32%' },
+      position: { top: '50%', left: '34%' },
       culture: 'Nizami Heritage & IT Hub',
       highlights: ['Nizami Culture', 'Biryani', 'IT Culture'],
       color: 'from-purple-400 to-indigo-500'
@@ -266,7 +266,7 @@ const InteractiveMap = () => {
       id: 'andhra-pradesh',
       name: 'Andhra Pradesh',
       capital: 'Amaravati',
-      position: { top: '62%', left: '35%' },
+      position: { top: '55%', left: '36%' },
       culture: 'Classical Dance & Coastal Heritage',
       highlights: ['Kuchipudi Dance', 'Coastal Culture', 'Spicy Cuisine'],
       color: 'from-orange-400 to-yellow-500'
@@ -275,7 +275,7 @@ const InteractiveMap = () => {
       id: 'karnataka',
       name: 'Karnataka',
       capital: 'Bengaluru',
-      position: { top: '62%', left: '28%' },
+      position: { top: '55%', left: '30%' },
       culture: 'Garden City & Carnatic Music',
       highlights: ['Classical Music', 'Silk Sarees', 'IT Capital'],
       color: 'from-red-400 to-pink-500'
@@ -284,7 +284,7 @@ const InteractiveMap = () => {
       id: 'kerala',
       name: 'Kerala',
       capital: 'Thiruvananthapuram',
-      position: { top: '70%', left: '26%' },
+      position: { top: '62%', left: '28%' },
       culture: 'Backwaters & Spice Heritage',
       highlights: ['Kathakali', 'Ayurveda', 'Spices'],
       color: 'from-green-400 to-emerald-500'
@@ -293,18 +293,18 @@ const InteractiveMap = () => {
       id: 'tamil-nadu',
       name: 'Tamil Nadu',
       capital: 'Chennai',
-      position: { top: '68%', left: '32%' },
+      position: { top: '60%', left: '33%' },
       culture: 'Temple Architecture & Classical Arts',
       highlights: ['Bharatanatyam', 'Temples', 'Classical Literature'],
       color: 'from-blue-400 to-indigo-500'
     },
 
-    // Union Territories
+    // Union Territories - Repositioned accurately
     {
       id: 'andaman-nicobar',
       name: 'Andaman & Nicobar',
       capital: 'Port Blair',
-      position: { top: '75%', left: '60%' },
+      position: { top: '70%', left: '55%' },
       culture: 'Island Culture & Marine Heritage',
       highlights: ['Island Culture', 'Marine Life', 'Tribal Heritage'],
       color: 'from-cyan-400 to-teal-500'
@@ -313,7 +313,7 @@ const InteractiveMap = () => {
       id: 'lakshadweep',
       name: 'Lakshadweep',
       capital: 'Kavaratti',
-      position: { top: '70%', left: '18%' },
+      position: { top: '65%', left: '20%' },
       culture: 'Coral Islands & Marine Culture',
       highlights: ['Coral Reefs', 'Island Life', 'Marine Culture'],
       color: 'from-blue-400 to-cyan-500'
@@ -322,7 +322,7 @@ const InteractiveMap = () => {
       id: 'puducherry',
       name: 'Puducherry',
       capital: 'Puducherry',
-      position: { top: '66%', left: '34%' },
+      position: { top: '58%', left: '34%' },
       culture: 'French Colonial Heritage',
       highlights: ['French Architecture', 'Spiritual Centers', 'Colonial Culture'],
       color: 'from-pink-400 to-purple-500'
@@ -331,7 +331,7 @@ const InteractiveMap = () => {
       id: 'dadra-nagar-haveli',
       name: 'Dadra & Nagar Haveli',
       capital: 'Silvassa',
-      position: { top: '48%', left: '22%' },
+      position: { top: '42%', left: '25%' },
       culture: 'Tribal Culture & Nature Heritage',
       highlights: ['Tribal Art', 'Nature Reserves', 'Folk Culture'],
       color: 'from-green-400 to-emerald-500'
@@ -340,7 +340,7 @@ const InteractiveMap = () => {
       id: 'daman-diu',
       name: 'Daman & Diu',
       capital: 'Daman',
-      position: { top: '45%', left: '19%' },
+      position: { top: '40%', left: '23%' },
       culture: 'Portuguese Heritage & Coastal Culture',
       highlights: ['Portuguese Forts', 'Beach Culture', 'Colonial Architecture'],
       color: 'from-amber-400 to-orange-500'
@@ -361,49 +361,74 @@ const InteractiveMap = () => {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Interactive Map */}
         <div className="relative">
-          <div className="relative w-full h-[500px] bg-gradient-to-br from-amber-100 to-orange-100 rounded-3xl border-4 border-saffron-200 overflow-hidden shadow-2xl">
-            {/* India outline - enhanced representation */}
-            <div className="absolute inset-4 bg-gradient-to-r from-emerald-50 to-blue-50 rounded-2xl border-2 border-emerald-200 relative">
+          <div className="relative w-full h-[600px] bg-gradient-to-br from-amber-100 to-orange-100 rounded-3xl border-4 border-saffron-200 overflow-hidden shadow-2xl">
+            {/* India outline - SVG based map */}
+            <div className="absolute inset-4 bg-gradient-to-r from-emerald-50 to-blue-50 rounded-2xl border-2 border-emerald-200 relative overflow-hidden">
               
-              {/* State/UT markers */}
+              {/* SVG India Map */}
+              <svg 
+                viewBox="0 0 400 500" 
+                className="absolute inset-0 w-full h-full"
+                style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' }}
+              >
+                {/* India Outline Path */}
+                <path
+                  d="M200 50 L230 60 L250 45 L280 55 L320 70 L340 90 L350 120 L360 150 L350 180 L340 200 L320 220 L300 240 L280 260 L260 280 L240 300 L220 320 L200 340 L180 360 L160 370 L140 365 L120 355 L100 340 L85 320 L75 300 L70 280 L65 260 L60 240 L55 220 L50 200 L45 180 L50 160 L60 140 L75 120 L90 105 L110 90 L130 80 L150 70 L170 60 Z"
+                  fill="url(#indiaGradient)"
+                  stroke="#10b981"
+                  strokeWidth="2"
+                />
+                
+                {/* Gradient Definition */}
+                <defs>
+                  <linearGradient id="indiaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#fef3c7" />
+                    <stop offset="50%" stopColor="#fed7aa" />
+                    <stop offset="100%" stopColor="#fbbf24" />
+                  </linearGradient>
+                </defs>
+                
+                {/* Decorative Border Pattern */}
+                <circle cx="50" cy="100" r="3" fill="#f97316" opacity="0.3" />
+                <circle cx="350" cy="150" r="3" fill="#10b981" opacity="0.3" />
+                <circle cx="180" cy="400" r="3" fill="#3b82f6" opacity="0.3" />
+              </svg>
+              
+              {/* State/UT markers - Now properly positioned */}
               {states.map((state) => (
                 <button
                   key={state.id}
                   onClick={() => setSelectedState(state)}
-                  className={`absolute w-3 h-3 rounded-full bg-gradient-to-r ${state.color} 
+                  className={`absolute w-4 h-4 rounded-full bg-gradient-to-r ${state.color} 
                     animate-pulse hover:scale-150 transition-all duration-300 cursor-pointer z-10
-                    ${selectedState?.id === state.id ? 'scale-150 animate-glow' : ''}
+                    border-2 border-white shadow-lg
+                    ${selectedState?.id === state.id ? 'scale-150 animate-ping' : ''}
                   `}
                   style={state.position}
                 >
-                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 
-                    bg-white px-2 py-1 rounded text-xs font-medium shadow-lg opacity-0 
-                    hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-20">
-                    <div className="font-semibold">{state.name}</div>
+                  <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 
+                    bg-white px-3 py-2 rounded-lg text-xs font-medium shadow-xl opacity-0 
+                    hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-20
+                    border border-gray-200">
+                    <div className="font-semibold text-gray-800">{state.name}</div>
                     <div className="text-gray-600 text-xs">{state.capital}</div>
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 
+                      w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
                   </div>
                 </button>
               ))}
               
-              {/* Decorative elements */}
-              <div className="absolute top-4 right-4 text-saffron-300">
-                <MapPin size={24} className="animate-float" />
-              </div>
-              <div className="absolute bottom-4 left-4 text-emerald-300">
-                <Palette size={20} className="animate-float" style={{ animationDelay: '1s' }} />
-              </div>
-              
-              {/* Region labels */}
-              <div className="absolute top-2 left-1/2 transform -translate-x-1/2 text-xs font-semibold text-gray-500">
+              {/* Region labels - repositioned */}
+              <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-sm font-semibold text-gray-600 bg-white/80 px-3 py-1 rounded-full">
                 Northern India
               </div>
-              <div className="absolute top-1/3 right-2 text-xs font-semibold text-gray-500 transform rotate-90">
+              <div className="absolute top-1/3 right-4 text-sm font-semibold text-gray-600 bg-white/80 px-3 py-1 rounded-full transform rotate-90 origin-center">
                 Eastern India
               </div>
-              <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-xs font-semibold text-gray-500">
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-sm font-semibold text-gray-600 bg-white/80 px-3 py-1 rounded-full">
                 Southern India
               </div>
-              <div className="absolute top-1/2 left-2 text-xs font-semibold text-gray-500 transform -rotate-90">
+              <div className="absolute top-1/2 left-4 text-sm font-semibold text-gray-600 bg-white/80 px-3 py-1 rounded-full transform -rotate-90 origin-center">
                 Western India
               </div>
             </div>
