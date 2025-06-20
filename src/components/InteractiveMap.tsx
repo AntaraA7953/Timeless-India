@@ -361,109 +361,113 @@ const InteractiveMap = () => {
         {/* Interactive Map */}
         <div className="relative">
           <div className="relative w-full h-[600px] bg-gradient-to-br from-amber-100 to-orange-100 rounded-3xl border-4 border-saffron-200 overflow-hidden shadow-2xl">
-            {/* India outline - Improved SVG Map */}
+            {/* India outline - Clear and Visible SVG Map */}
             <div className="absolute inset-4 bg-white rounded-2xl border-2 border-emerald-200 relative overflow-hidden">
               
-              {/* SVG India Map with Better Visibility */}
-              <svg 
-                viewBox="0 0 500 600" 
-                className="absolute inset-0 w-full h-full"
-                preserveAspectRatio="xMidYMid meet"
-              >
-                {/* Gradient Definitions */}
-                <defs>
-                  <linearGradient id="indiaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#fef7cd" />
-                    <stop offset="50%" stopColor="#fed7aa" />
-                    <stop offset="100%" stopColor="#fbbf24" />
-                  </linearGradient>
-                  <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#f97316" />
-                    <stop offset="100%" stopColor="#10b981" />
-                  </linearGradient>
-                </defs>
+              {/* Visible India Map */}
+              <div className="absolute inset-2 bg-gradient-to-br from-orange-200 via-yellow-100 to-green-200 rounded-xl border-4 border-orange-400 shadow-inner">
                 
-                {/* India Main Outline - More Accurate Shape */}
-                <path
-                  d="M 150 50 
-                     L 200 40 L 230 45 L 260 50 L 290 60 L 320 75 L 340 90 L 360 110 L 370 130 L 375 150 L 380 170 L 375 190 L 370 210 L 360 230 L 350 250 L 340 270 L 330 290 L 315 310 L 300 330 L 280 350 L 260 370 L 240 390 L 220 410 L 200 430 L 180 450 L 160 470 L 140 480 L 120 485 L 100 480 L 80 470 L 65 455 L 50 440 L 40 420 L 35 400 L 30 380 L 25 360 L 20 340 L 15 320 L 12 300 L 10 280 L 15 260 L 20 240 L 25 220 L 35 200 L 45 180 L 55 160 L 70 140 L 85 120 L 100 105 L 120 90 L 135 75 Z"
-                  fill="url(#indiaGradient)"
-                  stroke="url(#borderGradient)"
-                  strokeWidth="3"
-                  className="drop-shadow-lg"
-                />
+                {/* SVG India Outline - More Visible */}
+                <svg 
+                  viewBox="0 0 400 500" 
+                  className="absolute inset-0 w-full h-full opacity-90"
+                  preserveAspectRatio="xMidYMid meet"
+                >
+                  <defs>
+                    <linearGradient id="mapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#fbbf24" stopOpacity="0.8" />
+                      <stop offset="50%" stopColor="#f97316" stopOpacity="0.6" />
+                      <stop offset="100%" stopColor="#10b981" stopOpacity="0.8" />
+                    </linearGradient>
+                    <filter id="mapShadow">
+                      <feDropShadow dx="2" dy="2" stdDeviation="3" floodColor="#000000" floodOpacity="0.3"/>
+                    </filter>
+                  </defs>
+                  
+                  {/* Main India Shape - Highly Visible */}
+                  <path
+                    d="M 120 40 
+                       L 160 35 L 200 40 L 240 50 L 270 65 L 290 85 L 300 110 L 305 135 L 300 160 L 290 185 L 275 210 L 260 230 L 240 250 L 220 270 L 200 290 L 180 310 L 160 330 L 140 350 L 120 370 L 100 380 L 80 385 L 60 380 L 45 370 L 35 355 L 25 340 L 20 320 L 15 300 L 12 280 L 10 260 L 15 240 L 25 220 L 35 200 L 50 180 L 65 160 L 80 140 L 95 120 L 110 100 L 120 80 L 125 60 Z"
+                    fill="url(#mapGradient)"
+                    stroke="#dc2626"
+                    strokeWidth="4"
+                    filter="url(#mapShadow)"
+                    className="drop-shadow-xl"
+                  />
+                  
+                  {/* Kashmir Region - Visible */}
+                  <path
+                    d="M 120 40 L 140 35 L 155 40 L 160 50 L 155 60 L 145 65 L 130 60 L 120 50 Z"
+                    fill="#fbbf24"
+                    stroke="#dc2626"
+                    strokeWidth="3"
+                  />
+                  
+                  {/* Northeastern Region - Visible */}
+                  <path
+                    d="M 280 150 L 300 155 L 310 170 L 305 185 L 295 190 L 285 185 L 280 170 Z"
+                    fill="#10b981"
+                    stroke="#dc2626"
+                    strokeWidth="3"
+                  />
+                  
+                  {/* Southern Peninsula - Visible */}
+                  <path
+                    d="M 160 330 L 175 320 L 190 330 L 200 350 L 190 370 L 175 380 L 160 375 L 150 360 Z"
+                    fill="#3b82f6"
+                    stroke="#dc2626"
+                    strokeWidth="3"
+                  />
+                  
+                  {/* State boundaries - Light lines */}
+                  <g stroke="#f97316" strokeWidth="1" fill="none" opacity="0.5">
+                    <line x1="80" y1="120" x2="200" y2="120" />
+                    <line x1="80" y1="180" x2="220" y2="180" />
+                    <line x1="80" y1="240" x2="200" y2="240" />
+                    <line x1="120" y1="80" x2="120" y2="300" />
+                    <line x1="160" y1="80" x2="160" y2="320" />
+                    <line x1="200" y1="80" x2="200" y2="350" />
+                  </g>
+                </svg>
                 
-                {/* Kashmir Region */}
-                <path
-                  d="M 150 50 L 170 45 L 185 50 L 190 60 L 185 70 L 175 75 L 160 70 L 150 60 Z"
-                  fill="#fbbf24"
-                  stroke="#f97316"
-                  strokeWidth="2"
-                  opacity="0.8"
-                />
-                
-                {/* Northeastern States Region */}
-                <path
-                  d="M 350 180 L 370 185 L 380 200 L 375 220 L 365 225 L 355 220 L 350 200 Z"
-                  fill="#fed7aa"
-                  stroke="#10b981"
-                  strokeWidth="2"
-                  opacity="0.8"
-                />
-                
-                {/* Southern Peninsula */}
-                <path
-                  d="M 180 450 L 200 430 L 220 410 L 240 430 L 250 450 L 240 470 L 220 480 L 200 485 L 180 480 L 170 465 Z"
-                  fill="#fef7cd"
-                  stroke="#3b82f6"
-                  strokeWidth="2"
-                  opacity="0.8"
-                />
-                
-                {/* Decorative Elements */}
-                <circle cx="100" cy="150" r="2" fill="#f97316" opacity="0.6" />
-                <circle cx="350" cy="200" r="2" fill="#10b981" opacity="0.6" />
-                <circle cx="200" cy="400" r="2" fill="#3b82f6" opacity="0.6" />
-                <circle cx="300" cy="300" r="2" fill="#eab308" opacity="0.6" />
-              </svg>
+                {/* Clear Visible Text Labels */}
+                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-sm font-bold text-red-700 bg-yellow-200/90 px-3 py-1 rounded-full shadow-md border-2 border-red-400">
+                  🏔️ NORTHERN INDIA
+                </div>
+                <div className="absolute top-1/3 right-4 text-sm font-bold text-green-700 bg-emerald-200/90 px-3 py-1 rounded-full shadow-md border-2 border-green-400 transform rotate-90 origin-center">
+                  🌿 EAST
+                </div>
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-sm font-bold text-blue-700 bg-blue-200/90 px-3 py-1 rounded-full shadow-md border-2 border-blue-400">
+                  🏛️ SOUTHERN INDIA
+                </div>
+                <div className="absolute top-1/2 left-4 text-sm font-bold text-orange-700 bg-orange-200/90 px-3 py-1 rounded-full shadow-md border-2 border-orange-400 transform -rotate-90 origin-center">
+                  🏜️ WEST
+                </div>
+              </div>
               
               {/* State/UT markers - Better positioned and styled */}
               {states.map((state) => (
                 <button
                   key={state.id}
                   onClick={() => setSelectedState(state)}
-                  className={`absolute w-5 h-5 rounded-full bg-gradient-to-r ${state.color} 
-                    animate-pulse hover:scale-125 transition-all duration-300 cursor-pointer z-20
-                    border-2 border-white shadow-xl hover:shadow-2xl
-                    ${selectedState?.id === state.id ? 'scale-125 ring-4 ring-white ring-opacity-50' : ''}
+                  className={`absolute w-6 h-6 rounded-full bg-gradient-to-r ${state.color} 
+                    animate-pulse hover:scale-150 transition-all duration-300 cursor-pointer z-20
+                    border-3 border-white shadow-xl hover:shadow-2xl ring-2 ring-gray-400
+                    ${selectedState?.id === state.id ? 'scale-150 ring-4 ring-white ring-opacity-70' : ''}
                   `}
                   style={state.position}
                 >
-                  <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 
+                  <div className="absolute -top-24 left-1/2 transform -translate-x-1/2 
                     bg-white px-3 py-2 rounded-lg text-xs font-medium shadow-xl opacity-0 
                     hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-30
-                    border border-gray-200 max-w-48">
-                    <div className="font-semibold text-gray-800">{state.name}</div>
+                    border-2 border-gray-300 max-w-48">
+                    <div className="font-bold text-gray-800">{state.name}</div>
                     <div className="text-gray-600 text-xs">{state.capital}</div>
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 
                       w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white"></div>
                   </div>
                 </button>
               ))}
-              
-              {/* Enhanced Region Labels */}
-              <div className="absolute top-6 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/90 px-4 py-2 rounded-full shadow-md border border-orange-200">
-                🏔️ Northern India
-              </div>
-              <div className="absolute top-1/3 right-6 text-xs font-bold text-gray-700 bg-white/90 px-4 py-2 rounded-full shadow-md border border-emerald-200 transform rotate-90 origin-center">
-                🌿 Eastern India
-              </div>
-              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-xs font-bold text-gray-700 bg-white/90 px-4 py-2 rounded-full shadow-md border border-blue-200">
-                🏛️ Southern India
-              </div>
-              <div className="absolute top-1/2 left-6 text-xs font-bold text-gray-700 bg-white/90 px-4 py-2 rounded-full shadow-md border border-yellow-200 transform -rotate-90 origin-center">
-                🏜️ Western India
-              </div>
             </div>
           </div>
           
