@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react';
-import { Clock, ChevronRight, Star, Crown, Building2, Scroll } from 'lucide-react';
+import { Clock, ChevronRight, Star, Crown, Building2, Scroll, Sword, Globe, Users, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -10,7 +11,7 @@ const Timeline = () => {
     {
       period: "3300-1300 BCE",
       title: "Indus Valley Civilization",
-      description: "One of the world's earliest urban civilizations with advanced drainage systems and standardized weights.",
+      description: "One of the world's earliest urban civilizations with advanced drainage systems, standardized weights, and sophisticated city planning.",
       highlights: ["Harappa & Mohenjo-daro", "Urban Planning", "Trade Networks"],
       icon: Building2,
       color: "from-amber-400 to-orange-500"
@@ -18,40 +19,128 @@ const Timeline = () => {
     {
       period: "1500-500 BCE",
       title: "Vedic Period",
-      description: "Foundation of Hindu philosophy, with the composition of the Vedas and establishment of caste system.",
+      description: "Foundation of Hindu philosophy with composition of the Vedas, establishment of social systems, and emergence of Sanskrit literature.",
       highlights: ["Rigveda Composition", "Sanskrit Literature", "Philosophical Schools"],
       icon: Scroll,
       color: "from-emerald-400 to-teal-500"
     },
     {
+      period: "600-321 BCE",
+      title: "Mahajanapadas & Early Kingdoms",
+      description: "Rise of 16 powerful kingdoms with flourishing urbanization, trade, and emergence of Buddhism and Jainism as reformist movements.",
+      highlights: ["16 Mahajanapadas", "Buddha & Mahavira", "Urban Growth"],
+      icon: Crown,
+      color: "from-purple-400 to-indigo-500"
+    },
+    {
       period: "321-185 BCE",
-      title: "Mauryan Empire",
-      description: "First pan-Indian empire under Chandragupta Maurya and Ashoka's Buddhist propagation.",
+      title: "Mauryan Empire",  
+      description: "First pan-Indian empire under Chandragupta Maurya and Ashoka's Buddhist propagation across Asia.",
       highlights: ["Ashoka's Edicts", "Buddhist Spread", "Administrative System"],
       icon: Crown,
       color: "from-blue-400 to-indigo-500"
     },
     {
+      period: "185 BCE-319 CE",
+      title: "Post-Maurya Period",
+      description: "Era of fragmentation with foreign influences from Indo-Greeks, Kushans, and Shakas. Increased trade with Rome and Central Asia.",
+      highlights: ["Cultural Exchange", "Gandhara Art", "Mahayana Buddhism"],
+      icon: Globe,
+      color: "from-cyan-400 to-blue-500"
+    },
+    {
       period: "320-550 CE",
       title: "Gupta Golden Age",
-      description: "Period of peace, prosperity, and cultural achievements in art, science, and literature.",
+      description: "Period of unprecedented peace, prosperity, and cultural achievements in art, science, literature, and mathematics.",
       highlights: ["Scientific Advances", "Classical Arts", "Literary Works"],
       icon: Star,
-      color: "from-purple-400 to-pink-500"
+      color: "from-yellow-400 to-amber-500"
+    },
+    {
+      period: "550-1206 CE",
+      title: "Post-Gupta / Early Medieval",
+      description: "Political fragmentation with rise of regional kingdoms and devotional movements. Development of temple architecture and regional languages.",
+      highlights: ["Temple Architecture", "Regional Languages", "Bhakti Movement"],
+      icon: Building2,
+      color: "from-rose-400 to-pink-500"
+    },
+    {
+      period: "1206-1526 CE",
+      title: "Delhi Sultanate",
+      description: "Turkish and Afghan rulers established Islamic rule with five successive dynasties introducing new architecture and Indo-Islamic culture.",
+      highlights: ["Qutub Minar", "Indo-Islamic Culture", "Iqta System"],
+      icon: Sword,
+      color: "from-green-400 to-emerald-500"
     },
     {
       period: "1526-1857 CE",
       title: "Mughal Era",
-      description: "Islamic empire that created architectural marvels and fostered cultural synthesis.",
-      highlights: ["Taj Mahal", "Indo-Islamic Art", "Cultural Fusion"],
+      description: "Islamic empire creating architectural marvels and fostering cultural synthesis between Hindu and Islamic traditions.",
+      highlights: ["Taj Mahal", "Cultural Fusion", "Administrative Reforms"],
       icon: Crown,
       color: "from-red-400 to-orange-500"
     },
     {
+      period: "1700s-1857 CE",
+      title: "Regional Kingdoms & European Arrival",
+      description: "Decline of Mughals led to rise of Marathas, Sikhs, and Nawabs while Europeans competed for territorial control.",
+      highlights: ["Battle of Plassey", "East India Company", "Regional Powers"],
+      icon: Globe,
+      color: "from-indigo-400 to-purple-500"
+    },
+    {
+      period: "1858-1947 CE",
+      title: "British Colonial Rule",
+      description: "Direct British Crown control after 1857 Revolt. Era of exploitation but also modern education and freedom movement emergence.",
+      highlights: ["Freedom Movement", "INC Formation", "Civil Disobedience"],
+      icon: Users,
+      color: "from-gray-400 to-slate-500"
+    },
+    {
       period: "1947 CE",
-      title: "Modern India",
-      description: "Independence from British rule and emergence as a democratic republic with rich diversity.",
-      highlights: ["Independence", "Democracy", "Cultural Revival"],
+      title: "Independence & Partition",
+      description: "India gained freedom but was divided into India and Pakistan, leading to massive migration and communal violence.",
+      highlights: ["Independence Day", "Partition", "Constitution Making"],
+      icon: Star,
+      color: "from-saffron-400 to-emerald-500"
+    },
+    {
+      period: "1947-1964 CE",
+      title: "Nehru Era",
+      description: "Foundation of modern secular democracy with focus on planned industrialization, science, education, and non-alignment.",
+      highlights: ["Five-Year Plans", "Non-Alignment", "Institution Building"],
+      icon: Building2,
+      color: "from-blue-400 to-cyan-500"
+    },
+    {
+      period: "1964-1977 CE",
+      title: "Post-Nehru to Emergency",
+      description: "Political instability, wars with neighbors, Green Revolution, and controversial Emergency period suspending democratic rights.",
+      highlights: ["Green Revolution", "1971 War", "Emergency Period"],
+      icon: Zap,
+      color: "from-orange-400 to-red-500"
+    },
+    {
+      period: "1977-1991 CE",
+      title: "Post-Emergency to Liberalization",
+      description: "Coalition politics and economic crisis leading to landmark liberalization reforms opening India to global markets.",
+      highlights: ["End of License Raj", "Economic Opening", "Regional Politics"],
+      icon: Globe,
+      color: "from-teal-400 to-green-500"
+    },
+    {
+      period: "1991-2014 CE",
+      title: "Post-Liberalization India",
+      description: "Rapid economic growth, IT revolution, nuclear tests, and coalition governments reshaping modern India's global presence.",
+      highlights: ["IT Revolution", "Nuclear Tests", "Economic Growth"],
+      icon: Zap,
+      color: "from-purple-400 to-pink-500"
+    },
+    {
+      period: "2014-Present",
+      title: "Contemporary India",
+      description: "Digital transformation era with infrastructure development, strong governance, and active global diplomacy in space and technology.",
+      highlights: ["Digital India", "Space Missions", "Global Diplomacy"],
       icon: Star,
       color: "from-saffron-400 to-emerald-500"
     }
@@ -64,7 +153,7 @@ const Timeline = () => {
           Journey Through Time
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Explore India's rich chronological heritage from ancient civilizations to modern times
+          Explore India's comprehensive chronological heritage from ancient civilizations to the digital age
         </p>
       </div>
 
@@ -159,7 +248,7 @@ const Timeline = () => {
       </div>
 
       {/* Navigation Controls */}
-      <div className="mt-12 flex justify-center space-x-2">
+      <div className="mt-12 flex justify-center flex-wrap gap-2">
         {eras.map((_, index) => (
           <button
             key={index}
