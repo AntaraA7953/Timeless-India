@@ -66,6 +66,13 @@ const Index = () => {
                   <span className="text-sm font-medium">{label}</span>
                 </button>
               ))}
+              <a
+                href="/stories"
+                className="flex items-center space-x-1 px-3 py-2 rounded-full transition-all duration-300 text-gray-600 hover:text-saffron-600 hover:bg-saffron-50"
+              >
+                <Users size={16} />
+                <span className="text-sm font-medium">Stories</span>
+              </a>
             </div>
 
             <Button className="bg-gradient-to-r from-saffron-500 to-emerald-500 hover:from-saffron-600 hover:to-emerald-600 transform hover:scale-105 transition-all duration-300">
@@ -143,8 +150,8 @@ const Index = () => {
             <div className="space-y-4">
               <h4 className="font-semibold text-yellow-300">Connect</h4>
               <ul className="space-y-2 text-orange-200">
+                <li><a href="/stories" className="hover:text-yellow-300 transition-colors">Share Stories</a></li>
                 <li><a href="#" className="hover:text-yellow-300 transition-colors">Community</a></li>
-                <li><a href="#" className="hover:text-yellow-300 transition-colors">Share Stories</a></li>
                 <li><a href="#" className="hover:text-yellow-300 transition-colors">Cultural Events</a></li>
                 <li><a href="#" className="hover:text-yellow-300 transition-colors">Newsletter</a></li>
               </ul>
