@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, MapPin, Clock, Palette, Camera, Trophy, Users, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -37,7 +36,11 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-saffron-500 to-emerald-500 rounded-full animate-glow"></div>
+              <img 
+                src="/lovable-uploads/1d0c929a-51e7-44af-abd2-a6405a92a7e2.png" 
+                alt="Timeless India Logo" 
+                className="w-8 h-8 rounded-full"
+              />
               <h1 className="text-2xl font-bold text-gradient">Timeless India</h1>
             </div>
             
@@ -168,7 +171,11 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-emerald-400 rounded-full animate-glow"></div>
+                <img 
+                  src="/lovable-uploads/1d0c929a-51e7-44af-abd2-a6405a92a7e2.png" 
+                  alt="Timeless India Logo" 
+                  className="w-8 h-8 rounded-full"
+                />
                 <h3 className="text-xl font-bold">Timeless India</h3>
               </div>
               <p className="text-orange-200">
