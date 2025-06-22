@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ArrowLeft, Heart, Share2, Calendar, MapPin, User } from 'lucide-react';
+import { ArrowLeft, Heart, Share2, Calendar, MapPin, User, Upload, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
@@ -16,11 +16,14 @@ interface Story {
   date: string;
   likes: number;
   category: string;
+  image?: string;
 }
 
 const Stories = () => {
   const navigate = useNavigate();
   const [showSubmitForm, setShowSubmitForm] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     title: '',
     content: '',
@@ -29,7 +32,7 @@ const Stories = () => {
     category: 'personal'
   });
 
-  // Sample stories data
+  // Sample stories data with images
   const [stories] = useState<Story[]>([
     {
       id: '1',
@@ -39,7 +42,8 @@ const Stories = () => {
       location: 'Kolkata, West Bengal',
       date: '2024-01-15',
       likes: 24,
-      category: 'tradition'
+      category: 'tradition',
+      image: 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=300&fit=crop'
     },
     {
       id: '2',
@@ -49,7 +53,8 @@ const Stories = () => {
       location: 'Jaipur, Rajasthan',
       date: '2024-02-08',
       likes: 31,
-      category: 'craft'
+      category: 'craft',
+      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop'
     },
     {
       id: '3',
@@ -59,9 +64,36 @@ const Stories = () => {
       location: 'Alleppey, Kerala',
       date: '2024-01-22',
       likes: 18,
-      category: 'nature'
+      category: 'nature',
+      image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=400&h=300&fit=crop'
     }
   ]);
+
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      if (file.size > 5 * 1024 * 1024) { // 5MB limit
+        toast({
+          title: "Image too large",
+          description: "Please select an image smaller than 5MB",
+          variant: "destructive"
+        });
+        return;
+      }
+      
+      setSelectedImage(file);
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setImagePreview(e.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const removeImage = () => {
+    setSelectedImage(null);
+    setImagePreview(null);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -85,6 +117,8 @@ const Stories = () => {
       location: '',
       category: 'personal'
     });
+    setSelectedImage(null);
+    setImagePreview(null);
     setShowSubmitForm(false);
   };
 
@@ -160,6 +194,46 @@ const Stories = () => {
                       className="min-h-[150px] focus:ring-saffron-500"
                       placeholder="Tell us about your experience, tradition, memory, or any story that connects you to India's rich heritage..."
                     />
+                  </div>
+
+                  {/* Image Upload Section */}
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Add an Image (Optional)</label>
+                    <div className="space-y-4">
+                      {!imagePreview ? (
+                        <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-saffron-500 transition-colors">
+                          <input
+                            type="file"
+                            accept="image/*"
+                            onChange={handleImageUpload}
+                            className="hidden"
+                            id="image-upload"
+                          />
+                          <label htmlFor="image-upload" className="cursor-pointer">
+                            <Upload className="mx-auto h-12 w-12 text-gray-400 mb-2" />
+                            <p className="text-sm text-gray-600">Click to upload an image</p>
+                            <p className="text-xs text-gray-400 mt-1">PNG, JPG, GIF up to 5MB</p>
+                          </label>
+                        </div>
+                      ) : (
+                        <div className="relative">
+                          <img
+                            src={imagePreview}
+                            alt="Preview"
+                            className="w-full h-48 object-cover rounded-lg border"
+                          />
+                          <Button
+                            type="button"
+                            variant="destructive"
+                            size="sm"
+                            onClick={removeImage}
+                            className="absolute top-2 right-2"
+                          >
+                            <X className="h-4 w-4" />
+                          </Button>
+                        </div>
+                      )}
+                    </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
@@ -252,6 +326,13 @@ const Stories = () => {
                     </div>
                   </CardHeader>
                   <CardContent>
+                    {story.image && (
+                      <img
+                        src={story.image}
+                        alt={story.title}
+                        className="w-full h-48 object-cover rounded-lg mb-4"
+                      />
+                    )}
                     <p className="text-gray-700 leading-relaxed mb-4">{story.content}</p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
