@@ -6,16 +6,13 @@ import { Card, CardContent } from '@/components/ui/card';
 import Hero from '@/components/Hero';
 import InteractiveMap from '@/components/InteractiveMap';
 import Timeline from '@/components/Timeline';
-import ArtForms from '@/components/ArtForms';
-import GameSection from '@/components/GameSection';
-import VRExperience from '@/components/VRExperience';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'map', 'timeline', 'arts', 'games', 'vr'];
+      const sections = ['home', 'map', 'timeline'];
       const scrollPosition = window.scrollY + 100;
 
       sections.forEach(section => {
@@ -46,16 +43,16 @@ const Index = () => {
             
             <div className="hidden md:flex items-center space-x-8">
               {[
-                { id: 'home', label: 'Home', icon: Star },
-                { id: 'map', label: 'Explore', icon: MapPin },
-                { id: 'timeline', label: 'Timeline', icon: Clock },
-                { id: 'arts', label: 'Arts', icon: Palette },
-                { id: 'games', label: 'Games', icon: Trophy },
-                { id: 'vr', label: 'VR/AR', icon: Camera }
-              ].map(({ id, label, icon: Icon }) => (
+                { id: 'home', label: 'Home', icon: Star, action: () => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' }) },
+                { id: 'map', label: 'Explore', icon: MapPin, action: () => document.getElementById('map')?.scrollIntoView({ behavior: 'smooth' }) },
+                { id: 'timeline', label: 'Timeline', icon: Clock, action: () => document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' }) },
+                { id: 'arts', label: 'Arts', icon: Palette, action: () => window.location.href = '/arts' },
+                { id: 'games', label: 'Games', icon: Trophy, action: () => window.location.href = '/games' },
+                { id: 'vr', label: 'VR/AR', icon: Camera, action: () => window.location.href = '/vr' }
+              ].map(({ id, label, icon: Icon, action }) => (
                 <button
                   key={id}
-                  onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={action}
                   className={`flex items-center space-x-1 px-3 py-2 rounded-full transition-all duration-300 ${
                     activeSection === id
                       ? 'bg-saffron-100 text-saffron-700 scale-105'
@@ -98,19 +95,71 @@ const Index = () => {
         <Timeline />
       </section>
 
-      {/* Art Forms Section */}
-      <section id="arts" className="py-20">
-        <ArtForms />
-      </section>
+      {/* Quick Access Cards */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
+              Explore More
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Dive deeper into India's rich heritage through interactive experiences
+            </p>
+          </div>
 
-      {/* Games Section */}
-      <section id="games" className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50">
-        <GameSection />
-      </section>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Palette className="text-white" size={28} />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Arts & Culture</h3>
+                <p className="text-gray-600 mb-4">Discover traditional dance, music, and visual arts</p>
+                <Button 
+                  onClick={() => window.location.href = '/arts'}
+                  className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700"
+                >
+                  Explore Arts
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
 
-      {/* VR/AR Experience Section */}
-      <section id="vr" className="py-20">
-        <VRExperience />
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-400 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Trophy className="text-white" size={28} />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Interactive Games</h3>
+                <p className="text-gray-600 mb-4">Learn through fun quizzes and challenges</p>
+                <Button 
+                  onClick={() => window.location.href = '/games'}
+                  className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700"
+                >
+                  Play Games
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Camera className="text-white" size={28} />
+                </div>
+                <h3 className="text-xl font-bold mb-2">VR/AR Experience</h3>
+                <p className="text-gray-600 mb-4">Immersive virtual tours of monuments</p>
+                <Button 
+                  onClick={() => window.location.href = '/vr'}
+                  className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
+                >
+                  Experience VR
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
@@ -132,18 +181,18 @@ const Index = () => {
               <ul className="space-y-2 text-orange-200">
                 <li><a href="#map" className="hover:text-yellow-300 transition-colors">Cultural Map</a></li>
                 <li><a href="#timeline" className="hover:text-yellow-300 transition-colors">Heritage Timeline</a></li>
-                <li><a href="#arts" className="hover:text-yellow-300 transition-colors">Art Forms</a></li>
-                <li><a href="#games" className="hover:text-yellow-300 transition-colors">Interactive Games</a></li>
+                <li><a href="/arts" className="hover:text-yellow-300 transition-colors">Art Forms</a></li>
+                <li><a href="/games" className="hover:text-yellow-300 transition-colors">Interactive Games</a></li>
               </ul>
             </div>
             
             <div className="space-y-4">
               <h4 className="font-semibold text-yellow-300">Experience</h4>
               <ul className="space-y-2 text-orange-200">
-                <li><a href="#vr" className="hover:text-yellow-300 transition-colors">VR Monuments</a></li>
-                <li><a href="#vr" className="hover:text-yellow-300 transition-colors">AR Experiences</a></li>
-                <li><a href="#" className="hover:text-yellow-300 transition-colors">Virtual Tours</a></li>
-                <li><a href="#" className="hover:text-yellow-300 transition-colors">Digital Museum</a></li>
+                <li><a href="/vr" className="hover:text-yellow-300 transition-colors">VR Monuments</a></li>
+                <li><a href="/vr" className="hover:text-yellow-300 transition-colors">AR Experiences</a></li>
+                <li><a href="/vr" className="hover:text-yellow-300 transition-colors">Virtual Tours</a></li>
+                <li><a href="/vr" className="hover:text-yellow-300 transition-colors">Digital Museum</a></li>
               </ul>
             </div>
             
