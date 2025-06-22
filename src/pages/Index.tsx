@@ -39,7 +39,7 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/1d0c929a-51e7-44af-abd2-a6405a92a7e2.png" 
                 alt="Timeless India Logo" 
-                className="w-8 h-8 rounded-full"
+                className="w-12 h-12 rounded-full"
               />
               <h1 className="text-2xl font-bold text-gradient">Timeless India</h1>
             </div>
@@ -174,7 +174,7 @@ const Index = () => {
                 <img 
                   src="/lovable-uploads/1d0c929a-51e7-44af-abd2-a6405a92a7e2.png" 
                   alt="Timeless India Logo" 
-                  className="w-8 h-8 rounded-full"
+                  className="w-12 h-12 rounded-full"
                 />
                 <h3 className="text-xl font-bold">Timeless India</h3>
               </div>
