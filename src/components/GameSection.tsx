@@ -7,6 +7,7 @@ import HeritageQuiz from './games/HeritageQuiz';
 import CulturalExplorer from './games/CulturalExplorer';
 import FestivalMatcher from './games/FestivalMatcher';
 import MonumentBuilder from './games/MonumentBuilder';
+import ChessGame from './games/ChessGame';
 
 const GameSection = () => {
   const [selectedGame, setSelectedGame] = useState<string | null>(null);
@@ -56,6 +57,17 @@ const GameSection = () => {
       duration: '30-45 min',
       color: 'from-orange-400 to-red-500',
       features: ['3D Building', 'Historical Facts', 'Progress Tracking']
+    },
+    {
+      id: 'chess-game',
+      title: 'Chess Master',
+      description: 'Play strategic chess against an AI opponent and improve your skills',
+      icon: Brain,
+      difficulty: 'Medium',
+      players: '1 vs Computer',
+      duration: '15-45 min',
+      color: 'from-gray-600 to-gray-800',
+      features: ['AI Opponent', 'Move History', 'Score Tracking']
     }
   ];
 
@@ -116,6 +128,15 @@ const GameSection = () => {
             <MonumentBuilder 
               onBack={handleBackToGames}
               onComplete={(score) => handleGameComplete('monument-builder', score)}
+            />
+          </div>
+        );
+      case 'chess-game':
+        return (
+          <div className="container mx-auto px-4 py-8">
+            <ChessGame 
+              onBack={handleBackToGames}
+              onComplete={(score) => handleGameComplete('chess-game', score)}
             />
           </div>
         );
