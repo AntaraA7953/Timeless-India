@@ -9,49 +9,49 @@ const stateMeta = {
     capital: 'Srinagar (Summer), Jammu (Winter)',
     culture: 'Himalayan Culture & Sufi Heritage',
     highlights: ['Kashmiri Handicrafts', 'Sufi Music', 'Alpine Beauty'],
-    position: { top: '14%', left: '33%' }
+    position: { top: '14%', left: '30%' }
   },
   'ladakh': {
     name: 'Ladakh',
     capital: 'Leh',
     culture: 'Buddhist Monasteries & High Altitude Culture',
     highlights: ['Monasteries', 'Buddhist Art', 'Mountain Culture'],
-    position: { top: '10%', left: '37%' }
+    position: { top: '12%', left: '37%' }
   },
   'himachal-pradesh': {
     name: 'Himachal Pradesh',
     capital: 'Shimla',
     culture: 'Hill Station Culture & Pahari Traditions',
     highlights: ['Hill Stations', 'Pahari Culture', 'Adventure Sports'],
-    position: { top: '21%', left: '38%' }
+    position: { top: '19%', left: '36%' }
   },
   'punjab': {
     name: 'Punjab',
     capital: 'Chandigarh',
     culture: 'Sikh Heritage & Punjabi Culture',
     highlights: ['Golden Temple', 'Bhangra', 'Punjabi Cuisine'],
-    position: { top: '22%', left: '34%' }
+    position: { top: '22%', left: '32%' }
   },
   'haryana': {
     name: 'Haryana',
     capital: 'Chandigarh',
     culture: 'Agricultural Heritage & Folk Traditions',
     highlights: ['Folk Music', 'Wrestling', 'Agriculture'],
-    position: { top: '29%', left: '36%' }
+    position: { top: '27%', left: '33%' }
   },
   'rajasthan': {
     name: 'Rajasthan',
     capital: 'Jaipur',
     culture: 'Royal Heritage & Desert Culture',
     highlights: ['Royal Palaces', 'Desert Safari', 'Folk Dance'],
-    position: { top: '35%', left: '30%' }
+    position: { top: '35%', left: '28%' }
   },
   'gujarat': {
     name: 'Gujarat',
     capital: 'Gandhinagar',
     culture: 'Gujarati Heritage & Business Culture',
     highlights: ['Navratri', 'Handicrafts', 'Business Hub'],
-    position: { top: '44%', left: '27%' }
+    position: { top: '44%', left: '22%' }
   },
   'maharashtra': {
     name: 'Maharashtra',
@@ -72,28 +72,28 @@ const stateMeta = {
     capital: 'Lucknow',
     culture: 'Mughal Heritage & Spiritual Centers',
     highlights: ['Taj Mahal', 'Lucknowi Culture', 'Classical Music'],
-    position: { top: '38%', left: '47%' }
+    position: { top: '35%', left: '47%' }
   },
   'bihar': {
     name: 'Bihar',
     capital: 'Patna',
     culture: 'Ancient Heritage & Buddhist Culture',
     highlights: ['Nalanda', 'Buddhist Sites', 'Madhubani Art'],
-    position: { top: '37%', left: '57%' }
+    position: { top: '37%', left: '59%' }
   },
   'jharkhand': {
     name: 'Jharkhand',
     capital: 'Ranchi',
     culture: 'Tribal Heritage & Mining Culture',
     highlights: ['Tribal Dance', 'Handicrafts', 'Natural Beauty'],
-    position: { top: '44%', left: '56%' }
+    position: { top: '44%', left: '58%' }
   },
   'west-bengal': {
     name: 'West Bengal',
     capital: 'Kolkata',
     culture: 'Bengali Heritage & Literary Culture',
     highlights: ['Durga Puja', 'Literature', 'Sweets'],
-    position: { top: '45%', left: '63%' }
+    position: { top: '45%', left: '65%' }
   },
   'odisha': {
     name: 'Odisha',
@@ -121,98 +121,98 @@ const stateMeta = {
     capital: 'Amaravati',
     culture: 'Telugu Heritage & Classical Arts',
     highlights: ['Kuchipudi', 'Tirupati', 'Spicy Cuisine'],
-    position: { top: '72%', left: '42%' }
+    position: { top: '70%', left: '39%' }
   },
   'karnataka': {
     name: 'Karnataka',
     capital: 'Bengaluru',
     culture: 'Tech Hub & Kannada Heritage',
     highlights: ['IT Capital', 'Classical Music', 'Mysore Palace'],
-    position: { top: '73%', left: '34%' }
+    position: { top: '70%', left: '31%' }
   },
   'goa': {
     name: 'Goa',
     capital: 'Panaji',
     culture: 'Portuguese Heritage & Beach Culture',
     highlights: ['Beaches', 'Carnival', 'Portuguese Architecture'],
-    position: { top: '68%', left: '30%' }
+    position: { top: '68%', left: '25%' }
   },
   'kerala': {
     name: 'Kerala',
     capital: 'Thiruvananthapuram',
     culture: 'Backwaters & Ayurvedic Heritage',
     highlights: ['Backwaters', 'Ayurveda', 'Kathakali'],
-    position: { top: '83%', left: '40%' }
+    position: { top: '83%', left: '38%' }
   },
   'tamil-nadu': {
     name: 'Tamil Nadu',
     capital: 'Chennai',
     culture: 'Dravidian Heritage & Temple Culture',
     highlights: ['Temples', 'Bharatanatyam', 'Tamil Literature'],
-    position: { top: '83%', left: '35%' }
+    position: { top: '83%', left: '33%' }
   },
   'assam': {
     name: 'Assam',
     capital: 'Dispur',
     culture: 'Tea Gardens & Assamese Culture',
     highlights: ['Tea Gardens', 'Bihu Festival', 'Silk'],
-    position: { top: '34%', left: '74%' }
+    position: { top: '35%', left: '74%' }
   },
   'arunachal-pradesh': {
     name: 'Arunachal Pradesh',
     capital: 'Itanagar',
     culture: 'Tribal Heritage & Mountain Culture',
     highlights: ['Tribal Diversity', 'Monasteries', 'Natural Beauty'],
-    position: { top: '27%', left: '80%' }
+    position: { top: '27%', left: '85%' }
   },
   'nagaland': {
     name: 'Nagaland',
     capital: 'Kohima',
     culture: 'Naga Heritage & Warrior Culture',
     highlights: ['Hornbill Festival', 'Tribal Culture', 'Handicrafts'],
-    position: { top: '33%', left: '79%' }
+    position: { top: '33%', left: '85%' }
   },
   'manipur': {
     name: 'Manipur',
     capital: 'Imphal',
     culture: 'Manipuri Dance & Martial Arts',
     highlights: ['Manipuri Dance', 'Martial Arts', 'Loktak Lake'],
-    position: { top: '39%', left: '77%' }
+    position: { top: '39%', left: '83%' }
   },
   'mizoram': {
     name: 'Mizoram',
     capital: 'Aizawl',
     culture: 'Mizo Heritage & Bamboo Culture',
     highlights: ['Bamboo Dance', 'Tribal Culture', 'Hills'],
-    position: { top: '46%', left: '76%' }
+    position: { top: '46%', left: '80%' }
   },
   'tripura': {
     name: 'Tripura',
     capital: 'Agartala',
     culture: 'Bengali & Tribal Mix Culture',
     highlights: ['Ujjayanta Palace', 'Tribal Dance', 'Handicrafts'],
-    position: { top: '43%', left: '72%' }
+    position: { top: '43%', left: '77%' }
   },
   'meghalaya': {
     name: 'Meghalaya',
     capital: 'Shillong',
     culture: 'Khasi Heritage & Matrilineal Society',
     highlights: ['Living Bridges', 'Matrilineal Culture', 'Music'],
-    position: { top: '37%', left: '69%' }
+    position: { top: '38%', left: '73%' }
   },
   'sikkim': {
     name: 'Sikkim',
     capital: 'Gangtok',
     culture: 'Buddhist Heritage & Mountain Culture',
     highlights: ['Monasteries', 'Organic Farming', 'Mountain Views'],
-    position: { top: '31%', left: '65%' }
+    position: { top: '31%', left: '67%' }
   },
   'delhi': {
     name: 'Delhi',
     capital: 'New Delhi',
     culture: 'Mughal Heritage & Modern Capital',
     highlights: ['Red Fort', 'India Gate', 'Street Food'],
-    position: { top: '29%', left: '38%' }
+    position: { top: '29%', left: '36%' }
   }
 };
 
@@ -239,11 +239,11 @@ const InteractiveMap = () => {
 
       <div className="flex flex-col xl:grid xl:grid-cols-2 gap-6 lg:gap-12 items-start">
         {/* Map Container */}
-        <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] bg-gradient-to-br from-blue-100 to-teal-100 rounded-xl overflow-hidden shadow-2xl order-2 xl:order-1">
+        <div className="relative w-full aspect-square bg-gradient-to-br from-blue-100 to-teal-100 rounded-xl overflow-hidden shadow-2xl">
           <img
             src="/lovable-uploads/india.png"
             alt="India Map"
-            className="w-full h-full object-contain"
+            className="absolute inset-0 w-full h-full object-contain"
           />
           
           {/* State Markers */}
