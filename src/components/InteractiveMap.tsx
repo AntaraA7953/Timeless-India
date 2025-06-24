@@ -10,210 +10,210 @@ const stateMeta = {
     capital: 'Srinagar (Summer), Jammu (Winter)',
     culture: 'Himalayan Culture & Sufi Heritage',
     highlights: ['Kashmiri Handicrafts', 'Sufi Music', 'Alpine Beauty'],
-    position: { top: '8%', left: '20%' }
+    position: { top: '14%', left: '33%' }
   },
   'ladakh': {
     name: 'Ladakh',
     capital: 'Leh',
     culture: 'Buddhist Monasteries & High Altitude Culture',
     highlights: ['Monasteries', 'Buddhist Art', 'Mountain Culture'],
-    position: { top: '6%', left: '27%' }
+    position: { top: '10%', left: '37%' }
   },
   'himachal-pradesh': {
     name: 'Himachal Pradesh',
     capital: 'Shimla',
     culture: 'Hill Station Culture & Pahari Traditions',
     highlights: ['Hill Stations', 'Pahari Culture', 'Adventure Sports'],
-    position: { top: '15%', left: '24%' }
+    position: { top: '21%', left: '38%' }
   },
   'punjab': {
     name: 'Punjab',
     capital: 'Chandigarh',
     culture: 'Sikh Heritage & Punjabi Culture',
     highlights: ['Golden Temple', 'Bhangra', 'Punjabi Cuisine'],
-    position: { top: '18%', left: '23%' }
+    position: { top: '22%', left: '34%' }
   },
   'haryana': {
     name: 'Haryana',
     capital: 'Chandigarh',
     culture: 'Agricultural Heritage & Folk Traditions',
     highlights: ['Folk Music', 'Wrestling', 'Agriculture'],
-    position: { top: '22%', left: '24%' }
+    position: { top: '29%', left: '36%' }
   },
   'rajasthan': {
     name: 'Rajasthan',
     capital: 'Jaipur',
     culture: 'Royal Heritage & Desert Culture',
     highlights: ['Royal Palaces', 'Desert Safari', 'Folk Dance'],
-    position: { top: '26%', left: '18%' }
+    position: { top: '35%', left: '30%' }
   },
   'gujarat': {
     name: 'Gujarat',
     capital: 'Gandhinagar',
     culture: 'Gujarati Heritage & Business Culture',
     highlights: ['Navratri', 'Handicrafts', 'Business Hub'],
-    position: { top: '32%', left: '15%' }
+    position: { top: '44%', left: '27%' }
   },
   'maharashtra': {
     name: 'Maharashtra',
     capital: 'Mumbai',
     culture: 'Bollywood & Marathi Heritage',
     highlights: ['Bollywood', 'Ganpati Festival', 'Marathi Theatre'],
-    position: { top: '42%', left: '21%' }
+    position: { top: '55%', left: '34%' }
   },
   'madhya-pradesh': {
     name: 'Madhya Pradesh',
     capital: 'Bhopal',
     culture: 'Central Indian Heritage & Tribal Culture',
     highlights: ['Khajuraho', 'Tribal Art', 'Wildlife'],
-    position: { top: '34%', left: '26%' }
+    position: { top: '45%', left: '40%' }
   },
   'uttar-pradesh': {
     name: 'Uttar Pradesh',
     capital: 'Lucknow',
     culture: 'Mughal Heritage & Spiritual Centers',
     highlights: ['Taj Mahal', 'Lucknowi Culture', 'Classical Music'],
-    position: { top: '24%', left: '28%' }
+    position: { top: '38%', left: '47%' }
   },
   'bihar': {
     name: 'Bihar',
     capital: 'Patna',
     culture: 'Ancient Heritage & Buddhist Culture',
     highlights: ['Nalanda', 'Buddhist Sites', 'Madhubani Art'],
-    position: { top: '28%', left: '34%' }
+    position: { top: '37%', left: '57%' }
   },
   'jharkhand': {
     name: 'Jharkhand',
     capital: 'Ranchi',
     culture: 'Tribal Heritage & Mining Culture',
     highlights: ['Tribal Dance', 'Handicrafts', 'Natural Beauty'],
-    position: { top: '35%', left: '34%' }
+    position: { top: '44%', left: '56%' }
   },
   'west-bengal': {
     name: 'West Bengal',
     capital: 'Kolkata',
     culture: 'Bengali Heritage & Literary Culture',
     highlights: ['Durga Puja', 'Literature', 'Sweets'],
-    position: { top: '36%', left: '38%' }
+    position: { top: '45%', left: '63%' }
   },
   'odisha': {
     name: 'Odisha',
     capital: 'Bhubaneswar',
     culture: 'Temple Architecture & Classical Dance',
     highlights: ['Jagannath Temple', 'Odissi Dance', 'Temple Art'],
-    position: { top: '40%', left: '35%' }
+    position: { top: '53%', left: '55%' }
   },
   'chhattisgarh': {
     name: 'Chhattisgarh',
     capital: 'Raipur',
     culture: 'Tribal Heritage & Folk Traditions',
     highlights: ['Tribal Culture', 'Folk Dance', 'Handicrafts'],
-    position: { top: '38%', left: '30%' }
+    position: { top: '50%', left: '48%' }
   },
   'telangana': {
     name: 'Telangana',
     capital: 'Hyderabad',
     culture: 'Nizami Heritage & IT Culture',
     highlights: ['Charminar', 'Biryani', 'IT Hub'],
-    position: { top: '48%', left: '28%' }
+    position: { top: '60%', left: '42%' }
   },
   'andhra-pradesh': {
     name: 'Andhra Pradesh',
     capital: 'Amaravati',
     culture: 'Telugu Heritage & Classical Arts',
     highlights: ['Kuchipudi', 'Tirupati', 'Spicy Cuisine'],
-    position: { top: '52%', left: '30%' }
+    position: { top: '72%', left: '42%' }
   },
   'karnataka': {
     name: 'Karnataka',
     capital: 'Bengaluru',
     culture: 'Tech Hub & Kannada Heritage',
     highlights: ['IT Capital', 'Classical Music', 'Mysore Palace'],
-    position: { top: '52%', left: '24%' }
+    position: { top: '73%', left: '34%' }
   },
   'goa': {
     name: 'Goa',
     capital: 'Panaji',
     culture: 'Portuguese Heritage & Beach Culture',
     highlights: ['Beaches', 'Carnival', 'Portuguese Architecture'],
-    position: { top: '48%', left: '19%' }
+    position: { top: '68%', left: '30%' }
   },
   'kerala': {
     name: 'Kerala',
     capital: 'Thiruvananthapuram',
     culture: 'Backwaters & Ayurvedic Heritage',
     highlights: ['Backwaters', 'Ayurveda', 'Kathakali'],
-    position: { top: '59%', left: '24%' }
+    position: { top: '83%', left: '40%' }
   },
   'tamil-nadu': {
     name: 'Tamil Nadu',
     capital: 'Chennai',
     culture: 'Dravidian Heritage & Temple Culture',
     highlights: ['Temples', 'Bharatanatyam', 'Tamil Literature'],
-    position: { top: '57%', left: '28%' }
+    position: { top: '83%', left: '35%' }
   },
   'assam': {
     name: 'Assam',
     capital: 'Dispur',
     culture: 'Tea Gardens & Assamese Culture',
     highlights: ['Tea Gardens', 'Bihu Festival', 'Silk'],
-    position: { top: '28%', left: '48%' }
+    position: { top: '34%', left: '74%' }
   },
   'arunachal-pradesh': {
     name: 'Arunachal Pradesh',
     capital: 'Itanagar',
     culture: 'Tribal Heritage & Mountain Culture',
     highlights: ['Tribal Diversity', 'Monasteries', 'Natural Beauty'],
-    position: { top: '22%', left: '52%' }
+    position: { top: '27%', left: '80%' }
   },
   'nagaland': {
     name: 'Nagaland',
     capital: 'Kohima',
     culture: 'Naga Heritage & Warrior Culture',
     highlights: ['Hornbill Festival', 'Tribal Culture', 'Handicrafts'],
-    position: { top: '30%', left: '50%' }
+    position: { top: '33%', left: '79%' }
   },
   'manipur': {
     name: 'Manipur',
     capital: 'Imphal',
     culture: 'Manipuri Dance & Martial Arts',
     highlights: ['Manipuri Dance', 'Martial Arts', 'Loktak Lake'],
-    position: { top: '32%', left: '49%' }
+    position: { top: '39%', left: '77%' }
   },
   'mizoram': {
     name: 'Mizoram',
     capital: 'Aizawl',
     culture: 'Mizo Heritage & Bamboo Culture',
     highlights: ['Bamboo Dance', 'Tribal Culture', 'Hills'],
-    position: { top: '34%', left: '47%' }
+    position: { top: '46%', left: '76%' }
   },
   'tripura': {
     name: 'Tripura',
     capital: 'Agartala',
     culture: 'Bengali & Tribal Mix Culture',
     highlights: ['Ujjayanta Palace', 'Tribal Dance', 'Handicrafts'],
-    position: { top: '34%', left: '45%' }
+    position: { top: '43%', left: '72%' }
   },
   'meghalaya': {
     name: 'Meghalaya',
     capital: 'Shillong',
     culture: 'Khasi Heritage & Matrilineal Society',
     highlights: ['Living Bridges', 'Matrilineal Culture', 'Music'],
-    position: { top: '30%', left: '46%' }
+    position: { top: '37%', left: '69%' }
   },
   'sikkim': {
     name: 'Sikkim',
     capital: 'Gangtok',
     culture: 'Buddhist Heritage & Mountain Culture',
     highlights: ['Monasteries', 'Organic Farming', 'Mountain Views'],
-    position: { top: '24%', left: '39%' }
+    position: { top: '31%', left: '65%' }
   },
   'delhi': {
     name: 'Delhi',
     capital: 'New Delhi',
     culture: 'Mughal Heritage & Modern Capital',
     highlights: ['Red Fort', 'India Gate', 'Street Food'],
-    position: { top: '21%', left: '26%' }
+    position: { top: '29%', left: '38%' }
   }
 };
 
@@ -242,7 +242,7 @@ const InteractiveMap = () => {
         {/* Map Container */}
         <div className="relative w-full h-[600px] bg-gradient-to-br from-blue-100 to-teal-100 rounded-xl overflow-hidden shadow-2xl">
           <img
-            src="/lovable-uploads/0cdd8dc8-3510-4a1b-86ea-768b4c952447.png"
+            src="/lovable-uploads/india.png"
             alt="India Map"
             className="w-full h-full object-contain"
           />
