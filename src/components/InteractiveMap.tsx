@@ -9,7 +9,7 @@ const stateMeta = {
     capital: 'Srinagar (Summer), Jammu (Winter)',
     culture: 'Himalayan Culture & Sufi Heritage',
     highlights: ['Kashmiri Handicrafts', 'Sufi Music', 'Alpine Beauty'],
-    position: { top: '14%', left: '30%' }
+    position: { top: '14%', left: '28%' }
   },
   'ladakh': {
     name: 'Ladakh',
@@ -30,14 +30,14 @@ const stateMeta = {
     capital: 'Chandigarh',
     culture: 'Sikh Heritage & Punjabi Culture',
     highlights: ['Golden Temple', 'Bhangra', 'Punjabi Cuisine'],
-    position: { top: '22%', left: '32%' }
+    position: { top: '22%', left: '30%' }
   },
   'haryana': {
     name: 'Haryana',
     capital: 'Chandigarh',
     culture: 'Agricultural Heritage & Folk Traditions',
     highlights: ['Folk Music', 'Wrestling', 'Agriculture'],
-    position: { top: '27%', left: '33%' }
+    position: { top: '30%', left: '33%' }
   },
   'rajasthan': {
     name: 'Rajasthan',
@@ -58,7 +58,7 @@ const stateMeta = {
     capital: 'Mumbai',
     culture: 'Bollywood & Marathi Heritage',
     highlights: ['Bollywood', 'Ganpati Festival', 'Marathi Theatre'],
-    position: { top: '55%', left: '34%' }
+    position: { top: '55%', left: '37%' }
   },
   'madhya-pradesh': {
     name: 'Madhya Pradesh',
@@ -135,21 +135,22 @@ const stateMeta = {
     capital: 'Panaji',
     culture: 'Portuguese Heritage & Beach Culture',
     highlights: ['Beaches', 'Carnival', 'Portuguese Architecture'],
-    position: { top: '68%', left: '25%' }
+    position: { top: '69%', left: '25%' }
   },
   'kerala': {
     name: 'Kerala',
     capital: 'Thiruvananthapuram',
     culture: 'Backwaters & Ayurvedic Heritage',
     highlights: ['Backwaters', 'Ayurveda', 'Kathakali'],
-    position: { top: '83%', left: '38%' }
+    position: { top: '85%', left: '32%' }
+    
   },
   'tamil-nadu': {
     name: 'Tamil Nadu',
     capital: 'Chennai',
     culture: 'Dravidian Heritage & Temple Culture',
     highlights: ['Temples', 'Bharatanatyam', 'Tamil Literature'],
-    position: { top: '83%', left: '33%' }
+    position: { top: '87%', left: '38%' }
   },
   'assam': {
     name: 'Assam',
@@ -170,14 +171,14 @@ const stateMeta = {
     capital: 'Kohima',
     culture: 'Naga Heritage & Warrior Culture',
     highlights: ['Hornbill Festival', 'Tribal Culture', 'Handicrafts'],
-    position: { top: '33%', left: '85%' }
+    position: { top: '35%', left: '86%' }
   },
   'manipur': {
     name: 'Manipur',
     capital: 'Imphal',
     culture: 'Manipuri Dance & Martial Arts',
     highlights: ['Manipuri Dance', 'Martial Arts', 'Loktak Lake'],
-    position: { top: '39%', left: '83%' }
+    position: { top: '41%', left: '83%' }
   },
   'mizoram': {
     name: 'Mizoram',
@@ -191,29 +192,78 @@ const stateMeta = {
     capital: 'Agartala',
     culture: 'Bengali & Tribal Mix Culture',
     highlights: ['Ujjayanta Palace', 'Tribal Dance', 'Handicrafts'],
-    position: { top: '43%', left: '77%' }
+    position: { top: '47%', left: '77%' }
   },
   'meghalaya': {
     name: 'Meghalaya',
     capital: 'Shillong',
     culture: 'Khasi Heritage & Matrilineal Society',
     highlights: ['Living Bridges', 'Matrilineal Culture', 'Music'],
-    position: { top: '38%', left: '73%' }
+    position: { top: '40%', left: '73%' }
   },
   'sikkim': {
     name: 'Sikkim',
     capital: 'Gangtok',
     culture: 'Buddhist Heritage & Mountain Culture',
     highlights: ['Monasteries', 'Organic Farming', 'Mountain Views'],
-    position: { top: '31%', left: '67%' }
+    position: { top: '33%', left: '67%' }
   },
-  'delhi': {
-    name: 'Delhi',
-    capital: 'New Delhi',
-    culture: 'Mughal Heritage & Modern Capital',
-    highlights: ['Red Fort', 'India Gate', 'Street Food'],
-    position: { top: '29%', left: '36%' }
-  }
+  // Union Territories
+'andaman-and-nicobar-islands': {
+  name: 'Andaman & Nicobar Islands',
+  capital: 'Port Blair',
+  culture: 'Tribal Culture & Marine Heritage',
+  highlights: ['Scuba Diving', 'Tribal Communities', 'Cellular Jail'],
+  position: { top: '79%', left: '81%' }
+},
+'chandigarh': {
+  name: 'Chandigarh',
+  capital: 'Chandigarh',
+  culture: 'Modern Urban Planning & Punjabi Heritage',
+  highlights: ['Rock Garden', 'Capitol Complex', 'Rose Garden'],
+  position: { top: '24%', left: '35%' }
+},
+'dadra-and-nagar-haveli-and-daman-and-diu': {
+  name: 'Dadra & Nagar Haveli and Daman & Diu',
+  capital: 'Daman',
+  culture: 'Portuguese Influence & Tribal Culture',
+  highlights: ['Coastal Beauty', 'Heritage Forts', 'Tribal Handicrafts'],
+  position: { top: '56%', left: '23%' }
+},
+'delhi': {
+  name: 'Delhi',
+  capital: 'Delhi',
+  culture: 'Historical Capital with Mughal & Modern Fusion',
+  highlights: ['Red Fort', 'Qutub Minar', 'India Gate'],
+  position: { top: '34%', left: '35%' }
+},
+
+'lakshadweep': {
+  name: 'Lakshadweep',
+  capital: 'Kavaratti',
+  culture: 'Island Traditions with Arab Influence',
+  highlights: ['Coral Reefs', 'Water Sports', 'Seafood Cuisine'],
+   position: { top: '82%', left: '20%' }
+},
+'puducherry': {
+  name: 'Puducherry',
+  capital: 'Puducherry',
+  culture: 'French Colonial Heritage & Tamil Culture',
+  highlights: ['French Quarters', 'Auroville', 'Beaches'],
+   position: { top: '81%', left: '43%' }
+
+},
+
+// Uttarakhand
+'uttarakhand': {
+  name: 'Uttarakhand',
+  capital: 'Dehradun',
+  culture: 'Himalayan Spirituality & Folk Traditions',
+  highlights: ['Char Dham Yatra', 'Ganga Aarti', 'Kumaoni & Garhwali Culture'],
+  position: { top: '27%', left: '43%' }
+},
+
+  
 };
 
 const InteractiveMap = () => {
@@ -251,20 +301,19 @@ const InteractiveMap = () => {
             <button
               key={stateId}
               onClick={() => handleStateClick(stateId)}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer z-10"
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer z-10"
               style={{
                 top: state.position.top,
                 left: state.position.left
               }}
             >
-              <div className="relative">
-                {/* Orange circular pointer matching the reference */}
-                <div className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 bg-orange-500 rounded-full border-2 border-white shadow-lg group-hover:scale-125 transition-all duration-300 group-hover:bg-orange-600 group-hover:shadow-xl"></div>
-                
-                {/* Hover tooltip */}
-                <div className="absolute top-full mt-1 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-20 pointer-events-none">
+              <div className="relative flex flex-col items-center">
+                {/* Orange circular pointer (turns green on hover) */}
+                <div className="peer w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 bg-orange-500 rounded-full border-2 border-white shadow-lg hover:scale-125 transition-all duration-300 hover:bg-emerald-500 hover:shadow-xl"></div>
+                {/* State name visible only when hovering the dot, black background */}
+                <span className="mb-2 px-2 py-0.5 bg-black text-white text-xs sm:text-sm rounded shadow border border-gray-800 whitespace-nowrap z-20 opacity-0 peer-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
                   {state.name}
-                </div>
+                </span>
               </div>
             </button>
           ))}
