@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { MapPin, Info, Camera, Music, Palette } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -228,19 +227,19 @@ const InteractiveMap = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold bg-gradient-to-r from-saffron-600 to-emerald-600 bg-clip-text text-transparent">
+    <div className="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
+      <div className="text-center mb-6 sm:mb-12">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-saffron-600 to-emerald-600 bg-clip-text text-transparent px-2">
           Interactive Cultural Map of India
         </h2>
-        <p className="text-xl text-gray-600 mt-4">
+        <p className="text-sm sm:text-lg lg:text-xl text-gray-600 mt-2 sm:mt-4 px-2">
           Click on any state marker to discover its capital, culture, and heritage.
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <div className="flex flex-col xl:grid xl:grid-cols-2 gap-6 lg:gap-12 items-start">
         {/* Map Container */}
-        <div className="relative w-full h-[600px] bg-gradient-to-br from-blue-100 to-teal-100 rounded-xl overflow-hidden shadow-2xl">
+        <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] bg-gradient-to-br from-blue-100 to-teal-100 rounded-xl overflow-hidden shadow-2xl order-2 xl:order-1">
           <img
             src="/lovable-uploads/india.png"
             alt="India Map"
@@ -252,15 +251,18 @@ const InteractiveMap = () => {
             <button
               key={stateId}
               onClick={() => handleStateClick(stateId)}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 group"
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 group cursor-pointer z-10"
               style={{
                 top: state.position.top,
                 left: state.position.left
               }}
             >
               <div className="relative">
-                <div className="w-4 h-4 bg-saffron-500 rounded-full border-2 border-white shadow-lg group-hover:scale-150 transition-all duration-300 group-hover:bg-emerald-500"></div>
-                <div className="absolute top-6 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+                {/* Orange circular pointer matching the reference */}
+                <div className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 bg-orange-500 rounded-full border-2 border-white shadow-lg group-hover:scale-125 transition-all duration-300 group-hover:bg-orange-600 group-hover:shadow-xl"></div>
+                
+                {/* Hover tooltip */}
+                <div className="absolute top-full mt-1 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-20 pointer-events-none">
                   {state.name}
                 </div>
               </div>
@@ -269,22 +271,22 @@ const InteractiveMap = () => {
         </div>
 
         {/* Info Panel */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6 w-full order-1 xl:order-2">
           {selectedState ? (
             <Card className="shadow-2xl bg-gradient-to-br from-white to-orange-50 border-orange-200">
-              <CardHeader>
-                <CardTitle className="flex items-center text-2xl">
-                  <MapPin className="mr-2 text-saffron-600" />
+              <CardHeader className="pb-3 sm:pb-4">
+                <CardTitle className="flex items-center text-lg sm:text-xl lg:text-2xl">
+                  <MapPin className="mr-2 text-saffron-600 w-5 h-5 sm:w-6 sm:h-6" />
                   {selectedState.name}
                 </CardTitle>
-                <p className="text-gray-600 font-medium text-lg">{selectedState.culture}</p>
-                <p className="text-sm text-gray-500">
+                <p className="text-gray-600 font-medium text-sm sm:text-base lg:text-lg">{selectedState.culture}</p>
+                <p className="text-xs sm:text-sm text-gray-500">
                   <span className="font-semibold">Capital:</span> {selectedState.capital}
                 </p>
               </CardHeader>
-              <CardContent>
+              <CardContent className="pt-0">
                 <div>
-                  <h4 className="font-semibold text-gray-800 flex items-center mb-3">
+                  <h4 className="font-semibold text-gray-800 flex items-center mb-3 text-sm sm:text-base">
                     <Palette className="mr-2 text-emerald-500" size={16} />
                     Cultural Highlights
                   </h4>
@@ -292,37 +294,37 @@ const InteractiveMap = () => {
                     {selectedState.highlights.map((highlight) => (
                       <span
                         key={highlight}
-                        className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm border border-orange-200"
+                        className="px-2 sm:px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs sm:text-sm border border-orange-200"
                       >
                         {highlight}
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-3 mb-4">
-                    <Button variant="outline" className="flex-1 border-emerald-200 text-emerald-700 hover:bg-emerald-50">
-                      <Camera className="mr-2 h-4 w-4" />
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-4">
+                    <Button variant="outline" className="flex-1 border-emerald-200 text-emerald-700 hover:bg-emerald-50 text-xs sm:text-sm">
+                      <Camera className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                       View Gallery
                     </Button>
-                    <Button variant="outline" className="flex-1 border-saffron-200 text-saffron-700 hover:bg-saffron-50">
-                      <Music className="mr-2 h-4 w-4" />
+                    <Button variant="outline" className="flex-1 border-saffron-200 text-saffron-700 hover:bg-saffron-50 text-xs sm:text-sm">
+                      <Music className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                       Cultural Music
                     </Button>
                   </div>
-                  <Button className="w-full bg-gradient-to-r from-saffron-500 to-orange-600 text-white hover:from-saffron-600 hover:to-orange-700">
-                    <Info className="mr-2 h-4 w-4" />
+                  <Button className="w-full bg-gradient-to-r from-saffron-500 to-orange-600 text-white hover:from-saffron-600 hover:to-orange-700 text-xs sm:text-sm">
+                    <Info className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                     Explore {selectedState.name} Heritage
                   </Button>
                 </div>
               </CardContent>
             </Card>
           ) : (
-            <Card className="shadow-xl bg-gradient-to-br from-white to-amber-50 text-center py-12 border-amber-200">
-              <MapPin className="mx-auto mb-4 text-saffron-400 animate-pulse" size={48} />
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Explore India's Diverse States</h3>
-              <p className="text-gray-600 mb-4">
-                Click on any state marker on the map to discover its capital, culture, and highlights.
+            <Card className="shadow-xl bg-gradient-to-br from-white to-amber-50 text-center py-6 sm:py-12 border-amber-200">
+              <MapPin className="mx-auto mb-4 text-saffron-400 animate-pulse" size={40} />
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2 px-2">Explore India's Diverse States</h3>
+              <p className="text-gray-600 mb-4 text-sm sm:text-base px-2">
+                Click on any orange marker on the map to discover its capital, culture, and highlights.
               </p>
-              <div className="text-sm text-gray-500 grid grid-cols-2 gap-2 max-w-sm mx-auto">
+              <div className="text-xs sm:text-sm text-gray-500 grid grid-cols-2 gap-2 max-w-sm mx-auto px-2">
                 <div>📍 28 States</div>
                 <div>🏛️ 8 Union Territories</div>
                 <div>🎭 Rich Cultural Heritage</div>
@@ -332,16 +334,16 @@ const InteractiveMap = () => {
           )}
 
           {/* Quick Stats */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4">
             {[
               { num: 28, label: 'States', Icon: MapPin },
               { num: 8, label: 'Union Territories', Icon: Palette },
               { num: 22, label: 'Official Languages', Icon: Music },
             ].map(({ num, label, Icon }) => (
-              <Card key={label} className="text-center p-4 shadow-lg bg-gradient-to-br from-white to-emerald-50 border-emerald-200">
-                <Icon className="mx-auto mb-2 text-emerald-500 animate-pulse" size={24} />
-                <div className="text-2xl font-bold bg-gradient-to-r from-saffron-600 to-emerald-600 bg-clip-text text-transparent">{num}</div>
-                <div className="text-sm text-gray-600">{label}</div>
+              <Card key={label} className="text-center p-2 sm:p-4 shadow-lg bg-gradient-to-br from-white to-emerald-50 border-emerald-200">
+                <Icon className="mx-auto mb-1 sm:mb-2 text-emerald-500 animate-pulse" size={20} />
+                <div className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-saffron-600 to-emerald-600 bg-clip-text text-transparent">{num}</div>
+                <div className="text-xs sm:text-sm text-gray-600">{label}</div>
               </Card>
             ))}
           </div>
