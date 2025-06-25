@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MapPin, Info, Camera, Music, Palette } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const stateMeta = {
   'jammu-and-kashmir': {
@@ -268,11 +269,21 @@ const stateMeta = {
 
 const InteractiveMap = () => {
   const [selectedState, setSelectedState] = useState(null);
+  const navigate = useNavigate();
 
   const handleStateClick = (stateId) => {
     const meta = stateMeta[stateId];
     if (meta) {
       setSelectedState({ id: stateId, ...meta });
+    }
+  };
+
+  const handleExploreHeritage = () => {
+    if (selectedState?.id === 'jammu-and-kashmir') {
+      navigate('/jammu-kashmir');
+    } else {
+      // For other states, show a placeholder action
+      console.log(`Exploring ${selectedState?.name} heritage`);
     }
   };
 
@@ -359,7 +370,10 @@ const InteractiveMap = () => {
                       Cultural Music
                     </Button>
                   </div>
-                  <Button className="w-full bg-gradient-to-r from-saffron-500 to-orange-600 text-white hover:from-saffron-600 hover:to-orange-700 text-xs sm:text-sm">
+                  <Button 
+                    className="w-full bg-gradient-to-r from-saffron-500 to-orange-600 text-white hover:from-saffron-600 hover:to-orange-700 text-xs sm:text-sm"
+                    onClick={handleExploreHeritage}
+                  >
                     <Info className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                     Explore {selectedState.name} Heritage
                   </Button>

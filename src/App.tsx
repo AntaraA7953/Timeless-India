@@ -9,6 +9,7 @@ import Stories from "./pages/Stories";
 import Arts from "./pages/Arts";
 import Games from "./pages/Games";
 import VirtualReality from "./pages/VirtualReality";
+import JammuKashmir from "./pages/JammuKashmir";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/arts" element={<Arts />} />
           <Route path="/games" element={<Games />} />
           <Route path="/vr" element={<VirtualReality />} />
+          <Route path="/jammu-kashmir" element={<JammuKashmir />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
