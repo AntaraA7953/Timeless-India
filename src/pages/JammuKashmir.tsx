@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { ArrowLeft, MapPin, Mountain, Users, Coins, Camera, Utensils, Music, Star, Calendar, Thermometer, TreePine } from 'lucide-react';
+import { ArrowLeft, MapPin, Mountain, Users, Coins, Camera, Utensils, Music, Star, Calendar, Thermometer, TreePine, Flag, Vote, Building2, Users2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -88,6 +87,73 @@ const JammuKashmir = () => {
     }
   ];
 
+  const politicalStructure = [
+    {
+      title: 'Union Territory Status',
+      icon: Flag,
+      description: 'Reorganized as UT on August 5, 2019',
+      details: ['Direct Central Administration', 'Lieutenant Governor as Head', 'Legislative Assembly with limited powers'],
+      color: 'from-blue-400 to-blue-600'
+    },
+    {
+      title: 'Administrative Divisions',
+      icon: Building2,
+      description: '20 Districts across 3 divisions',
+      details: ['Kashmir Division (10 districts)', 'Jammu Division (10 districts)', 'Ladakh (now separate UT)'],
+      color: 'from-green-400 to-green-600'
+    },
+    {
+      title: 'Governance Structure',
+      icon: Users2,
+      description: 'Lieutenant Governor System',
+      details: ['Appointed by President of India', 'Council of Ministers', 'Legislative Assembly (90 seats)'],
+      color: 'from-purple-400 to-purple-600'
+    },
+    {
+      title: 'Electoral System',
+      icon: Vote,
+      description: 'Democratic representation',
+      details: ['Lok Sabha: 5 seats', 'Legislative Assembly: 90 seats', 'Panchayati Raj Institutions'],
+      color: 'from-orange-400 to-orange-600'
+    }
+  ];
+
+  const politicalParties = [
+    { name: 'Bharatiya Janata Party (BJP)', region: 'Jammu-dominant', color: 'bg-orange-100', textColor: 'text-orange-700' },
+    { name: 'National Conference (NC)', region: 'Kashmir-based', color: 'bg-red-100', textColor: 'text-red-700' },
+    { name: 'Peoples Democratic Party (PDP)', region: 'Kashmir-based', color: 'bg-green-100', textColor: 'text-green-700' },
+    { name: 'Indian National Congress', region: 'Pan-regional', color: 'bg-blue-100', textColor: 'text-blue-700' },
+    { name: 'Apni Party', region: 'Kashmir-based', color: 'bg-purple-100', textColor: 'text-purple-700' },
+    { name: 'Panthers Party', region: 'Jammu-based', color: 'bg-yellow-100', textColor: 'text-yellow-700' }
+  ];
+
+  const keyPoliticalFeatures = [
+    {
+      title: 'Article 370 (Abrogated)',
+      description: 'Special autonomous status revoked in 2019',
+      impact: 'Integration with Indian Constitution',
+      status: 'Historical'
+    },
+    {
+      title: 'Delimitation Commission',
+      description: 'Redrawing of electoral constituencies',
+      impact: 'New electoral boundaries for assembly seats',
+      status: 'Completed 2022'
+    },
+    {
+      title: 'Statehood Restoration',
+      description: 'Promise to restore full statehood',
+      impact: 'Enhanced legislative powers expected',
+      status: 'Pending'
+    },
+    {
+      title: 'Domicile Law',
+      description: 'New domicile rules for residents',
+      impact: 'Job reservations and land rights',
+      status: 'Implemented'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       {/* Header */}
@@ -138,8 +204,9 @@ const JammuKashmir = () => {
 
       <div className="container mx-auto px-4 py-8">
         <Tabs defaultValue="overview" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-6 mb-8 bg-white/70 backdrop-blur-sm">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-7 mb-8 bg-white/70 backdrop-blur-sm">
             <TabsTrigger value="overview" className="data-[state=active]:bg-blue-500 data-[state=active]:text-white">Overview</TabsTrigger>
+            <TabsTrigger value="politics" className="data-[state=active]:bg-red-500 data-[state=active]:text-white">Politics</TabsTrigger>
             <TabsTrigger value="culture" className="data-[state=active]:bg-purple-500 data-[state=active]:text-white">Culture</TabsTrigger>
             <TabsTrigger value="economy" className="data-[state=active]:bg-green-500 data-[state=active]:text-white">Economy</TabsTrigger>
             <TabsTrigger value="tourism" className="data-[state=active]:bg-orange-500 data-[state=active]:text-white">Tourism</TabsTrigger>
@@ -223,6 +290,130 @@ const JammuKashmir = () => {
                 </div>
               </CardContent>
             </Card>
+          </TabsContent>
+
+          {/* Politics Tab */}
+          <TabsContent value="politics" className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-6">
+              {politicalStructure.map((structure, index) => {
+                const IconComponent = structure.icon;
+                return (
+                  <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 overflow-hidden">
+                    <div className={`h-32 bg-gradient-to-r ${structure.color} relative`}>
+                      <img 
+                        src="https://images.unsplash.com/photo-1551038247-3d9af20df552?w=400&h=200&fit=crop" 
+                        alt={structure.title}
+                        className="w-full h-full object-cover opacity-30"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <IconComponent className="text-white" size={48} />
+                      </div>
+                    </div>
+                    <CardHeader>
+                      <CardTitle className="text-xl">{structure.title}</CardTitle>
+                      <p className="text-gray-600">{structure.description}</p>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-3">
+                        {structure.details.map((detail, idx) => (
+                          <li key={idx} className="flex items-center p-2 bg-gray-50 rounded-lg">
+                            <Flag size={16} className="mr-3 text-blue-400 flex-shrink-0" />
+                            <span className="text-gray-700">{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+
+            <Card className="border-0 bg-white/80 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-center text-2xl">
+                  <Users2 className="mr-3 text-purple-500" size={32} />
+                  Major Political Parties
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {politicalParties.map((party, index) => (
+                    <div key={index} className={`${party.color} p-4 rounded-xl hover:shadow-lg transition-all hover:scale-105`}>
+                      <h4 className={`font-semibold text-lg mb-2 ${party.textColor}`}>{party.name}</h4>
+                      <p className={`text-sm ${party.textColor} opacity-80`}>{party.region}</p>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 bg-white/80 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-center text-2xl">
+                  <Building2 className="mr-3 text-indigo-500" size={32} />
+                  Key Political Features & Changes
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  {keyPoliticalFeatures.map((feature, index) => (
+                    <div key={index} className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl">
+                      <div className="flex items-start justify-between mb-3">
+                        <h4 className="font-bold text-lg text-gray-800">{feature.title}</h4>
+                        <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                          feature.status === 'Historical' ? 'bg-gray-200 text-gray-700' :
+                          feature.status === 'Completed 2022' ? 'bg-green-200 text-green-700' :
+                          feature.status === 'Implemented' ? 'bg-blue-200 text-blue-700' :
+                          'bg-yellow-200 text-yellow-700'
+                        }`}>
+                          {feature.status}
+                        </span>
+                      </div>
+                      <p className="text-gray-600 mb-2">{feature.description}</p>
+                      <p className="text-sm text-gray-500 italic">Impact: {feature.impact}</p>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="border-0 bg-gradient-to-br from-red-50 to-red-100 hover:shadow-xl transition-all">
+                <CardHeader>
+                  <CardTitle className="text-lg flex items-center">
+                    <span className="text-2xl mr-2">🏛️</span>
+                    Current Administration
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-center p-2 bg-white/50 rounded">🏢 Lieutenant Governor System</li>
+                    <li className="flex items-center p-2 bg-white/50 rounded">⚖️ High Court at Srinagar & Jammu</li>
+                    <li className="flex items-center p-2 bg-white/50 rounded">🗳️ Election Commission Oversight</li>
+                    <li className="flex items-center p-2 bg-white/50 rounded">📋 Central Government Control</li>
+                    <li className="flex items-center p-2 bg-white/50 rounded">🏘️ District Administration</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="border-0 bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-xl transition-all">
+                <CardHeader>
+                  <CardTitle className="text-lg flex items-center">
+                    <span className="text-2xl mr-2">📊</span>
+                    Electoral Statistics
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex items-center p-2 bg-white/50 rounded">🗳️ Total Voters: ~75 Lakh</li>
+                    <li className="flex items-center p-2 bg-white/50 rounded">🏛️ Assembly Seats: 90</li>
+                    <li className="flex items-center p-2 bg-white/50 rounded">🏢 Lok Sabha Seats: 5</li>
+                    <li className="flex items-center p-2 bg-white/50 rounded">📍 Polling Stations: ~11,000</li>
+                    <li className="flex items-center p-2 bg-white/50 rounded">👥 Registered Parties: 50+</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
           </TabsContent>
 
           {/* Culture Tab */}
