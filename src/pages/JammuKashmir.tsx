@@ -69,7 +69,7 @@ const JammuKashmir = () => {
       title: 'Islamic Heritage', 
       icon: Star, 
       items: ['Sufi Traditions', 'Islamic Architecture', 'Kashmiri Cuisine'],
-      image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=300&h=200&fit=crop',
+      image: 'https://images.unsplash.com/photo-1466442929976-97f336a657be?w=300&h=200&fit=crop',
       gradient: 'from-emerald-400 to-teal-500'
     },
     { 
