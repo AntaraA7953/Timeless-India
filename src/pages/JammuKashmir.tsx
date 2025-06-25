@@ -204,15 +204,17 @@ const JammuKashmir = () => {
 
       <div className="container mx-auto px-4 py-8">
         <Tabs defaultValue="overview" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-7 mb-8 bg-white/70 backdrop-blur-sm">
-            <TabsTrigger value="overview" className="data-[state=active]:bg-blue-500 data-[state=active]:text-white">Overview</TabsTrigger>
-            <TabsTrigger value="politics" className="data-[state=active]:bg-red-500 data-[state=active]:text-white">Politics</TabsTrigger>
-            <TabsTrigger value="culture" className="data-[state=active]:bg-purple-500 data-[state=active]:text-white">Culture</TabsTrigger>
-            <TabsTrigger value="economy" className="data-[state=active]:bg-green-500 data-[state=active]:text-white">Economy</TabsTrigger>
-            <TabsTrigger value="tourism" className="data-[state=active]:bg-orange-500 data-[state=active]:text-white">Tourism</TabsTrigger>
-            <TabsTrigger value="nature" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white">Nature</TabsTrigger>
-            <TabsTrigger value="society" className="data-[state=active]:bg-indigo-500 data-[state=active]:text-white">Society</TabsTrigger>
-          </TabsList>
+          <div className="mb-8">
+            <TabsList className="grid w-full grid-cols-4 lg:grid-cols-7 gap-1 bg-white/70 backdrop-blur-sm h-auto p-2">
+              <TabsTrigger value="overview" className="data-[state=active]:bg-blue-500 data-[state=active]:text-white text-xs sm:text-sm px-2 py-2">Overview</TabsTrigger>
+              <TabsTrigger value="politics" className="data-[state=active]:bg-red-500 data-[state=active]:text-white text-xs sm:text-sm px-2 py-2">Politics</TabsTrigger>
+              <TabsTrigger value="culture" className="data-[state=active]:bg-purple-500 data-[state=active]:text-white text-xs sm:text-sm px-2 py-2">Culture</TabsTrigger>
+              <TabsTrigger value="economy" className="data-[state=active]:bg-green-500 data-[state=active]:text-white text-xs sm:text-sm px-2 py-2">Economy</TabsTrigger>
+              <TabsTrigger value="tourism" className="data-[state=active]:bg-orange-500 data-[state=active]:text-white text-xs sm:text-sm px-2 py-2">Tourism</TabsTrigger>
+              <TabsTrigger value="nature" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white text-xs sm:text-sm px-2 py-2">Nature</TabsTrigger>
+              <TabsTrigger value="society" className="data-[state=active]:bg-indigo-500 data-[state=active]:text-white text-xs sm:text-sm px-2 py-2">Society</TabsTrigger>
+            </TabsList>
+          </div>
 
           {/* Overview Tab */}
           <TabsContent value="overview" className="space-y-6">
