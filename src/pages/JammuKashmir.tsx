@@ -506,9 +506,6 @@ const JammuKashmir = () => {
                           alt={dress.name}
                           className="w-full h-full object-cover opacity-40"
                         />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="text-white text-4xl">👗</span>
-                        </div>
                       </div>
                       <CardHeader>
                         <CardTitle className="text-lg">{dress.name}</CardTitle>
