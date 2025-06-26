@@ -10,6 +10,13 @@ import Arts from "./pages/Arts";
 import Games from "./pages/Games";
 import VirtualReality from "./pages/VirtualReality";
 import JammuKashmir from "./pages/JammuKashmir";
+import Delhi from "./pages/Delhi";
+import Chandigarh from "./pages/Chandigarh";
+import Puducherry from "./pages/Puducherry";
+import AndamanNicobar from "./pages/AndamanNicobar";
+import Lakshadweep from "./pages/Lakshadweep";
+import DadraNavgarHaveliDamanDiu from "./pages/DadraNavgarHaveliDamanDiu";
+import Ladakh from "./pages/Ladakh";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +34,13 @@ const App = () => (
           <Route path="/games" element={<Games />} />
           <Route path="/vr" element={<VirtualReality />} />
           <Route path="/jammu-kashmir" element={<JammuKashmir />} />
+          <Route path="/delhi" element={<Delhi />} />
+          <Route path="/chandigarh" element={<Chandigarh />} />
+          <Route path="/puducherry" element={<Puducherry />} />
+          <Route path="/andaman-and-nicobar-islands" element={<AndamanNicobar />} />
+          <Route path="/lakshadweep" element={<Lakshadweep />} />
+          <Route path="/dadra-and-nagar-haveli-and-daman-and-diu" element={<DadraNavgarHaveliDamanDiu />} />
+          <Route path="/ladakh" element={<Ladakh />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

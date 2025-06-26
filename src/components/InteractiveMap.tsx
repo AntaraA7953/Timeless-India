@@ -210,61 +210,55 @@ const stateMeta = {
     position: { top: '33%', left: '67%' }
   },
   // Union Territories
-'andaman-and-nicobar-islands': {
-  name: 'Andaman & Nicobar Islands',
-  capital: 'Port Blair',
-  culture: 'Tribal Culture & Marine Heritage',
-  highlights: ['Scuba Diving', 'Tribal Communities', 'Cellular Jail'],
-  position: { top: '79%', left: '81%' }
-},
-'chandigarh': {
-  name: 'Chandigarh',
-  capital: 'Chandigarh',
-  culture: 'Modern Urban Planning & Punjabi Heritage',
-  highlights: ['Rock Garden', 'Capitol Complex', 'Rose Garden'],
-  position: { top: '24%', left: '35%' }
-},
-'dadra-and-nagar-haveli-and-daman-and-diu': {
-  name: 'Dadra & Nagar Haveli and Daman & Diu',
-  capital: 'Daman',
-  culture: 'Portuguese Influence & Tribal Culture',
-  highlights: ['Coastal Beauty', 'Heritage Forts', 'Tribal Handicrafts'],
-  position: { top: '56%', left: '23%' }
-},
-'delhi': {
-  name: 'Delhi',
-  capital: 'Delhi',
-  culture: 'Historical Capital with Mughal & Modern Fusion',
-  highlights: ['Red Fort', 'Qutub Minar', 'India Gate'],
-  position: { top: '34%', left: '35%' }
-},
-
-'lakshadweep': {
-  name: 'Lakshadweep',
-  capital: 'Kavaratti',
-  culture: 'Island Traditions with Arab Influence',
-  highlights: ['Coral Reefs', 'Water Sports', 'Seafood Cuisine'],
-   position: { top: '82%', left: '20%' }
-},
-'puducherry': {
-  name: 'Puducherry',
-  capital: 'Puducherry',
-  culture: 'French Colonial Heritage & Tamil Culture',
-  highlights: ['French Quarters', 'Auroville', 'Beaches'],
-   position: { top: '81%', left: '43%' }
-
-},
-
-// Uttarakhand
-'uttarakhand': {
-  name: 'Uttarakhand',
-  capital: 'Dehradun',
-  culture: 'Himalayan Spirituality & Folk Traditions',
-  highlights: ['Char Dham Yatra', 'Ganga Aarti', 'Kumaoni & Garhwali Culture'],
-  position: { top: '27%', left: '43%' }
-},
-
-  
+  'andaman-and-nicobar-islands': {
+    name: 'Andaman & Nicobar Islands',
+    capital: 'Port Blair',
+    culture: 'Tribal Culture & Marine Heritage',
+    highlights: ['Scuba Diving', 'Tribal Communities', 'Cellular Jail'],
+    position: { top: '79%', left: '81%' }
+  },
+  'chandigarh': {
+    name: 'Chandigarh',
+    capital: 'Chandigarh',
+    culture: 'Modern Urban Planning & Punjabi Heritage',
+    highlights: ['Rock Garden', 'Capitol Complex', 'Rose Garden'],
+    position: { top: '24%', left: '35%' }
+  },
+  'dadra-and-nagar-haveli-and-daman-and-diu': {
+    name: 'Dadra & Nagar Haveli and Daman & Diu',
+    capital: 'Daman',
+    culture: 'Portuguese Influence & Tribal Culture',
+    highlights: ['Coastal Beauty', 'Heritage Forts', 'Tribal Handicrafts'],
+    position: { top: '56%', left: '23%' }
+  },
+  'delhi': {
+    name: 'Delhi',
+    capital: 'Delhi',
+    culture: 'Historical Capital with Mughal & Modern Fusion',
+    highlights: ['Red Fort', 'Qutub Minar', 'India Gate'],
+    position: { top: '34%', left: '35%' }
+  },
+  'lakshadweep': {
+    name: 'Lakshadweep',
+    capital: 'Kavaratti',
+    culture: 'Island Traditions with Arab Influence',
+    highlights: ['Coral Reefs', 'Water Sports', 'Seafood Cuisine'],
+    position: { top: '82%', left: '20%' }
+  },
+  'puducherry': {
+    name: 'Puducherry',
+    capital: 'Puducherry',
+    culture: 'French Colonial Heritage & Tamil Culture',
+    highlights: ['French Quarters', 'Auroville', 'Beaches'],
+    position: { top: '81%', left: '43%' }
+  },
+  'uttarakhand': {
+    name: 'Uttarakhand',
+    capital: 'Dehradun',
+    culture: 'Himalayan Spirituality & Folk Traditions',
+    highlights: ['Char Dham Yatra', 'Ganga Aarti', 'Kumaoni & Garhwali Culture'],
+    position: { top: '27%', left: '43%' }
+  },
 };
 
 const InteractiveMap = () => {
@@ -279,10 +273,22 @@ const InteractiveMap = () => {
   };
 
   const handleExploreHeritage = () => {
-    if (selectedState?.id === 'jammu-and-kashmir') {
-      navigate('/jammu-kashmir');
+    const routeMap = {
+      'jammu-and-kashmir': '/jammu-kashmir',
+      'delhi': '/delhi',
+      'chandigarh': '/chandigarh',
+      'puducherry': '/puducherry',
+      'andaman-and-nicobar-islands': '/andaman-and-nicobar-islands',
+      'lakshadweep': '/lakshadweep',
+      'dadra-and-nagar-haveli-and-daman-and-diu': '/dadra-and-nagar-haveli-and-daman-and-diu',
+      'ladakh': '/ladakh'
+    };
+
+    const route = routeMap[selectedState?.id];
+    if (route) {
+      navigate(route);
     } else {
-      // For other states, show a placeholder action
+      // For states without dedicated pages yet
       console.log(`Exploring ${selectedState?.name} heritage`);
     }
   };
