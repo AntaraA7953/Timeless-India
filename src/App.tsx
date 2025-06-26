@@ -17,7 +17,6 @@ import AndamanNicobar from "./pages/AndamanNicobar";
 import Lakshadweep from "./pages/Lakshadweep";
 import DadraNavgarHaveliDamanDiu from "./pages/DadraNavgarHaveliDamanDiu";
 import Ladakh from "./pages/Ladakh";
-import OfficialLanguages from "./pages/OfficialLanguages";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,7 +33,6 @@ const App = () => (
           <Route path="/arts" element={<Arts />} />
           <Route path="/games" element={<Games />} />
           <Route path="/vr" element={<VirtualReality />} />
-          <Route path="/official-languages" element={<OfficialLanguages />} />
           <Route path="/jammu-kashmir" element={<JammuKashmir />} />
           <Route path="/delhi" element={<Delhi />} />
           <Route path="/chandigarh" element={<Chandigarh />} />

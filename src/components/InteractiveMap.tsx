@@ -1,245 +1,422 @@
-
 import React, { useState } from 'react';
-import { MapPin, Info, ExternalLink, Users, Globe } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { MapPin, Info, Camera, Music, Palette } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
+
+const stateMeta = {
+  'jammu-and-kashmir': {
+    name: 'Jammu & Kashmir',
+    capital: 'Srinagar (Summer), Jammu (Winter)',
+    culture: 'Himalayan Culture & Sufi Heritage',
+    highlights: ['Kashmiri Handicrafts', 'Sufi Music', 'Alpine Beauty'],
+    position: { top: '14%', left: '28%' }
+  },
+  'ladakh': {
+    name: 'Ladakh',
+    capital: 'Leh',
+    culture: 'Buddhist Monasteries & High Altitude Culture',
+    highlights: ['Monasteries', 'Buddhist Art', 'Mountain Culture'],
+    position: { top: '12%', left: '37%' }
+  },
+  'himachal-pradesh': {
+    name: 'Himachal Pradesh',
+    capital: 'Shimla',
+    culture: 'Hill Station Culture & Pahari Traditions',
+    highlights: ['Hill Stations', 'Pahari Culture', 'Adventure Sports'],
+    position: { top: '19%', left: '36%' }
+  },
+  'punjab': {
+    name: 'Punjab',
+    capital: 'Chandigarh',
+    culture: 'Sikh Heritage & Punjabi Culture',
+    highlights: ['Golden Temple', 'Bhangra', 'Punjabi Cuisine'],
+    position: { top: '22%', left: '30%' }
+  },
+  'haryana': {
+    name: 'Haryana',
+    capital: 'Chandigarh',
+    culture: 'Agricultural Heritage & Folk Traditions',
+    highlights: ['Folk Music', 'Wrestling', 'Agriculture'],
+    position: { top: '30%', left: '33%' }
+  },
+  'rajasthan': {
+    name: 'Rajasthan',
+    capital: 'Jaipur',
+    culture: 'Royal Heritage & Desert Culture',
+    highlights: ['Royal Palaces', 'Desert Safari', 'Folk Dance'],
+    position: { top: '35%', left: '28%' }
+  },
+  'gujarat': {
+    name: 'Gujarat',
+    capital: 'Gandhinagar',
+    culture: 'Gujarati Heritage & Business Culture',
+    highlights: ['Navratri', 'Handicrafts', 'Business Hub'],
+    position: { top: '44%', left: '22%' }
+  },
+  'maharashtra': {
+    name: 'Maharashtra',
+    capital: 'Mumbai',
+    culture: 'Bollywood & Marathi Heritage',
+    highlights: ['Bollywood', 'Ganpati Festival', 'Marathi Theatre'],
+    position: { top: '55%', left: '37%' }
+  },
+  'madhya-pradesh': {
+    name: 'Madhya Pradesh',
+    capital: 'Bhopal',
+    culture: 'Central Indian Heritage & Tribal Culture',
+    highlights: ['Khajuraho', 'Tribal Art', 'Wildlife'],
+    position: { top: '45%', left: '40%' }
+  },
+  'uttar-pradesh': {
+    name: 'Uttar Pradesh',
+    capital: 'Lucknow',
+    culture: 'Mughal Heritage & Spiritual Centers',
+    highlights: ['Taj Mahal', 'Lucknowi Culture', 'Classical Music'],
+    position: { top: '35%', left: '47%' }
+  },
+  'bihar': {
+    name: 'Bihar',
+    capital: 'Patna',
+    culture: 'Ancient Heritage & Buddhist Culture',
+    highlights: ['Nalanda', 'Buddhist Sites', 'Madhubani Art'],
+    position: { top: '37%', left: '59%' }
+  },
+  'jharkhand': {
+    name: 'Jharkhand',
+    capital: 'Ranchi',
+    culture: 'Tribal Heritage & Mining Culture',
+    highlights: ['Tribal Dance', 'Handicrafts', 'Natural Beauty'],
+    position: { top: '44%', left: '58%' }
+  },
+  'west-bengal': {
+    name: 'West Bengal',
+    capital: 'Kolkata',
+    culture: 'Bengali Heritage & Literary Culture',
+    highlights: ['Durga Puja', 'Literature', 'Sweets'],
+    position: { top: '45%', left: '65%' }
+  },
+  'odisha': {
+    name: 'Odisha',
+    capital: 'Bhubaneswar',
+    culture: 'Temple Architecture & Classical Dance',
+    highlights: ['Jagannath Temple', 'Odissi Dance', 'Temple Art'],
+    position: { top: '53%', left: '55%' }
+  },
+  'chhattisgarh': {
+    name: 'Chhattisgarh',
+    capital: 'Raipur',
+    culture: 'Tribal Heritage & Folk Traditions',
+    highlights: ['Tribal Culture', 'Folk Dance', 'Handicrafts'],
+    position: { top: '50%', left: '48%' }
+  },
+  'telangana': {
+    name: 'Telangana',
+    capital: 'Hyderabad',
+    culture: 'Nizami Heritage & IT Culture',
+    highlights: ['Charminar', 'Biryani', 'IT Hub'],
+    position: { top: '60%', left: '42%' }
+  },
+  'andhra-pradesh': {
+    name: 'Andhra Pradesh',
+    capital: 'Amaravati',
+    culture: 'Telugu Heritage & Classical Arts',
+    highlights: ['Kuchipudi', 'Tirupati', 'Spicy Cuisine'],
+    position: { top: '70%', left: '39%' }
+  },
+  'karnataka': {
+    name: 'Karnataka',
+    capital: 'Bengaluru',
+    culture: 'Tech Hub & Kannada Heritage',
+    highlights: ['IT Capital', 'Classical Music', 'Mysore Palace'],
+    position: { top: '70%', left: '31%' }
+  },
+  'goa': {
+    name: 'Goa',
+    capital: 'Panaji',
+    culture: 'Portuguese Heritage & Beach Culture',
+    highlights: ['Beaches', 'Carnival', 'Portuguese Architecture'],
+    position: { top: '69%', left: '25%' }
+  },
+  'kerala': {
+    name: 'Kerala',
+    capital: 'Thiruvananthapuram',
+    culture: 'Backwaters & Ayurvedic Heritage',
+    highlights: ['Backwaters', 'Ayurveda', 'Kathakali'],
+    position: { top: '85%', left: '32%' }
+    
+  },
+  'tamil-nadu': {
+    name: 'Tamil Nadu',
+    capital: 'Chennai',
+    culture: 'Dravidian Heritage & Temple Culture',
+    highlights: ['Temples', 'Bharatanatyam', 'Tamil Literature'],
+    position: { top: '87%', left: '38%' }
+  },
+  'assam': {
+    name: 'Assam',
+    capital: 'Dispur',
+    culture: 'Tea Gardens & Assamese Culture',
+    highlights: ['Tea Gardens', 'Bihu Festival', 'Silk'],
+    position: { top: '35%', left: '74%' }
+  },
+  'arunachal-pradesh': {
+    name: 'Arunachal Pradesh',
+    capital: 'Itanagar',
+    culture: 'Tribal Heritage & Mountain Culture',
+    highlights: ['Tribal Diversity', 'Monasteries', 'Natural Beauty'],
+    position: { top: '27%', left: '85%' }
+  },
+  'nagaland': {
+    name: 'Nagaland',
+    capital: 'Kohima',
+    culture: 'Naga Heritage & Warrior Culture',
+    highlights: ['Hornbill Festival', 'Tribal Culture', 'Handicrafts'],
+    position: { top: '35%', left: '86%' }
+  },
+  'manipur': {
+    name: 'Manipur',
+    capital: 'Imphal',
+    culture: 'Manipuri Dance & Martial Arts',
+    highlights: ['Manipuri Dance', 'Martial Arts', 'Loktak Lake'],
+    position: { top: '41%', left: '83%' }
+  },
+  'mizoram': {
+    name: 'Mizoram',
+    capital: 'Aizawl',
+    culture: 'Mizo Heritage & Bamboo Culture',
+    highlights: ['Bamboo Dance', 'Tribal Culture', 'Hills'],
+    position: { top: '46%', left: '80%' }
+  },
+  'tripura': {
+    name: 'Tripura',
+    capital: 'Agartala',
+    culture: 'Bengali & Tribal Mix Culture',
+    highlights: ['Ujjayanta Palace', 'Tribal Dance', 'Handicrafts'],
+    position: { top: '47%', left: '77%' }
+  },
+  'meghalaya': {
+    name: 'Meghalaya',
+    capital: 'Shillong',
+    culture: 'Khasi Heritage & Matrilineal Society',
+    highlights: ['Living Bridges', 'Matrilineal Culture', 'Music'],
+    position: { top: '40%', left: '73%' }
+  },
+  'sikkim': {
+    name: 'Sikkim',
+    capital: 'Gangtok',
+    culture: 'Buddhist Heritage & Mountain Culture',
+    highlights: ['Monasteries', 'Organic Farming', 'Mountain Views'],
+    position: { top: '33%', left: '67%' }
+  },
+  // Union Territories
+  'andaman-and-nicobar-islands': {
+    name: 'Andaman & Nicobar Islands',
+    capital: 'Port Blair',
+    culture: 'Tribal Culture & Marine Heritage',
+    highlights: ['Scuba Diving', 'Tribal Communities', 'Cellular Jail'],
+    position: { top: '79%', left: '81%' }
+  },
+  'chandigarh': {
+    name: 'Chandigarh',
+    capital: 'Chandigarh',
+    culture: 'Modern Urban Planning & Punjabi Heritage',
+    highlights: ['Rock Garden', 'Capitol Complex', 'Rose Garden'],
+    position: { top: '24%', left: '35%' }
+  },
+  'dadra-and-nagar-haveli-and-daman-and-diu': {
+    name: 'Dadra & Nagar Haveli and Daman & Diu',
+    capital: 'Daman',
+    culture: 'Portuguese Influence & Tribal Culture',
+    highlights: ['Coastal Beauty', 'Heritage Forts', 'Tribal Handicrafts'],
+    position: { top: '56%', left: '23%' }
+  },
+  'delhi': {
+    name: 'Delhi',
+    capital: 'Delhi',
+    culture: 'Historical Capital with Mughal & Modern Fusion',
+    highlights: ['Red Fort', 'Qutub Minar', 'India Gate'],
+    position: { top: '34%', left: '35%' }
+  },
+  'lakshadweep': {
+    name: 'Lakshadweep',
+    capital: 'Kavaratti',
+    culture: 'Island Traditions with Arab Influence',
+    highlights: ['Coral Reefs', 'Water Sports', 'Seafood Cuisine'],
+    position: { top: '82%', left: '20%' }
+  },
+  'puducherry': {
+    name: 'Puducherry',
+    capital: 'Puducherry',
+    culture: 'French Colonial Heritage & Tamil Culture',
+    highlights: ['French Quarters', 'Auroville', 'Beaches'],
+    position: { top: '81%', left: '43%' }
+  },
+  'uttarakhand': {
+    name: 'Uttarakhand',
+    capital: 'Dehradun',
+    culture: 'Himalayan Spirituality & Folk Traditions',
+    highlights: ['Char Dham Yatra', 'Ganga Aarti', 'Kumaoni & Garhwali Culture'],
+    position: { top: '27%', left: '43%' }
+  },
+};
 
 const InteractiveMap = () => {
-  const [selectedRegion, setSelectedRegion] = useState(null);
-  const [hoveredRegion, setHoveredRegion] = useState(null);
+  const [selectedState, setSelectedState] = useState(null);
+  const navigate = useNavigate();
 
-  const territories = [
-    {
-      id: 'jammu-kashmir',
-      name: 'Jammu & Kashmir',
-      path: '/jammu-kashmir',
-      description: 'Known for its stunning valleys and rich cultural heritage',
-      position: { x: 200, y: 120 },
-      color: '#8B5CF6'
-    },
-    {
-      id: 'delhi',
-      name: 'Delhi',
-      path: '/delhi',
-      description: 'The capital territory with rich history and modern governance',
-      position: { x: 280, y: 200 },
-      color: '#EF4444'
-    },
-    {
-      id: 'chandigarh',
-      name: 'Chandigarh',
-      path: '/chandigarh',
-      description: 'The beautifully planned city and joint capital',
-      position: { x: 260, y: 180 },
-      color: '#F59E0B'
-    },
-    {
-      id: 'puducherry',
-      name: 'Puducherry',
-      path: '/puducherry',
-      description: 'Former French colony with unique cultural blend',
-      position: { x: 350, y: 420 },
-      color: '#10B981'
-    },
-    {
-      id: 'andaman-nicobar',
-      name: 'Andaman & Nicobar',
-      path: '/andaman-and-nicobar-islands',
-      description: 'Tropical islands with pristine beaches and tribal heritage',
-      position: { x: 450, y: 350 },
-      color: '#06B6D4'
-    },
-    {
-      id: 'lakshadweep',
-      name: 'Lakshadweep',
-      path: '/lakshadweep',
-      description: 'Coral islands with marine biodiversity',
-      position: { x: 200, y: 380 },
-      color: '#3B82F6'
-    },
-    {
-      id: 'dadra-daman-diu',
-      name: 'Dadra & Nagar Haveli and Daman & Diu',
-      path: '/dadra-and-nagar-haveli-and-daman-and-diu',
-      description: 'Coastal territories with Portuguese colonial heritage',
-      position: { x: 220, y: 300 },
-      color: '#EC4899'
-    },
-    {
-      id: 'ladakh',
-      name: 'Ladakh',
-      path: '/ladakh',
-      description: 'High-altitude desert with Buddhist culture',
-      position: { x: 240, y: 100 },
-      color: '#F97316'
+  const handleStateClick = (stateId) => {
+    const meta = stateMeta[stateId];
+    if (meta) {
+      setSelectedState({ id: stateId, ...meta });
     }
-  ];
+  };
+
+  const handleExploreHeritage = () => {
+    const routeMap = {
+      'jammu-and-kashmir': '/jammu-kashmir',
+      'delhi': '/delhi',
+      'chandigarh': '/chandigarh',
+      'puducherry': '/puducherry',
+      'andaman-and-nicobar-islands': '/andaman-and-nicobar-islands',
+      'lakshadweep': '/lakshadweep',
+      'dadra-and-nagar-haveli-and-daman-and-diu': '/dadra-and-nagar-haveli-and-daman-and-diu',
+      'ladakh': '/ladakh'
+    };
+
+    const route = routeMap[selectedState?.id];
+    if (route) {
+      navigate(route);
+    } else {
+      // For states without dedicated pages yet
+      console.log(`Exploring ${selectedState?.name} heritage`);
+    }
+  };
 
   return (
-    <div className="container mx-auto px-4">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-          Explore India's Union Territories
+    <div className="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
+      <div className="text-center mb-6 sm:mb-12">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-saffron-600 to-emerald-600 bg-clip-text text-transparent px-2">
+          Interactive Cultural Map of India
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-          Click on any territory to discover its unique culture, heritage, and attractions
+        <p className="text-sm sm:text-lg lg:text-xl text-gray-600 mt-2 sm:mt-4 px-2">
+          Click on any state marker to discover its capital, culture, and heritage.
         </p>
-        
-        {/* Add Official Languages Button */}
-        <div className="flex justify-center mb-8">
-          <Button 
-            onClick={() => window.location.href = '/official-languages'}
-            className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-8 py-3 text-lg"
-          >
-            <Globe className="mr-2 h-5 w-5" />
-            Explore India's 22 Official Languages
-          </Button>
-        </div>
       </div>
 
-      <div className="relative">
+      <div className="flex flex-col xl:grid xl:grid-cols-2 gap-6 lg:gap-12 items-start">
         {/* Map Container */}
-        <div className="relative bg-gradient-to-br from-emerald-100 to-blue-200 rounded-3xl p-8 min-h-[600px] overflow-hidden">
-          {/* Decorative Elements */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-20 left-20 w-32 h-32 bg-orange-300 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-300 rounded-full blur-3xl"></div>
-            <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-emerald-300 rounded-full blur-2xl"></div>
-          </div>
-
-          {/* Map Outline (Simplified India) */}
-          <svg
-            viewBox="0 0 500 500"
-            className="absolute inset-0 w-full h-full"
-            style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))' }}
-          >
-            {/* Simplified India outline */}
-            <path
-              d="M200 100 L300 80 L380 120 L420 200 L400 280 L380 360 L350 420 L300 450 L250 460 L200 450 L150 420 L120 380 L100 320 L110 260 L130 200 L160 150 Z"
-              fill="rgba(255,255,255,0.3)"
-              stroke="rgba(255,165,0,0.6)"
-              strokeWidth="3"
-              className="animate-pulse"
-            />
-          </svg>
-
-          {/* Territory Markers */}
-          {territories.map((territory) => (
-            <div
-              key={territory.id}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group"
+        <div className="relative w-full aspect-square bg-gradient-to-br from-blue-100 to-teal-100 rounded-xl overflow-hidden shadow-2xl">
+          <img
+            src="/lovable-uploads/india.png"
+            alt="India Map"
+            className="absolute inset-0 w-full h-full object-contain"
+          />
+          
+          {/* State Markers */}
+          {Object.entries(stateMeta).map(([stateId, state]) => (
+            <button
+              key={stateId}
+              onClick={() => handleStateClick(stateId)}
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer z-10"
               style={{
-                left: `${territory.position.x}px`,
-                top: `${territory.position.y}px`,
-              }}
-              onMouseEnter={() => setHoveredRegion(territory)}
-              onMouseLeave={() => setHoveredRegion(null)}
-              onClick={() => setSelectedRegion(territory)}
-            >
-              <div
-                className="w-6 h-6 rounded-full border-3 border-white shadow-lg transform transition-all duration-300 group-hover:scale-150 group-hover:shadow-xl"
-                style={{ backgroundColor: territory.color }}
-              >
-                <div className="absolute inset-0 rounded-full animate-ping" style={{ backgroundColor: territory.color, opacity: 0.4 }}></div>
-              </div>
-              
-              {/* Territory Label */}
-              <div className="absolute top-8 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                {territory.name}
-              </div>
-            </div>
-          ))}
-
-          {/* Hover Tooltip */}
-          {hoveredRegion && (
-            <div 
-              className="absolute z-10 bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-xl border border-orange-200 max-w-xs transform -translate-x-1/2 transition-all duration-300"
-              style={{
-                left: `${hoveredRegion.position.x}px`,
-                top: `${hoveredRegion.position.y - 80}px`,
+                top: state.position.top,
+                left: state.position.left
               }}
             >
-              <h3 className="font-bold text-gray-800 mb-2">{hoveredRegion.name}</h3>
-              <p className="text-sm text-gray-600 mb-3">{hoveredRegion.description}</p>
-              <Button 
-                size="sm" 
-                className="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700"
-              >
-                <Info className="mr-1 h-3 w-3" />
-                Explore
-              </Button>
-            </div>
-          )}
-        </div>
-
-        {/* Territory Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-          {territories.map((territory) => (
-            <Card 
-              key={territory.id}
-              className="hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer bg-white/80 backdrop-blur-sm"
-              onClick={() => window.location.href = territory.path}
-            >
-              <CardContent className="p-6 text-center">
-                <div 
-                  className="w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center"
-                  style={{ backgroundColor: territory.color }}
-                >
-                  <MapPin className="text-white" size={24} />
-                </div>
-                <h3 className="font-bold text-gray-800 mb-2">{territory.name}</h3>
-                <p className="text-sm text-gray-600 mb-4">{territory.description}</p>
-                <Button 
-                  size="sm" 
-                  className="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700"
-                >
-                  <ExternalLink className="mr-1 h-3 w-3" />
-                  Discover
-                </Button>
-              </CardContent>
-            </Card>
+              <div className="relative flex flex-col items-center">
+                {/* Orange circular pointer (turns green on hover) */}
+                <div className="peer w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 bg-orange-500 rounded-full border-2 border-white shadow-lg hover:scale-125 transition-all duration-300 hover:bg-emerald-500 hover:shadow-xl"></div>
+                {/* State name visible only when hovering the dot, black background */}
+                <span className="mb-2 px-2 py-0.5 bg-black text-white text-xs sm:text-sm rounded shadow border border-gray-800 whitespace-nowrap z-20 opacity-0 peer-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                  {state.name}
+                </span>
+              </div>
+            </button>
           ))}
         </div>
 
-        {/* Selected Region Modal */}
-        {selectedRegion && (
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <Card className="max-w-md w-full">
-              <CardContent className="p-6">
-                <div className="text-center">
-                  <div 
-                    className="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center"
-                    style={{ backgroundColor: selectedRegion.color }}
+        {/* Info Panel */}
+        <div className="space-y-4 sm:space-y-6 w-full order-1 xl:order-2">
+          {selectedState ? (
+            <Card className="shadow-2xl bg-gradient-to-br from-white to-orange-50 border-orange-200">
+              <CardHeader className="pb-3 sm:pb-4">
+                <CardTitle className="flex items-center text-lg sm:text-xl lg:text-2xl">
+                  <MapPin className="mr-2 text-saffron-600 w-5 h-5 sm:w-6 sm:h-6" />
+                  {selectedState.name}
+                </CardTitle>
+                <p className="text-gray-600 font-medium text-sm sm:text-base lg:text-lg">{selectedState.culture}</p>
+                <p className="text-xs sm:text-sm text-gray-500">
+                  <span className="font-semibold">Capital:</span> {selectedState.capital}
+                </p>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <div>
+                  <h4 className="font-semibold text-gray-800 flex items-center mb-3 text-sm sm:text-base">
+                    <Palette className="mr-2 text-emerald-500" size={16} />
+                    Cultural Highlights
+                  </h4>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {selectedState.highlights.map((highlight) => (
+                      <span
+                        key={highlight}
+                        className="px-2 sm:px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs sm:text-sm border border-orange-200"
+                      >
+                        {highlight}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-4">
+                    <Button variant="outline" className="flex-1 border-emerald-200 text-emerald-700 hover:bg-emerald-50 text-xs sm:text-sm">
+                      <Camera className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                      View Gallery
+                    </Button>
+                    <Button variant="outline" className="flex-1 border-saffron-200 text-saffron-700 hover:bg-saffron-50 text-xs sm:text-sm">
+                      <Music className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                      Cultural Music
+                    </Button>
+                  </div>
+                  <Button 
+                    className="w-full bg-gradient-to-r from-saffron-500 to-orange-600 text-white hover:from-saffron-600 hover:to-orange-700 text-xs sm:text-sm"
+                    onClick={handleExploreHeritage}
                   >
-                    <MapPin className="text-white" size={32} />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{selectedRegion.name}</h3>
-                  <p className="text-gray-600 mb-6">{selectedRegion.description}</p>
-                  
-                  <div className="space-y-3">
-                    <Button 
-                      className="w-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700"
-                      onClick={() => {
-                        window.location.href = selectedRegion.path;
-                      }}
-                    >
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Explore {selectedRegion.name}
-                    </Button>
-                    
-                    <Button 
-                      variant="outline" 
-                      className="w-full"
-                      onClick={() => setSelectedRegion(null)}
-                    >
-                      Close
-                    </Button>
-                  </div>
+                    <Info className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                    Explore {selectedState.name} Heritage
+                  </Button>
                 </div>
               </CardContent>
             </Card>
+          ) : (
+            <Card className="shadow-xl bg-gradient-to-br from-white to-amber-50 text-center py-6 sm:py-12 border-amber-200">
+              <MapPin className="mx-auto mb-4 text-saffron-400 animate-pulse" size={40} />
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2 px-2">Explore India's Diverse States</h3>
+              <p className="text-gray-600 mb-4 text-sm sm:text-base px-2">
+                Click on any orange marker on the map to discover its capital, culture, and highlights.
+              </p>
+              <div className="text-xs sm:text-sm text-gray-500 grid grid-cols-2 gap-2 max-w-sm mx-auto px-2">
+                <div>📍 28 States</div>
+                <div>🏛️ 8 Union Territories</div>
+                <div>🎭 Rich Cultural Heritage</div>
+                <div>🏰 Historic Capitals</div>
+              </div>
+            </Card>
+          )}
+
+          {/* Quick Stats */}
+          <div className="grid grid-cols-3 gap-2 sm:gap-4">
+            {[
+              { num: 28, label: 'States', Icon: MapPin },
+              { num: 8, label: 'Union Territories', Icon: Palette },
+              { num: 22, label: 'Official Languages', Icon: Music },
+            ].map(({ num, label, Icon }) => (
+              <Card key={label} className="text-center p-2 sm:p-4 shadow-lg bg-gradient-to-br from-white to-emerald-50 border-emerald-200">
+                <Icon className="mx-auto mb-1 sm:mb-2 text-emerald-500 animate-pulse" size={20} />
+                <div className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-saffron-600 to-emerald-600 bg-clip-text text-transparent">{num}</div>
+                <div className="text-xs sm:text-sm text-gray-600">{label}</div>
+              </Card>
+            ))}
           </div>
-        )}
+        </div>
       </div>
     </div>
   );
