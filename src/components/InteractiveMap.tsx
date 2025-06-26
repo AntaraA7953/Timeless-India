@@ -404,18 +404,31 @@ const InteractiveMap = () => {
 
           {/* Quick Stats */}
           <div className="grid grid-cols-3 gap-2 sm:gap-4">
-            {[
-              { num: 28, label: 'States', Icon: MapPin },
-              { num: 8, label: 'Union Territories', Icon: Palette },
-              { num: 22, label: 'Official Languages', Icon: Music },
-            ].map(({ num, label, Icon }) => (
-              <Card key={label} className="text-center p-2 sm:p-4 shadow-lg bg-gradient-to-br from-white to-emerald-50 border-emerald-200">
-                <Icon className="mx-auto mb-1 sm:mb-2 text-emerald-500 animate-pulse" size={20} />
-                <div className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-saffron-600 to-emerald-600 bg-clip-text text-transparent">{num}</div>
-                <div className="text-xs sm:text-sm text-gray-600">{label}</div>
-              </Card>
-            ))}
-          </div>
+  {[
+    { num: 28, label: 'States', Icon: MapPin },
+    { num: 8, label: 'Union Territories', Icon: Palette },
+    { num: 22, label: 'Official Languages', Icon: Music },
+  ].map(({ num, label, Icon }) =>
+    label === 'Official Languages' ? (
+      <button
+        key={label}
+        onClick={() => navigate('/official-languages')}
+        className="text-center p-2 sm:p-4 shadow-lg bg-gradient-to-br from-white to-emerald-50 border-emerald-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 transition"
+        type="button"
+      >
+        <Icon className="mx-auto mb-1 sm:mb-2 text-emerald-500 animate-pulse" size={20} />
+        <div className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-saffron-600 to-emerald-600 bg-clip-text text-transparent">{num}</div>
+        <div className="text-xs sm:text-sm text-gray-600">{label}</div>
+      </button>
+    ) : (
+      <Card key={label} className="text-center p-2 sm:p-4 shadow-lg bg-gradient-to-br from-white to-emerald-50 border-emerald-200">
+        <Icon className="mx-auto mb-1 sm:mb-2 text-emerald-500 animate-pulse" size={20} />
+        <div className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-saffron-600 to-emerald-600 bg-clip-text text-transparent">{num}</div>
+        <div className="text-xs sm:text-sm text-gray-600">{label}</div>
+      </Card>
+    )
+  )}
+</div>
         </div>
       </div>
     </div>
