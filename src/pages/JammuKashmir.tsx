@@ -154,6 +154,41 @@ const JammuKashmir = () => {
     }
   ];
 
+  const traditionalDresses = [
+    {
+      name: 'Kashmiri Pheran',
+      region: 'Kashmir Valley',
+      description: 'Traditional long gown worn by both men and women',
+      features: ['Loose fitting', 'Warm winter wear', 'Embroidered collars', 'Worn with kangri (fire pot)'],
+      image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=300&fit=crop',
+      gradient: 'from-blue-400 to-indigo-500'
+    },
+    {
+      name: 'Dogri Traditional Wear',
+      region: 'Jammu Region',
+      description: 'Colorful traditional attire of Dogra community',
+      features: ['Bright colored fabrics', 'Heavy jewelry', 'Ghagra and choli', 'Ornate dupattas'],
+      image: 'https://images.unsplash.com/photo-1583391733956-3794bc9ce64f?w=400&h=300&fit=crop',
+      gradient: 'from-red-400 to-pink-500'
+    },
+    {
+      name: 'Ladakhi Gonchas',
+      region: 'Ladakh',
+      description: 'Traditional Buddhist robes and ceremonial dress',
+      features: ['Maroon and yellow colors', 'Woolen fabric', 'Ceremonial headgear', 'Prayer beads'],
+      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop',
+      gradient: 'from-orange-400 to-red-500'
+    },
+    {
+      name: 'Pashmina Shawls',
+      region: 'All Regions',
+      description: 'World-famous luxury shawls from Kashmir',
+      features: ['Fine cashmere wool', 'Intricate embroidery', 'Sozni and Tilla work', 'Heritage craft'],
+      image: 'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=300&fit=crop',
+      gradient: 'from-purple-400 to-indigo-500'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       {/* Header */}
@@ -452,6 +487,55 @@ const JammuKashmir = () => {
                 );
               })}
             </div>
+
+            {/* Traditional Dresses Section */}
+            <Card className="border-0 bg-white/80 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-center text-2xl">
+                  <span className="text-2xl mr-3">👘</span>
+                  Traditional Dresses & Attire
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {traditionalDresses.map((dress, index) => (
+                    <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 overflow-hidden">
+                      <div className={`h-32 bg-gradient-to-r ${dress.gradient} relative`}>
+                        <img 
+                          src={dress.image} 
+                          alt={dress.name}
+                          className="w-full h-full object-cover opacity-40"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span className="text-white text-4xl">👗</span>
+                        </div>
+                      </div>
+                      <CardHeader>
+                        <CardTitle className="text-lg">{dress.name}</CardTitle>
+                        <p className="text-sm text-gray-600 flex items-center">
+                          <MapPin size={14} className="mr-1" />
+                          {dress.region}
+                        </p>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-700 mb-4">{dress.description}</p>
+                        <div className="space-y-2">
+                          <h5 className="font-semibold text-gray-800">Key Features:</h5>
+                          <ul className="grid grid-cols-2 gap-2">
+                            {dress.features.map((feature, idx) => (
+                              <li key={idx} className="flex items-center text-sm">
+                                <span className="w-2 h-2 bg-blue-400 rounded-full mr-2 flex-shrink-0"></span>
+                                <span className="text-gray-600">{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
 
             <Card className="border-0 bg-white/80 backdrop-blur-sm">
               <CardHeader>
