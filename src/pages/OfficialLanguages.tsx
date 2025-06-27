@@ -15,7 +15,7 @@ const languages = [
     {
         name: "Assamese",
         description: "Spoken in Assam, Assamese has a rich literary tradition and is known for its distinctive script. It's the easternmost Indo-Aryan language and has influences from Tibeto-Burman languages.",
-        learningLink: "https://youtu.be/f7Bjdf4qCLM?si=y_ILMROsv5EimazF",
+        learningLink: "https://youtu.be/YByK3wkpaS4?si=SNVKIpCYLMHITzuD",
         speakers: "15 million",
         family: "Indo-Aryan",
         region: "Assam"
@@ -31,7 +31,7 @@ const languages = [
     {
         name: "Bodo",
         description: "Spoken in Assam, Bodo is a Tibeto-Burman language and the largest language in the Bodo family. It's recognized as an official language in India and has a growing literary tradition.",
-        learningLink: "https://youtu.be/j4NNwaym8Nc?si=s4KVOybF-dJhADtw",
+        learningLink: "https://youtu.be/d1MpGgOPsuM?si=644vljKdNGEaDXyj",
         speakers: "1.5 million",
         family: "Tibeto-Burman",
         region: "Assam"
@@ -103,7 +103,7 @@ const languages = [
     {
         name: "Manipuri",
         description: "Spoken in Manipur, Manipuri is a Tibeto-Burman language and has a unique cultural significance in the region. It's recognized as an official language in India and has a growing literary tradition.",
-        learningLink: "https://youtu.be/2OpBoULi9Go?si=0RT13JIcbCayEX3f",
+        learningLink: "https://youtu.be/DCfled6cpcw?si=LpOx1_ukMo6W6QNB",
         speakers: "1.8 million",
         family: "Tibeto-Burman",
         region: "Manipur"
@@ -143,7 +143,7 @@ const languages = [
     {
         name: "Sanskrit",
         description: "As an ancient language of India, Sanskrit is still used in religious and academic contexts. It's the liturgical language of Hinduism, Buddhism, and Jainism and has had a significant influence on many Indian languages.",
-        learningLink: "https://youtu.be/CnAUbMkMAb4?si=9xOf8JH4XTFKf91P",
+        learningLink: "https://youtu.be/vsY7C5WF9qA?si=U9aap-KXvjW8qEtz",
         speakers: "25,000",
         family: "Indo-Aryan",
         region: "Pan-India"
@@ -151,7 +151,7 @@ const languages = [
     {
         name: "Santali",
         description: "Spoken in Jharkhand, Santali is a Munda language and has a unique cultural significance in the region. It's recognized as an official language in India and has a growing literary tradition.",
-        learningLink: "https://youtu.be/SmNAbLGi5tQ?si=VgByZn56n7DT7S5G",
+        learningLink: "https://youtu.be/oswwAmcz87w?si=DPHIDQ7hGWMPbTK0",
         speakers: "7.4 million",
         family: "Austroasiatic",
         region: "Jharkhand"
@@ -159,7 +159,7 @@ const languages = [
     {
         name: "Sindhi",
         description: "Spoken in Sindh, Sindhi has a rich cultural heritage and is recognized as an official language in India. It's known for its distinctive script and has a growing literary tradition.",
-        learningLink: "https://youtu.be/PDA43Dldk9o?si=TwXMnwZ-8PCADQgb",
+        learningLink: "https://youtu.be/GwBadxpNf94?si=ZMD_Fjtnc5BWB61x",
         speakers: "2.7 million",
         family: "Indo-Aryan",
         region: "Sindh, Gujarat"
@@ -167,7 +167,7 @@ const languages = [
     {
         name: "Tamil",
         description: "As one of the oldest living languages in the world, Tamil has a rich literary tradition and is recognized as an official language in India. It's known for its distinctive script and has a significant presence in media and education.",
-        learningLink: "https://youtu.be/R1T1UsGVGL0?si=hM6kKHmTKStSgczF",
+        learningLink: "https://youtu.be/DfXkweGNsJs?si=dK7EL0MdaLD_lDk6",
         speakers: "75 million",
         family: "Dravidian",
         region: "Tamil Nadu"
@@ -175,7 +175,7 @@ const languages = [
     {
         name: "Telugu",
         description: "Spoken in Andhra Pradesh and Telangana, Telugu has a rich literary and cultural heritage. It's recognized as an official language in India and has a significant presence in media and education.",
-        learningLink: "https://youtu.be/NkIYFHHEcSw?si=owrDX7d41J9DGFyB",
+        learningLink: "https://youtu.be/OiYY3rTuHBg?si=Q7j-5JKJFr-j3LAC",
         speakers: "82 million",
         family: "Dravidian",
         region: "Andhra Pradesh, Telangana"
@@ -183,7 +183,7 @@ const languages = [
     {
         name: "Urdu",
         description: "As a descendant of Hindustani, Urdu has a significant presence in India and Pakistan. It's known for its rich literary tradition, including poetry, and is recognized as an official language in India.",
-        learningLink: "https://youtu.be/4fzN-RPO15c?si=rEBlowgpdZ0m3ibL",
+        learningLink: "https://youtu.be/npXBm2nvLfI?si=7tz2d360aDXOWCKC",
         speakers: "70 million",
         family: "Indo-Aryan",
         region: "Pan-India"
