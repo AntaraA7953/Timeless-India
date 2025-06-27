@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Trophy, Gamepad2, Brain, Star, Timer, Users, ArrowLeft } from 'lucide-react';
+import { Trophy, Gamepad2, Brain, Star, Timer, Users,Palette, ArrowLeft } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import HeritageQuiz from './games/HeritageQuiz';
@@ -8,7 +8,7 @@ import CulturalExplorer from './games/CulturalExplorer';
 import FestivalMatcher from './games/FestivalMatcher';
 import MonumentBuilder from './games/MonumentBuilder';
 import ChessGame from './games/ChessGame';
-
+import Rangoli from './games/Rangoli';
 const GameSection = () => {
   const [selectedGame, setSelectedGame] = useState<string | null>(null);
   const [playerScores, setPlayerScores] = useState<{[key: string]: number}>({});
@@ -68,7 +68,18 @@ const GameSection = () => {
       duration: '15-45 min',
       color: 'from-gray-600 to-gray-800',
       features: ['AI Opponent', 'Move History', 'Score Tracking']
-    }
+    },
+    {
+  id: 'rangoli-maker',
+  title: 'Rangoli Maker',
+  description: 'Create beautiful Rangoli patterns and learn about their cultural significance.',
+  icon: Palette,
+  difficulty: 'Easy',
+  players: '1',
+  duration: '10-20 min',
+  color: 'from-pink-400 to-yellow-400',
+  features: ['Pattern Drawing', 'Color Picker', 'Cultural Facts']
+}
   ];
 
   const leaderboard = [
@@ -140,6 +151,15 @@ const GameSection = () => {
             />
           </div>
         );
+        case 'rangoli-maker':
+      return (
+        <div className="container mx-auto px-4 py-8">
+          <Rangoli 
+            onBack={handleBackToGames}
+            // Add any other props if needed
+          />
+        </div>
+      );
       default:
         return null;
     }
