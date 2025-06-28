@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ArrowLeft, MapPin, PalmTree, Users, Coins, Camera, Utensils, Music, Star, Calendar, Thermometer, Waves, Boat, Fish, Leaf, Coconut } from 'lucide-react';
+import { ArrowLeft, MapPin, Users, Coins, Camera, Utensils, Music, Star, Calendar, Thermometer, Waves, Ship, Fish, Leaf, TreePalm } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -80,7 +80,7 @@ const Kerala = () => {
     },
     { 
       title: 'Traditional Architecture', 
-      icon: Boat, 
+      icon: Ship, 
       items: ['Nalukettu', 'Backwater Houseboats', 'Portuguese Architecture', 'Temples'],
       image: 'https://images.unsplash.com/photo-1583422409516-2895a77efded?w=300&h=200&fit=crop',
       gradient: 'from-blue-400 to-indigo-500'
@@ -90,7 +90,7 @@ const Kerala = () => {
   const politicalStructure = [
     {
       title: 'State Government',
-      icon: Coconut,
+      icon: TreePalm,
       description: 'Parliamentary system of government',
       details: ['Governor as constitutional head', 'Chief Minister as executive head', 'Unicameral legislature (140 seats)'],
       color: 'from-blue-400 to-blue-600'
@@ -205,7 +205,7 @@ const Kerala = () => {
                 <span>Back to Home</span>
               </Button>
               <div className="flex items-center space-x-2">
-                <PalmTree className="text-green-600" size={28} />
+                <TreePalm className="text-green-600" size={28} />
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
                   Kerala
                 </h1>
@@ -277,7 +277,7 @@ const Kerala = () => {
               <Card className="text-center hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-teal-50 to-teal-100">
                 <CardContent className="p-6">
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center">
-                    <PalmTree className="text-white" size={28} />
+                    <TreePalm className="text-white" size={28} />
                   </div>
                   <h3 className="font-bold text-lg mb-2 text-teal-800">Geography</h3>
                   <p className="text-sm text-teal-600">Western Ghats & Backwaters<br/>38,863 km²</p>
@@ -354,7 +354,7 @@ const Kerala = () => {
                       <ul className="space-y-3">
                         {structure.details.map((detail, idx) => (
                           <li key={idx} className="flex items-center p-2 bg-gray-50 rounded-lg">
-                            <Coconut size={16} className="mr-3 text-green-400 flex-shrink-0" />
+                            <TreePalm size={16} className="mr-3 text-green-400 flex-shrink-0" />
                             <span className="text-gray-700">{detail}</span>
                           </li>
                         ))}
