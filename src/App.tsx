@@ -19,6 +19,14 @@ import DadraNavgarHaveliDamanDiu from "./pages/DadraNavgarHaveliDamanDiu";
 import Ladakh from "./pages/Ladakh";
 import NotFound from "./pages/NotFound";
 import OfficialLanguages from "./pages/OfficialLanguages";
+import Maharashtra from "./pages/Maharashtra";
+import Karnataka from "./pages/Karnataka";
+import Kerala from "./pages/Kerala";
+import Manipur from "./pages/Manipur";
+import Meghalaya from "./pages/Meghalaya";
+import Mizoram from "./pages/Mizoram";
+import Nagaland from "./pages/Nagaland";
+import Odisha from "./pages/Odisha";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +43,7 @@ const App = () => (
           <Route path="/games" element={<Games />} />
           <Route path="/vr" element={<VirtualReality />} />
           <Route path="/official-languages" element={<OfficialLanguages />} />
+          <Route path="/interactive-map" element={<Index />} />
           <Route path="/jammu-kashmir" element={<JammuKashmir />} />
           <Route path="/delhi" element={<Delhi />} />
           <Route path="/chandigarh" element={<Chandigarh />} />
@@ -43,7 +52,15 @@ const App = () => (
           <Route path="/lakshadweep" element={<Lakshadweep />} />
           <Route path="/dadra-and-nagar-haveli-and-daman-and-diu" element={<DadraNavgarHaveliDamanDiu />} />
           <Route path="/ladakh" element={<Ladakh />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/maharashtra" element={<Maharashtra />} />
+          <Route path="/karnataka" element={<Karnataka />} />
+          <Route path="/kerala" element={<Kerala />} />
+          <Route path="/manipur" element={<Manipur />} />
+          <Route path="/meghalaya" element={<Meghalaya />} />
+          <Route path="/mizoram" element={<Mizoram />} />
+          <Route path="/nagaland" element={<Nagaland />} />
+          <Route path="/odisha" element={<Odisha />} />
+          { /* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */ }
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

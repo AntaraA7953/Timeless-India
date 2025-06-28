@@ -281,7 +281,15 @@ const InteractiveMap = () => {
       'andaman-and-nicobar-islands': '/andaman-and-nicobar-islands',
       'lakshadweep': '/lakshadweep',
       'dadra-and-nagar-haveli-and-daman-and-diu': '/dadra-and-nagar-haveli-and-daman-and-diu',
-      'ladakh': '/ladakh'
+      'ladakh': '/ladakh',
+      'maharashtra': '/maharashtra',
+       'karnataka': '/karnataka',
+    'kerala': '/kerala',
+    'manipur': '/manipur',
+    'meghalaya': '/meghalaya',
+    'mizoram': '/mizoram',
+    'nagaland': '/nagaland',
+    'odisha': '/odisha'
     };
 
     const route = routeMap[selectedState?.id];
