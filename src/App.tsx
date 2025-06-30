@@ -27,6 +27,28 @@ import Meghalaya from "./pages/Meghalaya";
 import Mizoram from "./pages/Mizoram";
 import Nagaland from "./pages/Nagaland";
 import Odisha from "./pages/Odisha";
+import ArunachalPradesh from "./pages/ArunachalPradesh";
+import Assam from "./pages/Assam";
+import Chhattisgarh from "./pages/Chhattisgarh";
+import Goa from "./pages/Goa";
+import HimachalPradesh from "./pages/HimachalPradesh";
+import Gujarat from "./pages/Gujarat";
+import Haryana from "./pages/Haryana";
+import Jharkhand from "./pages/Jharkhand";
+import MadhyaPradesh from "./pages/MadhyaPradesh";
+import Bihar from "./pages/Bihar";
+
+// import Punjab from "./pages/Punjab";
+// import Rajasthan from "./pages/Rajasthan";
+// import Sikkim from "./pages/Sikkim";
+// import TamilNadu from "./pages/TamilNadu";
+// import Telangana from "./pages/Telangana";
+// import UttarPradesh from "./pages/UttarPradesh";
+// import Uttarakhand from "./pages/Uttarakhand";
+// import WestBengal from "./pages/WestBengal";
+// import Tripura from "./pages/Tripura";
+
+
 
 const queryClient = new QueryClient();
 
@@ -60,6 +82,29 @@ const App = () => (
           <Route path="/mizoram" element={<Mizoram />} />
           <Route path="/nagaland" element={<Nagaland />} />
           <Route path="/odisha" element={<Odisha />} />
+          <Route path="/arunachalpradesh" element={<ArunachalPradesh />} />
+          <Route path="/assam" element={<Assam/>} />
+          <Route path="/chattisgarh" element={<Chhattisgarh />} />
+          <Route path="/goa" element={<Goa />} />
+          <Route path="/gujarat" element={<Gujarat />} />
+          <Route path="/haryana" element={<Haryana />} />
+          <Route path="/himachalpradesh" element={<HimachalPradesh />} />
+          <Route path="/jharkhand" element={<Jharkhand />} />
+          <Route path="/madhya-pradesh" element={<MadhyaPradesh />} />
+          <Route path="/bihar" element={<Bihar />} />
+          
+          {/*<Route path="/punjab" element={<Punjab />} />
+          <Route path="/rajasthan" element={<Rajasthan />} />
+          <Route path="/sikkim" element={<Sikkim />} />
+          <Route path="/tamil-nadu" element={<TamilNadu />} />
+          <Route path="/telangana" element={<Telangana />} />
+          <Route path="/uttar-pradesh" element={<UttarPradesh />} />
+          <Route path="/uttarakhand" element={<Uttarakhand />} /> 
+          <Route path="/west-bengal" element={<WestBengal />} />
+          <Route path="/tripura" element={<Tripura />} />
+          */}
+          
+
           { /* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */ }
           <Route path="*" element={<NotFound />} />
         </Routes>

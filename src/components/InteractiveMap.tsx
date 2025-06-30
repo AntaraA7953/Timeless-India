@@ -289,7 +289,18 @@ const InteractiveMap = () => {
     'meghalaya': '/meghalaya',
     'mizoram': '/mizoram',
     'nagaland': '/nagaland',
-    'odisha': '/odisha'
+    'odisha': '/odisha',
+    'madhya-pradesh': '/madhya-pradesh',
+    'uttar-pradesh': '/uttar-pradesh',
+    'bihar': '/bihar',
+    'goa': '/goa',
+    'gujarat': '/gujarat',
+    'haryana': '/haryana',
+    'himachal-pradesh': '/himachal-pradesh',
+    'jharkhand': '/jharkhand',
+    'assam': '/assam',
+    'arunachal-pradesh': '/arunachalpradesh',
+    'chhattisgarh': '/chhattisgarh',
     };
 
     const route = routeMap[selectedState?.id];
