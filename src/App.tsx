@@ -84,11 +84,11 @@ const App = () => (
           <Route path="/odisha" element={<Odisha />} />
           <Route path="/arunachalpradesh" element={<ArunachalPradesh />} />
           <Route path="/assam" element={<Assam/>} />
-          <Route path="/chattisgarh" element={<Chhattisgarh />} />
+          <Route path="/chhattisgarh" element={<Chhattisgarh />} />
           <Route path="/goa" element={<Goa />} />
           <Route path="/gujarat" element={<Gujarat />} />
           <Route path="/haryana" element={<Haryana />} />
-          <Route path="/himachalpradesh" element={<HimachalPradesh />} />
+          <Route path="/himachal-pradesh" element={<HimachalPradesh />} />
           <Route path="/jharkhand" element={<Jharkhand />} />
           <Route path="/madhya-pradesh" element={<MadhyaPradesh />} />
           <Route path="/bihar" element={<Bihar />} />
