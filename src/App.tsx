@@ -37,6 +37,7 @@ import Haryana from "./pages/Haryana";
 import Jharkhand from "./pages/Jharkhand";
 import MadhyaPradesh from "./pages/MadhyaPradesh";
 import Bihar from "./pages/Bihar";
+import AndhraPradesh from "./pages/AndhraPradesh";
 
 // import Punjab from "./pages/Punjab";
 // import Rajasthan from "./pages/Rajasthan";
@@ -92,6 +93,7 @@ const App = () => (
           <Route path="/jharkhand" element={<Jharkhand />} />
           <Route path="/madhya-pradesh" element={<MadhyaPradesh />} />
           <Route path="/bihar" element={<Bihar />} />
+          <Route path ="/andhra-pradesh" element={<AndhraPradesh />} />
           
           {/*<Route path="/punjab" element={<Punjab />} />
           <Route path="/rajasthan" element={<Rajasthan />} />

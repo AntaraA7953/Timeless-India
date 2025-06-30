@@ -301,6 +301,7 @@ const InteractiveMap = () => {
     'assam': '/assam',
     'arunachal-pradesh': '/arunachalpradesh',
     'chhattisgarh': '/chhattisgarh',
+    'andhra-pradesh': '/andhra-pradesh',
     };
 
     const route = routeMap[selectedState?.id];
