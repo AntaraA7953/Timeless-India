@@ -306,7 +306,7 @@ const InteractiveMap = () => {
     'telangana': '/telangana',
     'tamil-nadu': '/tamil-nadu',
     'punjab': '/punjab',
-    'west-bengal': '/west-bengal',
+    'west-bengal': '/westbengal',
     'sikkim': '/sikkim',
       'tripura': '/tripura',
       
