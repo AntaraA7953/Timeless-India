@@ -302,6 +302,14 @@ const InteractiveMap = () => {
     'arunachal-pradesh': '/arunachalpradesh',
     'chhattisgarh': '/chhattisgarh',
     'andhra-pradesh': '/andhra-pradesh',
+    'uttarkhand': '/uttarkhand',
+    'telangana': '/telangana',
+    'tamil-nadu': '/tamil-nadu',
+    'punjab': '/punjab',
+    'west-bengal': '/west-bengal',
+    'sikkim': '/sikkim',
+      'tripura': '/tripura',
+      
     };
 
     const route = routeMap[selectedState?.id];
