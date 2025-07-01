@@ -39,15 +39,15 @@ import MadhyaPradesh from "./pages/MadhyaPradesh";
 import Bihar from "./pages/Bihar";
 import AndhraPradesh from "./pages/AndhraPradesh";
 
-// import Punjab from "./pages/Punjab";
-// import Rajasthan from "./pages/Rajasthan";
-// import Sikkim from "./pages/Sikkim";
-// import TamilNadu from "./pages/TamilNadu";
-// import Telangana from "./pages/Telangana";
-// import UttarPradesh from "./pages/UttarPradesh";
-// import Uttarakhand from "./pages/Uttarakhand";
-// import WestBengal from "./pages/WestBengal";
-// import Tripura from "./pages/Tripura";
+ import Punjab from "./pages/Punjab";
+import Rajasthan from "./pages/Rajasthan";
+ import Sikkim from "./pages/Sikkim";
+ import TamilNadu from "./pages/TamilNadu";
+ import Telangana from "./pages/Telangana";
+ import UttarPradesh from "./pages/UttarPradesh";
+ import Uttarkhand from "./pages/Uttarkhand";
+ import WestBengal from "./pages/WestBengal";
+ import Tripura from "./pages/Tripura";
 
 import IndusValley from "./pages/IndusValley";
 import GoogleTranslate from "./components/GoogleTranslate";
@@ -97,16 +97,16 @@ const App = () => (
           <Route path="/bihar" element={<Bihar />} />
           <Route path ="/andhra-pradesh" element={<AndhraPradesh />} />
           
-          {/*<Route path="/punjab" element={<Punjab />} />
+          <Route path="/punjab" element={<Punjab />} />
           <Route path="/rajasthan" element={<Rajasthan />} />
           <Route path="/sikkim" element={<Sikkim />} />
           <Route path="/tamil-nadu" element={<TamilNadu />} />
           <Route path="/telangana" element={<Telangana />} />
-          <Route path="/uttar-pradesh" element={<UttarPradesh />} />
-          <Route path="/uttarakhand" element={<Uttarakhand />} /> 
-          <Route path="/west-bengal" element={<WestBengal />} />
+          <Route path="/uttarpradesh" element={<UttarPradesh />} />
+          <Route path="/uttarkhand" element={<Uttarkhand />} /> 
+          <Route path="/westbengal" element={<WestBengal />} />
           <Route path="/tripura" element={<Tripura />} />
-          */}
+
           <Route path="/indus-valley" element={<IndusValley />} />
 
           { /* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */ }
