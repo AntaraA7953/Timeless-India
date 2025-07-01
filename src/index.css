@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -124,4 +123,19 @@
   .glow-on-hover:hover {
     @apply shadow-lg shadow-saffron-400/50;
   }
+}
+
+/* Hide Google Translate top bar */
+iframe.goog-te-banner-frame {
+  display: none !important;
+  height: 0 !important;
+  visibility: hidden !important;
+}
+.goog-te-banner-frame {
+  display: none !important;
+  height: 0 !important;
+  visibility: hidden !important;
+}
+body {
+  top: 0 !important;
 }

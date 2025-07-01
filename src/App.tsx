@@ -49,7 +49,8 @@ import AndhraPradesh from "./pages/AndhraPradesh";
 // import WestBengal from "./pages/WestBengal";
 // import Tripura from "./pages/Tripura";
 
-
+import IndusValley from "./pages/IndusValley";
+import GoogleTranslate from "./components/GoogleTranslate";
 
 const queryClient = new QueryClient();
 
@@ -59,6 +60,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <GoogleTranslate />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/stories" element={<Stories />} />
@@ -105,7 +107,7 @@ const App = () => (
           <Route path="/west-bengal" element={<WestBengal />} />
           <Route path="/tripura" element={<Tripura />} />
           */}
-          
+          <Route path="/indus-valley" element={<IndusValley />} />
 
           { /* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */ }
           <Route path="*" element={<NotFound />} />

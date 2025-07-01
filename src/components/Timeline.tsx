@@ -1,11 +1,12 @@
-
 import React, { useState } from 'react';
 import { Clock, ChevronRight, Star, Crown, Building2, Scroll, Sword, Globe, Users, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const Timeline = () => {
   const [selectedEra, setSelectedEra] = useState(0);
+  const navigate = useNavigate();
 
   const eras = [
     {
@@ -229,9 +230,16 @@ const Timeline = () => {
 
                       {isSelected && (
                         <div className="mt-4 animate-fade-in-up">
-                          <Button 
+                          <Button
                             className="bg-gradient-to-r from-saffron-500 to-orange-600 
                               hover:from-saffron-600 hover:to-orange-700 text-white hover-scale"
+                            onClick={() => {
+                              // Example: Only the first era navigates to IndusValley
+                              if (index === 0) {
+                                navigate('/indus-valley');
+                              }
+                              // You can add more conditions for other eras if needed
+                            }}
                           >
                             Explore This Era
                             <ChevronRight className="ml-2 h-4 w-4" />
