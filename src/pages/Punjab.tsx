@@ -12,37 +12,37 @@ const Punjab = () => {
   const attractions = [
     { 
       name: 'Golden Temple', 
-      image: 'https://images.unsplash.com/photo-1601823984263-b87b59798b70?w=400&h=300&fit=crop', 
+      image: 'https://upload.wikimedia.org/wikipedia/commons/9/94/The_Golden_Temple_of_Amrithsar_7.jpg', 
       description: 'Holiest Gurdwara of Sikhism',
       location: 'Amritsar'
     },
     { 
       name: 'Jallianwala Bagh', 
-      image: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=300&fit=crop', 
+      image: 'https://s7ap1.scene7.com/is/image/incredibleindia/jallianwala-bagh-amritsar-punjab-5-musthead-hero?qlt=82&ts=1726662282486', 
       description: 'Historic memorial of 1919 massacre',
       location: 'Amritsar'
     },
     { 
       name: 'Wagah Border', 
-      image: 'https://images.unsplash.com/photo-1580566172229-e6a87bcb22a2?w=400&h=300&fit=crop', 
+      image: 'https://s3.ap-south-1.amazonaws.com/static.dynamitenews.com/wp-content/uploads/2018/08/01/new-gates-soon-at-attari-wagah-border/5b619699d8df7.jpeg', 
       description: 'India-Pakistan border ceremony',
       location: 'Amritsar'
     },
     { 
       name: 'Anandpur Sahib', 
-      image: 'https://images.unsplash.com/photo-1601823984263-b87b59798b70?w=400&h=300&fit=crop', 
+      image: 'https://upload.wikimedia.org/wikipedia/commons/9/95/1_Sri_Kesgarh_Takhat_Anandpur_Sahib_Khalsa_birthplace_Punjab_India.jpg', 
       description: 'Holy city of Sikhs',
       location: 'Rupnagar'
     },
     { 
       name: 'Sheesh Mahal', 
-      image: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=300&fit=crop', 
+      image: 'https://s7ap1.scene7.com/is/image/incredibleindia/sheesh-mahal-patiala-punjab-1-attr-hero?qlt=82&ts=1726661804953', 
       description: 'Palace of Mirrors',
       location: 'Patiala'
     },
     { 
       name: 'Rock Garden', 
-      image: 'https://images.unsplash.com/photo-1580566172229-e6a87bcb22a2?w=400&h=300&fit=crop', 
+      image: 'https://img.traveltriangle.com/blog/wp-content/uploads/2019/06/chandigarh-rock-garden-cover.jpg', 
       description: 'Unique sculpture garden',
       location: 'Chandigarh'
     }
@@ -59,28 +59,28 @@ const Punjab = () => {
       title: 'Sikh Heritage', 
       icon: Star, 
       items: ['Gurdwaras', 'Gatka Martial Arts', 'Gurbani Kirtan'],
-      image: 'https://images.unsplash.com/photo-1601823984263-b87b59798b70?w=300&h=200&fit=crop',
+      image: 'https://www.shutterstock.com/image-photo/golden-temple-amritsar-punjab-india-260nw-613195721.jpg',
       gradient: 'from-orange-400 to-red-500'
     },
     { 
       title: 'Punjabi Folk Culture', 
       icon: Music, 
       items: ['Bhangra Dance', 'Giddha Dance', 'Punjabi Folk Songs'],
-      image: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=300&h=200&fit=crop',
+      image: 'https://www.ancientbharat.com/wp-content/uploads/2022/02/Bhangra-640x348.png',
       gradient: 'from-emerald-400 to-teal-500'
     },
     { 
       title: 'Cuisine', 
       icon: Utensils, 
       items: ['Sarson da Saag', 'Makki di Roti', 'Butter Chicken', 'Lassi'],
-      image: 'https://images.unsplash.com/photo-1580566172229-e6a87bcb22a2?w=300&h=200&fit=crop',
+      image: 'https://c.ndtvimg.com/2022-07/g2rnr1u_saag_120x90_08_July_22.png',
       gradient: 'from-amber-400 to-yellow-500'
     },
     { 
       title: 'Festivals', 
       icon: Calendar, 
       items: ['Baisakhi', 'Lohri', 'Gurpurab', 'Teej'],
-      image: 'https://images.unsplash.com/photo-1601823984263-b87b59798b70?w=300&h=200&fit=crop',
+      image: 'https://static.toiimg.com/thumb/msid-90802194,width-1280,height-720,resizemode-4/90802194.jpg',
       gradient: 'from-blue-400 to-indigo-500'
     }
   ];
@@ -143,7 +143,7 @@ const Punjab = () => {
       region: 'Women',
       description: 'Colorful traditional attire with dupatta',
       features: ['Salwar Kameez', 'Bright colors', 'Phulkari embroidery', 'Chunni'],
-      image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=300&fit=crop',
+      image: 'https://cdn0.weddingwire.in/article/3443/3_2/1280/jpg/63443-ladiespunjabidress-kirandeepphotography-lead.webp',
       gradient: 'from-blue-400 to-indigo-500'
     },
     {
@@ -151,7 +151,7 @@ const Punjab = () => {
       region: 'Men',
       description: 'Traditional outfit with turban',
       features: ['Loose fitting', 'Cotton fabric', 'Often white', 'Pagri (turban)'],
-      image: 'https://images.unsplash.com/photo-1583391733956-3794bc9ce64f?w=400&h=300&fit=crop',
+      image: 'https://i.pinimg.com/736x/5d/63/f2/5d63f22730ef3ea060d361d5a59b907c.jpg',
       gradient: 'from-red-400 to-pink-500'
     },
     {
@@ -159,7 +159,7 @@ const Punjab = () => {
       region: 'Women',
       description: 'Traditional embroidery work',
       features: ['Floral patterns', 'Bright threads', 'Shawls and dupattas', 'Heritage craft'],
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop',
+      image: 'https://itokri.com/cdn/shop/articles/Phulkari_Banner_Image_d72efdd2-9104-4456-a3c1-622ee5637d39.jpg?v=1748412731&width=1500',
       gradient: 'from-orange-400 to-red-500'
     }
   ];
@@ -198,7 +198,7 @@ const Punjab = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1601823984263-b87b59798b70?w=1200&h=400&fit=crop)'
+            backgroundImage: 'url(https://bega-static.s3.us-east-2.amazonaws.com/userfiles/images/03_Projects/pj_harmandir_01.jpg)'
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-orange-900/70 to-red-900/70"></div>
@@ -313,7 +313,7 @@ const Punjab = () => {
                   <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 overflow-hidden">
                     <div className={`h-32 bg-gradient-to-r ${structure.color} relative`}>
                       <img 
-                        src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=200&fit=crop" 
+                        src="https://thumbs.dreamstime.com/b/activists-protest-political-riot-sign-banners-people-holding-protests-placards-manifestation-banner-jobs-activist-strike-138923436.jpg"
                         alt={structure.title}
                         className="w-full h-full object-cover opacity-30"
                       />
@@ -701,7 +701,7 @@ const Punjab = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-green-400 to-emerald-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=200&fit=crop" 
+                    src="https://www.shutterstock.com/image-photo/maze-field-punjab-260nw-1117406792.jpg" 
                     alt="Wildlife"
                     className="w-full h-full object-cover opacity-30"
                   />
@@ -763,7 +763,7 @@ const Punjab = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-blue-400 to-indigo-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1580566172229-e6a87bcb22a2?w=400&h=200&fit=crop" 
+                    src="https://images.unsplash.com/photo-1584890769337-4ccd5aec09bb?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHB1bmphYnxlbnwwfHwwfHx8MA%3D%3D" 
                     alt="Rivers"
                     className="w-full h-full object-cover opacity-30"
                   />

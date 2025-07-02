@@ -12,37 +12,37 @@ const WestBengal = () => {
   const attractions = [
     { 
       name: 'Victoria Memorial', 
-      image: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=400&h=300&fit=crop', 
+      image: 'https://images.unsplash.com/photo-1651651166379-06540f274707?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmljdG9yaWElMjBtZW1vcmlhbHxlbnwwfHwwfHx8MA%3D%3D', 
       description: 'Iconic marble building dedicated to Queen Victoria',
       location: 'Kolkata'
     },
     { 
       name: 'Sundarbans', 
-      image: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=400&h=300&fit=crop', 
+      image: 'https://www.holidify.com/images/bgImages/SUNDARBAN-NATIONAL-PARK.jpg', 
       description: 'Largest mangrove forest and tiger reserve',
       location: 'South 24 Parganas'
     },
     { 
       name: 'Darjeeling', 
-      image: 'https://images.unsplash.com/photo-1566334806721-32c4e0f5a9d8?w=400&h=300&fit=crop', 
+      image: 'https://hikerwolf.com/wp-content/uploads/2020/04/Darjeeling-toy-train-route.jpg', 
       description: 'Famous for tea gardens and Himalayan views',
       location: 'Darjeeling District'
     },
     { 
       name: 'Dakshineswar Kali Temple', 
-      image: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=400&h=300&fit=crop', 
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG/960px-Dakhineshwar_Temple_beside_the_Hoogly%2C_West_Bengal.JPG', 
       description: 'Sacred Hindu temple on the Ganges',
       location: 'Kolkata'
     },
     { 
       name: 'Bishnupur Terracotta Temples', 
-      image: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=400&h=300&fit=crop', 
+      image: 'https://www.team-bhp.com/forum/attachments/travelogues/114876d1237741112-terracotta-temples-bishnupur-shyamrai1.jpg', 
       description: 'Ancient temples with intricate terracotta artwork',
       location: 'Bankura District'
     },
     { 
       name: 'Shantiniketan', 
-      image: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=400&h=300&fit=crop', 
+      image: 'https://th-i.thgim.com/public/news/national/or8s0e/article67318727.ece/alternates/LANDSCAPE_1200/santiniketan.jpg', 
       description: 'Rabindranath Tagore\'s university town',
       location: 'Birbhum District'
     }
@@ -59,28 +59,28 @@ const WestBengal = () => {
       title: 'Bengali Renaissance', 
       icon: Users, 
       items: ['Rabindranath Tagore', 'Bankim Chandra Chatterjee', 'Satyajit Ray'],
-      image: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=300&h=200&fit=crop',
+      image: 'https://southasia.berkeley.edu/sites/default/files/styles/panopoly_image_original/public/portrait_of_rabindranath_tagore_photographed_during_bengali_wikipedia_10th_anniversary_celebration_jadavpur_university_campus5887.jpg?itok=FhcUEY-u&timestamp=1720543332',
       gradient: 'from-orange-400 to-red-500'
     },
     { 
       title: 'Durga Puja', 
       icon: Star, 
       items: ['UNESCO Heritage Festival', 'Pandal Hopping', 'Traditional Dhak'],
-      image: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=300&h=200&fit=crop',
+      image: 'https://english.cdn.zeenews.com/sites/default/files/2021/10/12/978709-durga-ranchi.jpg',
       gradient: 'from-emerald-400 to-teal-500'
     },
     { 
       title: 'Folk Traditions', 
       icon: Mountain, 
       items: ['Baul Music', 'Chhau Dance', 'Jatra Theater'],
-      image: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=300&h=200&fit=crop',
+      image: 'https://cdn.yehaindia.com/wp-content/uploads/2022/06/Chhau-cover.jpg',
       gradient: 'from-amber-400 to-yellow-500'
     },
     { 
       title: 'Literary Heritage', 
       icon: TreePine, 
       items: ['Nobel Laureates', 'Bengali Literature', 'Poetry Movements'],
-      image: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=300&h=200&fit=crop',
+      image: 'https://tds-images.thedailystar.net/sites/default/files/styles/big_202/public/news/images/a_noobs_guide_to_bangla_literature_2.jpg',
       gradient: 'from-blue-400 to-indigo-500'
     }
   ];
@@ -157,7 +157,7 @@ const WestBengal = () => {
       region: 'State-wide',
       description: 'Traditional attire for women with distinct draping style',
       features: ['White with red border', 'Cotton or silk', 'Baluchari/Kantha work', 'Worn with traditional jewelry'],
-      image: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=400&h=300&fit=crop',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2024/11/466674583/SD/KZ/HX/18526633/bengali-taussar-saree-500x500.jpg',
       gradient: 'from-blue-400 to-indigo-500'
     },
     {
@@ -165,7 +165,7 @@ const WestBengal = () => {
       region: 'State-wide',
       description: 'Traditional attire for men',
       features: ['White dhoti', 'Kurta or panjabi', 'Often worn with shawl', 'Common in cultural events'],
-      image: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=400&h=300&fit=crop',
+      image: 'https://i.pinimg.com/736x/0e/7a/80/0e7a809eefdfede52f51260abfec2cb4.jpg',
       gradient: 'from-red-400 to-pink-500'
     },
     {
@@ -173,7 +173,7 @@ const WestBengal = () => {
       region: 'Jalpaiguri, Alipurduar',
       description: 'Traditional wear of tribal communities',
       features: ['Colorful fabrics', 'Beaded jewelry', 'Distinct headgear', 'Handwoven textiles'],
-      image: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=400&h=300&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStUTAfaLD4w7VBB35CHSzttCckUIba1bd7vBA1zCKhzZ2gh1_8Cztofv9ZwiLu27qdVAo&usqp=CAU',
       gradient: 'from-orange-400 to-red-500'
     },
     {
@@ -181,7 +181,7 @@ const WestBengal = () => {
       region: 'Murshidabad, Nadia',
       description: 'Fine muslin textile with geometric patterns',
       features: ['Delicate weaving', 'Traditional motifs', 'Lightweight fabric', 'Heritage craft'],
-      image: 'https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=400&h=300&fit=crop',
+      image: 'https://media.istockphoto.com/id/872166732/photo/an-intangible-cultural-heritage-of-humanity.jpg?s=612x612&w=0&k=20&c=4Kzv8GTUEbwqicLdgNaVgSbJCq-LnAsDq-8pAp9Lf9w=',
       gradient: 'from-purple-400 to-indigo-500'
     }
   ];
@@ -220,7 +220,7 @@ const WestBengal = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=1200&h=400&fit=crop)'
+            backgroundImage: 'url(https://victoriamemorial-cal.org/media/2024/04/Victoria-Memorial-Hall-Kolkata.jpg)'
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-purple-900/70"></div>
@@ -335,7 +335,7 @@ const WestBengal = () => {
                   <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 overflow-hidden">
                     <div className={`h-32 bg-gradient-to-r ${structure.color} relative`}>
                       <img 
-                        src="https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=400&h=200&fit=crop" 
+                        src="https://www.shutterstock.com/image-vector/politics-concept-web-template-illustration-260nw-2489852537.jpg" 
                         alt={structure.title}
                         className="w-full h-full object-cover opacity-30"
                       />
@@ -729,7 +729,7 @@ const WestBengal = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-green-400 to-emerald-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=400&h=200&fit=crop" 
+                    src="https://www.wildbengal.com/images/slider/01.jpg" 
                     alt="Wildlife"
                     className="w-full h-full object-cover opacity-30"
                   />
@@ -791,7 +791,7 @@ const WestBengal = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-blue-400 to-indigo-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=400&h=200&fit=crop" 
+                    src="https://media.istockphoto.com/id/1164517176/photo/historic-howrah-bridge-with-boat-on-river-ganges-at-kolkata-india.jpg?s=612x612&w=0&k=20&c=aZX8zvFV5O1qtoWnv-gPtiW1eRPlUHeK_vjh87qLMU8=" 
                     alt="Rivers"
                     className="w-full h-full object-cover opacity-30"
                   />

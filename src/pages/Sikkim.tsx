@@ -12,37 +12,37 @@ const Sikkim = () => {
   const attractions = [
     { 
       name: 'Tsomgo Lake', 
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=400&h=300&fit=crop', 
+      image: 'https://upload.wikimedia.org/wikipedia/commons/b/b4/Tsongmo_Lake_or_Changu_Lake_-_East_Sikkim.jpg', 
       description: 'Glacial lake at 12,400 ft altitude',
       location: 'East Sikkim'
     },
     { 
       name: 'Nathula Pass', 
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=300&fit=crop', 
+      image: 'https://nomadicweekends.com/blog/wp-content/uploads/2019/03/Nathula-Pass.jpg', 
       description: 'Historic Indo-China border crossing',
       location: 'East Sikkim'
     },
     { 
       name: 'Rumtek Monastery', 
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=300&fit=crop', 
+      image: 'https://holidays.tripfactory.com/sikkim/wp-content/uploads/sites/18/2024/05/Rumtek.webp', 
       description: 'Largest monastery in Sikkim',
       location: 'Gangtok'
     },
     { 
       name: 'Yumthang Valley', 
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=400&h=300&fit=crop', 
+      image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/12/96/88/photo0jpg.jpg?w=1200&h=-1&s=1', 
       description: 'Valley of Flowers with hot springs',
       location: 'North Sikkim'
     },
     { 
       name: 'Pelling', 
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=300&fit=crop', 
+      image: 'https://assets.zeezest.com/blogs/PROD_Indulge%20In%20The%20Sikkimese%20Legacy%20With%20Some%20Of%20The%20Top%20Places%20To%20Visit%20In%20Pelling%20%281%29_1723563550195.jpg', 
       description: 'Scenic town with Kanchenjunga views',
       location: 'West Sikkim'
     },
     { 
       name: 'Ravangla', 
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=400&h=300&fit=crop', 
+      image: 'https://spiceholiday.in/wp-content/uploads/2023/07/ravangla1.jpg', 
       description: 'Picturesque town with Buddha Park',
       location: 'South Sikkim'
     }
@@ -61,28 +61,28 @@ const Sikkim = () => {
       title: 'Buddhist Heritage', 
       icon: Mountain, 
       items: ['Monasteries', 'Prayer Flags', 'Butter Lamps', 'Losar Festival'],
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=300&h=200&fit=crop',
+      image: 'https://media.istockphoto.com/id/668705218/photo/rumtek-monastery-in-sikkim.jpg?s=170667a&w=0&k=20&c=CgL_ApJ2M38SB8kKvbM1SePPAgwKo2KNXsxp3i7wjpE=',
       gradient: 'from-orange-400 to-red-500'
     },
     { 
       title: 'Lepcha Culture', 
       icon: Users, 
       items: ['Indigenous traditions', 'Bamboo crafts', 'Folk dances', 'Shamanism'],
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=300&h=200&fit=crop',
+      image: 'https://oddessemania.in/wp-content/uploads/2024/09/Bamboo-and-Cane-Crafts-one-of-Sikkim-famous-things.jpg',
       gradient: 'from-emerald-400 to-teal-500'
     },
     { 
       title: 'Nepali Influence', 
       icon: Music, 
       items: ['Dashain Festival', 'Tamang Selo', 'Nepali cuisine', 'Hindu traditions'],
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=300&h=200&fit=crop',
+      image: 'https://i.ytimg.com/vi/u0a8_h8Dkgg/maxresdefault.jpg',
       gradient: 'from-amber-400 to-yellow-500'
     },
     { 
       title: 'Bhutia Traditions', 
       icon: TreePine, 
       items: ['Tibetan Buddhism', 'Thangka paintings', 'Lama dances', 'Traditional dress'],
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=300&h=200&fit=crop',
+      image: 'https://vajiramandravi.com/upsc-exam/wp-content/uploads/2025/05/Thangka-painting-depicting-Buddha.webp',
       gradient: 'from-blue-400 to-indigo-500'
     }
   ];
@@ -145,7 +145,7 @@ const Sikkim = () => {
       region: 'Bhutia',
       description: 'Traditional Tibetan-style robe',
       features: ['Woolen fabric', 'Colorful stripes', 'Worn with leggings', 'Silk sash'],
-      image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=300&fit=crop',
+      image: 'https://www.indiatravel.app/wp-content/uploads/2024/10/bakhu-dress-of-sikkim.jpg',
       gradient: 'from-blue-400 to-indigo-500'
     },
     {
@@ -153,7 +153,7 @@ const Sikkim = () => {
       region: 'Lepcha',
       description: 'Traditional Lepcha attire',
       features: ['Cotton fabric', 'Striped patterns', 'Worn with cap', 'Bamboo accessories'],
-      image: 'https://images.unsplash.com/photo-1583391733956-3794bc9ce64f?w=400&h=300&fit=crop',
+      image: 'https://zestycrush.com/wp-content/uploads/2024/10/Sikkim-Traditional-Dress-Female-and-Jewelry.webp',
       gradient: 'from-red-400 to-pink-500'
     },
     {
@@ -161,7 +161,7 @@ const Sikkim = () => {
       region: 'Women',
       description: 'Colorful striped apron',
       features: ['Worn over bakhu', 'Handwoven', 'Symbol of marriage', 'Intricate designs'],
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop',
+      image: 'https://i.etsystatic.com/10690294/r/il/9622cb/3526784934/il_fullxfull.3526784934_70ad.jpg',
       gradient: 'from-orange-400 to-red-500'
     }
   ];
@@ -200,7 +200,7 @@ const Sikkim = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=1200&h=400&fit=crop)'
+            backgroundImage: 'url(https://travelogyindia.b-cdn.net/storage/app/upload/nathula-pass.jpg)'
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-green-900/70 to-blue-900/70"></div>
@@ -315,7 +315,7 @@ const Sikkim = () => {
                   <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 overflow-hidden">
                     <div className={`h-32 bg-gradient-to-r ${structure.color} relative`}>
                       <img 
-                        src="https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=200&fit=crop" 
+                        src="https://media.istockphoto.com/id/1128518146/vector/activists-protest-political-riot-sign-banners-people-holding-protests-placards-and.jpg?s=612x612&w=0&k=20&c=sT7aO2LedFyyD1JU52Zq06aTrvFv_3QB3dqi4d_wVh4=" 
                         alt={structure.title}
                         className="w-full h-full object-cover opacity-30"
                       />
@@ -702,7 +702,7 @@ const Sikkim = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-green-400 to-emerald-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=200&fit=crop" 
+                    src="https://www.esikkimtourism.in/wp-content/uploads/2019/03/gangtok-zooo-bnnnr.jpg" 
                     alt="Wildlife"
                     className="w-full h-full object-cover opacity-30"
                   />
@@ -764,7 +764,7 @@ const Sikkim = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-blue-400 to-indigo-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=400&h=200&fit=crop" 
+                    src="https://www.sikkimtourismindia.com/uploads/yumthong-tour.jpg" 
                     alt="Mountains"
                     className="w-full h-full object-cover opacity-30"
                   />

@@ -12,37 +12,37 @@ const Telangana = () => {
   const attractions = [
     { 
       name: 'Charminar', 
-      image: 'https://images.unsplash.com/photo-1581852057101-76897baab589?w=400&h=300&fit=crop', 
+      image: 'https://t4.ftcdn.net/jpg/00/47/49/01/360_F_47490128_JLClMTbZyVdxl3OW2m8H4vJHW7hDZ8Jj.jpg', 
       description: 'Iconic monument and mosque',
       location: 'Hyderabad'
     },
     { 
       name: 'Golconda Fort', 
-      image: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=300&fit=crop', 
+      image: 'https://s7ap1.scene7.com/is/image/incredibleindia/golconda-fort-hyderabad-secunderabad-telangana-1-musthead-hero?qlt=82&ts=1726652867867', 
       description: 'Historic fort known for its acoustics',
       location: 'Hyderabad'
     },
     { 
       name: 'Ramoji Film City', 
-      image: 'https://images.unsplash.com/photo-1633613286848-e6f43bbafb8d?w=400&h=300&fit=crop', 
+      image: 'https://i0.wp.com/weekendyaari.in/wp-content/uploads/2024/09/weekend-yaari-ramoji-film-city-1.webp?fit=1921%2C1081&ssl=1', 
       description: 'Worlds largest integrated film city',
       location: 'Hyderabad'
     },
     { 
       name: 'Warangal Fort', 
-      image: 'https://images.unsplash.com/photo-1581852057101-76897baab589?w=400&h=300&fit=crop', 
+      image: 'https://s7ap1.scene7.com/is/image/incredibleindia/warangal-fort-warangal-telangana-1-attr-hero?qlt=82&ts=1726653479730', 
       description: 'Ancient Kakatiya dynasty fort',
       location: 'Warangal'
     },
     { 
       name: 'Nagarkurnool Caves', 
-      image: 'https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=400&h=300&fit=crop', 
+      image: 'https://content.jdmagicbox.com/comp/def_content_category/caves/3f8e9f4e85-caves-1-4u2hx.jpg', 
       description: 'Ancient rock-cut caves',
       location: 'Nagarkurnool'
     },
     { 
       name: 'Kuntala Waterfalls', 
-      image: 'https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&h=300&fit=crop', 
+      image: 'https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/2018/05/24143309/Kuntala.png', 
       description: 'Tallest waterfall in Telangana',
       location: 'Adilabad'
     }
@@ -61,28 +61,28 @@ const Telangana = () => {
       title: 'Telugu Culture', 
       icon: Users, 
       items: ['Bathukamma Festival', 'Bonalu Festival', 'Classical Dance Forms'],
-      image: 'https://images.unsplash.com/photo-1601645191164-3fc4a2b5c827?w=300&h=200&fit=crop',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPABLxJ5OOhHmzEovEoqxk9zHemkyA8_Byiw&s',
       gradient: 'from-orange-400 to-red-500'
     },
     { 
       title: 'Islamic Heritage', 
       icon: Star, 
       items: ['Hyderabadi Biryani', 'Charminar Architecture', 'Qutb Shahi Tombs'],
-      image: 'https://images.unsplash.com/photo-1581852057101-76897baab589?w=300&h=200&fit=crop',
+      image: 'https://static.wixstatic.com/media/91e241_475faa4fa56341f3878699dde5ab4904~mv2.jpg/v1/fill/w_864,h_576,al_c,lg_1,q_85/91e241_475faa4fa56341f3878699dde5ab4904~mv2.jpg',
       gradient: 'from-emerald-400 to-teal-500'
     },
     { 
       title: 'Tribal Traditions', 
       icon: Mountain, 
       items: ['Gond Tribes', 'Lambadi Dance', 'Traditional Crafts'],
-      image: 'https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=300&h=200&fit=crop',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/Lambadi_Dance.jpg',
       gradient: 'from-amber-400 to-yellow-500'
     },
     { 
       title: 'Modern Fusion', 
       icon: TreePine, 
       items: ['Hyderabadi Pearls', 'IT Culture', 'Cosmopolitan Lifestyle'],
-      image: 'https://images.unsplash.com/photo-1633613286848-e6f43bbafb8d?w=300&h=200&fit=crop',
+      image: 'https://miro.medium.com/v2/resize:fit:690/0*NsYOELYtlKuOwd1Z.png',
       gradient: 'from-indigo-400 to-purple-500'
     }
   ];
@@ -160,7 +160,7 @@ const Telangana = () => {
       region: 'Urban Areas',
       description: 'Elegant traditional attire for men',
       features: ['Long coat', 'Often paired with pajama', 'Rich embroidery', 'Worn for weddings'],
-      image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=400&h=300&fit=crop',
+      image: 'https://image.wedmegood.com/resized/720X/uploads/member/3352455/1707860233_ASUKA_14.03.238143_Large.jpeg?crop=7,98,1267,712',
       gradient: 'from-blue-400 to-indigo-500'
     },
     {
@@ -168,7 +168,7 @@ const Telangana = () => {
       region: 'Rural Areas',
       description: 'Traditional handwoven silk saree',
       features: ['Ikat patterns', 'Bright colors', 'Geometric designs', 'Lightweight fabric'],
-      image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=300&fit=crop',
+      image: 'https://img.indiahandmade.com/catalog/product/cache/dee0bc41489afb86ae85561eae1bc64e/g/b/gb_handlooms_saree_01_1.jpeg',
       gradient: 'from-red-400 to-pink-500'
     },
     {
@@ -176,7 +176,7 @@ const Telangana = () => {
       region: 'Tribal Areas',
       description: 'Vibrant tribal dress',
       features: ['Colorful embroidery', 'Mirror work', 'Heavy jewelry', 'Ankle-length skirts'],
-      image: 'https://images.unsplash.com/photo-1583391733956-3794bc9ce64f?w=400&h=300&fit=crop',
+      image: 'https://i.pinimg.com/originals/ae/72/dc/ae72dcfe93911c28fff0f5dd55beebf2.jpg',
       gradient: 'from-orange-400 to-red-500'
     },
     {
@@ -184,8 +184,7 @@ const Telangana = () => {
       region: 'All Regions',
       description: 'Traditional male attire',
       features: ['Cotton fabric', 'Simple design', 'Comfortable wear', 'Common in rural areas'],
-      image: 'https://images.unsplash.com/photo-1556909211-d5b462e9f8a1?w=400&h=300&fit=crop',
-      gradient: 'from-purple-400 to-indigo-500'
+      image: 'https://fashionstreetmart.wordpress.com/wp-content/uploads/2018/06/hqdefault1.jpg?w=640'
     }
   ];
 
@@ -223,7 +222,7 @@ const Telangana = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1581852057101-76897baab589?w=1200&h=400&fit=crop)'
+            backgroundImage: 'url(https://s3.youthkiawaaz.com/wp-content/uploads/2020/06/27135008/Golconda-Fort.jpeg)'
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-orange-900/70 to-red-900/70"></div>
@@ -338,7 +337,7 @@ const Telangana = () => {
                   <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 overflow-hidden">
                     <div className={`h-32 bg-gradient-to-r ${structure.color} relative`}>
                       <img 
-                        src="https://images.unsplash.com/photo-1581852057101-76897baab589?w=400&h=200&fit=crop" 
+                        src="https://media.istockphoto.com/id/1128518146/vector/activists-protest-political-riot-sign-banners-people-holding-protests-placards-and.jpg?s=612x612&w=0&k=20&c=sT7aO2LedFyyD1JU52Zq06aTrvFv_3QB3dqi4d_wVh4=" 
                         alt={structure.title}
                         className="w-full h-full object-cover opacity-30"
                       />
@@ -731,7 +730,7 @@ const Telangana = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-green-400 to-emerald-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&h=200&fit=crop" 
+                    src="https://www.thewildlifediaries.com/wp-content/uploads/2019/06/Blackbuck.jpg" 
                     alt="Wildlife"
                     className="w-full h-full object-cover opacity-30"
                   />
@@ -799,7 +798,7 @@ const Telangana = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-blue-400 to-indigo-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1581852057101-76897baab589?w=400&h=200&fit=crop" 
+                    src="https://www.shutterstock.com/image-photo/srisailam-dam-andhrapradesh-india-dec-260nw-1659720955.jpg" 
                     alt="Rivers"
                     className="w-full h-full object-cover opacity-30"
                   />

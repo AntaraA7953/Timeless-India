@@ -12,37 +12,37 @@ const Uttarakhand = () => {
   const attractions = [
     { 
       name: 'Valley of Flowers', 
-      image: 'https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?w=400&h=300&fit=crop', 
+      image: 'https://images.prismic.io/indiahike/ZidYsPPdc1huKsSI_ValleyOfFlowers-PavanJain-Bloomingflowersofthevalley.jpg?auto=compress,format&rect=0,49,1600,800&w=1200&h=600', 
       description: 'UNESCO World Heritage Site with alpine flowers',
       location: 'Chamoli'
     },
     { 
       name: 'Kedarnath Temple', 
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=400&h=300&fit=crop', 
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Kedarnath_Temple_in_Rainy_season.jpg/960px-Kedarnath_Temple_in_Rainy_season.jpg', 
       description: 'Sacred Hindu shrine dedicated to Lord Shiva',
       location: 'Rudraprayag'
     },
     { 
       name: 'Mussoorie', 
-      image: 'https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=400&h=300&fit=crop', 
+      image: 'https://travelchardham.com/sites/default/files/2024-12/Mall%20Road%20Mussoorie.jpg', 
       description: 'Queen of the Hills with panoramic views',
       location: 'Dehradun'
     },
     { 
       name: 'Nainital', 
-      image: 'https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&h=300&fit=crop', 
+      image: 'https://uttarakhandguide.com/wp-content/uploads/2023/04/nainital.jpg', 
       description: 'Picturesque lake town in the Kumaon hills',
       location: 'Nainital'
     },
     { 
       name: 'Jim Corbett National Park', 
-      image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&h=300&fit=crop', 
+      image: 'https://upload.wikimedia.org/wikipedia/commons/7/78/Bengal-Tiger_Corbett_Uttarakhand_Dec-2013.jpg', 
       description: 'India\'s oldest national park and tiger reserve',
       location: 'Nainital'
     },
     { 
       name: 'Haridwar', 
-      image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=300&fit=crop', 
+      image: 'https://s7ap1.scene7.com/is/image/incredibleindia/ganga-ghat-haridwar1-attr-hero?qlt=82&ts=1726645870499', 
       description: 'Holy city where Ganges enters plains',
       location: 'Haridwar'
     }
@@ -61,28 +61,28 @@ const Uttarakhand = () => {
       title: 'Garhwali Culture', 
       icon: Mountain, 
       items: ['Langvir Nritya', 'Jhora Dance', 'Traditional folk songs'],
-      image: 'https://images.unsplash.com/photo-1583391733956-3794bc9ce64f?w=300&h=200&fit=crop',
+      image: 'https://stagebuzz.in/wp-content/uploads/2021/12/0696a56e1441ff33eca4daa0c87398bd.jpg',
       gradient: 'from-orange-400 to-red-500'
     },
     { 
       title: 'Kumaoni Heritage', 
       icon: TreePine, 
       items: ['Chholiya Dance', 'Hill Jatra festival', 'Aipan art'],
-      image: 'https://images.unsplash.com/photo-1601645191164-3fc4a2b5c827?w=300&h=200&fit=crop',
+      image: 'https://s7ap1.scene7.com/is/image/incredibleindia/Aipan-dehradun-uttarakhand-craft-hero?qlt=82&ts=1726641510222',
       gradient: 'from-emerald-400 to-teal-500'
     },
     { 
       title: 'Spiritual Traditions', 
       icon: Star, 
       items: ['Char Dham Yatra', 'Ganga Aarti', 'Yoga capital Rishikesh'],
-      image: 'https://images.unsplash.com/photo-1581852057101-76897baab589?w=300&h=200&fit=crop',
+      image: 'https://raftingcampingrishikesh.com/images/triveni-ghat.jpg',
       gradient: 'from-amber-400 to-yellow-500'
     },
     { 
       title: 'Tribal Communities', 
       icon: Users, 
       items: ['Bhotiya tribe', 'Jaunsari people', 'Tharu culture'],
-      image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=300&h=200&fit=crop',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Jaunsari_Garhwali_Harul_dance.jpg/500px-Jaunsari_Garhwali_Harul_dance.jpg',
       gradient: 'from-blue-400 to-indigo-500'
     }
   ];
@@ -158,7 +158,7 @@ const Uttarakhand = () => {
       region: 'Garhwal',
       description: 'Traditional women\'s attire with red dupatta',
       features: ['Red and gold colors', 'Heavy jewelry', 'Woolen fabric', 'Worn with ghagra'],
-      image: 'https://images.unsplash.com/photo-1583391733956-3794bc9ce64f?w=400&h=300&fit=crop',
+      image: 'https://www.himalayanbuzz.com/wp-content/uploads/2016/10/wedcover.jpg',
       gradient: 'from-blue-400 to-indigo-500'
     },
     {
@@ -166,7 +166,7 @@ const Uttarakhand = () => {
       region: 'Kumaon',
       description: 'Traditional cap for men',
       features: ['Black color', 'Gold embroidery', 'Woolen material', 'Symbol of identity'],
-      image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=300&fit=crop',
+      image: 'https://5.imimg.com/data5/SELLER/Default/2022/9/CH/SY/YA/62382801/jet-black-500x500.jpg',
       gradient: 'from-red-400 to-pink-500'
     },
     {
@@ -174,7 +174,7 @@ const Uttarakhand = () => {
       region: 'Tribal Areas',
       description: 'Traditional woolen garments',
       features: ['Handwoven', 'Natural dyes', 'Geometric patterns', 'Warm for winters'],
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop',
+      image: 'https://www.uttarakhandi.com/wp-content/uploads/bhotia-min-1140x445.png',
       gradient: 'from-orange-400 to-red-500'
     },
     {
@@ -182,7 +182,7 @@ const Uttarakhand = () => {
       region: 'All Regions',
       description: 'Traditional hill saree',
       features: ['Cotton fabric', 'Simple design', 'Bright colors', 'Everyday wear'],
-      image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=400&h=300&fit=crop',
+      image: 'https://static.wixstatic.com/media/910b6a_0854e4c849e84a018b21320b62aac61f~mv2.jpg/v1/fill/w_980,h_490,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/910b6a_0854e4c849e84a018b21320b62aac61f~mv2.jpg',
       gradient: 'from-purple-400 to-indigo-500'
     }
   ];
@@ -221,7 +221,7 @@ const Uttarakhand = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?w=1200&h=400&fit=crop)'
+            backgroundImage: 'url(https://images.prismic.io/indiahike/ZidYsPPdc1huKsSI_ValleyOfFlowers-PavanJain-Bloomingflowersofthevalley.jpg?auto=compress,format&rect=0,49,1600,800&w=1200&h=600)'
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-green-900/70 to-teal-900/70"></div>
@@ -336,7 +336,7 @@ const Uttarakhand = () => {
                   <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 overflow-hidden">
                     <div className={`h-32 bg-gradient-to-r ${structure.color} relative`}>
                       <img 
-                        src="https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?w=400&h=200&fit=crop" 
+                        src="https://www.shutterstock.com/image-vector/politics-concept-web-template-illustration-260nw-2489852537.jpg" 
                         alt={structure.title}
                         className="w-full h-full object-cover opacity-30"
                       />
@@ -729,7 +729,7 @@ const Uttarakhand = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-green-400 to-emerald-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&h=200&fit=crop" 
+                    src="https://www.trawell.in/images/pics/uttarakhand_nw_main.jpg" 
                     alt="Wildlife"
                     className="w-full h-full object-cover opacity-30"
                   />
@@ -797,7 +797,7 @@ const Uttarakhand = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-blue-400 to-indigo-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=400&h=200&fit=crop" 
+                    src="https://specialplacesofindia.com/wp-content/uploads/2023/10/Trishul-Mountain.jpg" 
                     alt="Mountains"
                     className="w-full h-full object-cover opacity-30"
                   />

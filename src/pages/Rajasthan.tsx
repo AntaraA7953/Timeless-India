@@ -12,37 +12,37 @@ const Rajasthan = () => {
   const attractions = [
     { 
       name: 'Amber Fort', 
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=400&h=300&fit=crop', 
+      image: 'https://s7ap1.scene7.com/is/image/incredibleindia/amber-fort-jaipur-rajasthan-1-attr-hero?qlt=82&ts=1742157903972', 
       description: 'Majestic fort with mirror work and carvings',
       location: 'Jaipur'
     },
     { 
       name: 'Mehrangarh Fort', 
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=300&fit=crop', 
+      image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/99/ae/7f/images-14-largejpg.jpg?w=700&h=400&s=1', 
       description: 'One of India\'s largest forts',
       location: 'Jodhpur'
     },
     { 
       name: 'Hawa Mahal', 
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=300&fit=crop', 
+      image: 'https://upload.wikimedia.org/wikipedia/commons/4/41/East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg', 
       description: 'Palace of Winds with intricate latticework',
       location: 'Jaipur'
     },
     { 
       name: 'City Palace', 
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=400&h=300&fit=crop', 
+      image: 'https://s7ap1.scene7.com/is/image/incredibleindia/city-palace-udaipur-rajasthan-1-new-attr-hero?qlt=82&ts=1727353238554', 
       description: 'Royal residence with museums',
       location: 'Udaipur'
     },
     { 
       name: 'Jaisalmer Fort', 
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=300&fit=crop', 
+      image: 'https://jaisalmertourism.co.in/images/places-to-visit/headers/jaisalmer-fort-entry-fee-timings-holidays-reviews-header.jpg', 
       description: 'Golden fort rising from the desert',
       location: 'Jaisalmer'
     },
     { 
       name: 'Ranthambore', 
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=400&h=300&fit=crop', 
+      image: 'https://ranthambhorenationalpark.in/images/Ranthambhore%20Tiger%20safari%20park.JPG', 
       description: 'Famous tiger reserve',
       location: 'Sawai Madhopur'
     }
@@ -61,28 +61,28 @@ const Rajasthan = () => {
       title: 'Royal Heritage', 
       icon: Landmark, 
       items: ['Palaces & Forts', 'Rajput Valor', 'Royal Traditions'],
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=300&h=200&fit=crop',
+      image: 'https://t4.ftcdn.net/jpg/01/86/03/91/360_F_186039131_DtzFlukfaDy0Fdsgq6HzJwGGJ1II5Ls9.jpg',
       gradient: 'from-orange-400 to-red-500'
     },
     { 
       title: 'Folk Culture', 
       icon: Music, 
       items: ['Ghoomar Dance', 'Kalbeliya', 'Manganiyar Music', 'Puppetry'],
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=300&h=200&fit=crop',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Ghoomar_dancers_%28Rajasthan%2C_India%2C_2023%29.jpg/1200px-Ghoomar_dancers_%28Rajasthan%2C_India%2C_2023%29.jpg',
       gradient: 'from-emerald-400 to-teal-500'
     },
     { 
       title: 'Cuisine', 
       icon: Utensils, 
       items: ['Dal Baati Churma', 'Laal Maas', 'Ghewar', 'Ker Sangri'],
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=300&h=200&fit=crop',
+      image: 'https://www.joviindia.com/cdn/shop/articles/1.jpg?v=1716982970&width=1100',
       gradient: 'from-amber-400 to-yellow-500'
     },
     { 
       title: 'Festivals', 
       icon: Calendar, 
       items: ['Pushkar Fair', 'Teej', 'Gangaur', 'Desert Festival'],
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=300&h=200&fit=crop',
+      image: 'https://i0.wp.com/deramasuda.com/wp-content/uploads/2018/10/pushkar-fair-2.jpg?fit=737%2C388&ssl=1',
       gradient: 'from-blue-400 to-indigo-500'
     }
   ];
@@ -145,7 +145,7 @@ const Rajasthan = () => {
       region: 'Women',
       description: 'Colorful traditional attire with odhni',
       features: ['Flared skirt', 'Embroidered blouse', 'Dupatta', 'Silver jewelry'],
-      image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=300&fit=crop',
+      image: 'https://i.pinimg.com/736x/17/b2/5b/17b25b4317b4e906d785fb1b36e2102d.jpg',
       gradient: 'from-blue-400 to-indigo-500'
     },
     {
@@ -153,7 +153,7 @@ const Rajasthan = () => {
       region: 'Men',
       description: 'Traditional outfit with pagri',
       features: ['White dhoti', 'Angrakha kurta', 'Colorful pagri', 'Mojari footwear'],
-      image: 'https://images.unsplash.com/photo-1583391733956-3794bc9ce64f?w=400&h=300&fit=crop',
+      image: 'https://live.staticflickr.com/6177/6202387672_6aaa4d8907_z.jpg',
       gradient: 'from-red-400 to-pink-500'
     },
     {
@@ -161,7 +161,7 @@ const Rajasthan = () => {
       region: 'Women',
       description: 'Tie-dye textile tradition',
       features: ['Bright colors', 'Intricate patterns', 'Special occasions', 'Regional variations'],
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop',
+      image: 'https://5.imimg.com/data5/IC/KK/TY/SELLER-55061345/rajasthani-bandhani-saree-with-gota-patti.jpg',
       gradient: 'from-orange-400 to-red-500'
     }
   ];
@@ -200,7 +200,7 @@ const Rajasthan = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=1200&h=400&fit=crop)'
+            backgroundImage: 'url(https://www.shutterstock.com/image-photo/hawa-mahal-jaipur-rajasthan-260nw-1150541366.jpg)'
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-orange-900/70 to-red-900/70"></div>
@@ -315,7 +315,7 @@ const Rajasthan = () => {
                   <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 overflow-hidden">
                     <div className={`h-32 bg-gradient-to-r ${structure.color} relative`}>
                       <img 
-                        src="https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=200&fit=crop" 
+                        src="https://media.istockphoto.com/id/1128518146/vector/activists-protest-political-riot-sign-banners-people-holding-protests-placards-and.jpg?s=612x612&w=0&k=20&c=sT7aO2LedFyyD1JU52Zq06aTrvFv_3QB3dqi4d_wVh4=" 
                         alt={structure.title}
                         className="w-full h-full object-cover opacity-30"
                       />
@@ -702,7 +702,7 @@ const Rajasthan = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-green-400 to-emerald-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=200&fit=crop" 
+                    src="https://www.ranthamborenationalpark.com/wp-content/uploads/2020/05/rajasthan-wildlife.jpg" 
                     alt="Wildlife"
                     className="w-full h-full object-cover opacity-30"
                   />
@@ -764,7 +764,7 @@ const Rajasthan = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-blue-400 to-indigo-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=400&h=200&fit=crop" 
+                    src="https://t4.ftcdn.net/jpg/06/31/02/21/360_F_631022109_PXYXdWEMMa494E6dwHC0GSTvqSeHc3My.jpg" 
                     alt="Desert"
                     className="w-full h-full object-cover opacity-30"
                   />

@@ -12,37 +12,37 @@ const TamilNadu = () => {
   const attractions = [
     { 
       name: 'Meenakshi Temple', 
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=400&h=300&fit=crop', 
+      image: 'https://thrillingtravel.in/wp-content/uploads/2018/02/Golden-Lotus-Pond-at-Meenakshi-Temple.jpg', 
       description: 'Iconic temple with towering gopurams',
       location: 'Madurai'
     },
     { 
       name: 'Brihadeeswarar Temple', 
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=300&fit=crop', 
+      image: 'https://cdn.britannica.com/66/250066-050-B34A9532/Brihadishvara-Temple-Thanjavur-Tamil-Nadu-India.jpg', 
       description: 'UNESCO World Heritage Site',
       location: 'Thanjavur'
     },
     { 
       name: 'Marina Beach', 
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=300&fit=crop', 
+      image: 'https://s7ap1.scene7.com/is/image/incredibleindia/marina-beach-chennai-tamil-nadu-4-attr-hero?qlt=82&ts=1726655007714', 
       description: 'Second longest urban beach in the world',
       location: 'Chennai'
     },
     { 
       name: 'Mahabalipuram', 
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=400&h=300&fit=crop', 
+      image: 'https://www.tripsavvy.com/thmb/yZuvI0lUakLLJ4QxgbAwtglMEyg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-579760012-b78004a355354623924eda63842ac3a9.jpg', 
       description: 'Ancient port city with rock-cut temples',
       location: 'Kanchipuram'
     },
     { 
       name: 'Ooty', 
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=300&fit=crop', 
+      image: 'https://images.hindustantimes.com/img/2023/01/11/1600x900/mugi-jo-6qUltw7SjzM-unsplash_1669276738103_1673425680248_1673425680248.jpg', 
       description: 'Queen of Hill Stations',
       location: 'Nilgiris'
     },
     { 
       name: 'Rameswaram', 
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=400&h=300&fit=crop', 
+      image: 'https://pravase.co.in/admin_pravase/uploads/yatradham/Rameswaram-Tamil-Nadu_1619273873.JPG', 
       description: 'Sacred island with Ramanathaswamy Temple',
       location: 'Ramanathapuram'
     }
@@ -61,28 +61,28 @@ const TamilNadu = () => {
       title: 'Tamil Heritage', 
       icon: Building2, 
       items: ['Sangam Literature', 'Temple Architecture', 'Classical Dance'],
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=300&h=200&fit=crop',
+      image: 'https://cdn.testbook.com/1697549473399-Bharatanatyam.webp/1697549475.webp',
       gradient: 'from-orange-400 to-red-500'
     },
     { 
       title: 'Festivals', 
       icon: Calendar, 
       items: ['Pongal', 'Tamil New Year', 'Jallikattu', 'Karthigai Deepam'],
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=300&h=200&fit=crop',
+      image: 'https://i.ytimg.com/vi/qgSwHsGaY48/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBHWcNDii2_7-OHq_sV283oZDMCcQ',
       gradient: 'from-emerald-400 to-teal-500'
     },
     { 
       title: 'Cuisine', 
       icon: Utensils, 
       items: ['Idli-Dosa', 'Sambar-Rasam', 'Chettinad dishes', 'Filter Coffee'],
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=300&h=200&fit=crop',
+      image: 'https://miro.medium.com/v2/resize:fit:1400/1*_tbU3CLl9HKPdMUfIKiSYw.jpeg',
       gradient: 'from-amber-400 to-yellow-500'
     },
     { 
       title: 'Arts', 
       icon: Music, 
       items: ['Bharatanatyam', 'Carnatic Music', 'Tamil Cinema', 'Tanjore Painting'],
-      image: 'https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=300&h=200&fit=crop',
+      image: 'https://andhraportal.org/wp-content/uploads/2017/01/rudravina.jpg',
       gradient: 'from-blue-400 to-indigo-500'
     }
   ];
@@ -145,7 +145,7 @@ const TamilNadu = () => {
       region: 'Women',
       description: 'Traditional nine-yard saree',
       features: ['Kanjeevaram silk', 'Zari work', 'Bright colors', 'Temple borders'],
-      image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=300&fit=crop',
+      image: 'https://www.mohifashion.com/cdn/shop/articles/Kanjivaram_saree_3.jpg?v=1722507413&width=1100',
       gradient: 'from-blue-400 to-indigo-500'
     },
     {
@@ -153,7 +153,7 @@ const TamilNadu = () => {
       region: 'Men',
       description: 'White cotton dhoti',
       features: ['Angavastram', 'Formal occasions', 'Plain or bordered', 'With shirt'],
-      image: 'https://images.unsplash.com/photo-1583391733956-3794bc9ce64f?w=400&h=300&fit=crop',
+      image: 'https://cdn.shopify.com/s/files/1/0080/4844/3455/files/456.jpg?v=1640019095',
       gradient: 'from-red-400 to-pink-500'
     },
     {
@@ -161,7 +161,7 @@ const TamilNadu = () => {
       region: 'Girls',
       description: 'Silk skirt and blouse',
       features: ['Festive wear', 'Matching choli', 'Gold jewelry', 'Flower garlands'],
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop',
+      image: 'https://organikos.net/wp-content/uploads/2013/02/395160_399413980132501_483129447_n.jpg',
       gradient: 'from-orange-400 to-red-500'
     }
   ];
@@ -200,7 +200,7 @@ const TamilNadu = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=1200&h=400&fit=crop)'
+            backgroundImage: 'url(https://www.trawell.in/blog/wp-content/uploads/2024/03/ooty-main.jpg)'
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-red-900/70 to-orange-900/70"></div>
@@ -315,7 +315,7 @@ const TamilNadu = () => {
                   <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 overflow-hidden">
                     <div className={`h-32 bg-gradient-to-r ${structure.color} relative`}>
                       <img 
-                        src="https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=200&fit=crop" 
+                        src="https://media.istockphoto.com/id/1128518146/vector/activists-protest-political-riot-sign-banners-people-holding-protests-placards-and.jpg?s=612x612&w=0&k=20&c=sT7aO2LedFyyD1JU52Zq06aTrvFv_3QB3dqi4d_wVh4=" 
                         alt={structure.title}
                         className="w-full h-full object-cover opacity-30"
                       />
@@ -703,7 +703,7 @@ const TamilNadu = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-green-400 to-emerald-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1524309553216-30910a9d3d56?w=400&h=200&fit=crop" 
+                    src="https://www.indianholiday.com/wordpress/wp-content/uploads/2022/12/mudumalai-national-park.jpg" 
                     alt="Wildlife"
                     className="w-full h-full object-cover opacity-30"
                   />
@@ -765,7 +765,7 @@ const TamilNadu = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-blue-400 to-indigo-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=400&h=200&fit=crop" 
+                    src="https://content.skyscnr.com/m/517387a72f083c22/original/Feb-25-B2-IN-8-Hill-Tamilnadu_1B_1.jpg?resize=1224%3Aauto" 
                     alt="Landscapes"
                     className="w-full h-full object-cover opacity-30"
                   />

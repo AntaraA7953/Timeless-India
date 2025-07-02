@@ -12,37 +12,37 @@ const UttarPradesh = () => {
   const attractions = [
     { 
       name: 'Taj Mahal', 
-      image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=400&h=300&fit=crop', 
+      image: 'https://upload.wikimedia.org/wikipedia/commons/1/1d/Taj_Mahal_%28Edited%29.jpeg', 
       description: 'Iconic white marble mausoleum and UNESCO World Heritage Site',
       location: 'Agra'
     },
     { 
       name: 'Varanasi Ghats', 
-      image: 'https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=400&h=300&fit=crop', 
+      image: 'https://taxiserviceinvaranasi.com/wp-content/uploads/2024/10/dashashwamedh-ghat-varanasi-tourism-entry-fee-timings-holidays-reviews-header.jpg', 
       description: 'Sacred riverfront steps along the Ganges',
       location: 'Varanasi'
     },
     { 
       name: 'Ayodhya Ram Temple', 
-      image: 'https://images.unsplash.com/photo-1585506942812-e72b29cef752?w=400&h=300&fit=crop', 
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ram_Janmbhoomi_Mandir%2C_Ayodhya_Dham.jpg/640px-Ram_Janmbhoomi_Mandir%2C_Ayodhya_Dham.jpg', 
       description: 'Newly constructed temple at Ram Janmabhoomi',
       location: 'Ayodhya'
     },
     { 
       name: 'Fatehpur Sikri', 
-      image: 'https://images.unsplash.com/photo-1581852057101-76897baab589?w=400&h=300&fit=crop', 
+      image: 'https://d37rmf1ynyg9aw.cloudfront.net/fit-in/1280x1280/data/v4/resources/images/328fc4ee-b6d6-4882-9e87-d7342b1b15bb.jpg', 
       description: 'Mughal capital with stunning architecture',
       location: 'Agra District'
     },
     { 
       name: 'Allahabad Sangam', 
-      image: 'https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=400&h=300&fit=crop', 
+      image: 'https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2024/01/05/e5c371fa9c1bbfb486c1a85f7364cd2f_1000x1000.png', 
       description: 'Confluence of Ganges, Yamuna and mythical Saraswati',
       location: 'Prayagraj'
     },
     { 
       name: 'Mathura-Vrindavan', 
-      image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=300&fit=crop', 
+      image: 'https://vrindavanmathura.com/wp-content/uploads/elementor/thumbs/prem-mandir-temple-vrindavan-mathura-india-prem-mandir-temple-is-maintained-by-jagadguru-kripalu-parishat-international-non-profit-educational-spiritual-charitable-trust-1-pw397u7khp84t8plp03nevf8m5nrfywk9116y9w7ek.jpg', 
       description: 'Sacred sites associated with Lord Krishna',
       location: 'Mathura District'
     }
@@ -60,28 +60,28 @@ const UttarPradesh = () => {
       title: 'Spiritual Heritage', 
       icon: Star, 
       items: ['Kashi Vishwanath Temple', 'Sarnath Buddhist Site', 'Chhath Puja'],
-      image: 'https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=300&h=200&fit=crop',
+      image: 'https://kashi.gov.in/cmsadmin/storage/CMS/65cf050e379bf1708066062.jpg',
       gradient: 'from-orange-400 to-red-500'
     },
     { 
       title: 'Mughal Legacy', 
       icon: Building2, 
       items: ['Mughlai Cuisine', 'Urdu Poetry', 'Islamic Architecture'],
-      image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=300&h=200&fit=crop',
+      image: 'https://live-liamtra-blog.s3.ap-south-1.amazonaws.com/2020/05/agra-fort.jpg',
       gradient: 'from-emerald-400 to-teal-500'
     },
     { 
       title: 'Traditional Arts', 
       icon: Music, 
       items: ['Kathak Dance', 'Ramleela', 'Chikankari Embroidery'],
-      image: 'https://images.unsplash.com/photo-1601645191164-3fc4a2b5c827?w=300&h=200&fit=crop',
+      image: 'https://www.dsource.in/sites/default/files/resource/chikankari-embroidery-lucknow/introduction/images/introduction.jpg',
       gradient: 'from-amber-400 to-yellow-500'
     },
     { 
       title: 'Literary Tradition', 
       icon: Users, 
       items: ['Hindi Literature', 'Harivansh Rai Bachchan', 'Premchand'],
-      image: 'https://images.unsplash.com/photo-1581852057101-76897baab589?w=300&h=200&fit=crop',
+      image: 'https://thelifestylejournalist.com/wp-content/uploads/2022/09/Evolution-of-hindi-literature-in-india.webp',
       gradient: 'from-blue-400 to-indigo-500'
     }
   ];
@@ -158,7 +158,7 @@ const UttarPradesh = () => {
       region: 'Varanasi',
       description: 'Luxurious silk sarees with intricate zari work',
       features: ['Gold/silver brocade', 'Floral motifs', 'Heavy fabric', 'Wedding wear'],
-      image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=300&fit=crop',
+      image: 'https://www.shutterstock.com/image-photo/flat-lay-picture-banarasi-saree-600nw-1849146910.jpg',
       gradient: 'from-purple-400 to-indigo-500'
     },
     {
@@ -166,7 +166,7 @@ const UttarPradesh = () => {
       region: 'Lucknow',
       description: 'Delicate white embroidery on fine fabrics',
       features: ['Hand-stitched', 'Floral patterns', 'Light cotton', 'Summer wear'],
-      image: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=400&h=300&fit=crop',
+      image: 'https://m.media-amazon.com/images/S/aplus-media-library-service-media/74c0934e-770c-41a7-b6f6-e15f2f90eab0.__CR0,1,1280,396_PT0_SX970_V1___.jpg',
       gradient: 'from-blue-400 to-indigo-500'
     },
     {
@@ -174,7 +174,7 @@ const UttarPradesh = () => {
       region: 'All Regions',
       description: 'Traditional male attire',
       features: ['White cotton', 'Simple design', 'Comfortable wear', 'Religious occasions'],
-      image: 'https://images.unsplash.com/photo-1556909211-d5b462e9f8a1?w=400&h=300&fit=crop',
+      image: 'https://cdn.sareeka.com/image/data2021/cream-plain-ceremonial-dhoti-kurta-171447.jpg',
       gradient: 'from-green-400 to-teal-500'
     },
     {
@@ -182,7 +182,7 @@ const UttarPradesh = () => {
       region: 'Braj Region',
       description: 'Traditional female festive wear',
       features: ['Bright colors', 'Mirror work', 'Heavy embroidery', 'Festival wear'],
-      image: 'https://images.unsplash.com/photo-1583391733956-3794bc9ce64f?w=400&h=300&fit=crop',
+      image: 'https://www.mohifashion.com/cdn/shop/articles/banner_c0a4b3dc-fc5e-4843-8ddf-c0770b1dc8cf.jpg?v=1723110932&width=1100',
       gradient: 'from-red-400 to-pink-500'
     }
   ];
@@ -221,7 +221,7 @@ const UttarPradesh = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1200&h=400&fit=crop)'
+            backgroundImage: 'url(https://dharoharkashi.com/wp-content/uploads/2022/12/Graphic2-3.jpg)'
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-orange-900/70 to-yellow-900/70"></div>
@@ -336,7 +336,7 @@ const UttarPradesh = () => {
                   <Card key={index} className="hover:shadow-xl transition-all duration-300 border-0 overflow-hidden">
                     <div className={`h-32 bg-gradient-to-r ${structure.color} relative`}>
                       <img 
-                        src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=400&h=200&fit=crop" 
+                        src="https://www.shutterstock.com/image-vector/deceitful-politician-speaking-tribune-corruption-260nw-1331331257.jpg" 
                         alt={structure.title}
                         className="w-full h-full object-cover opacity-30"
                       />
@@ -729,7 +729,7 @@ const UttarPradesh = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-green-400 to-emerald-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=400&h=200&fit=crop" 
+                    src="https://cdn.shopify.com/s/files/1/0757/0253/4444/files/dudhwa-left_480x480.jpg?v=1707896772" 
                     alt="Wildlife"
                     className="w-full h-full object-cover opacity-30"
                   />
@@ -797,7 +797,7 @@ const UttarPradesh = () => {
               <Card className="border-0 bg-white/80 backdrop-blur-sm hover:shadow-xl transition-all">
                 <div className="h-32 bg-gradient-to-r from-blue-400 to-indigo-500 relative overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=400&h=200&fit=crop" 
+                    src="https://media.gettyimages.com/id/1224123305/video/sunrise-view-of-the-city-of-benares-from-the-ganges-river-uttar-pradesh-state-india-asia.jpg?s=640x640&k=20&c=KH45qN4U2h_QKWJXrJjLvY0r3DtFOAOXR4kvTJ77KHQ=" 
                     alt="Rivers"
                     className="w-full h-full object-cover opacity-30"
                   />
