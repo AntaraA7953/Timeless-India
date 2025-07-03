@@ -18,8 +18,8 @@ const GoogleTranslate = () => {
       new window.google.translate.TranslateElement(
         {
           pageLanguage: 'en',
-          includedLanguages: 'en,hi,bn,ta,te,ml,kn,gu,pa,mr,or,as,ur,ne,si',
-          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+          includedLanguages: 'en,hi,bn,ta,te,ml,kn,gu,pa,mr,or,as,ur,ne,si,fr,zh-CN,es,ar,de,ru,pt,ja,it,ko',
+           layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
           autoDisplay: false,
         },
         'google_translate_element'
