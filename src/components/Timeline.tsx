@@ -15,7 +15,8 @@ const Timeline = () => {
       description: "One of the world's earliest urban civilizations with advanced drainage systems, standardized weights, and sophisticated city planning.",
       highlights: ["Harappa & Mohenjo-daro", "Urban Planning", "Trade Networks"],
       icon: Building2,
-      color: "from-amber-400 to-orange-500"
+      color: "from-amber-400 to-orange-500",
+       route: "/indus-valley"
     },
     {
       period: "1500-500 BCE",
@@ -23,15 +24,18 @@ const Timeline = () => {
       description: "Foundation of Hindu philosophy with composition of the Vedas, establishment of social systems, and emergence of Sanskrit literature.",
       highlights: ["Rigveda Composition", "Sanskrit Literature", "Philosophical Schools"],
       icon: Scroll,
-      color: "from-emerald-400 to-teal-500"
+      color: "from-emerald-400 to-teal-500",
+      route: "/vedic-period"
     },
+
     {
       period: "600-321 BCE",
       title: "Mahajanapadas & Early Kingdoms",
       description: "Rise of 16 powerful kingdoms with flourishing urbanization, trade, and emergence of Buddhism and Jainism as reformist movements.",
       highlights: ["16 Mahajanapadas", "Buddha & Mahavira", "Urban Growth"],
       icon: Crown,
-      color: "from-purple-400 to-indigo-500"
+      color: "from-purple-400 to-indigo-500",
+      route: "/mahajanapadas"
     },
     {
       period: "321-185 BCE",
@@ -39,7 +43,8 @@ const Timeline = () => {
       description: "First pan-Indian empire under Chandragupta Maurya and Ashoka's Buddhist propagation across Asia.",
       highlights: ["Ashoka's Edicts", "Buddhist Spread", "Administrative System"],
       icon: Crown,
-      color: "from-blue-400 to-indigo-500"
+      color: "from-blue-400 to-indigo-500",
+      route: "/mauryan-empire"
     },
     {
       period: "185 BCE-319 CE",
@@ -47,7 +52,8 @@ const Timeline = () => {
       description: "Era of fragmentation with foreign influences from Indo-Greeks, Kushans, and Shakas. Increased trade with Rome and Central Asia.",
       highlights: ["Cultural Exchange", "Gandhara Art", "Mahayana Buddhism"],
       icon: Globe,
-      color: "from-cyan-400 to-blue-500"
+      color: "from-cyan-400 to-blue-500",
+      route: "/post-maurya"
     },
     {
       period: "320-550 CE",
@@ -55,7 +61,8 @@ const Timeline = () => {
       description: "Period of unprecedented peace, prosperity, and cultural achievements in art, science, literature, and mathematics.",
       highlights: ["Scientific Advances", "Classical Arts", "Literary Works"],
       icon: Star,
-      color: "from-yellow-400 to-amber-500"
+      color: "from-yellow-400 to-amber-500",
+      route: "/gupta-empire"
     },
     {
       period: "550-1206 CE",
@@ -63,7 +70,8 @@ const Timeline = () => {
       description: "Political fragmentation with rise of regional kingdoms and devotional movements. Development of temple architecture and regional languages.",
       highlights: ["Temple Architecture", "Regional Languages", "Bhakti Movement"],
       icon: Building2,
-      color: "from-rose-400 to-pink-500"
+      color: "from-rose-400 to-pink-500",
+      route: "/post-gupta"
     },
     {
       period: "1206-1526 CE",
@@ -71,7 +79,8 @@ const Timeline = () => {
       description: "Turkish and Afghan rulers established Islamic rule with five successive dynasties introducing new architecture and Indo-Islamic culture.",
       highlights: ["Qutub Minar", "Indo-Islamic Culture", "Iqta System"],
       icon: Sword,
-      color: "from-green-400 to-emerald-500"
+      color: "from-green-400 to-emerald-500",
+      route: "/delhi-sultanate"
     },
     {
       period: "1526-1857 CE",
@@ -79,7 +88,8 @@ const Timeline = () => {
       description: "Islamic empire creating architectural marvels and fostering cultural synthesis between Hindu and Islamic traditions.",
       highlights: ["Taj Mahal", "Cultural Fusion", "Administrative Reforms"],
       icon: Crown,
-      color: "from-red-400 to-orange-500"
+      color: "from-red-400 to-orange-500",
+      route: "/mughal-empire"
     },
     {
       period: "1700s-1857 CE",
@@ -87,7 +97,8 @@ const Timeline = () => {
       description: "Decline of Mughals led to rise of Marathas, Sikhs, and Nawabs while Europeans competed for territorial control.",
       highlights: ["Battle of Plassey", "East India Company", "Regional Powers"],
       icon: Globe,
-      color: "from-indigo-400 to-purple-500"
+      color: "from-indigo-400 to-purple-500",
+      route: "/regional-kingdoms"
     },
     {
       period: "1858-1947 CE",
@@ -95,7 +106,8 @@ const Timeline = () => {
       description: "Direct British Crown control after 1857 Revolt. Era of exploitation but also modern education and freedom movement emergence.",
       highlights: ["Freedom Movement", "INC Formation", "Civil Disobedience"],
       icon: Users,
-      color: "from-gray-400 to-slate-500"
+      color: "from-gray-400 to-slate-500",
+      route: "/british-colonial-rule"
     },
     {
       period: "1947 CE",
@@ -103,7 +115,8 @@ const Timeline = () => {
       description: "India gained freedom but was divided into India and Pakistan, leading to massive migration and communal violence.",
       highlights: ["Independence Day", "Partition", "Constitution Making"],
       icon: Star,
-      color: "from-saffron-400 to-emerald-500"
+      color: "from-saffron-400 to-emerald-500",
+      route: "/independence-partition"
     },
     {
       period: "1947-1964 CE",
@@ -111,7 +124,8 @@ const Timeline = () => {
       description: "Foundation of modern secular democracy with focus on planned industrialization, science, education, and non-alignment.",
       highlights: ["Five-Year Plans", "Non-Alignment", "Institution Building"],
       icon: Building2,
-      color: "from-blue-400 to-cyan-500"
+      color: "from-blue-400 to-cyan-500",
+      route: "/nehru-era"
     },
     {
       period: "1964-1977 CE",
@@ -119,7 +133,8 @@ const Timeline = () => {
       description: "Political instability, wars with neighbors, Green Revolution, and controversial Emergency period suspending democratic rights.",
       highlights: ["Green Revolution", "1971 War", "Emergency Period"],
       icon: Zap,
-      color: "from-orange-400 to-red-500"
+      color: "from-orange-400 to-red-500",
+      route: "/post-nehru"
     },
     {
       period: "1977-1991 CE",
@@ -127,7 +142,8 @@ const Timeline = () => {
       description: "Coalition politics and economic crisis leading to landmark liberalization reforms opening India to global markets.",
       highlights: ["End of License Raj", "Economic Opening", "Regional Politics"],
       icon: Globe,
-      color: "from-teal-400 to-green-500"
+      color: "from-teal-400 to-green-500",
+      route: "/post-emergency"
     },
     {
       period: "1991-2014 CE",
@@ -135,7 +151,8 @@ const Timeline = () => {
       description: "Rapid economic growth, IT revolution, nuclear tests, and coalition governments reshaping modern India's global presence.",
       highlights: ["IT Revolution", "Nuclear Tests", "Economic Growth"],
       icon: Zap,
-      color: "from-purple-400 to-pink-500"
+      color: "from-purple-400 to-pink-500",
+      route: "/post-liberalization"
     },
     {
       period: "2014-Present",
@@ -143,7 +160,8 @@ const Timeline = () => {
       description: "Digital transformation era with infrastructure development, strong governance, and active global diplomacy in space and technology.",
       highlights: ["Digital India", "Space Missions", "Global Diplomacy"],
       icon: Star,
-      color: "from-saffron-400 to-emerald-500"
+      color: "from-saffron-400 to-emerald-500",
+      route: "/contemporary-india"
     }
   ];
 
@@ -234,9 +252,9 @@ const Timeline = () => {
                             className="bg-gradient-to-r from-saffron-500 to-orange-600 
                               hover:from-saffron-600 hover:to-orange-700 text-white hover-scale"
                             onClick={() => {
-                              // Example: Only the first era navigates to IndusValley
-                              if (index === 0) {
-                                navigate('/indus-valley');
+                              const eraRoute = era.route;
+                              if (eraRoute) {
+                                navigate(eraRoute);
                               }
                               // You can add more conditions for other eras if needed
                             }}

@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -50,6 +49,23 @@ import Rajasthan from "./pages/Rajasthan";
  import Tripura from "./pages/Tripura";
 
 import IndusValley from "./pages/IndusValley";
+import VedicPeriod from "./pages/VedicPeriod";
+import MauryanEmpire from "./pages/MauryanEmpire";
+import Mahajanapadas from "./pages/Mahajanapadas";
+import PostMauryan from "./pages/PostMauryan";
+import GuptaEmpire from "./pages/GuptaEmpire";
+import PostGupta from "./pages/PostGupta";
+import DelhiSultanate from "./pages/DelhiSultanate";
+import MughalEmpire from "./pages/MughalEmpire";
+import RegionalKingdoms from "./pages/RegionalKingdoms";
+import BritishColonialRule from "./pages/BritishColonialRule";
+import IndependencePartition from "./pages/IndependencePartition";
+import NehruEra from "./pages/NehruEra";
+import PostNehru from "./pages/PostNehru";
+import PostEmergency from "./pages/PostEmergency";
+import PostLiberalization from "./pages/PostLiberalization";
+import ContemporaryIndia from "./pages/ContemporaryIndia";
+
 import GoogleTranslate from "./components/GoogleTranslate";
 
 const queryClient = new QueryClient();
@@ -108,6 +124,23 @@ const App = () => (
           <Route path="/tripura" element={<Tripura />} />
 
           <Route path="/indus-valley" element={<IndusValley />} />
+          <Route path="/vedic-period" element={<VedicPeriod />} />
+          <Route path="/mahajanapadas" element={<Mahajanapadas />} />
+          <Route path="/mauryan-empire" element={<MauryanEmpire />} />
+          <Route path="/post-mauryan" element={<PostMauryan />} />
+          <Route path="/gupta-empire" element={<GuptaEmpire />} />
+          <Route path="/post-gupta" element={<PostGupta />} />
+          <Route path="/delhi-sultanate" element={<DelhiSultanate />} />
+          <Route path="/mughal-empire" element={<MughalEmpire />} />
+          <Route path="/regional-kingdoms" element={<RegionalKingdoms />} />
+          <Route path="/british-colonial-rule" element={<BritishColonialRule />} />
+          <Route path="/independence-partition" element={<IndependencePartition />} />
+          <Route path="/nehru-era" element={<NehruEra />} />
+          <Route path="/post-nehru" element={<PostNehru />} />
+          <Route path="/post-emergency" element={<PostEmergency />} />
+          <Route path="/post-liberalization" element={<PostLiberalization />} />
+          <Route path="/contemporary-india" element={<ContemporaryIndia />} />
+
 
           { /* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */ }
           <Route path="*" element={<NotFound />} />
