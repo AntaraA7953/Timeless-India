@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Music, Palette, Theater, Shirt, Play, Heart } from 'lucide-react';
+import { Music, Palette, Theater, Shirt, Play, Heart, Building2 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -95,6 +95,12 @@ const ArtForms = () => {
           origin: 'Andhra Pradesh',
           description: 'Hand-painted textile art',
           color: 'from-cyan-400 to-blue-500'
+        },
+        {          
+          name: 'Tanjore Painting',
+          origin: 'Tamil Nadu',
+          description: 'Richly decorated paintings with gold foil',
+          color: 'from-emerald-400 to-teal-500'
         }
       ]
     },
@@ -125,6 +131,36 @@ const ArtForms = () => {
           origin: 'Kashmir',
           description: 'Fine cashmere wool shawls and scarves',
           color: 'from-purple-400 to-indigo-500'
+        }
+      ]
+    },
+    architecture: {
+      title: 'Architecture',
+      icon: Building2,
+      items: [
+        {
+          name: 'Temples',
+          origin: 'Pan-India',
+          description: 'Intricate stone carvings and sculptures',
+          color: 'from-orange-400 to-yellow-500'
+        },
+        {
+          name: 'Mughal Architecture',
+          origin: 'North India',
+          description: 'Grand palaces and gardens with Persian influence',
+          color: 'from-red-400 to-pink-500'
+        },
+        {
+          name: 'Fort Architecture',
+          origin: 'Rajasthan',
+          description: 'Massive forts with defensive structures',
+          color: 'from-blue-400 to-indigo-500'
+        },
+        {
+          name: 'Heritage Havelis',
+          origin: 'Gujarat/Rajasthan',
+          description: 'Traditional mansions with ornate facades',
+          color: 'from-green-400 to-teal-500'
         }
       ]
     }
