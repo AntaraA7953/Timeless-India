@@ -1,0 +1,260 @@
+* QuisineCorner Component Styles */
+
+.quisine-corner {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fef7ed 0%, #fef2f2 50%, #fefce8 100%);
+}
+
+/* Header Styles */
+.quisine-header {
+  text-align: center;
+  padding: 5rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.quisine-bg-decorations {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+}
+
+.quisine-bg-element {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(48px);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.quisine-bg-element-1 {
+  top: 2.5rem;
+  left: 25%;
+  width: 8rem;
+  height: 8rem;
+  background-color: #fb923c;
+}
+
+.quisine-bg-element-2 {
+  bottom: 2.5rem;
+  right: 25%;
+  width: 10rem;
+  height: 10rem;
+  background-color: #f87171;
+  animation-delay: 1000ms;
+}
+
+.quisine-title-container {
+  position: relative;
+  z-index: 10;
+}
+
+.quisine-main-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 768px) {
+  .quisine-main-title {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .quisine-main-title {
+    font-size: 8rem;
+  }
+}
+
+.quisine-title-line-1 {
+  background: linear-gradient(to right, #ea580c, #dc2626, #d97706);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07));
+}
+
+.quisine-title-line-2 {
+  background: linear-gradient(to right, #d97706, #ea580c, #dc2626);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07));
+}
+
+/* Decorative spice elements */
+.quisine-spice-decorations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quisine-spice {
+  border-radius: 50%;
+}
+
+.quisine-spice-1 {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #f97316;
+  animation: bounce 1s infinite;
+}
+
+.quisine-spice-2 {
+  width: 0.25rem;
+  height: 2rem;
+  background: linear-gradient(to bottom, #ef4444, #f97316);
+  border-radius: 9999px;
+}
+
+.quisine-spice-3 {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #eab308;
+  animation: bounce 1s infinite;
+  animation-delay: 300ms;
+}
+
+.quisine-spice-4 {
+  width: 0.25rem;
+  height: 1.5rem;
+  background: linear-gradient(to bottom, #f97316, #eab308);
+  border-radius: 9999px;
+}
+
+.quisine-spice-5 {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #ef4444;
+  animation: bounce 1s infinite;
+  animation-delay: 700ms;
+}
+
+/* Description Styles */
+.quisine-description {
+  font-size: 1.25rem;
+  color: #374151;
+  max-width: 64rem;
+  margin: 0 auto 2rem;
+  line-height: 1.625;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .quisine-description {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .quisine-description {
+    font-size: 1.875rem;
+  }
+}
+
+.quisine-description-main {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.quisine-description-sub {
+  font-size: 1.125rem;
+  color: #4b5563;
+}
+
+@media (min-width: 768px) {
+  .quisine-description-sub {
+    font-size: 1.25rem;
+  }
+}
+
+.quisine-highlight-orange {
+  color: #ea580c;
+  font-weight: 600;
+}
+
+.quisine-highlight-red {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* Results Counter */
+.quisine-results-counter {
+  color: #4b5563;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.quisine-counter-highlight-orange {
+  color: #ea580c;
+  font-weight: bold;
+}
+
+.quisine-counter-highlight-red {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+/* Content Styles */
+.quisine-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+
+.quisine-dishes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .quisine-dishes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .quisine-dishes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* No Results Styles */
+.quisine-no-results {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.quisine-no-results-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.quisine-no-results-text {
+  color: #6b7280;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}

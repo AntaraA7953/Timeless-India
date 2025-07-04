@@ -5,11 +5,13 @@ import { Card, CardContent } from '@/components/ui/card';
 import Hero from '@/components/Hero';
 import InteractiveMap from '@/components/InteractiveMap';
 import Timeline from '@/components/Timeline';
+import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [peekOpen, setPeekOpen] = useState(false);
   const peekRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -107,14 +109,14 @@ const Index = () => {
                     <div className="absolute -top-2 right-6 w-4 h-4 bg-white border-l border-t border-orange-100 rotate-45 z-10"></div>
                     <button
                       className="flex items-center gap-3 w-full text-left px-5 py-3 rounded-t-xl hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
-                      onClick={() => { window.location.href = '/quisine-corner'; setPeekOpen(false); }}
+                      onClick={() => { navigate('/quisine/QuisineCorner'); setPeekOpen(false); }}
                     >
                       <Utensils size={18} className="text-saffron-500" />
                       Quisine Corner
                     </button>
                     <button
                       className="flex items-center gap-3 w-full text-left px-5 py-3 hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
-                      onClick={() => { /* Add routing if needed */ setPeekOpen(false); }}
+                      onClick={() => { navigate('/quisine/QuisineCorner'); setPeekOpen(false); }}
                     >
                       <Sparkles size={18} className="text-emerald-500" />
                       Festival Fiesta

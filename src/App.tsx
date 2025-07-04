@@ -68,6 +68,8 @@ import ContemporaryIndia from "./pages/ContemporaryIndia";
 
 import GoogleTranslate from "./components/GoogleTranslate";
 
+import QuisineCorner from './pages/quisine/QuisineCorner';
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -141,6 +143,7 @@ const App = () => (
           <Route path="/post-liberalization" element={<PostLiberalization />} />
           <Route path="/contemporary-india" element={<ContemporaryIndia />} />
 
+          <Route path="/quisine/QuisineCorner" element={<QuisineCorner />} />
 
           { /* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */ }
           <Route path="*" element={<NotFound />} />
