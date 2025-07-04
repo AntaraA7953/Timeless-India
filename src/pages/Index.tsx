@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowRight, MapPin, Clock, Palette, Camera, Trophy, Users, Star } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { ArrowRight, MapPin, Clock, Palette, Camera, Trophy, Users, Star, Eye, Utensils, Sparkles, Newspaper, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Hero from '@/components/Hero';
@@ -8,6 +8,8 @@ import Timeline from '@/components/Timeline';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [peekOpen, setPeekOpen] = useState(false);
+  const peekRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +30,19 @@ const Index = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (peekRef.current && !peekRef.current.contains(event.target as Node)) {
+        setPeekOpen(false);
+      }
+    }
+    if (peekOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [peekOpen]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-emerald-50">
@@ -73,12 +88,69 @@ const Index = () => {
                 <Users size={16} />
                 <span className="text-sm font-medium">Stories</span>
               </a>
+              {/* Peek Button and Dropdown */}
+              <div ref={peekRef} className="relative">
+                <button
+                  className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-saffron-400 to-emerald-400 text-white shadow-lg hover:scale-110 transition-all border-2 border-white"
+                  onClick={() => setPeekOpen((open) => !open)}
+                  aria-label="Peek"
+                  type="button"
+                >
+                  <Eye size={20} />
+                </button>
+                {peekOpen && (
+                  <div
+                    className="absolute right-0 mt-3 w-56 bg-white rounded-xl shadow-2xl border border-orange-100 z-50 animate-fade-in-up"
+                    style={{ minWidth: 220 }}
+                  >
+                    {/* Triangle pointer */}
+                    <div className="absolute -top-2 right-6 w-4 h-4 bg-white border-l border-t border-orange-100 rotate-45 z-10"></div>
+                    <button
+                      className="flex items-center gap-3 w-full text-left px-5 py-3 rounded-t-xl hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
+                      onClick={() => { window.location.href = '/quisine-corner'; setPeekOpen(false); }}
+                    >
+                      <Utensils size={18} className="text-saffron-500" />
+                      Quisine Corner
+                    </button>
+                    <button
+                      className="flex items-center gap-3 w-full text-left px-5 py-3 hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
+                      onClick={() => { /* Add routing if needed */ setPeekOpen(false); }}
+                    >
+                      <Sparkles size={18} className="text-emerald-500" />
+                      Festival Fiesta
+                    </button>
+                    <button
+                      className="flex items-center gap-3 w-full text-left px-5 py-3 hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
+                      onClick={() => { /* Add routing if needed */ setPeekOpen(false); }}
+                    >
+                      <Newspaper size={18} className="text-orange-500" />
+                      Daily Echoes
+                    </button>
+                    <button
+                      className="flex items-center gap-3 w-full text-left px-5 py-3 rounded-b-xl hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
+                      onClick={() => { /* Add routing if needed */ setPeekOpen(false); }}
+                    >
+                      <ShoppingBag size={18} className="text-pink-500" />
+                      Made in My India
+                    </button>
+                  </div>
+                )}
+              </div>
+              {/* End Peek Button */}
+              <Button className="bg-gradient-to-r from-saffron-500 to-emerald-500 hover:from-saffron-600 hover:to-emerald-600 transform hover:scale-105 transition-all duration-300">
+                <Users className="mr-2 h-4 w-4" />
+                Join Community
+              </Button>
             </div>
 
-            <Button className="bg-gradient-to-r from-saffron-500 to-emerald-500 hover:from-saffron-600 hover:to-emerald-600 transform hover:scale-105 transition-all duration-300">
-              <Users className="mr-2 h-4 w-4" />
-              Join Community
-            </Button>
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <button className="text-gray-600 hover:text-saffron-600 focus:outline-none" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
@@ -224,3 +296,13 @@ const Index = () => {
 };
 
 export default Index;
+
+/* Add this animation to your global CSS or in a <style> tag:
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.25s ease;
+}
+*/
