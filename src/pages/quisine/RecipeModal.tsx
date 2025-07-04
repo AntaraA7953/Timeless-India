@@ -15,6 +15,7 @@ interface Dish {
   ingredients: string[];
   instructions: string[];
   videoId: string;
+  imageLink: string; // URL to the dish image
   nutrition: {
     calories: number;
     protein: string;
@@ -51,10 +52,10 @@ const RecipeModal = ({ dish, onClose }: RecipeModalProps) => {
           {/* Header */}
           <div className="relative">
             <img
-              src={`https://images.unsplash.com/${dish.image}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`}
-              alt={dish.name}
-              className="w-full h-64 object-cover"
-            />
+  src={`${dish.imageLink}?auto=format&fit=crop&w=1200&q=80`}
+  alt={dish.name}
+  className="w-full h-64 object-cover"
+/>
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             <button
               onClick={onClose}
