@@ -11,7 +11,7 @@ export interface Dish {
   ingredients: string[];
   instructions: string[];
   videoId: string;
-  videoLink: string; // <-- add this
+  //videoLink: string; // <-- add this
   nutrition: {
     calories: number;
     protein: string;
@@ -26,15 +26,15 @@ export const dishes: Dish[] = [
   {
     id: 1,
     name: "Butter Chicken",
-    image: "https://www.indianhealthyrecipes.com/wp-content/uploads/2023/05/butter-chicken-murgh-makhani.jpg.webp",
+    image: "photo-1603894584373-5ac82b2ae398",
     imageLink: "https://www.indianhealthyrecipes.com/wp-content/uploads/2023/05/butter-chicken-murgh-makhani.jpg.webp",
     region: "Delhi",
     cookTime: "45 mins",
     servings: 4,
     difficulty: "Medium",
     description: "Rich and creamy tomato-based curry with tender chicken pieces, aromatic spices, and a touch of butter. This iconic North Indian dish is perfect with naan or basmati rice.",
-    videoId: "a03c6gsJL6I",
-    videoLink: "https://www.youtube.com/watch?v=a03c6gsJL6I",
+    videoId: "a03U45jFxOI",
+   // videoLink: "https://www.youtube.com/watch?v=a03c6gsJL6I",
     nutrition: {
       calories: 420,
       protein: "28g",
@@ -77,15 +77,15 @@ export const dishes: Dish[] = [
   {
     id: 2,
     name: "Biryani",
-    image: "photo-1563379091339-03246963d96c",
+    image: "photo-1589302168068-964664d93dc0",
     imageLink: "https://images.unsplash.com/photo-1563379091339-03246963d96c",
     region: "Telangana",
     cookTime: "90 mins",
     servings: 6,
     difficulty: "Hard",
     description: "Aromatic basmati rice layered with spiced meat or vegetables, cooked in a sealed pot to perfection. This royal dish is a celebration of flavors and fragrances.",
-    videoId: "qbp5tOtJkH0",
-    videoLink: "https://www.youtube.com/watch?v=qbp5tOtJkH0",
+    videoId: "95BCU1n268w",
+    //videoLink: "https://www.youtube.com/watch?v=qbp5tOtJkH0",
     nutrition: {
       calories: 600,
       protein: "30g",
@@ -130,15 +130,15 @@ export const dishes: Dish[] = [
   {
     id: 3,
     name: "Masala Dosa",
-    image: "photo-1567188040759-fb8a883dc6d8",
+    image: "photo-1743517894265-c86ab035adef",
     imageLink: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8",
     region: "Karnataka",
     cookTime: "30 mins",
     servings: 4,
     difficulty: "Medium",
     description: "Crispy, golden crepe made from fermented rice and lentil batter, filled with spiced potato curry. A South Indian breakfast favorite served with coconut chutney and sambar.",
-    videoId: "5A9EPnXkVd0",
-    videoLink: "https://www.youtube.com/watch?v=5A9EPnXkVd0",
+    videoId: "mDqkxZ3UVzc",
+    //videoLink: "https://www.youtube.com/watch?v=5A9EPnXkVd0",
     nutrition: {
       calories: 250,
       protein: "8g",
@@ -188,8 +188,8 @@ export const dishes: Dish[] = [
     servings: 4,
     difficulty: "Easy",
     description: "Hearty red kidney bean curry cooked in a rich tomato-onion gravy with aromatic spices. This protein-rich North Indian comfort food pairs perfectly with steamed rice.",
-    videoId: "UbR7HSfhKJs",
-    videoLink: "https://www.youtube.com/watch?v=UbR7HSfhKJs",
+    videoId: "M_ncAJhIaIU",
+    //videoLink: "https://www.youtube.com/watch?v=UbR7HSfhKJs",
     nutrition: {
       calories: 350,
       protein: "20g",
@@ -239,8 +239,8 @@ export const dishes: Dish[] = [
     servings: 4,
     difficulty: "Medium",
     description: "Spicy mixed vegetable curry served with buttered bread rolls. This popular Mumbai street food is a perfect blend of flavors and textures that will tantalize your taste buds.",
-    videoId: "2oHU1_tv7KQ",
-    videoLink: "https://www.youtube.com/watch?v=2oHU1_tv7KQ",
+    videoId: "gkH2eqFb_YE",
+    //videoLink: "https://www.youtube.com/watch?v=2oHU1_tv7KQ",
     nutrition: {
       calories: 400,
       protein: "10g",
@@ -282,15 +282,15 @@ export const dishes: Dish[] = [
   {
     id: 6,
     name: "Chole Bhature",
-    image: "photo-1571167896368-bd872c3b85a0",
-    imageLink: "https://images.unsplash.com/photo-1571167896368-bd872c3b85a0",
+    image: "https://www.happy-tummy.co.in/wp-content/uploads/2020/07/Chole-Bhature-scaled.jpg",
+    imageLink: "https://www.happy-tummy.co.in/wp-content/uploads/2020/07/Chole-Bhature-scaled.jpg",
     region: "Haryana",
     cookTime: "75 mins",
     servings: 4,
     difficulty: "Medium",
     description: "Spicy chickpea curry paired with fluffy deep-fried bread. This iconic North Indian combination is a weekend favorite that brings families together around the dining table.",
-    videoId: "dzz3j_G5WqI",
-    videoLink: "https://www.youtube.com/watch?v=dzz3j_G5WqI",
+    videoId: "aFzBnNWEu5Y",
+    //videoLink: "https://www.youtube.com/watch?v=dzz3j_G5WqI",
     nutrition: {
       calories: 500,
       protein: "20g",
@@ -340,7 +340,7 @@ export const dishes: Dish[] = [
     difficulty: "Hard",
     description: "Aromatic lamb curry from Kashmir, slow-cooked in yogurt and spices with a rich red color from Kashmiri chilies.",
     videoId: "QzTNhfAKhfA",
-    videoLink: "https://www.youtube.com/watch?v=QzTNhfAKhfA",
+    //videoLink: "https://www.youtube.com/watch?v=QzTNhfAKhfA",
     nutrition: {
       calories: 650,
       protein: "40g",
@@ -387,7 +387,7 @@ export const dishes: Dish[] = [
     difficulty: "Medium",
     description: "Traditional Punjabi winter meal of corn flour flatbread served with mustard greens curry and butter.",
     videoId: "zKb0g8OLSqE",
-    videoLink: "https://www.youtube.com/watch?v=zKb0g8OLSqE",
+    //videoLink: "https://www.youtube.com/watch?v=zKb0g8OLSqE",
     nutrition: {
       calories: 400,
       protein: "12g",
@@ -432,7 +432,7 @@ export const dishes: Dish[] = [
     difficulty: "Easy",
     description: "Steamed savory cake made from fermented chickpea flour batter, light and spongy with a tangy flavor.",
     videoId: "8JVfOPJ8OjY",
-    videoLink: "https://www.youtube.com/watch?v=8JVfOPJ8OjY",
+    //videoLink: "https://www.youtube.com/watch?v=8JVfOPJ8OjY",
     nutrition: {
       calories: 150,
       protein: "5g",
@@ -476,7 +476,7 @@ export const dishes: Dish[] = [
     difficulty: "Hard",
     description: "Fiery red mutton curry from Rajasthan, cooked with Mathania chilies and aromatic spices.",
     videoId: "BvjfWQnxEn0",
-    videoLink: "https://www.youtube.com/watch?v=BvjfWQnxEn0",
+    //videoLink: "https://www.youtube.com/watch?v=BvjfWQnxEn0",
     nutrition: {
       calories: 700,
       protein: "45g",
@@ -521,7 +521,7 @@ export const dishes: Dish[] = [
     difficulty: "Medium",
     description: "Spongy cottage cheese balls cooked in sugar syrup, a beloved Bengali sweet dessert.",
     videoId: "M4n1vTLgmrU",
-    videoLink: "https://www.youtube.com/watch?v=M4n1vTLgmrU",
+    //videoLink: "https://www.youtube.com/watch?v=M4n1vTLgmrU",
     nutrition: {
       calories: 200,
       protein: "5g",
@@ -562,7 +562,7 @@ export const dishes: Dish[] = [
     difficulty: "Medium",
     description: "Steamed rice cakes served with lentil curry, a staple South Indian breakfast dish.",
     videoId: "yXL_MpjHZ1M",
-    videoLink: "https://www.youtube.com/watch?v=yXL_MpjHZ1M",
+    //videoLink: "https://www.youtube.com/watch?v=yXL_MpjHZ1M",
     nutrition: {
       calories: 300,
       protein: "10g",
@@ -606,7 +606,7 @@ export const dishes: Dish[] = [
     difficulty: "Medium",
     description: "Coconut-based fish curry with curry leaves and kokum, a signature dish from God's Own Country.",
     videoId: "7JZ7vkwfVE8",
-    videoLink: "https://www.youtube.com/watch?v=7JZ7vkwfVE8",
+    //videoLink: "https://www.youtube.com/watch?v=7JZ7vkwfVE8",
     nutrition: {
       calories: 350,
       protein: "25g",
@@ -650,7 +650,7 @@ export const dishes: Dish[] = [
     difficulty: "Easy",
     description: "Flattened rice cooked with onions, curry leaves, and spices, a popular breakfast dish from Central India.",
     videoId: "Rb5KrKrWUWI",
-    videoLink: "https://www.youtube.com/watch?v=Rb5KrKrWUWI",
+    //videoLink: "https://www.youtube.com/watch?v=Rb5KrKrWUWI",
     nutrition: {
       calories: 200,
       protein: "5g",
@@ -696,7 +696,7 @@ export const dishes: Dish[] = [
     difficulty: "Medium",
     description: "Spicy rice and lentil dish cooked with vegetables and aromatic spices, a comfort food from Karnataka.",
     videoId: "XzKnpAUoTlY",
-    videoLink: "https://www.youtube.com/watch?v=XzKnpAUoTlY",
+    //videoLink: "https://www.youtube.com/watch?v=XzKnpAUoTlY",
     nutrition: {
       calories: 450,
       protein: "15g",
@@ -740,7 +740,7 @@ export const dishes: Dish[] = [
     difficulty: "Easy",
     description: "Crispy potato patties served with chutneys, a popular street food snack from North India.",
     videoId: "5KvOWYKRKIQ",
-    videoLink: "https://www.youtube.com/watch?v=5KvOWYKRKIQ",
+    //videoLink: "https://www.youtube.com/watch?v=5KvOWYKRKIQ",
     nutrition: {
       calories: 250,
       protein: "5g",
@@ -784,7 +784,7 @@ export const dishes: Dish[] = [
     difficulty: "Medium",
     description: "Delicate cottage cheese sweet from Bengal, often flavored with cardamom or saffron.",
     videoId: "J8zl5JIUP0E",
-    videoLink: "https://www.youtube.com/watch?v=J8zl5JIUP0E",
+    //videoLink: "https://www.youtube.com/watch?v=J8zl5JIUP0E",
     nutrition: {
       calories: 180,
       protein: "6g",
@@ -825,7 +825,7 @@ export const dishes: Dish[] = [
     difficulty: "Medium",
     description: "Spicy sprouted moth bean curry topped with farsan, served with bread rolls.",
     videoId: "tJ9Rk4cxKqo",
-    videoLink: "https://www.youtube.com/watch?v=tJ9Rk4cxKqo",
+    //videoLink: "https://www.youtube.com/watch?v=tJ9Rk4cxKqo",
     nutrition: {
       calories: 400,
       protein: "15g",
@@ -868,7 +868,7 @@ export const dishes: Dish[] = [
     difficulty: "Hard",
     description: "Traditional Rajasthani sweet with honeycomb texture, soaked in sugar syrup and topped with cream.",
     videoId: "dJ4k6TnzT0w",
-    videoLink: "https://www.youtube.com/watch?v=dJ4k6TnzT0w",
+    //videoLink: "https://www.youtube.com/watch?v=dJ4k6TnzT0w",
     nutrition: {
       calories: 300,
       protein: "4g",
@@ -910,7 +910,7 @@ export const dishes: Dish[] = [
     difficulty: "Medium",
     description: "Stuffed flatbread with spiced potato filling, served with yogurt and pickle.",
     videoId: "bCsG5dLCZWE",
-    videoLink: "https://www.youtube.com/watch?v=bCsG5dLCZWE",
+    //videoLink: "https://www.youtube.com/watch?v=bCsG5dLCZWE",
     nutrition: {
       calories: 350,
       protein: "10g",
@@ -954,7 +954,7 @@ export const dishes: Dish[] = [
     difficulty: "Medium",
     description: "Fermented rice pancakes with soft center and crispy edges, served with stew or curry.",
     videoId: "qJy8DTCY_1Y",
-    videoLink: "https://www.youtube.com/watch?v=qJy8DTCY_1Y",
+    //videoLink: "https://www.youtube.com/watch?v=qJy8DTCY_1Y",
     nutrition: {
       calories: 200,
       protein: "5g",
@@ -996,7 +996,7 @@ export const dishes: Dish[] = [
     difficulty: "Easy",
     description: "Tibetan noodle soup with vegetables and meat, perfect for cold mountain weather.",
     videoId: "8jWRhPFhNJI",
-    videoLink: "https://www.youtube.com/watch?v=8jWRhPFhNJI",
+    //videoLink: "https://www.youtube.com/watch?v=8jWRhPFhNJI",
     nutrition: {
       calories: 300,
       protein: "15g",
@@ -1040,7 +1040,7 @@ export const dishes: Dish[] = [
     difficulty: "Medium",
     description: "Traditional Assamese curry made with tender bamboo shoots and fish or meat.",
     videoId: "rQ8l7VNXxPE",
-    videoLink: "https://www.youtube.com/watch?v=rQ8l7VNXxPE",
+    //videoLink: "https://www.youtube.com/watch?v=rQ8l7VNXxPE",
     nutrition: {
       calories: 250,
       protein: "15g",
@@ -1083,7 +1083,7 @@ export const dishes: Dish[] = [
     difficulty: "Easy",
     description: "Fermented rice dish served with fried vegetables, a cooling summer meal from Odisha.",
     videoId: "wNOxTgJfFzs",
-    videoLink: "https://www.youtube.com/watch?v=wNOxTgJfFzs",
+    //videoLink: "https://www.youtube.com/watch?v=wNOxTgJfFzs",
     nutrition: {
       calories: 180,
       protein: "4g",
@@ -1126,7 +1126,7 @@ export const dishes: Dish[] = [
     difficulty: "Medium",
     description: "Khasi red rice dish cooked with pork and black sesame, a tribal delicacy from Northeast India.",
     videoId: "yPl2gDWZHEU",
-    videoLink: "https://www.youtube.com/watch?v=yPl2gDWZHEU",
+    //videoLink: "https://www.youtube.com/watch?v=yPl2gDWZHEU",
     nutrition: {
       calories: 500,
       protein: "30g",
