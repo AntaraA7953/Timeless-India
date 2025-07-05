@@ -317,8 +317,8 @@ const IndusValley = () => {
               left: 0;
               right: 0;
               bottom: 0;
-              background: url('https://wallpapercave.com/wp/wp11945055.jpg') center/cover;
-              opacity: 0.6;
+              background: url('') center/cover;
+              opacity: 0.2;
               z-index: 0;
           }
 

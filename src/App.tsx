@@ -52,7 +52,7 @@ import IndusValley from "./pages/IndusValley";
 import VedicPeriod from "./pages/VedicPeriod";
 import MauryanEmpire from "./pages/MauryanEmpire";
 import Mahajanapadas from "./pages/Mahajanapadas";
-import PostMauryan from "./pages/PostMauryan";
+import PostMaurya from "./pages/PostMaurya";
 import GuptaEmpire from "./pages/GuptaEmpire";
 import PostGupta from "./pages/PostGupta";
 import DelhiSultanate from "./pages/DelhiSultanate";
@@ -127,7 +127,7 @@ const App = () => (
           <Route path="/vedic-period" element={<VedicPeriod />} />
           <Route path="/mahajanapadas" element={<Mahajanapadas />} />
           <Route path="/mauryan-empire" element={<MauryanEmpire />} />
-          <Route path="/post-mauryan" element={<PostMauryan />} />
+          <Route path="/post-maurya" element={<PostMaurya />} />
           <Route path="/gupta-empire" element={<GuptaEmpire />} />
           <Route path="/post-gupta" element={<PostGupta />} />
           <Route path="/delhi-sultanate" element={<DelhiSultanate />} />
