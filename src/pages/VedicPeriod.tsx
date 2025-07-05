@@ -485,7 +485,7 @@ const VedicPeriod = () => {
                     <p>Farming scenes – Agriculture using ploughs and irrigation in rural settlements</p>
                 </div>
                 <div className="image-card">
-                    <img src="https://notes.edureify.com/wp-content/uploads/2022/08/photoFXlab_2016-02-05_10-30-44.jpg" alt="Vedic Festival"/>
+                    <img src="https://www.poojn.in/wp-content/uploads/2025/03/Later-Vedic-Period-Society-and-Culture-Transformed.jpeg.jpg" alt="Vedic Festival"/>
                     <p>Community gathering – Festivals and yajnas brought people together in shared spiritual observances</p>
                 </div>
             </div>
