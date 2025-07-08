@@ -688,8 +688,8 @@ export const dishes: Dish[] = [
   {
     id: 15,
     name: "Bisi Bele Bath",
-    image: "photo-1565299624946-b28f40a0ca4b",
-    imageLink: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b",
+    image: "photo-1666181190996-80ed100c66ef",
+    imageLink: "https://images.unsplash.com/photo-1666181190996-80ed100c66ef",
     region: "Karnataka",
     cookTime: "50 mins",
     servings: 4,
@@ -860,8 +860,8 @@ export const dishes: Dish[] = [
   {
     id: 19,
     name: "Ghevar",
-    image: "photo-1571167896368-bd872c3b85a0",
-    imageLink: "https://images.unsplash.com/photo-1571167896368-bd872c3b85a0",
+    image: "photo-1696454599025-42b5089f58dc",
+    imageLink: "https://images.unsplash.com/photo-1696454599025-42b5089f58dc",
     region: "Rajasthan",
     cookTime: "40 mins",
     servings: 8,
@@ -1032,8 +1032,8 @@ export const dishes: Dish[] = [
   {
     id: 23,
     name: "Bamboo Shoot Curry",
-    image: "photo-1565299624946-b28f40a0ca4b",
-    imageLink: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b",
+    image: "photo-1612755657417-9c6885e5ece9",
+    imageLink: "https://images.unsplash.com/photo-1612755657417-9c6885e5ece9",
     region: "Assam",
     cookTime: "40 mins",
     servings: 4,
@@ -1075,8 +1075,8 @@ export const dishes: Dish[] = [
   {
     id: 24,
     name: "Pakhala Bhata",
-    image: "photo-1701011134313-fd5c91ea051e",
-    imageLink: "https://images.unsplash.com/photo-1701011134313-fd5c91ea051e",
+    image: "photo-1694953593181-6ce423500712",
+    imageLink: "https://images.unsplash.com/photo-1694953593181-6ce423500712",
     region: "Odisha",
     cookTime: "15 mins",
     servings: 4,
