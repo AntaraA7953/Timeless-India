@@ -121,13 +121,7 @@ const Index = () => {
                       <Sparkles size={18} className="text-emerald-500" />
                       Festival Fiesta
                     </button>
-                    <button
-                      className="flex items-center gap-3 w-full text-left px-5 py-3 hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
-                      onClick={() => { navigate('/DailyEchoes') ;setPeekOpen(false); }}
-                    >
-                      <Newspaper size={18} className="text-orange-500" />
-                      Daily Echoes
-                    </button>
+                    
                     <button
                       className="flex items-center gap-3 w-full text-left px-5 py-3 rounded-b-xl hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
                       onClick={() => { navigate('/DailyEchoes');setPeekOpen(false); }}
