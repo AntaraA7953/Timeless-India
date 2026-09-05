@@ -70,7 +70,6 @@ import GoogleTranslate from "./components/GoogleTranslate";
 
 import QuisineCorner from './pages/quisine/QuisineCorner';
 
-import DailyEchoes from "./pages/DailyEchoes"; 
 
 const queryClient = new QueryClient();
 
@@ -146,8 +145,7 @@ const App = () => (
           <Route path="/contemporary-india" element={<ContemporaryIndia />} />
 
           <Route path="/quisine/QuisineCorner" element={<QuisineCorner />} />
-          <Route path="/DailyEchoes" element={<DailyEchoes />} />
-
+          
           { /* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */ }
           <Route path="*" element={<NotFound />} />
         </Routes>

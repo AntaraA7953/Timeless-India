@@ -103,7 +103,7 @@ const ChessGame: React.FC<ChessGameProps> = ({ onBack, onComplete }) => {
 
     switch (piece.type) {
       case 'pawn':
-        const direction = piece.color === 'white' ? -1 : 1;
+        {const direction = piece.color === 'white' ? -1 : 1;
         const startRow = piece.color === 'white' ? 6 : 1;
         
         // Forward move
@@ -126,10 +126,10 @@ const ChessGame: React.FC<ChessGameProps> = ({ onBack, onComplete }) => {
           moves.push({ row: row + direction, col: col + 1 });
         }
         break;
-
+        }
       case 'rook':
         // Horizontal and vertical moves
-        for (let i = 1; i < 8; i++) {
+        {for (let i = 1; i < 8; i++) {
           const positions = [
             { row: row + i, col },
             { row: row - i, col },
@@ -152,11 +152,11 @@ const ChessGame: React.FC<ChessGameProps> = ({ onBack, onComplete }) => {
           });
         }
         break;
-
+        }
       // Add other piece movement logic here (simplified for demo)
       default:
         // For demo purposes, allow basic moves for other pieces
-        const directions = [
+        {const directions = [
           [-1, -1], [-1, 0], [-1, 1],
           [0, -1],           [0, 1],
           [1, -1],  [1, 0],  [1, 1]
@@ -172,7 +172,7 @@ const ChessGame: React.FC<ChessGameProps> = ({ onBack, onComplete }) => {
               moves.push({ row: newRow, col: newCol });
             }
           }
-        });
+        });}
     }
 
     return moves;

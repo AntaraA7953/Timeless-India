@@ -506,7 +506,7 @@ const Rangoli = ({ onBack }: RangoliProps) => {
         drawFn(canvas.width - x, canvas.height - y);
         break;
       case "radial8":
-        const angles = [0, 45, 90, 135, 180, 225, 270, 315];
+        {const angles = [0, 45, 90, 135, 180, 225, 270, 315];
         const dx = x - centerX;
         const dy = y - centerY;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -520,7 +520,7 @@ const Rangoli = ({ onBack }: RangoliProps) => {
             drawFn(newX, newY);
           }
         });
-        break;
+        break;}
     }
   };
 
