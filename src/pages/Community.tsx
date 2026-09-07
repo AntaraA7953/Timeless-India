@@ -11,7 +11,7 @@ type Post = {
   content: string;
   heritage_category: string | null;
   created_at: string;
-  profiles: { username: string; avatar_url: string | null } | null;
+  profiles: { username: string; avatar_url: string | null }[];
 };
 
 type Community = {
@@ -123,7 +123,7 @@ const Community = () => {
             {error && <p className="text-sm text-red-600">{error}</p>}
             {posts.map((post) => (
               <Card key={post.id}>
-                <CardHeader><CardTitle className="text-xl">{post.title}</CardTitle><p className="text-sm text-gray-500">By {post.profiles?.username ?? "Community member"} · {new Date(post.created_at).toLocaleDateString()}</p></CardHeader>
+                <CardHeader><CardTitle className="text-xl">{post.title}</CardTitle><p className="text-sm text-gray-500">By {post.profiles?.[0]?.username ?? "Community member"} · {new Date(post.created_at).toLocaleDateString()}</p></CardHeader>
                 <CardContent><p className="whitespace-pre-wrap text-gray-700">{post.content}</p>{post.heritage_category && <span className="mt-4 inline-block rounded-full bg-orange-100 px-3 py-1 text-xs text-orange-700">{post.heritage_category}</span>}</CardContent>
               </Card>
             ))}
