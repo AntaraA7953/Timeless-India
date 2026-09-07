@@ -11,7 +11,7 @@ type Post = {
   content: string;
   heritage_category: string | null;
   created_at: string;
-  profiles: { username: string; avatar_url: string | null }[];
+  profiles: { username: string; avatar_url: string | null } | null;
 };
 
 type Community = {
@@ -19,6 +19,15 @@ type Community = {
   name: string;
   description: string;
   focus_area: string;
+};
+
+const formatPostDate = (createdAt: string) => {
+  const date = new Date(createdAt);
+
+  return {
+    date: date.toLocaleDateString(undefined, { dateStyle: "medium" }),
+    time: date.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }),
+  };
 };
 
 const Community = () => {
@@ -152,7 +161,16 @@ const Community = () => {
             {error && <p className="text-sm text-red-600">{error}</p>}
             {posts.map((post) => (
               <Card key={post.id}>
-                <CardHeader><CardTitle className="text-xl">{post.title}</CardTitle><p className="text-sm text-gray-500">By {post.profiles?.[0]?.username ?? "Community member"} · {new Date(post.created_at).toLocaleDateString()}</p></CardHeader>
+                <CardHeader>
+                  <CardTitle className="text-xl">{post.title}</CardTitle>
+                  <p className="text-sm text-gray-500">
+                    Posted by <span className="font-medium text-gray-700">@{post.profiles?.username ?? "community-member"}</span>
+                    {(() => {
+                      const postDate = formatPostDate(post.created_at);
+                      return <> · {postDate.date} at {postDate.time}</>;
+                    })()}
+                  </p>
+                </CardHeader>
                 <CardContent><p className="whitespace-pre-wrap text-gray-700">{post.content}</p>{post.heritage_category && <span className="mt-4 inline-block rounded-full bg-orange-100 px-3 py-1 text-xs text-orange-700">{post.heritage_category}</span>}</CardContent>
               </Card>
             ))}
