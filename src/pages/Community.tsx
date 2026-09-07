@@ -23,6 +23,7 @@ type Community = {
 
 const Community = () => {
   const navigate = useNavigate();
+  const [isCheckingAccess, setIsCheckingAccess] = useState(true);
   const [posts, setPosts] = useState<Post[]>([]);
   const [communities, setCommunities] = useState<Community[]>([]);
   const [title, setTitle] = useState("");
@@ -32,6 +33,23 @@ const Community = () => {
   const [error, setError] = useState("");
 
   const loadCommunity = async () => {
+    const { data: userData, error: userError } = await supabase.auth.getUser();
+    if (userError || !userData.user) {
+      navigate("/auth", { replace: true });
+      return;
+    }
+
+    const { data: profileData, error: profileError } = await supabase
+      .from("profiles")
+      .select("username")
+      .eq("id", userData.user.id)
+      .maybeSingle();
+
+    if (profileError || !profileData?.username?.trim()) {
+      navigate("/profile", { replace: true });
+      return;
+    }
+
     const [{ data: postData, error: postError }, { data: communityData, error: communityError }] = await Promise.all([
       supabase.from("community_posts").select("id, title, content, heritage_category, created_at, profiles(username, avatar_url)").order("created_at", { ascending: false }),
       supabase.from("communities").select("id, name, description, focus_area").order("created_at", { ascending: false }),
@@ -44,11 +62,16 @@ const Community = () => {
 
     setPosts((postData ?? []) as Post[]);
     setCommunities((communityData ?? []) as Community[]);
+    setIsCheckingAccess(false);
   };
 
   useEffect(() => {
     void loadCommunity();
   }, []);
+
+  if (isCheckingAccess) {
+    return <div className="flex min-h-screen items-center justify-center">Checking community access...</div>;
+  }
 
   const createPost = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();

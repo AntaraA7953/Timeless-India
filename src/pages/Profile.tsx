@@ -1,5 +1,5 @@
 import { FormEvent, useEffect, useState } from "react";
-import { ArrowLeft, Save, Users } from "lucide-react";
+import { ArrowLeft, Save } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -121,10 +121,6 @@ const Profile = () => {
           <Button variant="ghost" onClick={() => navigate("/")}>
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Timeless India
-          </Button>
-          <Button onClick={() => navigate("/community")} variant="outline">
-            <Users className="mr-2 h-4 w-4" />
-            Open Community
           </Button>
         </div>
 
