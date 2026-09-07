@@ -189,9 +189,9 @@ const Lakshadweep = () => {
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-blue-50 to-teal-50">
       {/* Header */}
       <div className="bg-white/90 backdrop-blur-md border-b border-cyan-200/50 sticky top-0 z-40">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
+        <div className="container mx-auto px-4 py-3 sm:py-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="flex min-w-0 items-center gap-2 sm:gap-4">
               <Button
                 variant="outline"
                 onClick={() => navigate('/')}
@@ -200,14 +200,14 @@ const Lakshadweep = () => {
                 <ArrowLeft size={16} />
                 <span>Back to Home</span>
               </Button>
-              <div className="flex items-center space-x-2">
-                <TreePine className="text-cyan-600" size={28} />
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
+              <div className="flex min-w-0 items-center gap-2">
+                <TreePine className="shrink-0 text-cyan-600" size={28} />
+                <h1 className="truncate text-xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent sm:text-2xl">
                   Lakshadweep
                 </h1>
               </div>
             </div>
-            <div className="text-sm text-gray-600 italic">
+            <div className="text-right text-xs text-gray-600 italic sm:text-sm">
               "Emerald Islands of India"
             </div>
           </div>
@@ -215,7 +215,7 @@ const Lakshadweep = () => {
       </div>
 
       {/* Hero Section with Background Image */}
-      <div className="relative h-80 overflow-hidden">
+      <div className="relative min-h-[18rem] overflow-hidden sm:h-80">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -224,9 +224,9 @@ const Lakshadweep = () => {
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/70 to-blue-900/70"></div>
         <div className="relative container mx-auto px-4 h-full flex items-center">
-          <div className="max-w-2xl text-white">
-            <h2 className="text-5xl font-bold mb-4 animate-fade-in-up">Discover the Coral Paradise</h2>
-            <p className="text-xl opacity-90 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="max-w-2xl py-10 text-white sm:py-0">
+            <h2 className="mb-4 text-3xl font-bold animate-fade-in-up sm:text-5xl">Discover the Coral Paradise</h2>
+            <p className="text-base opacity-90 animate-fade-in-up sm:text-xl" style={{ animationDelay: '0.2s' }}>
               Experience the pristine beauty, marine wonders, and unique island culture of Lakshadweep
             </p>
           </div>
@@ -236,14 +236,14 @@ const Lakshadweep = () => {
       <div className="container mx-auto px-4 py-8">
         <Tabs defaultValue="overview" className="w-full">
           <div className="mb-8">
-            <TabsList className="grid w-full grid-cols-4 lg:grid-cols-7 gap-1 bg-white/70 backdrop-blur-sm h-auto p-2">
-              <TabsTrigger value="overview" className="data-[state=active]:bg-cyan-500 data-[state=active]:text-white text-xs sm:text-sm px-2 py-2">Overview</TabsTrigger>
-              <TabsTrigger value="politics" className="data-[state=active]:bg-blue-500 data-[state=active]:text-white text-xs sm:text-sm px-2 py-2">Politics</TabsTrigger>
-              <TabsTrigger value="culture" className="data-[state=active]:bg-teal-500 data-[state=active]:text-white text-xs sm:text-sm px-2 py-2">Culture</TabsTrigger>
-              <TabsTrigger value="economy" className="data-[state=active]:bg-green-500 data-[state=active]:text-white text-xs sm:text-sm px-2 py-2">Economy</TabsTrigger>
-              <TabsTrigger value="tourism" className="data-[state=active]:bg-indigo-500 data-[state=active]:text-white text-xs sm:text-sm px-2 py-2">Tourism</TabsTrigger>
-              <TabsTrigger value="nature" className="data-[state=active]:bg-emerald-500 data-[state=active]:text-white text-xs sm:text-sm px-2 py-2">Nature</TabsTrigger>
-              <TabsTrigger value="society" className="data-[state=active]:bg-purple-500 data-[state=active]:text-white text-xs sm:text-sm px-2 py-2">Society</TabsTrigger>
+            <TabsList className="grid h-auto w-full grid-cols-2 gap-1 bg-white/70 p-2 backdrop-blur-sm sm:grid-cols-4 lg:grid-cols-7">
+              <TabsTrigger value="overview" className="whitespace-normal px-2 py-2 text-center text-xs leading-tight sm:text-sm data-[state=active]:bg-cyan-500 data-[state=active]:text-white">Overview</TabsTrigger>
+              <TabsTrigger value="politics" className="whitespace-normal px-2 py-2 text-center text-xs leading-tight sm:text-sm data-[state=active]:bg-blue-500 data-[state=active]:text-white">Politics</TabsTrigger>
+              <TabsTrigger value="culture" className="whitespace-normal px-2 py-2 text-center text-xs leading-tight sm:text-sm data-[state=active]:bg-teal-500 data-[state=active]:text-white">Culture</TabsTrigger>
+              <TabsTrigger value="economy" className="whitespace-normal px-2 py-2 text-center text-xs leading-tight sm:text-sm data-[state=active]:bg-green-500 data-[state=active]:text-white">Economy</TabsTrigger>
+              <TabsTrigger value="tourism" className="whitespace-normal px-2 py-2 text-center text-xs leading-tight sm:text-sm data-[state=active]:bg-indigo-500 data-[state=active]:text-white">Tourism</TabsTrigger>
+              <TabsTrigger value="nature" className="whitespace-normal px-2 py-2 text-center text-xs leading-tight sm:text-sm data-[state=active]:bg-emerald-500 data-[state=active]:text-white">Nature</TabsTrigger>
+              <TabsTrigger value="society" className="whitespace-normal px-2 py-2 text-center text-xs leading-tight sm:text-sm data-[state=active]:bg-purple-500 data-[state=active]:text-white">Society</TabsTrigger>
             </TabsList>
           </div>
 

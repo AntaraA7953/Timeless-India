@@ -95,6 +95,16 @@
 
   body {
     @apply bg-background text-foreground font-sans;
+    margin: 0;
+    min-width: 320px;
+    overflow-x: hidden;
+  }
+
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -138,4 +148,59 @@ iframe.goog-te-banner-frame {
 }
 body {
   top: 0 !important;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .sticky.top-0 > .container > .flex.items-center.justify-between {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .sticky.top-0 > .container > .flex.items-center.justify-between > :first-child {
+    min-width: 0;
+    flex: 1 1 100%;
+  }
+
+  .sticky.top-0 h1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .relative.h-80.overflow-hidden {
+    height: auto;
+    min-height: 18rem;
+  }
+
+  .relative.h-80.overflow-hidden h2 {
+    font-size: 2.25rem;
+    line-height: 1.1;
+  }
+
+  [class*="grid-cols-4"][class*="lg:grid-cols-7"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  [class*="grid-cols-4"][class*="lg:grid-cols-7"] > * {
+    min-width: 0;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .text-5xl {
+    font-size: 2.25rem;
+    line-height: 1.1;
+  }
+
+  .text-4xl {
+    font-size: 1.875rem;
+    line-height: 1.15;
+  }
 }

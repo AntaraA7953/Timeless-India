@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowRight, MapPin, Clock, Palette, Camera, Trophy, Users, Star, Eye, Utensils, Sparkles, Newspaper, ShoppingBag, CircleUserRound, LogOut } from 'lucide-react';
+import { ArrowRight, MapPin, Clock, Palette, Camera, Trophy, Users, Star, Eye, Utensils, Sparkles, Newspaper, ShoppingBag, CircleUserRound, LogOut, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Hero from '@/components/Hero';
@@ -12,6 +12,7 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [peekOpen, setPeekOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [userEmail, setUserEmail] = useState('');
   const peekRef = useRef<HTMLDivElement>(null);
   const profileRef = useRef<HTMLDivElement>(null);
@@ -195,15 +196,72 @@ const Index = () => {
               </div>
             </div>
 
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => navigate('/community')}
+              className="hidden md:inline-flex"
+            >
+              <Users className="mr-2 h-4 w-4" />
+              Open Community
+            </Button>
+
             {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <button className="text-gray-600 hover:text-saffron-600 focus:outline-none" aria-label="Toggle menu">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
+            <div className="flex items-center gap-1 md:hidden">
+              <button
+                type="button"
+                onClick={() => navigate('/profile')}
+                className="rounded-md p-2 text-gray-600 hover:bg-saffron-50 hover:text-saffron-600 focus:outline-none focus:ring-2 focus:ring-saffron-500"
+                aria-label="Open profile"
+              >
+                <CircleUserRound className="h-6 w-6" />
+              </button>
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen((open) => !open)}
+                className="rounded-md p-2 text-gray-600 hover:bg-saffron-50 hover:text-saffron-600 focus:outline-none focus:ring-2 focus:ring-saffron-500"
+                aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+                aria-expanded={mobileMenuOpen}
+                aria-controls="mobile-navigation"
+              >
+                {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
           </div>
+          {mobileMenuOpen && (
+            <div id="mobile-navigation" className="mt-3 border-t border-orange-100 pt-3 md:hidden">
+              <div className="grid gap-1">
+                {[
+                  { id: 'home', label: 'Home', icon: Star, action: () => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' }) },
+                  { id: 'map', label: 'Explore', icon: MapPin, action: () => document.getElementById('map')?.scrollIntoView({ behavior: 'smooth' }) },
+                  { id: 'timeline', label: 'Timeline', icon: Clock, action: () => document.getElementById('timeline')?.scrollIntoView({ behavior: 'smooth' }) },
+                  { id: 'arts', label: 'Arts', icon: Palette, action: () => navigate('/arts') },
+                  { id: 'games', label: 'Games', icon: Trophy, action: () => navigate('/games') },
+                  { id: 'vr', label: 'VR/AR', icon: Camera, action: () => navigate('/vr') },
+                  { id: 'stories', label: 'Stories', icon: Users, action: () => navigate('/stories') },
+                  { id: 'profile', label: 'Profile', icon: CircleUserRound, action: () => navigate('/profile') },
+                  { id: 'community', label: 'Open Community', icon: Users, action: () => navigate('/community') },
+                ].map(({ id, label, icon: Icon, action }) => (
+                  <button
+                    key={id}
+                    type="button"
+                    onClick={() => {
+                      action();
+                      setMobileMenuOpen(false);
+                    }}
+                    className={`flex items-center gap-3 rounded-lg px-3 py-3 text-left text-sm font-medium transition-colors ${
+                      activeSection === id
+                        ? 'bg-saffron-100 text-saffron-700'
+                        : 'text-gray-700 hover:bg-saffron-50 hover:text-saffron-600'
+                    }`}
+                  >
+                    <Icon className="h-4 w-4" />
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
