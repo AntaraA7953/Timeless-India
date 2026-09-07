@@ -39,6 +39,8 @@ import MadhyaPradesh from "./pages/MadhyaPradesh";
 import Bihar from "./pages/Bihar";
 import AndhraPradesh from "./pages/AndhraPradesh";
 import Auth from "./pages/Auth";
+import Profile from "./pages/Profile";
+import Community from "./pages/Community";
 
  import Punjab from "./pages/Punjab";
 import Rajasthan from "./pages/Rajasthan";
@@ -100,6 +102,8 @@ const ProtectedRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Index />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/community" element={<Community />} />
       <Route path="/stories" element={<Stories />} />
       <Route path="/arts" element={<Arts />} />
       <Route path="/games" element={<Games />} />

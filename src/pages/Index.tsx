@@ -1,17 +1,33 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowRight, MapPin, Clock, Palette, Camera, Trophy, Users, Star, Eye, Utensils, Sparkles, Newspaper, ShoppingBag } from 'lucide-react';
+import { ArrowRight, MapPin, Clock, Palette, Camera, Trophy, Users, Star, Eye, Utensils, Sparkles, Newspaper, ShoppingBag, CircleUserRound, LogOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Hero from '@/components/Hero';
 import InteractiveMap from '@/components/InteractiveMap';
 import Timeline from '@/components/Timeline';
 import { useNavigate } from 'react-router-dom';
+import { supabase } from '@/lib/supabase';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [peekOpen, setPeekOpen] = useState(false);
+  const [profileOpen, setProfileOpen] = useState(false);
+  const [userEmail, setUserEmail] = useState('');
   const peekRef = useRef<HTMLDivElement>(null);
+  const profileRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data }) => {
+      setUserEmail(data.user?.email ?? '');
+    });
+
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUserEmail(session?.user.email ?? '');
+    });
+
+    return () => listener.subscription.unsubscribe();
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,12 +55,15 @@ const Index = () => {
       if (peekRef.current && !peekRef.current.contains(event.target as Node)) {
         setPeekOpen(false);
       }
+      if (profileRef.current && !profileRef.current.contains(event.target as Node)) {
+        setProfileOpen(false);
+      }
     }
-    if (peekOpen) {
+    if (peekOpen || profileOpen) {
       document.addEventListener('mousedown', handleClickOutside);
     }
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [peekOpen]);
+  }, [peekOpen, profileOpen]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-amber-50 to-emerald-50">
@@ -133,10 +152,47 @@ const Index = () => {
                 )}
               </div>
               {/* End Peek Button */}
-              <Button onClick={() => navigate('/auth')} className="bg-gradient-to-r from-saffron-500 to-emerald-500 hover:from-saffron-600 hover:to-emerald-600 transform hover:scale-105 transition-all duration-300">
-                <Users className="mr-2 h-4 w-4" />
-                Join Community
-              </Button>
+              <div ref={profileRef} className="relative">
+                <button
+                  type="button"
+                  aria-label="Open profile menu"
+                  aria-expanded={profileOpen}
+                  onClick={() => setProfileOpen((open) => !open)}
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-saffron-500 to-emerald-500 text-white shadow-lg transition-all hover:scale-110"
+                >
+                  <CircleUserRound size={22} />
+                </button>
+                {profileOpen && (
+                  <div className="absolute right-0 mt-3 w-64 rounded-xl border border-orange-100 bg-white p-2 shadow-2xl">
+                    <div className="border-b border-gray-100 px-3 py-2">
+                      <p className="text-xs text-gray-500">Signed in as</p>
+                      <p className="truncate text-sm font-medium text-gray-800">{userEmail || 'User'}</p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        navigate('/profile');
+                        setProfileOpen(false);
+                      }}
+                      className="flex w-full items-center gap-3 rounded-lg px-3 py-3 text-left text-sm font-medium text-gray-700 transition-colors hover:bg-orange-50"
+                    >
+                      <CircleUserRound size={17} />
+                      Edit profile
+                    </button>
+                    <button
+                      type="button"
+                      onClick={async () => {
+                        await supabase.auth.signOut();
+                        setProfileOpen(false);
+                      }}
+                      className="flex w-full items-center gap-3 rounded-lg px-3 py-3 text-left text-sm font-medium text-red-600 transition-colors hover:bg-red-50"
+                    >
+                      <LogOut size={17} />
+                      Log out
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
