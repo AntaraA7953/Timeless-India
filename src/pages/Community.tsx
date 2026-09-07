@@ -24,6 +24,7 @@ type Community = {
 const Community = () => {
   const navigate = useNavigate();
   const [isCheckingAccess, setIsCheckingAccess] = useState(true);
+  const [currentUsername, setCurrentUsername] = useState("");
   const [posts, setPosts] = useState<Post[]>([]);
   const [communities, setCommunities] = useState<Community[]>([]);
   const [title, setTitle] = useState("");
@@ -49,6 +50,8 @@ const Community = () => {
       navigate("/profile", { replace: true });
       return;
     }
+
+    setCurrentUsername(profileData.username);
 
     const [{ data: postData, error: postError }, { data: communityData, error: communityError }] = await Promise.all([
       supabase.from("community_posts").select("id, title, content, heritage_category, created_at, profiles(username, avatar_url)").order("created_at", { ascending: false }),
@@ -132,7 +135,10 @@ const Community = () => {
               <p className="mt-2 text-gray-600">Share and discover India’s living culture and heritage.</p>
             </div>
             <Card>
-              <CardHeader><CardTitle>Share with the community</CardTitle></CardHeader>
+              <CardHeader>
+                <CardTitle>Share with the community</CardTitle>
+                <p className="text-sm text-gray-600">Posting as @{currentUsername}</p>
+              </CardHeader>
               <CardContent>
                 <form onSubmit={createPost} className="space-y-3">
                   <input required value={title} onChange={(event) => setTitle(event.target.value)} placeholder="Post title" className="w-full rounded-md border border-gray-300 px-3 py-2" />
