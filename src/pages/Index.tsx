@@ -133,7 +133,7 @@ const Index = () => {
                 )}
               </div>
               {/* End Peek Button */}
-              <Button className="bg-gradient-to-r from-saffron-500 to-emerald-500 hover:from-saffron-600 hover:to-emerald-600 transform hover:scale-105 transition-all duration-300">
+              <Button onClick={() => navigate('/auth')} className="bg-gradient-to-r from-saffron-500 to-emerald-500 hover:from-saffron-600 hover:to-emerald-600 transform hover:scale-105 transition-all duration-300">
                 <Users className="mr-2 h-4 w-4" />
                 Join Community
               </Button>
