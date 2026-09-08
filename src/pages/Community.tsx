@@ -11,7 +11,7 @@ type Post = {
   content: string;
   heritage_category: string | null;
   created_at: string;
-  profiles: { username: string; avatar_url: string | null } | null;
+  profiles: { username: string; avatar_url: string | null }[] | null;
 };
 
 type Community = {
@@ -164,7 +164,7 @@ const Community = () => {
                 <CardHeader>
                   <CardTitle className="text-xl">{post.title}</CardTitle>
                   <p className="text-sm text-gray-500">
-                    Posted by <span className="font-medium text-gray-700">@{post.profiles?.username ?? "community-member"}</span>
+                    Posted by <span className="font-medium text-gray-700">@{post.profiles?.[0]?.username ?? "community-member"}</span>
                     {(() => {
                       const postDate = formatPostDate(post.created_at);
                       return <> · {postDate.date} at {postDate.time}</>;
