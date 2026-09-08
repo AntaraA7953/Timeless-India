@@ -5,13 +5,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { supabase } from "@/lib/supabase";
 
+type Profile = {
+  username: string;
+  avatar_url: string | null;
+};
+
 type Post = {
   id: string;
   title: string;
   content: string;
   heritage_category: string | null;
   created_at: string;
-  profiles: { username: string; avatar_url: string | null }[] | null;
+  author_id?: string | null;
+  profiles: Profile | Profile[] | null;
 };
 
 type Community = {
@@ -28,6 +34,14 @@ const formatPostDate = (createdAt: string) => {
     date: date.toLocaleDateString(undefined, { dateStyle: "medium" }),
     time: date.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }),
   };
+};
+
+const getPostAuthor = (post: Post) => {
+  if (Array.isArray(post.profiles)) {
+    return post.profiles[0] ?? null;
+  }
+
+  return post.profiles ?? null;
 };
 
 const Community = () => {
@@ -63,7 +77,7 @@ const Community = () => {
     setCurrentUsername(profileData.username);
 
     const [{ data: postData, error: postError }, { data: communityData, error: communityError }] = await Promise.all([
-      supabase.from("community_posts").select("id, title, content, heritage_category, created_at, profiles(username, avatar_url)").order("created_at", { ascending: false }),
+      supabase.from("community_posts").select("id, author_id, title, content, heritage_category, created_at, profiles!author_id(username, avatar_url)").order("created_at", { ascending: false }),
       supabase.from("communities").select("id, name, description, focus_area").order("created_at", { ascending: false }),
     ]);
 
@@ -72,7 +86,12 @@ const Community = () => {
       return;
     }
 
-    setPosts((postData ?? []) as Post[]);
+    const normalizedPosts: Post[] = (postData ?? []).map((post) => ({
+      ...post,
+      profiles: Array.isArray(post.profiles) ? post.profiles[0] ?? null : post.profiles ?? null,
+    }));
+
+    setPosts(normalizedPosts);
     setCommunities((communityData ?? []) as Community[]);
     setIsCheckingAccess(false);
   };
@@ -164,7 +183,7 @@ const Community = () => {
                 <CardHeader>
                   <CardTitle className="text-xl">{post.title}</CardTitle>
                   <p className="text-sm text-gray-500">
-                    Posted by <span className="font-medium text-gray-700">@{post.profiles?.[0]?.username ?? "community-member"}</span>
+                    Posted by <span className="font-medium text-gray-700">@{getPostAuthor(post)?.username ?? "community-member"}</span>
                     {(() => {
                       const postDate = formatPostDate(post.created_at);
                       return <> · {postDate.date} at {postDate.time}</>;
