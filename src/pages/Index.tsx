@@ -129,6 +129,13 @@ const Index = () => {
                     <div className="absolute -top-2 right-6 w-4 h-4 bg-white border-l border-t border-orange-100 rotate-45 z-10"></div>
                     <button
                       className="flex items-center gap-3 w-full text-left px-5 py-3 rounded-t-xl hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
+                      onClick={() => { navigate('/cultural-mosaic'); setPeekOpen(false); }}
+                    >
+                      <Palette size={18} className="text-amber-500" />
+                      Cultural Mosaic
+                    </button>
+                    <button
+                      className="flex items-center gap-3 w-full text-left px-5 py-3 hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
                       onClick={() => { navigate('/quisine/QuisineCorner'); setPeekOpen(false); }}
                     >
                       <Utensils size={18} className="text-saffron-500" />
@@ -141,7 +148,13 @@ const Index = () => {
                       <Sparkles size={18} className="text-emerald-500" />
                       Festival Fiesta
                     </button>
-                    
+                    <button
+                      className="flex items-center gap-3 w-full text-left px-5 py-3 hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
+                      onClick={() => { navigate('/cultural-mosaic'); setPeekOpen(false); }}
+                    >
+                      <Palette size={18} className="text-amber-500" />
+                      Cultural Mosaic
+                    </button>
                     <button
                       className="flex items-center gap-3 w-full text-left px-5 py-3 rounded-b-xl hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
                       onClick={() => { navigate('/DailyEchoes');setPeekOpen(false); }}
@@ -239,6 +252,7 @@ const Index = () => {
                   { id: 'games', label: 'Games', icon: Trophy, action: () => navigate('/games') },
                   { id: 'vr', label: 'VR/AR', icon: Camera, action: () => navigate('/vr') },
                   { id: 'stories', label: 'Stories', icon: Users, action: () => navigate('/stories') },
+                  { id: 'cultural-mosaic', label: 'Cultural Mosaic', icon: Palette, action: () => navigate('/cultural-mosaic') },
                   { id: 'profile', label: 'Profile', icon: CircleUserRound, action: () => navigate('/profile') },
                   { id: 'community', label: 'Open Community', icon: Users, action: () => navigate('/community') },
                 ].map(({ id, label, icon: Icon, action }) => (

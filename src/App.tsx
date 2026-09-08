@@ -74,6 +74,7 @@ import GoogleTranslate from "./components/GoogleTranslate";
 import { supabase } from "@/lib/supabase";
 
 import QuisineCorner from './pages/quisine/QuisineCorner';
+import CulturalMosaic from "./pages/CulturalMosaic.tsx";
 
 const ProtectedRoutes = () => {
   const [hasSession, setHasSession] = useState<boolean | null>(null);
@@ -110,6 +111,7 @@ const ProtectedRoutes = () => {
       <Route path="/vr" element={<VirtualReality />} />
       <Route path="/official-languages" element={<OfficialLanguages />} />
       <Route path="/interactive-map" element={<Index />} />
+      <Route path="/cultural-mosaic" element={<CulturalMosaic />} />
       <Route path="/jammu-kashmir" element={<JammuKashmir />} />
       <Route path="/delhi" element={<Delhi />} />
       <Route path="/chandigarh" element={<Chandigarh />} />
