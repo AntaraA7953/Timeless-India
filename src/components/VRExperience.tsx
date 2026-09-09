@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Camera, Headset, Smartphone, Eye, Download, Share } from 'lucide-react';
+import { Camera, CalendarCheck, ExternalLink, Headset, Smartphone, Eye, Download, Share } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -64,6 +64,33 @@ const VRExperience = () => {
       features: ['Step-by-step Guides', 'Progress Tracking', 'Video Recording'],
       color: 'from-rose-400 to-red-500'
     }
+  ];
+
+  const mandirTours = [
+    {
+      name: 'Kashi Vishwanath Temple',
+      location: 'Varanasi, Uttar Pradesh',
+      description: 'Explore the sacred corridor and experience a guided virtual darshan of one of Shiva\'s oldest holy shrines.',
+      image: 'https://sanskritforus.com/wp-content/uploads/2024/02/temple_To4YlfIJ_202308271009080.jpg',
+      tourUrl: 'https://www.youtube.com/results?search_query=Kashi+Vishwanath+Temple+360+virtual+tour',
+      bookingUrl: 'https://shrikashivishwanath.org/frontend/home/onlinepooja',
+    },
+    {
+      name: 'Tirumala Venkateswara Temple',
+      location: 'Tirupati, Andhra Pradesh',
+      description: 'Visit the hill shrine virtually, learn its traditions, and check official seva and puja booking availability.',
+      image: 'https://sanskritforus.com/wp-content/uploads/2024/02/temple_To4YlfIJ_202308271009080.jpg',
+      tourUrl: 'https://www.youtube.com/results?search_query=Tirumala+Tirupati+360+virtual+tour',
+      bookingUrl: 'https://ttdevasthanams.ap.gov.in/',
+    },
+    {
+      name: 'Somnath Jyotirlinga',
+      location: 'Prabhas Patan, Gujarat',
+      description: 'See the seafront temple and its evening aarti atmosphere before arranging an official puja or darshan.',
+      image: 'https://www.gosahin.com/go/p/b/1517055102_Somnath1.jpg',
+      tourUrl: 'https://www.youtube.com/results?search_query=Somnath+Temple+360+virtual+tour',
+      bookingUrl: 'https://somnath.org/online-services/',
+    },
   ];
 
   return (
@@ -174,6 +201,40 @@ const VRExperience = () => {
               </Card>
             ))}
           </div>
+
+          <section aria-labelledby="mandir-tours-heading" className="space-y-6">
+            <div className="text-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-600">Virtual darshan</p>
+              <h3 id="mandir-tours-heading" className="mt-2 text-3xl font-bold text-gray-800">Mandir VR Tours in India</h3>
+              <p className="mx-auto mt-2 max-w-2xl text-gray-600">Visit India&apos;s living temples online, then use the official temple service to arrange your puja.</p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {mandirTours.map((temple) => (
+                <Card key={temple.name} className="overflow-hidden border-0 bg-white shadow-xl">
+                  <img src={temple.image} alt={temple.name} className="h-48 w-full object-cover" />
+                  <CardContent className="p-5">
+                    <div className="mb-3 flex items-start justify-between gap-3">
+                      <div>
+                        <h4 className="text-xl font-bold text-gray-800">{temple.name}</h4>
+                        <p className="mt-1 text-sm text-orange-700">{temple.location}</p>
+                      </div>
+                      <span className="shrink-0 rounded-full bg-emerald-100 px-2 py-1 text-xs font-medium text-emerald-700">Available online</span>
+                    </div>
+                    <p className="mb-5 text-sm leading-relaxed text-gray-600">{temple.description}</p>
+                    <div className="grid gap-2 sm:grid-cols-2">
+                      <a href={temple.tourUrl} target="_blank" rel="noreferrer" className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-gradient-to-r from-blue-500 to-indigo-600 px-3 text-sm font-medium text-white transition-opacity hover:opacity-90">
+                        <Headset className="h-4 w-4" /> VR tour <ExternalLink className="h-3 w-3" />
+                      </a>
+                      <a href={temple.bookingUrl} target="_blank" rel="noreferrer" className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-orange-300 bg-orange-50 px-3 text-sm font-medium text-orange-800 transition-colors hover:bg-orange-100">
+                        <CalendarCheck className="h-4 w-4" /> Book puja <ExternalLink className="h-3 w-3" />
+                      </a>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <p className="text-center text-xs text-gray-500">Puja bookings open the temple&apos;s official service. Availability, timings, and fees are controlled by each temple.</p>
+          </section>
 
           {/* VR Requirements */}
           <Card className="border-0 shadow-xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
