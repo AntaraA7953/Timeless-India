@@ -143,7 +143,7 @@ const Index = () => {
                     </button>
                     <button
                       className="flex items-center gap-3 w-full text-left px-5 py-3 hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
-                      onClick={() => { navigate('/quisine/QuisineCorner'); setPeekOpen(false); }}
+                      onClick={() => { navigate('/festival-fiesta'); setPeekOpen(false); }}
                     >
                       <Sparkles size={18} className="text-emerald-500" />
                       Festival Fiesta
