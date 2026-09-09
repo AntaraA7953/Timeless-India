@@ -248,7 +248,7 @@ const Index = () => {
                   { id: 'stories', label: 'Stories', icon: Users, action: () => navigate('/stories') },
                   { id: 'cultural-mosaic', label: 'Cultural Mosaic', icon: Palette, action: () => navigate('/cultural-mosaic') },
                   { id: 'festival-fiesta', label: 'Festival Fiesta', icon: Calendar, action: () => navigate('/festival-fiesta') },
-                  { id: 'quisine-corner', label: 'Quisine Corner', icon: Utensils, action: () => navigate('/quisine-corner') },
+                  { id: 'quisine-corner', label: 'Quisine Corner', icon: Utensils, action: () => navigate('/quisine/QuisineCorner') },
                   { id: 'profile', label: 'Profile', icon: CircleUserRound, action: () => navigate('/profile') },
                   { id: 'community', label: 'Open Community', icon: Users, action: () => navigate('/community') },
                 ].map(({ id, label, icon: Icon, action }) => (
