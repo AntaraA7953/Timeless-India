@@ -1,0 +1,373 @@
+{
+  "name": "Durga Puja",
+  "nativeName": "দুর্গা পূজা",
+  "audio": {
+    "dhak": "/sounds/dhak.mp3"
+  },
+  "images": {
+    "hero": "https://live.staticflickr.com/65535/54819206925_9cc456d8c8_h.jpg",
+    "story": "https://i.pinimg.com/236x/5c/0d/69/5c0d69e309b915068924b9d7338717ca.jpg",
+    "goddess": "https://upload.wikimedia.org/wikipedia/commons/e/e7/%E0%A6%AC%E0%A6%BE%E0%A6%97%E0%A6%AC%E0%A6%BE%E0%A6%9C%E0%A6%BE%E0%A6%B0_%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AC%E0%A6%9C%E0%A6%A8%E0%A7%80%E0%A6%A8_%E0%A6%A6%E0%A7%81%E0%A6%B0%E0%A7%8D%E0%A6%97%E0%A7%8B%E0%A7%8E%E0%A6%B8%E0%A6%AC_%E0%A7%A8%E0%A7%A6%E0%A7%A7%E0%A7%AE.jpg",
+    "kumartuli": "https://dubeat.com/wp-content/uploads/2023/09/Kumartuli-40kb.jpg",
+    "pandal": "https://thefederal.com/h-upload/2025/09/28/566388-sreebhumi-sporting-club-pandal-durga-puja-202511zon.webp",
+    "bijoya": "https://i0.wp.com/www.wanderinganusuya.com/wp-content/uploads/2020/10/Maa-Durga-Debi-boron-Finalll-e1603788947236.jpeg?fit=848%2C1209&ssl=1"
+  },
+  "introduction": {
+    "text": "Durga Puja is one of the most important festivals associated with Bengal. At its religious centre is the worship of Goddess Durga and the celebration of her victory over Mahishasura. But in Bengali life, the festival has grown into something much larger: a season of art, music, food, craftsmanship, community gatherings, new clothes, illuminated streets and the emotional idea of the Goddess returning home.",
+    "extended": "The festival combines several worlds that might otherwise remain separate. A temporary structure can become an elaborate work of architecture. A clay sculpture becomes the focus of worship. A neighbourhood club becomes a cultural organisation. Traditional drumming accompanies contemporary performances. Families who may not meet regularly gather together. The result is a festival that is simultaneously sacred, artistic, social and deeply personal."
+  },
+  "meaningNotes": [
+    {
+      "title": "The mythological story",
+      "label": "STORY",
+      "image": "https://www.4to40.com/wp-content/uploads/2017/09/history-of-durga-puja.jpg",
+      "text": "Durga Puja celebrates the victory of Goddess Durga over Mahishasura, the buffalo demon. According to the traditional story, the gods were unable to defeat him individually, so their combined divine energies manifested as Durga. Armed with divine weapons and riding a lion, she fought Mahishasura and restored balance."
+    },
+    {
+      "title": "A daughter comes home",
+      "label": "BENGAL",
+      "image": "https://live.staticflickr.com/586/32123666236_06e4d93564_b.jpg",
+      "text": "In Bengali cultural imagination, Durga is also seen as a daughter returning to her maternal home with her children. This idea gives the festival a particularly intimate emotional character."
+    },
+    {
+      "title": "Religion and community",
+      "label": "COMMUNITY",
+      "image": "https://utsav.gov.in/public/uploads/event_cover_image/event_506/16572617131213650603.jpg",
+      "text": "Although worship remains central, Durga Puja extends far beyond the shrine. Neighbourhood committees, families, artisans, performers, cooks, musicians and volunteers all contribute to the festival."
+    },
+    {
+      "title": "Art becomes worship",
+      "label": "ART",
+      "image": "https://thedotinsaga.weebly.com/uploads/7/8/8/3/78834578/5433703_orig.jpg",
+      "text": "Idol making, pandal design, lighting, painting, textiles and decoration are all important parts of the celebration. Contemporary Puja committees frequently commission artists and designers."
+    },
+    {
+      "title": "A festival of transformation",
+      "label": "CULTURE",
+      "image": "https://www.tripsavvy.com/thmb/XGo_N0lhell08y595oYLezsva9I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-521404358-578f1c1f5f9b584d20c82eec.jpg",
+      "text": "For several days, ordinary neighbourhoods are transformed. Empty plots become temporary temples, streets become illuminated walkways and local clubs become cultural centres."
+    },
+    {
+      "title": "When and where?",
+      "label": "FACTS",
+      "image": "https://curlytales.com/wp-content/uploads/2023/10/Kashful-640x480.jpg",
+      "text": "Durga Puja follows the Hindu lunar calendar and is primarily celebrated during the month of Ashwin, usually in September or October. It is especially associated with West Bengal."
+    }
+  ],
+  "story": {
+    "paragraphs": [
+      "The central myth of Durga Puja concerns the battle between Goddess Durga and Mahishasura, a powerful buffalo demon. Mahishasura had obtained a boon that made him extremely difficult for the gods to defeat, allowing him to challenge the established order.",
+      "The gods combined their divine energies, and from that collective power emerged Durga. Different gods are traditionally said to have given her weapons: the trident of Shiva, the discus of Vishnu and other divine instruments. She rode into battle on a lion and fought Mahishasura until she defeated him.",
+      "The story is understood as a triumph of good over destructive forces. But the Bengali understanding of Durga carries another emotional dimension. She is often imagined as a daughter visiting her maternal home during the autumn season, accompanied by her children.",
+      "That idea of homecoming changes the emotional character of the festival. Durga is not represented only as a distant divine figure. She is welcomed, decorated, fed, celebrated and eventually mourned when she leaves."
+    ]
+  },
+  "family": [
+    {
+      "name": "Lakshmi",
+      "association": "Prosperity",
+      "image": "https://static.wixstatic.com/media/e67f6b_bad6f2717c16432790dc946af2d0e283~mv2.jpg/v1/fill/w_768,h_432,al_c/e67f6b_bad6f2717c16432790dc946af2d0e283~mv2.jpg",
+      "detail": "Lakshmi is associated with prosperity, abundance and good fortune. In the traditional Bengali Durga Puja tableau, she appears alongside Durga as one of her children."
+    },
+    {
+      "name": "Saraswati",
+      "association": "Knowledge",
+      "image": "https://www.orissapost.com/wp-content/uploads/2019/02/Benefits-of-worshipping-Maa-Saraswati-1024x683.jpg",
+      "detail": "Saraswati represents knowledge, learning, music and the arts. Her presence connects the festival with education and creativity."
+    },
+    {
+      "name": "Ganesha",
+      "association": "Auspicious beginnings",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/081/710/513/small_2x/golden-lord-ganesha-idol-surrounded-by-red-hibiscus-flowers-on-a-dark-green-surface-photo.jpeg",
+      "detail": "Ganesha is associated with wisdom, auspicious beginnings and the removal of obstacles. He is traditionally represented as another of Durga's children."
+    },
+    {
+      "name": "Kartikeya",
+      "association": "Courage",
+      "image": "https://assets.telegraphindia.com/abp/2024/Nov/1731726764_kartik.jpg",
+      "detail": "Kartikeya is associated with courage, strength and martial ability. His presence completes the familiar Bengali family arrangement surrounding Durga."
+    }
+  ],
+  "days": [
+    {
+      "number": "01",
+      "name": "Mahalaya",
+      "nativeName": "মহালয়া",
+      "type": "THE CALLING",
+      "image": "https://c.ndtvimg.com/2019-09/fiu0pbkk_mahalaya-2019_625x300_27_September_19.jpg",
+      "description": "Mahalaya marks the beginning of the emotional countdown to Durga Puja for many Bengali families. It is traditionally associated with the invocation of the Goddess and is especially remembered for the early-morning broadcast of Mahishasura Mardini, the celebrated recitation of verses and devotional music associated with the arrival of Durga.",
+      "highlights": [
+        "Mahishasura Mardini",
+        "Invocation of Durga",
+        "Chandipath",
+        "Countdown begins"
+      ]
+    },
+    {
+      "number": "02",
+      "name": "Preparation",
+      "nativeName": "প্রস্তুতি",
+      "type": "THE MAKING",
+      "image": "https://www.thestatesman.com/wp-content/uploads/2018/10/Durga-Puja-1.jpg",
+      "video": true,
+      "videoId": "kHaCdOBHoSM",
+      "description": "Long before the principal Puja days arrive, the festival is already taking shape. Artisans complete idols, pandals are constructed, lights are installed and neighbourhood committees organise the enormous amount of work required for the celebration.",
+      "highlights": [
+        "Idol making",
+        "Pandal construction",
+        "Lighting",
+        "Decorations"
+      ]
+    },
+    {
+      "number": "03",
+      "name": "Shashthi",
+      "nativeName": "ষষ্ঠী",
+      "type": "THE ARRIVAL",
+      "principal": true,
+      "image": "https://www.shutterstock.com/editorial/image-editorial/M1T0M315N7TaQ2wfNTg3NTY=/different-moments-goddess-durga-bodhan-kolkata-mahasasthi-440nw-13436523e.jpg",
+      "video": true,
+      "videoId": "-aqYED-b0h0",
+      "description": "Shashthi marks the beginning of the five principal days of Durga Puja. The Goddess is ceremonially welcomed and invoked. The atmosphere changes noticeably as pandals become active, rituals begin and people start visiting the decorated spaces in large numbers.",
+      "highlights": [
+        "Bodhon",
+        "Welcoming the Goddess",
+        "Pandal openings",
+        "Evening celebrations"
+      ]
+    },
+    {
+      "number": "04",
+      "name": "Saptami",
+      "nativeName": "সপ্তমী",
+      "type": "THE WORSHIP",
+      "principal": true,
+      "image": "https://cf-img-a-in.tosshub.com/lingo/atbn/images/story/202110/durga_puja_2021_maha_saptami_nabapatrika_snan_rituals_significance_importance_why_kola_bou_is_worshiped-sixteen_nine.jpg?size=948:533",
+      "description": "Saptami begins with important ritual preparations. The Nabapatrika, a group of nine plants ritually associated with different forms of the Goddess, is prepared and worshipped. Morning rituals, Pushpanjali and community bhog become important parts of the day.",
+      "highlights": [
+        "Nabapatrika",
+        "Morning rituals",
+        "Pushpanjali",
+        "Bhog"
+      ]
+    },
+    {
+      "number": "05",
+      "name": "Ashtami",
+      "nativeName": "অষ্টমী",
+      "type": "THE HEART",
+      "principal": true,
+      "image": "https://thereport.live/media/imgAll/2024November/Kumari-Puja-02-20250930075459.jpg",
+      "video": true,
+      "videoId": "2EN3qpDg8Jk",
+      "description": "Ashtami is traditionally one of the most significant days of the festival. Devotees gather for Pushpanjali and other rituals, while Kumari Puja may also be observed. The transition from Ashtami to Navami leads into Sandhi Puja, one of the most important ritual moments of the celebration.",
+      "highlights": [
+        "Pushpanjali",
+        "Kumari Puja",
+        "Sandhi Puja",
+        "Traditional worship"
+      ]
+    },
+    {
+      "number": "06",
+      "name": "Navami",
+      "nativeName": "নবমী",
+      "type": "THE CELEBRATION",
+      "principal": true,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1ssMpyh8pdjanmyt_KE_SSZCewuVFvASC9QgxGfzNni948IL8nKMefQY&s=10",
+      "description": "Navami carries the festival towards its final day. Worship and offerings continue, but the atmosphere outside the shrine becomes increasingly celebratory. Navami evening is often one of the busiest times for visiting pandals, meeting friends and experiencing the artistic and social side of Puja.",
+      "highlights": [
+        "Navami Puja",
+        "Bhog",
+        "Cultural programmes",
+        "Pandal visits"
+      ]
+    },
+    {
+      "number": "07",
+      "name": "Dashami",
+      "nativeName": "দশমী",
+      "type": "THE FAREWELL",
+      "principal": true,
+      "image": "https://img.etimg.com/thumb/msid-104671841,width-1200,height-900,resizemode-4/news/india/vijayadashami-2023-india-celebrates-durga-puja-with-enthusiasm/sindoor-khela.jpg",
+      "video": true,
+      "videoId": "cBP5fpyIo_k",
+      "description": "Dashami is the final principal day of Durga Puja. The emotional mood changes from celebration to farewell. In many Bengali communities, Sindoor Khela is observed before the Goddess is carried in procession for immersion. The farewell does not end with the ritual itself: the day continues through Visarjan, Bijoya and the promise of her return.",
+      "highlights": [
+        "Sindoor Khela",
+        "Farewell rituals",
+        "Visarjan",
+        "Bijoya",
+        "Asche Bochor"
+      ],
+      "afterDashami": [
+        {
+          "title": "Visarjan",
+          "nativeName": "বিসর্জন",
+          "type": "THE JOURNEY HOME",
+          "image": "https://media.gettyimages.com/id/2178243855/video/guwahati-india-an-image-of-the-hindu-goddess-durga-floats-in-the-brahmaputra-river-on-dashami.jpg?s=640x640&k=20&c=TOQeqbDW8yARK7Sm_QodPMwTAAdJBdPEPVG7pTDgNfI=",
+          "description": "The idol is carried from the Puja venue through the streets in a procession before being immersed in water. Dhak rhythms, dancing, chanting and emotional farewells accompany the journey."
+        },
+        {
+          "title": "Bijoya",
+          "nativeName": "বিজয়া",
+          "type": "THE GREETING",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfpyIKZxlMDBPubJSIvLIT5kD6zsSi_E5ceXCkvJhuGjpXsVgVdiXIhEfi&s=10",
+          "description": "After immersion, Bijoya becomes a period of greeting, reunion and remembrance. People visit relatives and friends, exchange sweets and seek blessings from elders."
+        },
+        {
+          "title": "Asche Bochor",
+          "nativeName": "আসছে বছর আবার হবে",
+          "type": "THE PROMISE",
+          "image": "https://i1.sndcdn.com/artworks-000621889636-ggvo1a-t500x500.jpg",
+          "description": "The festival ends with the hope that the celebration will return again. 'Asche bochor abar hobe' captures the bittersweet spirit of Durga Puja."
+        }
+      ]
+    }
+  ],
+  "symbols": [
+    {
+      "title": "The ten arms",
+      "icon": "✋",
+      "image": "https://durantbarta.com/uploads/2/2025-08/maa_durga_2.jpg",
+      "detail": "Durga is traditionally depicted with ten arms, allowing her to hold weapons and sacred objects associated with different divine powers. The many arms visually express her ability to confront several forms of danger simultaneously."
+    },
+    {
+      "title": "The lion",
+      "icon": "♞",
+      "image": "https://www.pngmagic.com/product_images/durga-maa-images-with-trishul-and-lion_I18Q.jpg",
+      "detail": "Durga's lion represents courage, strength and fearless action. In the story of her battle with Mahishasura, the lion becomes an important visual expression of her power."
+    },
+    {
+      "title": "The Trishul",
+      "icon": "🔱",
+      "image": "https://i.pinimg.com/736x/2a/4b/1d/2a4b1d95241ef65cde465a89f0ef3750.jpg",
+      "detail": "The trident is associated with Shiva and is one of the weapons traditionally shown in Durga's hands. It represents the destruction of forces that disturb balance and order."
+    },
+    {
+      "title": "The Chakra",
+      "icon": "◉",
+      "image": "https://i.pinimg.com/1200x/73/ce/cd/73cecd82d63725ba608e36161a97a258.jpg",
+      "detail": "The discus associated with Vishnu represents divine power and the restoration of cosmic order. In Durga's hands it becomes part of the collection of divine weapons given to her."
+    },
+    {
+      "title": "Mahishasura",
+      "icon": "◆",
+      "image": "https://media.istockphoto.com/id/1477554535/photo/goddess-devi-durga-idol-decorated-at-a-puja-pandal-in-kolkata-west-bengal-india-durga-puja-is.jpg?s=612x612&w=0&k=20&c=a6o-ISwaoZ3zi__H_ABmELOTwrBlQCwsSkFEX856Cl0=",
+      "detail": "Mahishasura, the buffalo demon, represents destructive and disorderly forces. His defeat by Durga is central to the mythology celebrated through the festival."
+    }
+  ],
+  "rituals": [
+    {
+      "title": "Bodhon",
+      "short": "Welcoming and awakening the Goddess.",
+      "video": true,
+      "videoId": "1TVbmhOyE-g",
+      "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi3xXg-zAajnNn5yjG6z3vd_IgKLytbQERP3DP0Fn8lgs-T4m_1TbTT44XOT9riNAMzIPkA3Lklb7NHm5SbRvkoWUw23ut-tMzBlcZhRHabpBx91OFRp6nhUsFR0eDm4nPOyYa_z8IcdwaR/s1600/DSC_0055.jpg",
+      "text": "Bodhon is associated with ceremonially invoking and awakening the Goddess at the beginning of the main Puja period. It marks an important transition from preparation into worship."
+    },
+    {
+      "title": "Nabapatrika",
+      "short": "Nine plants ritually brought into the celebration.",
+      "image": "https://cf-img-a-in.tosshub.com/lingo/atbn/images/story/202110/durga_puja_2021_maha_saptami_nabapatrika_snan_rituals_significance_importance_why_kola_bou_is_worshiped-sixteen_nine.jpg?size=948:533",
+      "text": "Nabapatrika refers to a group of nine plants that are ritually prepared and worshipped during Saptami. Their presence connects the festival with nature, agricultural traditions and different forms associated with the divine feminine."
+    },
+    {
+      "title": "Pushpanjali",
+      "short": "Offering flowers with sacred mantras.",
+      "image": "https://curlytales.com/wp-content/uploads/2023/10/Pushpanjali-.jpg",
+      "text": "Pushpanjali is one of the most recognisable participatory rituals of Durga Puja. Devotees hold flowers in their hands, repeat sacred mantras and offer the flowers to the Goddess."
+    },
+    {
+      "title": "Kumari Puja",
+      "short": "The divine feminine represented through a young girl.",
+      "video": true,
+      "videoId": "U9lB_VmjowQ",
+      "image": "https://live.staticflickr.com/65535/52408053197_4959b998b1_b.jpg",
+      "text": "In Kumari Puja, a young girl is worshipped as a symbolic manifestation of the divine feminine. The practice reflects the wider Shakta understanding of feminine power as sacred."
+    },
+    {
+      "title": "Sandhi Puja",
+      "short": "The transition between Ashtami and Navami.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/Sandhi_puja_at_Ballygange_Cultural_Club_Kolkata_DSCN1373.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "text": "Sandhi Puja takes place at the transition between Ashtami and Navami. It is considered a particularly powerful ritual moment and is associated with the culmination of the battle between Durga and Mahishasura."
+    },
+    {
+      "title": "Sindoor Khela",
+      "short": "A Dashami farewell tradition.",
+      "video": true,
+      "videoId": "a84GSD69f4Y",
+      "image": "https://www.womenentrepreneursreview.com/entrepreneur_images/news_images/68df791f761b3_1.jpg",
+      "text": "Sindoor Khela is traditionally observed by married women in many Bengali communities on Dashami. Vermilion is offered to the Goddess and shared among participants before immersion."
+    }
+  ],
+  "culture": {
+    "kumartuli": {
+      "title": "Kumartuli",
+      "category": "CRAFT",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Making_of_Maa_Durga_Idol%2C_Kumartuli%2C_Kolkata.jpg/1280px-Making_of_Maa_Durga_Idol%2C_Kumartuli%2C_Kolkata.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "text": "Kumartuli is one of Kolkata's best-known artisan neighbourhoods. Generations of idol makers have worked here, building Durga images from bamboo, straw and clay. The process begins with an internal framework, followed by straw construction and layers of clay."
+    },
+    "pandal": {
+      "title": "The Pandal",
+      "category": "ARCHITECTURE",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Durga_Puja_Pandal_in_Kolkata%2C_2023_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "text": "A pandal is a temporary structure created for the worship of the Goddess. In Bengal, pandal-making has developed into a major creative practice. Designers may draw inspiration from temples, villages, textiles, historical architecture and contemporary art."
+    },
+    "dhak": {
+      "title": "The Dhak",
+      "category": "SOUND",
+      "icon": "🥁",
+      "image": "https://media.istockphoto.com/id/1428956796/photo/dhakis-were-playing-dhak-dhol-in-durga-puja-bengali-men-were-performing-during-durga-puja.jpg?s=612x612&w=0&k=20&c=1QSV1K7bgU42tIn9MRZj8DKhhMjeFyXfCvnQLNggtvU=",
+      "text": "The dhak is a traditional Bengali drum and one of the defining sounds of Durga Puja. Dhakis use large drums carried from the shoulder, creating deep rhythms that accompany rituals and celebrations."
+    },
+    "dhunuchi": {
+      "title": "Dhunuchi",
+      "category": "RITUAL",
+      "icon": "🪔",
+      "video": true,
+      "videoId": "64akk_pXaLk",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Traditional_Dhunuchi_Dance.jpg?utm_source=sco.wikipedia.org&utm_campaign=index&utm_content=original",
+      "text": "A dhunuchi is an earthen incense burner traditionally used during worship. Dhunuchi dance, performed while holding the smoking vessel, is especially associated with the energetic atmosphere of Durga Puja."
+    },
+    "bhog": {
+      "title": "Bhog",
+      "category": "FOOD",
+      "icon": "🍚",
+      "image": "https://indiacuisine.net/cdn/shop/articles/ba2-1600411463.jpg?v=1695024344",
+      "text": "Bhog is food offered to the Goddess and subsequently distributed among devotees. Community bhog is an important part of many Puja celebrations."
+    },
+    "clothing": {
+      "title": "Festival Clothing",
+      "category": "DRESS",
+      "icon": "🥻",
+      "image": "https://assets.telegraphindia.com/telegraph/2020/Oct/1602572548_thumbnail-image-with-sponsored-tag-1.jpg",
+      "text": "Traditional clothing becomes an important part of the visual atmosphere of Puja. Sarees, especially Bengali styles, and traditional men's clothing appear alongside contemporary festive fashion."
+    },
+    "community": {
+      "title": "Community Puja",
+      "category": "PEOPLE",
+      "icon": "◌",
+      "image": "https://i0.wp.com/avenuemail.in/wp-content/uploads/2025/09/1-5.jpg?fit=1600%2C1068&ssl=1",
+      "text": "Many Durga Pujas are organised collectively by neighbourhood committees or community groups. Volunteers coordinate fundraising, idol installation, decoration, rituals, food distribution and cultural programmes."
+    }
+  },
+  "food": {
+    "description": "Food is one of the most memorable parts of Puja. Bhog is offered to the Goddess and then shared with devotees. Bengali homes and restaurants also prepare festive dishes throughout the season.",
+    "dishes": [
+      "Khichuri",
+      "Labra",
+      "Begun Bhaja",
+      "Luchi",
+      "Chutney",
+      "Payesh",
+      "Sandesh",
+      "Rasgulla"
+    ]
+  },
+  "farewell": {
+    "description": "After days of celebration, Dashami changes the mood of the festival. The Goddess is carried through the streets in a procession and taken for immersion. The departure can feel bittersweet: the physical idol leaves, but the relationships, memories and emotions created during the festival remain.",
+    "bengali": "আসছে বছর আবার হবে",
+    "translation": "Asche bochor abar hobe — It will happen again next year."
+  }
+}

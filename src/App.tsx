@@ -74,8 +74,8 @@ import GoogleTranslate from "./components/GoogleTranslate";
 import { supabase } from "@/lib/supabase";
 
 import QuisineCorner from './pages/quisine/QuisineCorner';
-import CulturalMosaic from "./pages/CulturalMosaic.tsx";
-
+import CulturalMosaic from "./pages/CulturalMosaic";
+import FestivalFiesta from "./pages/FestivalFiesta";
 const ProtectedRoutes = () => {
   const [hasSession, setHasSession] = useState<boolean | null>(null);
 
@@ -112,6 +112,7 @@ const ProtectedRoutes = () => {
       <Route path="/official-languages" element={<OfficialLanguages />} />
       <Route path="/interactive-map" element={<Index />} />
       <Route path="/cultural-mosaic" element={<CulturalMosaic />} />
+      <Route path="/festival-fiesta" element={<FestivalFiesta />} />
       <Route path="/jammu-kashmir" element={<JammuKashmir />} />
       <Route path="/delhi" element={<Delhi />} />
       <Route path="/chandigarh" element={<Chandigarh />} />
@@ -166,6 +167,7 @@ const ProtectedRoutes = () => {
       <Route path="/post-liberalization" element={<PostLiberalization />} />
       <Route path="/contemporary-india" element={<ContemporaryIndia />} />
       <Route path="/quisine/QuisineCorner" element={<QuisineCorner />} />
+
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

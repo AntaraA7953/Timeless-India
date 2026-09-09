@@ -1,0 +1,457 @@
+{
+  "name": "Christmas",
+  "nativeName": "Christmas",
+  "audio": {
+    "bells": "/sounds/jingle-bells.mp3"
+  },
+  "images": {
+    "hero": "https://d2a0if70l7p1kn.cloudfront.net/blog/uploads/2019/10/christmas.jpg",
+    "Lights": "https://media.istockphoto.com/id/1761537213/photo/christmas-tree-with-garland-lights-evening-city-with-blurred-background.jpg?s=612x612&w=0&k=20&c=6lJ_fC-USoqnSnEFCyHAG24CAnqRM5RcJvtH-pWj3ag=",
+    "story": "https://wallpapercave.com/wp/wp8013743.jpg",
+    "nativity": "https://thumbs.dreamstime.com/b/nativity-mosaic-photo-80080781.jpg",
+    "tree": "https://api.travalot.com/attachment/12744c90-ccc5-11ef-ad30-b3b2f8b405d9.jpg",
+    "Home": "https://media.istockphoto.com/id/578095894/photo/christmas-dinner.jpg?s=612x612&w=0&k=20&c=BuuAB-HXzeadrttrAGAzSHVkEbnfbmJkz_LWqu-xLvI=",
+    "gifts": "https://media.istockphoto.com/id/1341388194/photo/couple-exchanging-christmas-gift-with-red-bow-on-background-of-christmas-tree-with-lights.jpg?s=612x612&w=0&k=20&c=o6EZmSjfeTDhFptqqhVNeQWI4ZtcWHFVL3IbUN7esAw=",
+    "Music": "https://media.istockphoto.com/id/1435587569/photo/multigeneration-family-gathering-for-christmas-celebration-and-playing-on-piano.jpg?s=612x612&w=0&k=20&c=t-jOJ27zviPK2yeWJztT-vQkCsitlE_J-R-O2_ee96g=",
+    "feast": "https://images.pexels.com/photos/30057240/pexels-photo-30057240/free-photo-of-festive-christmas-dinner-table-with-decorations.jpeg?cs=tinysrgb&dpr=1&w=500",
+    "Goa": "https://blog.lohono.com/wp-content/uploads/2025/12/christmas-markets-in-goa-evening.webp",
+    "Mumbai": "https://media2.thrillophilia.com/images/photos/000/401/343/original/1765276190_Kala_Ghoda_Christmas_pop-ups.png?w=753&h=450&dpr=1.5",
+    "Kerala": "https://trekgo.in/blog/christmas-kerala/hero.jpg",
+    "TamilNadu": "https://th-i.thgim.com/public/incoming/jm8he4/article70437537.ece/alternates/LANDSCAPE_1200/2315_25_12_2025_17_8_16_2_NAGERCOIL2_12.JPG",
+    "Kolkata": "https://media.istockphoto.com/id/1290536797/photo/christmas-eve.jpg?s=612x612&w=0&k=20&c=nQL41sSPY3VijQQmdUreD4TZ0tsYa7GGG3ZD7wyWXUM=",
+    "NorthEast": "https://www.awazthevoice.in/upload/news/1766636602Christmas_decoration_in_Shillong_public_place01.webp",
+    "Carols": "https://media.istockphoto.com/id/2228606011/photo/neighbours-gathering-to-sing-christmas-carols.jpg?s=612x612&w=0&k=20&c=Kgn57uL_01sB-H8hQ0j6mBr6NCOVYIPM3hF-FP7eW34=",
+    "Dance": "https://www.dancecity.co.uk/wp-content/spektrix_images/ef3f82cf-d85f-44ac-b9fc-d2a8b8aa77a1.jpg.jpg",
+    "Plays": "https://media.istockphoto.com/id/515701655/photo/children-playing-christmas.jpg?s=612x612&w=0&k=20&c=VsDDc0jzlQmkzIReL8CBa15gYMZx-PSNEgTxYVA4UDs=",
+    "School": "https://img.magnific.com/premium-photo/school-classroom-decorated-christmas-party-with-students-festive-outfits_997534-76899.jpg?w=360",
+    "Visit" : "https://media.istockphoto.com/id/1664171276/photo/friends-celebrating-christmas.jpg?s=612x612&w=0&k=20&c=BIgq1W_6Sc-w9wJbMOK9hw3UEnbAFv_y9aQUQX9FzRQ=",
+    "Community" : "https://images.stockcake.com/public/b/c/f/bcfcb43d-5665-4c28-9455-bdc29a0b85c7/christmas-family-celebration-stockcake.jpg"
+
+  },
+  "introduction": {
+    "text": "Christmas is a festival celebrated around the world with a remarkable variety of customs. For Christians, it commemorates the birth of Jesus Christ. Around that religious foundation has grown a rich cultural season of lights, music, trees, cards, gifts, gatherings, special meals and acts of generosity.",
+    "extended": "The character of Christmas changes from place to place. A snowy European street, a warm Indian family gathering, a midnight church service, a Christmas market and a summer barbecue in the Southern Hemisphere can all look completely different while sharing the same festive spirit. The celebration is therefore not one single visual tradition, but a collection of stories and customs that have travelled, changed and been adopted by communities across generations."
+  },
+  "story": {
+    "paragraphs": [
+      "At the centre of the Christian Christmas story is the birth of Jesus in Bethlehem. The Gospel accounts describe Mary and Joseph travelling to Bethlehem, where Jesus is born and placed in a manger.",
+      "The story is surrounded by memorable figures and signs: angels announce the birth, shepherds come to see the child, and the Magi are traditionally remembered as visitors who bring gifts. The Nativity scene brings these elements together in a visual form that has become familiar around the world.",
+      "Christmas also carries a message of hope, peace and goodwill. These ideas have helped the festival develop a strong social dimension, encouraging people to gather with family, remember others and share what they can.",
+      "Over time, local cultures added their own traditions. Christmas trees, stockings, crackers, carols, markets, Santa Claus and distinctive regional foods became part of the broader Christmas landscape without replacing its central religious story."
+    ]
+  },
+  "figures": [
+    {
+      "name": "Jesus",
+      "association": "The central figure",
+      "icon": "✦",
+      "image": "https://png.pngtree.com/thumb_back/fh260/background/20230605/pngtree-jesus-holds-the-heart-of-christ-in-his-hand-image_2884657.jpg",
+      "detail": "For Christians, Christmas commemorates the birth of Jesus Christ. His birth in Bethlehem is the central event around which the Nativity story is built."
+    },
+    {
+      "name": "Mary",
+      "association": "Mother of Jesus",
+      "icon": "✧",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST0xiumbIJcvjfrVThyft8OMB-B3j14E4iCsHnAlOPxvxYM1q3Hz-B5zlP&s=10",
+      "detail": "Mary is central to the Nativity story as the mother of Jesus. Christmas traditions often portray her beside the infant Jesus in the manger."
+    },
+    {
+      "name": "Joseph",
+      "association": "Guardian of the family",
+      "icon": "✚",
+      "image": "https://t4.ftcdn.net/jpg/11/60/35/85/360_F_1160358593_kM69YgiDpzKTgJXIfUfpn9cMKEPtBScR.jpg",
+      "detail": "Joseph accompanies Mary in the Nativity account and is traditionally remembered as the earthly guardian of Jesus."
+    },
+    {
+      "name": "The Magi",
+      "association": "Visitors bearing gifts",
+      "icon": "◇",
+      "image": "https://media.swncdn.com/via/6112-jonathan-meyer.jpg",
+      "detail": "The Magi are traditionally associated with the gifts of gold, frankincense and myrrh. Their visit is remembered in the wider Christmas story and Epiphany traditions."
+    }
+  ],
+  "stages": [
+    {
+      "number": "01",
+      "name": "Advent",
+      "nativeName": "Advent",
+      "type": "THE WAITING",
+      "image": "https://media.istockphoto.com/id/1352297578/photo/fourth-advent-four-candles-are-lighted-christmas-decoration-and-gifts-on-rustic-wooden-planks.jpg?s=612x612&w=0&k=20&c=R4oIxU_KhqTnOkIxkMafTaO4Fhn6LRQVpIIRiY2d2Uc=",
+      "description": "Advent is the period of preparation leading up to Christmas in many Christian traditions. Calendars, candles, wreaths and weekly rituals can turn the countdown itself into part of the celebration.",
+      "highlights": [
+        "Advent calendar",
+        "Wreaths",
+        "Candles",
+        "Anticipation"
+      ]
+    },
+    {
+      "number": "02",
+      "name": "Decorating",
+      "nativeName": "Christmas Preparations",
+      "type": "THE MAKING",
+      "image": "https://cheetah.cherishx.com/uploads/diy-6ft-pine-christmas-tree.jpg",
+      "description": "Homes, schools, streets and public spaces begin to glow with Christmas decorations. Trees are dressed with ornaments and lights, doors receive wreaths and families often keep favourite decorations that return every year.",
+      "highlights": [
+        "Christmas tree",
+        "Lights",
+        "Ornaments",
+        "Wreaths"
+      ]
+    },
+    {
+      "number": "03",
+      "name": "Christmas Eve",
+      "nativeName": "December 24",
+      "type": "THE ANTICIPATION",
+      "image": "https://datetimeonline.com/imgfiles/holidays/uk/christmas-eve.jpg",
+      "description": "Christmas Eve carries a special sense of anticipation. Families may finish preparations, exchange small gifts, attend church services, sing carols or gather around a festive meal before Christmas Day arrives.",
+      "highlights": [
+        "Carols",
+        "Family dinner",
+        "Church services",
+        "Midnight celebrations"
+      ]
+    },
+    {
+      "number": "04",
+      "name": "Christmas Day",
+      "nativeName": "December 25",
+      "type": "THE CELEBRATION",
+      "principal": true,
+      "image": "https://img.etimg.com/photo/msid-116646142,imgsize-2426080/Christmas.jpg",
+      "description": "Christmas Day is the main day of celebration for many communities. People attend worship, share meals, exchange gifts and spend time with family and friends. Traditions vary enormously between countries and households.",
+      "highlights": [
+        "Gift giving",
+        "Family gatherings",
+        "Christmas lunch",
+        "Carols"
+      ]
+    },
+    {
+      "number": "05",
+      "name": "Nativity",
+      "nativeName": "The Birth of Jesus",
+      "type": "THE STORY",
+      "principal": true,
+      "image": "https://png.pngtree.com/background/20250107/original/pngtree-jesus-family-christmas-picture-image_16144240.jpg",
+      "description": "Nativity displays and plays retell the story of Jesus's birth. Churches, schools and families may create scenes showing Bethlehem, the manger, Mary and Joseph, shepherds and the Magi.",
+      "highlights": [
+        "Bethlehem",
+        "Manger",
+        "Shepherds",
+        "Magi"
+      ]
+    },
+    {
+      "number": "06",
+      "name": "Christmas Morning",
+      "nativeName": "The Morning After",
+      "type": "THE SURPRISE",
+      "image": "https://t3.ftcdn.net/jpg/14/85/10/62/360_F_1485106247_bEjbSgSUWS6tnMnG47j9khktdFLdZay2.jpg",
+      "description": "In many households, Christmas morning begins around decorated trees and wrapped presents. Children and adults open gifts, discover surprises and share the excitement of giving and receiving.",
+      "highlights": [
+        "Stockings",
+        "Presents",
+        "Surprises",
+        "Family photos"
+      ]
+    },
+    {
+      "number": "07",
+      "name": "Boxing Day",
+      "nativeName": "December 26",
+      "type": "THE CONTINUATION",
+      "image": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-985448,resizemode-75,msid-126174645/news/international/us/what-is-boxing-day-do-americans-celebrate-this-post-christmas-holiday-heres-what-you-need-to-know.jpg",
+      "description": "Boxing Day is observed in several countries on December 26. Its customs vary, but it can include visiting family, sharing leftover festive food, shopping, sport and continued relaxation after Christmas Day.",
+      "highlights": [
+        "Family visits",
+        "Leftovers",
+        "Sport",
+        "Second-day traditions"
+      ]
+    },
+    {
+      "number": "08",
+      "name": "Epiphany",
+      "nativeName": "January 6",
+      "type": "THE JOURNEY ON",
+      "image": "https://guideposts.org/articles/wp-content/uploads/2026/03/three_wise_men_epiphany-1.jpg",
+      "description": "In many Christian traditions, Epiphany is associated with the visit of the Magi and the revelation of Christ to the world. It also marks an important point in the wider Christmas season.",
+      "highlights": [
+        "The Magi",
+        "Three gifts",
+        "Epiphany",
+        "Christmas season"
+      ]
+    }
+  ],
+  "symbols": [
+    {
+      "title": "The Christmas Tree",
+      "icon": "🎄",
+      "image": "https://png.pngtree.com/thumb_back/fh260/background/20220309/pngtree-christmas-decorations-hanging-on-fir-tree-greetings-horizontal-christmas-eve-photo-image_23966446.jpg",
+      "detail": "The Christmas tree has become one of the most recognisable symbols of the season. Evergreen trees and branches have long carried associations with life during winter, while modern Christmas trees are decorated with lights, ornaments and stars."
+    },
+    {
+      "title": "The Star",
+      "icon": "★",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/056/249/773/small/glowing-golden-star-lantern-hanging-in-dark-ambient-setting-photo.jpg",
+      "detail": "The star is closely connected with the Nativity tradition. The Star of Bethlehem is remembered in Christian tradition as a sign associated with the birth of Jesus and the journey of the Magi."
+    },
+    {
+      "title": "The Bell",
+      "icon": "🔔",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/070/827/974/small/decorative-gold-bells-with-red-ribbons-placed-on-fresh-snow-during-winter-season-celebration-photo.jpeg",
+      "detail": "Bells became strongly associated with Christmas music, church traditions and festive celebration. Their bright sound is now part of the familiar Christmas soundscape."
+    },
+    {
+      "title": "The Stocking",
+      "icon": "🧦",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/052/399/245/small/a-cozy-fireplace-with-a-christmas-tree-and-four-red-stockings-hanging-from-it-photo.jpg",
+      "detail": "Christmas stockings are commonly hung as decorative containers for small gifts and treats. Their exact origin is linked to several traditions and stories, including legends surrounding Saint Nicholas."
+    },
+    {
+      "title": "The Wreath",
+      "icon": "⭕",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/050/626/680/small_2x/festive-christmas-wreath-with-pine-cones-and-berries-on-a-dark-wooden-background-photo.jpeg",
+      "detail": "A wreath is a circular decoration often made with evergreen foliage. It is commonly placed on doors during the Christmas season and can symbolise continuity and welcome."
+    },
+    {
+      "title": "The Candle",
+      "icon": "🕯️",
+      "image": "https://media.istockphoto.com/id/517924225/photo/christmas-candles-and-lights.jpg?s=612x612&w=0&k=20&c=irETe7Sauc8298EIEC7ey80CPPtOi0cyJxo6emLhHfE=",
+      "detail": "Candles and lights are important in many Christmas traditions. Their glow can represent hope, warmth and light during the darkest part of the year."
+    }
+  ],
+  "traditions": [
+    {
+      "title": "Carolling",
+      "short": "Singing Christmas songs together.",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/033/221/037/small/ai-generative-people-children-and-adults-of-different-ethnicity-and-culture-singing-christmas-carols-by-night-with-candle-in-their-hands-photo.jpg",
+      "text": "Christmas carols bring groups together through music. They can tell religious stories, celebrate the season or simply create the warm sound of a shared holiday gathering."
+    },
+    {
+      "title": "Christmas Crackers",
+      "short": "A festive table tradition with a snap, joke and surprise.",
+      "image": "https://media.istockphoto.com/id/629113196/photo/couple-pulling-cracker-in-room-decorated-for-christmas.jpg?s=612x612&w=0&k=20&c=JhS8NNCNcymMkeOi9pAGQbiv7Lr7iJTOEorNF6g8sJg=",
+      "text": "Christmas crackers are a popular British and Commonwealth table tradition. Two people pull a cracker apart to make a small bang, revealing a paper crown, a joke and a tiny novelty gift."
+    },
+    {
+      "title": "Secret Santa",
+      "short": "A playful way of exchanging gifts anonymously.",
+      "image": "https://t3.ftcdn.net/jpg/16/07/48/16/360_F_1607481696_fvBD7i8hhXOnAmyQSlCcyIYOH5SWQuZv.jpg",
+      "text": "In Secret Santa exchanges, participants are assigned another person and buy a gift for them without revealing the giver beforehand. It is common in families, schools, workplaces and friend groups."
+    },
+    {
+      "title": "Midnight Mass",
+      "short": "A Christmas Eve worship tradition.",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/052/006/125/small/christmas-eve-in-church-many-lit-candles-leading-to-the-altar-decorated-for-christmas-mass-free-photo.jpg",
+      "text": "Midnight Mass is a Christmas Eve worship service observed in many Christian communities. The timing and exact form vary, but it often becomes a meaningful transition into Christmas Day."
+    },
+    {
+      "title": "Nativity Plays",
+      "short": "The Christmas story brought to the stage.",
+      "image": "https://media.istockphoto.com/id/521322105/photo/christmas-nativity-with-angel.jpg?s=612x612&w=0&k=20&c=POctLiWqNmsNsl3UE_cnN8RycZOZW7Usa3HHgoS52tQ=",
+      "text": "Nativity plays retell the birth of Jesus through drama. Children and adults may take roles as Mary, Joseph, shepherds, angels and the Magi, turning the story into a community performance."
+    },
+    {
+      "title": "Gift Giving",
+      "short": "A tradition built around generosity.",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/072/550/158/small/exchanging-christmas-gift-by-fireplace-holiday-giving-photo.jpeg",
+      "text": "Gift giving is one of the most visible modern Christmas traditions. It can express affection, gratitude and generosity, and in Christian contexts it can also be connected with the gifts brought by the Magi."
+    }
+  ],
+  "culture": {
+    "tree": {
+      "title": "The Christmas Tree",
+      "category": "DECOR",
+      "icon": "🎄",
+      "image": "https://homemadelovely.com/wp-content/uploads/2023/11/christmas-tree-2023-horizontal.jpg",
+      "text": "The tree becomes a centrepiece of the home. Families may decorate it with ornaments collected over many years, handmade decorations, lights and a star or angel at the top."
+    },
+    "santa": {
+      "title": "Santa Claus",
+      "category": "FOLK TRADITION",
+      "icon": "🎅",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/007/717/554/small_2x/santa-claus-looking-at-the-camera-christmas-is-coming-merry-christmas-santa-is-watching-photo.jpg",
+      "text": "Santa Claus developed from traditions surrounding Saint Nicholas and other European gift-bringing figures. Modern Santa imagery combines many influences and is now recognised worldwide."
+    },
+    "lights": {
+      "title": "Christmas Lights",
+      "category": "GLOW",
+      "icon": "✨",
+      "image": "https://media.istockphoto.com/id/1175684792/photo/stylish-christmas-golden-star-illumination-and-fir-branches-with-red-and-gold-baubles-golden.jpg?s=612x612&w=0&k=20&c=INVlJRr7JyUi1MoPMZJDS2PdJbguyLlItqadtPueXFc=",
+      "text": "String lights transform homes, streets and public spaces into glowing Christmas landscapes. In many places, switching on the lights has itself become a festive event."
+    },
+    "crackers": {
+      "title": "Christmas Crackers",
+      "category": "TABLE",
+      "icon": "🎉",
+      "image": "https://media.istockphoto.com/id/179061668/photo/red-theme-christmas-dinner-table-setting.jpg?s=612x612&w=0&k=20&c=Q1n0HaT3zFEZEV047KxLn6lg7wQec9SGEYcb1VusWU8=",
+      "text": "Crackers are pulled across the Christmas table and pop with a small snap. Inside are traditionally a paper crown, a joke and a small gift, making them both decoration and entertainment."
+    },
+    "feast": {
+      "title": "The Christmas Feast",
+      "category": "FOOD",
+      "icon": "🍽️",
+      "image": "https://img.magnific.com/free-photo/high-angle-christmas-feast-with-delicious-food_23-2148705409.jpg?semt=ais_hybrid&w=740&q=80",
+      "text": "Christmas meals differ widely by region and family. Roast dishes, puddings, cakes, sweets and local specialities can all become part of a family's annual Christmas menu."
+    },
+    "cards": {
+      "title": "Christmas Cards",
+      "category": "MESSAGES",
+      "icon": "💌",
+      "image": "https://img.magnific.com/free-psd/christmas-greeting-card-template-design_23-2151879561.jpg?semt=ais_hybrid&w=740&q=80",
+      "text": "Christmas cards turn seasonal greetings into something tangible. Families and friends use them to send wishes across distance and to keep in touch with people they may not see during the year."
+    },
+    "community": {
+      "title": "Christmas Together",
+      "category": "PEOPLE",
+      "icon": "🤍",
+      "image": "https://media.istockphoto.com/id/1187014289/photo/family-with-kids-having-christmas-dinner-at-tree.jpg?s=612x612&w=0&k=20&c=BORjf4Co-2bkN8EP-NWTHoaicW29gizsKm2Ctw_KySU=",
+      "text": "At its most personal, Christmas is about people. Family gatherings, community meals, volunteering, visiting neighbours and sharing with people who may be alone can all give the season its warmth."
+    }
+  },
+  "food": {
+    "description": "There is no single Christmas menu. Food changes dramatically from country to country and even from one family to another. The common thread is the idea of a meal made special because it is shared.",
+    "dishes": [
+      "Christmas cake",
+      "Roast dinner",
+      "Plum pudding",
+      "Gingerbread",
+      "Cookies",
+      "Hot chocolate",
+      "Fruit cake",
+      "Regional sweets"
+    ]
+  },
+  "farewell": {
+    "description": "The Christmas season eventually comes to an end, but its decorations, photographs, songs and memories often remain. For many people, the end of Christmas is less a goodbye than a quiet promise to gather and celebrate again.",
+    "phrase": "Merry Christmas",
+    "translation": "A wish for joy, peace and warmth during the Christmas season."
+  },
+  "india": {
+    "introduction": "Christmas in India is not one single experience. Christian communities, schools, neighbourhoods and families shape the celebration through local food, languages, music, church traditions and community events.",
+    "children": [
+      {
+        "title": "Carols",
+        "icon": "🎶",
+        "text": "Children sing Christmas carols at school programmes, churches, neighbourhood gatherings and community events."
+      },
+      {
+        "title": "Dance & music",
+        "icon": "💃",
+        "text": "Christmas programmes often include group dances, choir performances and festive songs prepared by children."
+      },
+      {
+        "title": "Nativity plays",
+        "icon": "🎭",
+        "text": "Students may perform the Nativity story as Mary, Joseph, shepherds, angels and the Magi."
+      },
+      {
+        "title": "School celebrations",
+        "icon": "🎄",
+        "text": "Schools may organise decorations, competitions, games, performances, Secret Santa exchanges and Christmas parties."
+      },
+      {
+        "title": "Christmas visits",
+        "icon": "🎁",
+        "text": "Children often visit relatives, exchange small gifts and share Christmas cake or other festive treats."
+      },
+      {
+        "title": "Community sharing",
+        "icon": "🤍",
+        "text": "Churches and community groups may organise meals, carol rounds, charity activities and gatherings for families."
+      }
+    ],
+    "regions": [
+      {
+        "place": "GOA",
+        "title": "Christmas by the coast",
+        "text": "Midnight Mass, Christmas stars, cribs, carols, decorated homes and community celebrations form a strong public festive culture.",
+        "icon": "🌴",
+        "videoId": "6_gYAWCidak"
+      },
+      {
+        "place": "KERALA",
+        "title": "Stars, cribs & family tables",
+        "text": "Homes and churches may feature illuminated stars and Nativity displays, while church services and family meals remain central.",
+        "icon": "⭐",
+        "videoId": "2xkmQ0NfGJo"
+      },
+      {
+        "place": "NORTHEAST INDIA",
+        "title": "Church, choir & community",
+        "text": "In many communities Christmas is deeply connected with worship, choir singing, gatherings and beautifully decorated churches and homes.",
+        "icon": "⛪",
+        "videoId": "cmUXSJ1QDaw"
+      },
+      {
+        "place": "KOLKATA",
+        "title": "A city celebration",
+        "text": "Park Street and neighbourhood churches become festive gathering places, with lights, music, food and public celebrations alongside church traditions.",
+        "icon": "🌟",
+        "videoId": "RW36HMDXnG0"
+      },
+      {
+        "place": "MUMBAI",
+        "title": "Community & city lights",
+        "text": "Churches, schools, housing societies and local communities often bring together decorations, carols, parties and family celebrations.",
+        "icon": "🏙️",
+        "videoId": "vlib99EJAzc"
+      },
+      {
+        "place": "TAMIL NADU",
+        "title": "Stars outside the home",
+        "text": "Illuminated Christmas stars, church services, carols, cribs and family gatherings are familiar parts of Christmas in many Christian communities.",
+        "icon": "✦",
+        "videoId": "vlib99EJAzc"
+      }
+    ],
+    "traditions": [
+      {
+        "title": "Christmas Stars",
+        "icon": "⭐",
+        "text": "Illuminated stars are a striking part of Christmas decoration in many Indian homes, often hung outside as a festive sign."
+      },
+      {
+        "title": "Nativity Cribs",
+        "icon": "🐑",
+        "text": "Churches, schools and families may build cribs representing Bethlehem, the manger and figures from the Nativity story."
+      },
+      {
+        "title": "Midnight Mass",
+        "icon": "🔔",
+        "text": "Christmas Eve worship, including Midnight Mass in many communities, brings together prayer, music and anticipation for Christmas Day."
+      },
+      {
+        "title": "Christmas Cake",
+        "icon": "🍰",
+        "text": "Fruit cakes, plum cakes and regional festive sweets are shared with relatives, neighbours, friends and visitors."
+      }
+    ]
+  },
+  "giftFacts": [
+    {
+      "label": "CHILDREN",
+      "title": "Songs & dances",
+      "text": "School and community programmes can turn Christmas into a stage for carols, dances and group performances."
+    },
+    {
+      "label": "INDIA",
+      "title": "Christmas stars",
+      "text": "In many parts of India, children help make or hang glowing stars outside homes and churches."
+    },
+    {
+      "label": "COMMUNITY",
+      "title": "Nativity plays",
+      "text": "Children often retell the Christmas story through school and church performances."
+    },
+    {
+      "label": "SHARING",
+      "title": "Gifts & cake",
+      "text": "Small presents, Christmas cake and festive treats become ways of sharing affection and celebration."
+    }
+  ]
+}

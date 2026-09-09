@@ -1,0 +1,205 @@
+{
+  "name": "Diwali",
+  "nativeName": "दीपावली",
+  "audio": {
+    "crackers": "/sounds/crackers.mp3"
+  },
+  "images": {
+    "hero": "https://c.ndtvimg.com/2023-11/grbqgnc_diwali-generic_625x300_11_November_23.jpeg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+    "diya": "https://i.pinimg.com/736x/5d/a7/c4/5da7c47a2741e5a4a8a78b641a5876f0.jpg",
+    "lights": "https://media.istockphoto.com/id/521400147/photo/decorative-lights-in-a-temple.jpg?s=612x612&w=0&k=20&c=Rq4dkkivhjiRFiXsc39i3GQ5oacfiZybUmQWn0zs0Ko=",
+    "rangoli": "https://d1msew97rp2nin.cloudfront.net/prodin/phool/plpimages/design-for-diwali-rangoli-1728453297509-c4b5e00c-ba41-4bfd-a465-bc79a4fcf708.webp",
+    "family": "https://images.stockcake.com/public/0/4/9/049d73e7-bd4c-4527-94e6-658e017f8d3b_large/diwali-celebration-sparkle-stockcake.jpg",
+    "sweets": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=90"
+  },
+  "introduction": {
+    "text": "Diwali, or Deepavali, is a festival of light celebrated across India and by Indian communities around the world. Homes glow with diyas and lamps, streets fill with colour, families gather, sweets are exchanged and the night becomes a celebration of light, renewal and togetherness. It brings together spiritual reflection and everyday celebration, so the festival can feel both deeply personal and shared by an entire community.",
+    "extended": "The meaning and traditions of Diwali vary across regions and communities. For many, the festival represents the victory of light over darkness, good over evil and knowledge over ignorance. It is also associated with prosperity, new beginnings, family gatherings, prayer, food and the renewal of homes. These ideas appear differently from one place to another, which is why Diwali can look and feel distinct across India while retaining its central sense of light and renewal."
+  },
+  "moments": [
+    {
+      "number": "01",
+      "name": "Dhanteras",
+      "nativeName": "धनतेरस",
+      "type": "THE BEGINNING",
+      "description": "Dhanteras marks the beginning of the Diwali season for many communities. Homes are cleaned and decorated, lamps are lit and purchasing items associated with prosperity and auspicious beginnings is traditional in many households. It is also a time when families begin arranging the home for the days ahead and preparing for the festive atmosphere.",
+      "image": "https://www.4to40.com/wp-content/uploads/2016/10/dhanteras-puja.jpg"
+    },
+    {
+      "number": "02",
+      "name": "Naraka Chaturdashi",
+      "nativeName": "नरक चतुर्दशी",
+      "type": "THE CLEANSING",
+      "description": "Naraka Chaturdashi is observed in different ways across India. In many traditions, an early bath, oil application, lamps and preparations for the main Diwali celebration are part of the day. The day is often connected with removing what is old and beginning the main celebration with a sense of freshness and preparation.",
+      "image": "https://religionworld.s3.ap-south-1.amazonaws.com/uploads/2019/10/goa-naraka.jpg",
+      "video": true,
+      "videoId": "YyHPfUNyf9w"
+    },
+    {
+      "number": "03",
+      "name": "Diwali Night",
+      "nativeName": "दीपावली",
+      "type": "THE NIGHT OF LIGHT",
+      "description": "The central celebration is filled with lamps, decorations, family gatherings, prayers, sweets and festive meals. In many traditions Lakshmi Puja is performed in the evening, while homes and streets shine with rows of diyas. The evening brings together worship, visiting, exchanging sweets and gifts, and the shared glow of lamps that makes homes and streets feel transformed.",
+      "image": "https://media.istockphoto.com/id/1184561549/photo/fireworks.jpg?s=612x612&w=0&k=20&c=zcRFeYDt5AaQvkpikIZseuJ2gIAM8cxa5nR1NZ40kts=",
+      "video": true,
+      "videoId": "g9Sck3GTEt4"
+    },
+    {
+      "number": "04",
+      "name": "Govardhan Puja",
+      "nativeName": "गोवर्धन पूजा",
+      "type": "THE THANKSGIVING",
+      "description": "Govardhan Puja is especially associated with traditions connected to Krishna and the lifting of Govardhan Hill. Food offerings and symbolic representations of Govardhan are important in many communities. The observance also highlights gratitude for nature, food and the sustaining relationship between people, land and community.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuT01TpugYOvqqZI3FUyglrlf7DbZrgzdufPd3U6Joh5bc1mzz_7PGe88&s=10"
+    },
+    {
+      "number": "05",
+      "name": "Bhai Dooj",
+      "nativeName": "भाई दूज",
+      "type": "THE BOND",
+      "description": "Bhai Dooj celebrates the bond between brothers and sisters. Sisters traditionally perform a ceremonial tilak and families gather for food, blessings and time together. The celebration closes the Diwali sequence on a more intimate note, placing affection, blessings and family relationships at its centre.",
+      "image": "https://s7ap1.scene7.com/is/image/incredibleindia/bhai-dooj-fes-hero?qlt=82&ts=1726639246217",
+      "video": true,
+      "videoId": "TQXQYFMU4gg"
+    }
+  ],
+  "themes": [
+    {
+      "title": "Light over darkness",
+      "label": "MEANING",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/028/856/075/small/a-close-up-of-a-diya-the-flame-flickering-in-the-darkness-diwali-stock-images-realistic-stocks-photo.jpg",
+      "text": "The lamp is one of the most recognisable symbols of Diwali. Across many traditions, light carries associations with hope, knowledge, renewal and the overcoming of darkness. The simple act of lighting a lamp therefore becomes both a visual celebration and a reminder of inner clarity."
+    },
+    {
+      "title": "Lakshmi and prosperity",
+      "label": "DEVOTION",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/070/500/019/small/buddha-statue-with-orange-flowers-and-candles-photo.jpg",
+      "text": "Lakshmi is worshipped in many Diwali traditions as a goddess associated with prosperity, abundance and good fortune. For many households, the evening prayer is also a moment to express gratitude for what they have and hope for well-being in the year ahead.",
+      "video": true,
+      "videoId": "r21G0cE3-Ks"
+    },
+    {
+      "title": "A home transformed",
+      "label": "HOME",
+      "image": "https://t4.ftcdn.net/jpg/20/96/18/25/360_F_2096182594_C9U4cBPmwafUKKZujkvB0Nla6hIyktTg.jpg",
+      "text": "Cleaning and decorating the home is an important part of Diwali preparation. Lights, flowers, rangoli and decorations transform familiar spaces into festive ones. The preparation itself can become a family activity, with people cleaning, arranging lamps and adding small details that make the space feel welcoming."
+    },
+    {
+      "title": "Family returns",
+      "label": "TOGETHERNESS",
+      "image": "https://images.stockcake.com/public/1/d/7/1d7ec0ba-5845-4585-95fd-7fdfd1e49268_large/diwali-family-celebration-stockcake.jpg",
+      "text": "For many families, Diwali is a time to return home, meet relatives, exchange gifts and spend time together. The festival often creates a pause in the year when familiar rituals, shared meals and conversations bring generations together."
+    },
+    {
+      "title": "The language of colour",
+      "label": "ART",
+      "image": "https://www.kidsgen.com/events/diwali/images/beautiful-rangoli-designs-diwali.jpg",
+      "text": "Rangoli, textiles, flowers and lights create a visual language of colour throughout the festival. These details make the festival feel especially alive, turning ordinary entrances, courtyards and rooms into temporary works of art."
+    },
+    {
+      "title": "The sweetness of celebration",
+      "label": "FOOD",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/073/737/173/small/diwali-sweets-and-candles-create-a-festive-atmosphere-photo.jpeg",
+      "text": "Sweets are exchanged with family, friends and neighbours. Different regions have their own traditional Diwali preparations. Offering sweets is as much about affection and hospitality as it is about the food itself, with boxes of mithai travelling between homes."
+    }
+  ],
+  "traditions": [
+    {
+      "title": "Diyas",
+      "category": "LIGHT",
+      "icon": "🪔",
+      "image": "https://cdn.britannica.com/53/263653-050-37A84AA1/diwali-hindu-festival-of-lights-celebration.jpg",
+      "text": "Small oil lamps are placed around homes, entrances, windows and prayer spaces. Their warm glow is one of the defining visual features of Diwali. They may be arranged in rows or clusters, especially around thresholds, creating a gentle glow that welcomes guests and marks the festive evening."
+    },
+    {
+      "title": "Rangoli",
+      "category": "ART",
+      "icon": "✦",
+      "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202111/maxresdefault.jp_1200x768.png?size=1200:675",
+      "text": "Rangoli designs are created using coloured powders, flowers, rice and other materials. Designs and meanings vary widely across regions. A design may be simple or elaborate, and making it can become a shared household ritual passed between generations.",
+      "video": true,
+      "videoId": "NuxZU3KzYyM"
+    },
+    {
+      "title": "Fireworks",
+      "category": "CELEBRATION",
+      "icon": "✹",
+      "image": "https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2024/11/06/d0faa9a1-bf51-4ece-b331-cfc099240b7b_e8f2b7d3.jpg?itok=o3sR4eqX&v=1730876343",
+      "text": "Fireworks have become part of Diwali celebrations in many places, although their use varies and many people now choose quieter or community-friendly alternatives. Their place in the celebration continues to vary, with many families balancing tradition with concern for noise, air quality and animals.",
+      "video": true,
+      "videoId": "d9RY0tx6ERs"
+    },
+    {
+      "title": "Sweets",
+      "category": "FOOD",
+      "icon": "●",
+      "image": "https://c.ndtvimg.com/2025-10/3dke37og_food_625x300_14_October_25.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=675",
+      "text": "Mithai is exchanged throughout the festival. Laddoo, barfi, jalebi, kaju katli and many regional sweets are common festive favourites. Offering mithai is a familiar way of saying thank you, sharing good wishes and welcoming others into the celebration."
+    },
+    {
+      "title": "New clothes",
+      "category": "FESTIVE LIFE",
+      "icon": "◇",
+      "image": "https://www.mohifashion.com/cdn/shop/articles/Diwali_2024_banner.jpg?v=1729153100&width=1100",
+      "text": "New or festive clothing is traditionally associated with celebration, renewal and visiting family and friends. Wearing something special can make an ordinary family gathering feel like a distinct festive occasion and is often part of getting ready for visits and prayers."
+    },
+    {
+      "title": "Toran & decoration",
+      "category": "HOME",
+      "icon": "❋",
+      "image": "https://mangalfashions.com/cdn/shop/products/39-Inch-100-cm-Artificial-Marigold-Fluffy-Yellow-Dark-Orange-Toran-W-Design-for-Main-Door-Entry-Way-Decor-Mangal-Fashions-Indian-Home-Decor-and-Craft-837.jpg?v=1681620240",
+      "text": "Doorways and homes may be decorated with flowers, torans, lights and other festive ornaments. These decorations can be handmade or purchased, but their purpose is often the same: to make the entrance feel festive, welcoming and ready for guests."
+    }
+  ],
+  "food": {
+    "description": "Food is one of the most joyful parts of Diwali. Families prepare sweets and savouries, exchange mithai and gather around festive meals. Recipes and favourites differ from family to family, and the table can bring together regional sweets, savouries and dishes that are prepared especially for the season.",
+    "dishes": [
+      "Kaju Katli",
+      "Laddoo",
+      "Barfi",
+      "Jalebi",
+      "Gujiya",
+      "Chakli",
+      "Shankarpali",
+      "Mysore Pak"
+    ]
+  },
+  "ending": {
+    "title": "Let the light stay.",
+    "bengali": "শুভ দীপাবলি",
+    "text": "The lamps may eventually go out, but the warmth of a festival spent together stays long after the night is over. What remains is often found in the small things: a familiar sweet, a doorway still marked by colour, a family photograph, or the memory of everyone sitting together beneath the lights."
+  },
+  "finalStories": [
+    {
+      "number": "01",
+      "name": "Kali Pujo",
+      "nativeName": "কালী পূজা",
+      "type": "THE NIGHT OF KALI",
+      "description": "In Bengal, Kali Pujo is celebrated on the same new-moon night as Diwali. Homes and pandals are illuminated, devotees offer prayers to Goddess Kali, and the night becomes a powerful celebration of devotion, protection and the triumph over darkness.",
+      "image": "https://nkbmeditation.org/images/image/67e249f6913b180370049630/image.png",
+      "video": true,
+      "videoId": "PHzej_G9qEY"
+    },
+    {
+      "number": "02",
+      "name": "Dusshera",
+      "nativeName": "दशहरा",
+      "type": "THE VICTORY",
+      "description": "The defeat of Ravana is remembered in the Rama tradition as the victory of dharma over adharma. It is especially associated with Vijayadashami and leads into the story of Rama’s return to Ayodhya.",
+      "image": "https://media.istockphoto.com/id/1454304269/photo/ravan-dahan-according-to-hindu-culture-effigies-of-ravana-are-burned-on-vijayadashami-in.jpg?s=612x612&w=0&k=20&c=C0qORXmNdYDc1J7sHSSF3ppnhmP-iY6JAixadS0eOaA=",
+      "video": true,
+      "videoId": "QOPc7fMd1xY"
+    },
+    {
+      "number": "03",
+      "name": "Narakasura Vadh",
+      "nativeName": "नरकासुर वध",
+      "type": "THE TRIUMPH",
+      "description": "Naraka Chaturdashi is connected in several traditions with Krishna’s defeat of Narakasura and the overcoming of darkness before the main Diwali celebration.",
+      "image": "https://www.hyderabadstories.com/wp-content/uploads/2025/10/For-Better-TTommorow-1.jpg",
+      "video": true,
+      "videoId": "LFAqKSZZjqY"
+    }
+  ]
+}
