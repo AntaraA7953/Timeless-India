@@ -5,7 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import Stories from "./pages/Stories";
 import Arts from "./pages/Arts";
 import Games from "./pages/Games";
 import VirtualReality from "./pages/VirtualReality";
@@ -105,7 +104,6 @@ const ProtectedRoutes = () => {
       <Route path="/" element={<Index />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/community" element={<Community />} />
-      <Route path="/stories" element={<Stories />} />
       <Route path="/arts" element={<Arts />} />
       <Route path="/games" element={<Games />} />
       <Route path="/vr" element={<VirtualReality />} />

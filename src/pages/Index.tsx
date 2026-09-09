@@ -103,13 +103,7 @@ const Index = () => {
                   <span className="text-sm font-medium">{label}</span>
                 </button>
               ))}
-              <a
-                href="/stories"
-                className="flex items-center space-x-1 px-3 py-2 rounded-full transition-all duration-300 text-gray-600 hover:text-saffron-600 hover:bg-saffron-50"
-              >
-                <Users size={16} />
-                <span className="text-sm font-medium">Stories</span>
-              </a>
+              
               {/* Peek Button and Dropdown */}
               <div ref={peekRef} className="relative">
                 <button
@@ -245,7 +239,6 @@ const Index = () => {
                   { id: 'arts', label: 'Arts', icon: Palette, action: () => navigate('/arts') },
                   { id: 'games', label: 'Games', icon: Trophy, action: () => navigate('/games') },
                   { id: 'vr', label: 'VR/AR', icon: Camera, action: () => navigate('/vr') },
-                  { id: 'stories', label: 'Stories', icon: Users, action: () => navigate('/stories') },
                   { id: 'cultural-mosaic', label: 'Cultural Mosaic', icon: Palette, action: () => navigate('/cultural-mosaic') },
                   { id: 'festival-fiesta', label: 'Festival Fiesta', icon: Calendar, action: () => navigate('/festival-fiesta') },
                   { id: 'quisine-corner', label: 'Quisine Corner', icon: Utensils, action: () => navigate('/quisine/QuisineCorner') },
