@@ -79,7 +79,7 @@ const VRExperience = () => {
       name: 'Tirumala Venkateswara Temple',
       location: 'Tirupati, Andhra Pradesh',
       description: 'Visit the hill shrine virtually, learn its traditions, and check official seva and puja booking availability.',
-      image: 'https://sanskritforus.com/wp-content/uploads/2024/02/temple_To4YlfIJ_202308271009080.jpg',
+      image: 'https://th.bing.com/th/id/OIP.vL-KFBhLaE4BriJkRiECRwHaDs?w=303&h=150&c=6&r=0&o=7&dpr=1.1&pid=1.7&rm=3',
       tourUrl: 'https://www.youtube.com/results?search_query=Tirumala+Tirupati+360+virtual+tour',
       bookingUrl: 'https://ttdevasthanams.ap.gov.in/',
     },

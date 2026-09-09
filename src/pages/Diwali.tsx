@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import diwali from "./Diwali.json";
+import FestivalCountdown from "./FestivalCountdown";
 
 /* =========================================================
    MAIN COMPONENT
@@ -414,6 +415,12 @@ function DiwaliArrival({
             Let the night begin.
           </strong>
         </div>
+
+        <FestivalCountdown
+          date="2026-11-08T00:00:00+05:30"
+          label="Diwali 2026"
+          theme="diwali"
+        />
 
         <button
           className="enter-diwali"
@@ -2087,6 +2094,17 @@ img {
 
   line-height: 1.2;
 }
+
+.festival-countdown { width: min(430px, 100%); margin: 25px 0 20px; padding: 15px 17px 16px; border: 1px solid rgba(244, 201, 93, .35); background: rgba(20, 23, 51, .78); box-shadow: 0 12px 28px rgba(0, 0, 0, .2); }
+.countdown-heading { display: flex; align-items: center; gap: 10px; color: var(--gold); }
+.countdown-heading > div { display: flex; flex: 1; flex-direction: column; gap: 4px; }
+.countdown-eyebrow { font: 8px Arial, sans-serif; letter-spacing: .18em; font-weight: 700; color: var(--gold-light); }
+.countdown-heading strong { color: var(--cream); font: 18px "Fraunces", serif; font-weight: 500; }
+.countdown-spark { font-size: 15px; }
+.countdown-units { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin-top: 14px; }
+.countdown-unit { padding: 8px 4px 7px; text-align: center; background: rgba(255, 247, 223, .08); border-top: 2px solid var(--pink); }
+.countdown-unit strong { display: block; color: var(--gold-light); font: 24px "Fraunces", serif; line-height: 1; }
+.countdown-unit span { display: block; margin-top: 5px; color: rgba(255, 247, 223, .62); font: 7px Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
 
 
 /* =========================================================

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import durgaPuja from "./durgaPuja.json";
+import FestivalCountdown from "./FestivalCountdown";
 
 
 /* =========================================================
@@ -351,6 +352,12 @@ function ArrivalPage({
               experience.
             </p>
           </div>
+
+          <FestivalCountdown
+            date="2026-10-17T00:00:00+05:30"
+            label="Durga Puja 2026"
+            theme="durga"
+          />
 
           <button
             className="enter-button"
@@ -2180,6 +2187,17 @@ img {
   font-size: 14px;
   line-height: 1.35;
 }
+
+.festival-countdown { width: min(430px, 100%); margin: 25px 0 20px; padding: 15px 17px 16px; border: 1px solid rgba(128, 36, 24, .18); background: rgba(255, 250, 237, .72); box-shadow: 0 10px 22px rgba(91, 46, 24, .08); }
+.countdown-heading { display: flex; align-items: center; gap: 10px; color: var(--vermilion); }
+.countdown-heading > div { display: flex; flex: 1; flex-direction: column; gap: 4px; }
+.countdown-eyebrow { font: 8px Arial, sans-serif; letter-spacing: .18em; font-weight: 700; }
+.countdown-heading strong { color: var(--ink); font: 18px "Fraunces", serif; font-weight: 500; }
+.countdown-spark { font-size: 15px; }
+.countdown-units { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin-top: 14px; }
+.countdown-unit { padding: 8px 4px 7px; text-align: center; background: rgba(255, 255, 255, .52); border-top: 2px solid var(--vermilion); }
+.countdown-unit strong { display: block; color: var(--ink); font: 24px "Fraunces", serif; line-height: 1; }
+.countdown-unit span { display: block; margin-top: 5px; color: var(--muted); font: 7px Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
 
 .enter-button {
   display: flex;
