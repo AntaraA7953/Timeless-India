@@ -1,8 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
-import { Brain, Clock, Trophy, RotateCcw, ArrowRight } from 'lucide-react';
+import { Brain, Clock, Trophy, RotateCcw, ArrowRight, Download, User } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { jsPDF } from 'jspdf';
 
 interface Question {
   id: number;
@@ -64,6 +65,8 @@ const HeritageQuiz: React.FC<HeritageQuizProps> = ({ onBack, onComplete }) => {
   const [showExplanation, setShowExplanation] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [answers, setAnswers] = useState<number[]>([]);
+  const [participantName, setParticipantName] = useState('');
+  const [quizStarted, setQuizStarted] = useState(false);
 
   useEffect(() => {
     if (timeLeft > 0 && !showExplanation && !gameOver) {
@@ -101,8 +104,13 @@ const HeritageQuiz: React.FC<HeritageQuizProps> = ({ onBack, onComplete }) => {
       setShowExplanation(false);
       setTimeLeft(30);
     } else {
+      const finalScore = score + (selectedAnswer === questions[currentQuestion].correctAnswer ? 10 : 0);
       setGameOver(true);
-      onComplete(score);
+      setScore(finalScore);
+      onComplete(finalScore);
+      if (finalScore >= questions.length * 10 * 0.6) {
+        handleDownloadCertificate(finalScore);
+      }
     }
   };
 
@@ -116,6 +124,96 @@ const HeritageQuiz: React.FC<HeritageQuizProps> = ({ onBack, onComplete }) => {
     setAnswers([]);
   };
 
+  const percentage = Math.round((score / (questions.length * 10)) * 100);
+  const hasPassed = percentage >= 60;
+
+  const handleDownloadCertificate = (certificateScore = score) => {
+    const pdf = new jsPDF({ orientation: 'landscape', unit: 'mm', format: 'a4' });
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+    const certificatePercentage = Math.round((certificateScore / (questions.length * 10)) * 100);
+    const issuedOn = new Date().toLocaleDateString('en-IN', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    });
+
+    pdf.setFillColor(255, 249, 240);
+    pdf.rect(0, 0, pageWidth, pageHeight, 'F');
+    pdf.setDrawColor(180, 83, 9);
+    pdf.setLineWidth(2);
+    pdf.rect(10, 10, pageWidth - 20, pageHeight - 20);
+    pdf.setDrawColor(234, 179, 8);
+    pdf.setLineWidth(0.6);
+    pdf.rect(14, 14, pageWidth - 28, pageHeight - 28);
+
+    pdf.setTextColor(154, 52, 18);
+    pdf.setFont('helvetica', 'bold');
+    pdf.setFontSize(24);
+    pdf.text('TIMELESS INDIA', pageWidth / 2, 35, { align: 'center' });
+    pdf.setTextColor(55, 65, 81);
+    pdf.setFontSize(12);
+    pdf.text('Celebrating India\'s civilizational journey', pageWidth / 2, 43, { align: 'center' });
+
+    pdf.setTextColor(17, 24, 39);
+    pdf.setFontSize(28);
+    pdf.text('CERTIFICATE OF ACHIEVEMENT', pageWidth / 2, 67, { align: 'center' });
+    pdf.setFont('helvetica', 'normal');
+    pdf.setFontSize(13);
+    pdf.text('This certificate is proudly presented to', pageWidth / 2, 82, { align: 'center' });
+    pdf.setFont('helvetica', 'bold');
+    pdf.setFontSize(25);
+    pdf.setTextColor(180, 83, 9);
+    pdf.text(participantName, pageWidth / 2, 99, { align: 'center' });
+    pdf.setDrawColor(180, 83, 9);
+    pdf.line(65, 103, pageWidth - 65, 103);
+
+    pdf.setTextColor(55, 65, 81);
+    pdf.setFont('helvetica', 'normal');
+    pdf.setFontSize(14);
+    pdf.text('for successfully passing the Heritage Quiz', pageWidth / 2, 119, { align: 'center' });
+    pdf.setFont('helvetica', 'bold');
+    pdf.setFontSize(16);
+    pdf.text(`Score: ${certificateScore}/${questions.length * 10}  |  Accuracy: ${certificatePercentage}%`, pageWidth / 2, 133, { align: 'center' });
+
+    pdf.setFont('helvetica', 'normal');
+    pdf.setFontSize(11);
+    pdf.text(`Issued on ${issuedOn}`, 35, pageHeight - 30);
+    pdf.text('Timeless India', pageWidth - 35, pageHeight - 30, { align: 'right' });
+    pdf.save(`timeless-india-heritage-quiz-${participantName.replace(/[^a-z0-9]+/gi, '-').toLowerCase()}.pdf`);
+  };
+
+  if (!quizStarted) {
+    return (
+      <Card className="max-w-2xl mx-auto">
+        <CardHeader className="text-center">
+          <Brain className="mx-auto mb-4 text-blue-600" size={48} />
+          <CardTitle className="text-2xl">Heritage Quiz Master</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p className="text-center text-gray-600">Enter your name to begin the quiz and receive a certificate if you pass.</p>
+          <label htmlFor="participant-name" className="flex items-center gap-2 font-medium text-gray-700">
+            <User className="h-4 w-4" /> Participant name
+          </label>
+          <input
+            id="participant-name"
+            value={participantName}
+            onChange={(event) => setParticipantName(event.target.value)}
+            placeholder="Enter your full name"
+            className="w-full rounded-md border border-gray-300 px-3 py-2 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+            maxLength={80}
+          />
+          <div className="flex justify-center gap-4 pt-2">
+            <Button onClick={() => setQuizStarted(true)} disabled={!participantName.trim()}>
+              Start Quiz <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+            <Button onClick={onBack} variant="outline">Back to Games</Button>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  }
+
   if (gameOver) {
     return (
       <Card className="max-w-2xl mx-auto">
@@ -124,12 +222,20 @@ const HeritageQuiz: React.FC<HeritageQuizProps> = ({ onBack, onComplete }) => {
           <CardTitle className="text-2xl">Quiz Complete!</CardTitle>
         </CardHeader>
         <CardContent className="text-center space-y-4">
-          <div className="text-4xl font-bold text-green-600">{score}/50</div>
+          <div className={`text-4xl font-bold ${hasPassed ? 'text-green-600' : 'text-red-600'}`}>
+            {percentage}%
+          </div>
           <p className="text-gray-600">
-            You scored {score} out of 50 points!
-            {score >= 40 ? " Excellent knowledge!" : score >= 25 ? " Good job!" : " Keep learning!"}
+            You scored {score} out of {questions.length * 10} points.
+            {hasPassed ? " Congratulations, you passed!" : " You need 60% to pass. Keep learning!"}
           </p>
           <div className="flex gap-4 justify-center">
+            {hasPassed && (
+              <Button onClick={() => handleDownloadCertificate()} className="bg-amber-600 hover:bg-amber-700">
+                <Download className="mr-2 h-4 w-4" />
+                Download Certificate
+              </Button>
+            )}
             <Button onClick={handleRestart} className="bg-blue-500 hover:bg-blue-600">
               <RotateCcw className="mr-2 h-4 w-4" />
               Play Again
