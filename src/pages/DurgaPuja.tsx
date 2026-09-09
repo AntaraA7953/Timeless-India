@@ -1926,29 +1926,17 @@ img {
 
 .trishul-projectile {
   position: absolute;
-  top: -55px;
-  right: -8px;
-
-  /* Smaller than before */
+  top: -90px;
+  right: -5px;
   width: 76px;
   height: 315px;
-
   transform-origin: 50% 50%;
   will-change: transform, opacity;
-
-  /*
-    Starts in the upper-right corner, crosses the page diagonally,
-    and settles into the lower-left ground position.
-
-    180° puts the Trishul head at the bottom.
-    +45° tilts it sideways.
-    Total = 225°.
-  */
   animation:
     trishulThrow
-    2.0s
-    cubic-bezier(.22,.61,.36,1)
-    .35s
+    3.2s
+    cubic-bezier(.16,.72,.22,1)
+    .25s
     forwards;
 }
 
@@ -1957,71 +1945,46 @@ img {
   width: 76px;
   height: 315px;
   object-fit: contain;
-  opacity: .88;
+  opacity: .9;
   filter: drop-shadow(0 4px 7px rgba(70,20,15,.12));
   will-change: transform;
 }
 
-/*
-  Smooth path:
-  upper-right
-       \
-        \
-         \
-          \
-           \
-            ↓
-       lower-left
-
-  The Trishul remains above the photo card and all other
-  arrival-page elements because the animation wrapper has z-index 90.
-*/
+/* Smooth diagonal path: upper-right → lower-left */
 @keyframes trishulThrow {
   0% {
-    transform: translate3d(2vw, -13vh, 0) rotate(225deg);
+    transform: translate3d(3vw, -18vh, 0) rotate(225deg);
     opacity: 0;
   }
 
-  7% {
+  12% {
     transform: translate3d(1vw, -7vh, 0) rotate(225deg);
-    opacity: .88;
-    animation-timing-function: cubic-bezier(.25,.8,.35,1);
+    opacity: .9;
   }
 
-  25% {
-    transform: translate3d(-7vw, 14vh, 0) rotate(225deg);
-    opacity: .88;
-    animation-timing-function: cubic-bezier(.35,.75,.35,1);
+  32% {
+    transform: translate3d(-8vw, 13vh, 0) rotate(225deg);
+    opacity: .9;
   }
 
-  50% {
-    transform: translate3d(-18vw, 40vh, 0) rotate(225deg);
-    opacity: .88;
-    animation-timing-function: cubic-bezier(.3,.7,.3,1);
+  55% {
+    transform: translate3d(-20vw, 39vh, 0) rotate(225deg);
+    opacity: .9;
   }
 
-  72% {
-    transform: translate3d(-29vw, 61vh, 0) rotate(225deg);
-    opacity: .88;
-    animation-timing-function: cubic-bezier(.2,.8,.25,1);
+  75% {
+    transform: translate3d(-30vw, 60vh, 0) rotate(225deg);
+    opacity: .9;
   }
 
-  88% {
+  91% {
     transform: translate3d(-35vw, 70vh, 0) rotate(225deg);
-    opacity: .88;
-    animation-timing-function: cubic-bezier(.15,.75,.2,1);
-  }
-
-  96% {
-    transform: translate3d(-36.2vw, 72.5vh, 0) rotate(225deg);
-    opacity: .88;
-    animation-timing-function: cubic-bezier(.12,.75,.18,1);
+    opacity: .9;
   }
 
   100% {
-    /* Final: planted and held in the ground */
     transform: translate3d(-36vw, 73vh, 0) rotate(225deg);
-    opacity: .88;
+    opacity: .9;
   }
 }
 
@@ -2036,7 +1999,7 @@ img {
   border-radius: 50%;
   opacity: 0;
   transform: scale(.35);
-  animation: trishulImpact .65s ease-out 2.85s forwards;
+  animation: trishulImpact .65s ease-out 3.45s forwards;
 }
 
 .trishul-impact-dust {
@@ -2046,7 +2009,7 @@ img {
   width: 1px;
   height: 1px;
   opacity: 0;
-  animation: trishulDust .6s ease-out 2.85s forwards;
+  animation: trishulDust .6s ease-out 3.45s forwards;
 }
 
 .trishul-impact-dust i {
