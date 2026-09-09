@@ -127,13 +127,7 @@ const Index = () => {
                   >
                     {/* Triangle pointer */}
                     <div className="absolute -top-2 right-6 w-4 h-4 bg-white border-l border-t border-orange-100 rotate-45 z-10"></div>
-                    <button
-                      className="flex items-center gap-3 w-full text-left px-5 py-3 rounded-t-xl hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
-                      onClick={() => { navigate('/cultural-mosaic'); setPeekOpen(false); }}
-                    >
-                      <Palette size={18} className="text-amber-500" />
-                      Cultural Mosaic
-                    </button>
+                    
                     <button
                       className="flex items-center gap-3 w-full text-left px-5 py-3 hover:bg-gradient-to-r hover:from-saffron-100 hover:to-emerald-50 transition-all font-medium text-gray-700"
                       onClick={() => { navigate('/quisine/QuisineCorner'); setPeekOpen(false); }}
