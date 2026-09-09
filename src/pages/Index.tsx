@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowRight, MapPin, Clock, Palette, Camera, Trophy, Users, Star, Eye, Utensils, Sparkles, Newspaper, ShoppingBag, CircleUserRound, LogOut, Menu, X } from 'lucide-react';
+import { ArrowRight, MapPin, Clock, Palette, Camera, Trophy, Users, Star, Eye, Utensils, Sparkles, Newspaper, ShoppingBag, CircleUserRound,Calendar, LogOut, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Hero from '@/components/Hero';
@@ -247,6 +247,8 @@ const Index = () => {
                   { id: 'vr', label: 'VR/AR', icon: Camera, action: () => navigate('/vr') },
                   { id: 'stories', label: 'Stories', icon: Users, action: () => navigate('/stories') },
                   { id: 'cultural-mosaic', label: 'Cultural Mosaic', icon: Palette, action: () => navigate('/cultural-mosaic') },
+                  { id: 'festival-fiesta', label: 'Festival Fiesta', icon: Calendar, action: () => navigate('/festival-fiesta') },
+                  { id: 'quisine-corner', label: 'Quisine Corner', icon: Utensils, action: () => navigate('/quisine-corner') },
                   { id: 'profile', label: 'Profile', icon: CircleUserRound, action: () => navigate('/profile') },
                   { id: 'community', label: 'Open Community', icon: Users, action: () => navigate('/community') },
                 ].map(({ id, label, icon: Icon, action }) => (
