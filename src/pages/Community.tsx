@@ -1,17 +1,19 @@
 import { FormEvent, useCallback, useEffect, useState } from "react";
-import { ArrowLeft, MessageCircle, Search, Send, Users } from "lucide-react";
+import { ArrowLeft, ImagePlus, MessageCircle, Search, Send, Users, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { supabase } from "@/lib/supabase";
 
 type Profile = { id: string; username: string; avatar_url: string | null };
-type Post = { id: string; title: string; content: string; heritage_category: string | null; created_at: string; author_id: string; profiles: Profile | Profile[] | null };
+type Post = { id: string; title: string; content: string; image_url: string | null; heritage_category: string | null; created_at: string; author_id: string; profiles: Profile | Profile[] | null };
 type Community = { id: string; name: string; description: string; focus_area: string };
-type Message = { id: string; community_id: string; author_id: string; parent_id: string | null; content: string; created_at: string; profiles: Profile | Profile[] | null };
+type Message = { id: string; community_id: string; author_id: string; parent_id: string | null; content: string; image_url: string | null; created_at: string; profiles: Profile | Profile[] | null };
 
 const formatDate = (createdAt: string) => new Date(createdAt).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
 const getProfile = (profile: Profile | Profile[] | null) => Array.isArray(profile) ? profile[0] ?? null : profile;
+const imageAccept = ".jpg,.jpeg,.png,.webp,.gif,.heic,.heif";
+const imageExtensions = new Set(["jpg", "jpeg", "png", "webp", "gif", "heic", "heif"]);
 
 const Community = () => {
   const navigate = useNavigate();
@@ -29,10 +31,12 @@ const Community = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [category, setCategory] = useState("");
+  const [postImage, setPostImage] = useState<File | null>(null);
   const [communityName, setCommunityName] = useState("");
   const [communityDescription, setCommunityDescription] = useState("");
   const [communityFocus, setCommunityFocus] = useState("");
   const [messageText, setMessageText] = useState("");
+  const [messageImage, setMessageImage] = useState<File | null>(null);
   const [replyTo, setReplyTo] = useState<Message | null>(null);
   const [notice, setNotice] = useState("");
   const [error, setError] = useState("");
@@ -43,7 +47,7 @@ const Community = () => {
     setCurrentUserId(userData.user.id);
     const [{ data: profileData, error: profileError }, { data: postData, error: postError }, { data: communityData, error: communityError }, { data: membershipData }] = await Promise.all([
       supabase.from("profiles").select("id, username").eq("id", userData.user.id).maybeSingle(),
-      supabase.from("community_posts").select("id, author_id, title, content, heritage_category, created_at, profiles!author_id(id, username, avatar_url)").order("created_at", { ascending: false }),
+      supabase.from("community_posts").select("id, author_id, title, content, image_url, heritage_category, created_at, profiles!author_id(id, username, avatar_url)").order("created_at", { ascending: false }),
       supabase.from("communities").select("id, name, description, focus_area").order("created_at", { ascending: false }),
       supabase.from("community_members").select("community_id").eq("user_id", userData.user.id),
     ]);
@@ -63,17 +67,30 @@ const Community = () => {
   useEffect(() => {
     if (!selectedCommunityId || !memberships.includes(selectedCommunityId)) { setMessages([]); return; }
     const loadMessages = async () => {
-      const { data, error: messageError } = await supabase.from("community_messages").select("id, community_id, author_id, parent_id, content, created_at, profiles!author_id(id, username, avatar_url)").eq("community_id", selectedCommunityId).order("created_at", { ascending: true });
+      const { data, error: messageError } = await supabase.from("community_messages").select("id, community_id, author_id, parent_id, content, image_url, created_at, profiles!author_id(id, username, avatar_url)").eq("community_id", selectedCommunityId).order("created_at", { ascending: true });
       if (messageError) setError(messageError.message); else setMessages((data ?? []) as Message[]);
     };
     void loadMessages();
   }, [selectedCommunityId, memberships]);
 
+  const uploadImage = async (file: File) => {
+    const extension = file.name.split(".").pop()?.toLowerCase() || "";
+    if (!file.type.startsWith("image/") && !imageExtensions.has(extension)) throw new Error("Please choose a JPG, PNG, WEBP, GIF, or HEIC image.");
+    if (file.size > 8 * 1024 * 1024) throw new Error("Images must be 8 MB or smaller.");
+    const path = `${currentUserId}/${crypto.randomUUID()}.${extension || "jpg"}`;
+    const { error: uploadError } = await supabase.storage.from("community-media").upload(path, file, { contentType: file.type, upsert: false });
+    if (uploadError) throw uploadError;
+    return supabase.storage.from("community-media").getPublicUrl(path).data.publicUrl;
+  };
+
   const createPost = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault(); setError("");
-    const { error: insertError } = await supabase.from("community_posts").insert({ author_id: currentUserId, title, content, heritage_category: category || null });
-    if (insertError) { setError(insertError.message); return; }
-    setTitle(""); setContent(""); setCategory(""); setNotice("Your post is live."); await loadCommunity();
+    try {
+      const imageUrl = postImage ? await uploadImage(postImage) : null;
+      const { error: insertError } = await supabase.from("community_posts").insert({ author_id: currentUserId, title, content, image_url: imageUrl, heritage_category: category || null });
+      if (insertError) throw insertError;
+      setTitle(""); setContent(""); setCategory(""); setPostImage(null); setNotice("Your post is live."); await loadCommunity();
+    } catch (submitError) { setError(submitError instanceof Error ? submitError.message : "Unable to publish your post."); }
   };
 
   const createCommunity = async (event: FormEvent<HTMLFormElement>) => {
@@ -92,12 +109,15 @@ const Community = () => {
   };
 
   const sendMessage = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); if (!selectedCommunityId || !messageText.trim()) return;
-    const { error: sendError } = await supabase.from("community_messages").insert({ community_id: selectedCommunityId, author_id: currentUserId, parent_id: replyTo?.id ?? null, content: messageText.trim() });
-    if (sendError) { setError(sendError.message); return; }
-    setMessageText(""); setReplyTo(null); setNotice("Message sent.");
-    const { data } = await supabase.from("community_messages").select("id, community_id, author_id, parent_id, content, created_at, profiles!author_id(id, username, avatar_url)").eq("community_id", selectedCommunityId).order("created_at", { ascending: true });
-    setMessages((data ?? []) as Message[]);
+    event.preventDefault(); if (!selectedCommunityId || (!messageText.trim() && !messageImage)) return;
+    try {
+      const imageUrl = messageImage ? await uploadImage(messageImage) : null;
+      const { error: sendError } = await supabase.from("community_messages").insert({ community_id: selectedCommunityId, author_id: currentUserId, parent_id: replyTo?.id ?? null, content: messageText.trim() || " ", image_url: imageUrl });
+      if (sendError) throw sendError;
+      setMessageText(""); setMessageImage(null); setReplyTo(null); setNotice("Message sent.");
+      const { data } = await supabase.from("community_messages").select("id, community_id, author_id, parent_id, content, image_url, created_at, profiles!author_id(id, username, avatar_url)").eq("community_id", selectedCommunityId).order("created_at", { ascending: true });
+      setMessages((data ?? []) as Message[]);
+    } catch (sendError) { setError(sendError instanceof Error ? sendError.message : "Unable to send your message."); }
   };
 
   const searchProfiles = async (event: FormEvent<HTMLFormElement>) => {
@@ -118,14 +138,14 @@ const Community = () => {
         {notice && <p className="mb-4 text-sm text-emerald-700">{notice}</p>}{error && <p className="mb-4 text-sm text-red-600">{error}</p>}
         <div className="grid gap-8 xl:grid-cols-[minmax(0,1fr)_360px]">
           <section className="space-y-6">
-            <Card><CardHeader><CardTitle>{selectedProfile ? `Posts by @${selectedProfile.username}` : "General feed"}</CardTitle><p className="text-sm text-gray-600">{selectedProfile ? "This profile's public posts." : "Posts from everyone in the Timeless India community."}</p></CardHeader><CardContent className="space-y-4">{selectedProfile && <Button variant="outline" size="sm" onClick={() => setSelectedProfile(null)}>Back to general feed</Button>}{visiblePosts.length === 0 && <p className="text-sm text-gray-600">No posts to show yet.</p>}{visiblePosts.map((post) => { const author = getProfile(post.profiles); return <article key={post.id} className="border-b border-gray-100 pb-4 last:border-0"><h2 className="text-xl font-semibold">{post.title}</h2><p className="mt-1 text-sm text-gray-500">@{author?.username ?? "community-member"} · {formatDate(post.created_at)}</p><p className="mt-3 whitespace-pre-wrap text-gray-700">{post.content}</p>{post.heritage_category && <span className="mt-3 inline-block rounded-full bg-orange-100 px-3 py-1 text-xs text-orange-700">{post.heritage_category}</span>}</article>; })}</CardContent></Card>
-            <Card><CardHeader><CardTitle>Share with the community</CardTitle><p className="text-sm text-gray-600">Posting as @{currentUsername}</p></CardHeader><CardContent><form onSubmit={createPost} className="space-y-3"><input required value={title} onChange={(event) => setTitle(event.target.value)} placeholder="Post title" className="w-full rounded-md border border-gray-300 px-3 py-2" /><textarea required value={content} onChange={(event) => setContent(event.target.value)} placeholder="Share a tradition, story, event, or social work update" rows={4} className="w-full rounded-md border border-gray-300 px-3 py-2" /><input value={category} onChange={(event) => setCategory(event.target.value)} placeholder="Heritage category (optional)" className="w-full rounded-md border border-gray-300 px-3 py-2" /><Button type="submit"><Send className="mr-2 h-4 w-4" />Publish post</Button></form></CardContent></Card>
+            <Card><CardHeader><CardTitle>{selectedProfile ? `Posts by @${selectedProfile.username}` : "General feed"}</CardTitle><p className="text-sm text-gray-600">{selectedProfile ? "This profile's public posts." : "Posts from everyone in the Timeless India community."}</p></CardHeader><CardContent className="space-y-4">{selectedProfile && <Button variant="outline" size="sm" onClick={() => setSelectedProfile(null)}>Back to general feed</Button>}{visiblePosts.length === 0 && <p className="text-sm text-gray-600">No posts to show yet.</p>}{visiblePosts.map((post) => { const author = getProfile(post.profiles); return <article key={post.id} className="border-b border-gray-100 pb-4 last:border-0"><h2 className="text-xl font-semibold">{post.title}</h2><p className="mt-1 text-sm text-gray-500">@{author?.username ?? "community-member"} · {formatDate(post.created_at)}</p><p className="mt-3 whitespace-pre-wrap text-gray-700">{post.content}</p>{post.image_url && <img src={post.image_url} alt="Attached to this post" className="mt-3 max-h-96 w-full rounded-md object-cover" />}{post.heritage_category && <span className="mt-3 inline-block rounded-full bg-orange-100 px-3 py-1 text-xs text-orange-700">{post.heritage_category}</span>}</article>; })}</CardContent></Card>
+            <Card><CardHeader><CardTitle>Share with the community</CardTitle><p className="text-sm text-gray-600">Posting as @{currentUsername}</p></CardHeader><CardContent><form onSubmit={createPost} className="space-y-3"><input required value={title} onChange={(event) => setTitle(event.target.value)} placeholder="Post title" className="w-full rounded-md border border-gray-300 px-3 py-2" /><textarea required value={content} onChange={(event) => setContent(event.target.value)} placeholder="Share a tradition, story, event, or social work update" rows={4} className="w-full rounded-md border border-gray-300 px-3 py-2" /><input value={category} onChange={(event) => setCategory(event.target.value)} placeholder="Heritage category (optional)" className="w-full rounded-md border border-gray-300 px-3 py-2" /><div className="flex flex-wrap items-center gap-3"><label className="inline-flex cursor-pointer items-center gap-2 rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 hover:bg-gray-50"><ImagePlus className="h-4 w-4" />Attach image<input type="file" accept={imageAccept} className="sr-only" onChange={(event) => setPostImage(event.target.files?.[0] ?? null)} /></label>{postImage && <span className="flex items-center gap-1 text-sm text-gray-600">{postImage.name}<button type="button" aria-label="Remove post image" onClick={() => setPostImage(null)}><X className="h-4 w-4" /></button></span>}</div><Button type="submit"><Send className="mr-2 h-4 w-4" />Publish post</Button></form></CardContent></Card>
           </section>
           <aside className="space-y-6">
             <Card><CardHeader><CardTitle>Find a profile</CardTitle></CardHeader><CardContent><form onSubmit={searchProfiles} className="flex gap-2"><input value={profileSearch} onChange={(event) => setProfileSearch(event.target.value)} placeholder="Search username" className="min-w-0 flex-1 rounded-md border border-gray-300 px-3 py-2" /><Button type="submit" size="icon" aria-label="Search profiles"><Search className="h-4 w-4" /></Button></form><div className="mt-3 space-y-2">{profileResults.map((profile) => <Button key={profile.id} variant="ghost" className="w-full justify-start" onClick={() => setSelectedProfile(profile)}>@{profile.username}</Button>)}</div></CardContent></Card>
             <Card><CardHeader><CardTitle>Create a community</CardTitle></CardHeader><CardContent><form onSubmit={createCommunity} className="space-y-3"><input required value={communityName} onChange={(event) => setCommunityName(event.target.value)} placeholder="Community name" className="w-full rounded-md border border-gray-300 px-3 py-2" /><input required value={communityFocus} onChange={(event) => setCommunityFocus(event.target.value)} placeholder="Focus area" className="w-full rounded-md border border-gray-300 px-3 py-2" /><textarea required value={communityDescription} onChange={(event) => setCommunityDescription(event.target.value)} placeholder="What will members do together?" rows={3} className="w-full rounded-md border border-gray-300 px-3 py-2" /><Button type="submit">Create community</Button></form></CardContent></Card>
             <Card><CardHeader><CardTitle>Communities</CardTitle></CardHeader><CardContent className="space-y-4">{communities.length === 0 && <p className="text-sm text-gray-600">No communities have been created yet.</p>}{communities.map((community) => { const isMember = memberships.includes(community.id); return <div key={community.id} className="border-b border-gray-100 pb-4 last:border-0"><button className="text-left" onClick={() => isMember && setSelectedCommunityId(community.id)}><h2 className="font-semibold">{community.name}</h2><p className="text-xs text-emerald-700">{community.focus_area}</p><p className="my-2 text-sm text-gray-600">{community.description}</p></button>{isMember ? <Button size="sm" variant={selectedCommunityId === community.id ? "default" : "outline"} onClick={() => setSelectedCommunityId(community.id)}><MessageCircle className="mr-2 h-4 w-4" />{selectedCommunityId === community.id ? "Open chat" : "View chat"}</Button> : <Button size="sm" variant="outline" onClick={() => void joinCommunity(community.id)}>Join community</Button>}</div>; })}</CardContent></Card>
-            {selectedCommunity && memberships.includes(selectedCommunity.id) && <Card><CardHeader><CardTitle>{selectedCommunity.name} chat</CardTitle><p className="text-sm text-gray-600">Only members can read and send messages.</p></CardHeader><CardContent><div className="mb-4 max-h-80 space-y-3 overflow-y-auto">{messages.length === 0 && <p className="text-sm text-gray-600">Start the conversation.</p>}{messages.map((message) => { const author = getProfile(message.profiles); return <div key={message.id} className={`rounded-md p-3 ${message.parent_id ? "ml-5 border-l-2 border-emerald-200 bg-emerald-50" : "bg-gray-50"}`}><p className="text-xs text-gray-500">@{author?.username ?? "member"} · {formatDate(message.created_at)}</p><p className="mt-1 text-sm text-gray-700">{message.content}</p><button className="mt-2 text-xs font-medium text-emerald-700" onClick={() => setReplyTo(message)}>Reply</button></div>; })}</div>{replyTo && <p className="mb-2 text-xs text-gray-600">Replying to a message <button className="text-red-600" onClick={() => setReplyTo(null)}>Cancel</button></p>}<form onSubmit={sendMessage} className="flex gap-2"><input required value={messageText} onChange={(event) => setMessageText(event.target.value)} placeholder="Write a message" className="min-w-0 flex-1 rounded-md border border-gray-300 px-3 py-2" /><Button type="submit" size="icon" aria-label="Send message"><Send className="h-4 w-4" /></Button></form></CardContent></Card>}
+            {selectedCommunity && memberships.includes(selectedCommunity.id) && <Card><CardHeader><CardTitle>{selectedCommunity.name} chat</CardTitle><p className="text-sm text-gray-600">Only members can read and send messages.</p></CardHeader><CardContent><div className="mb-4 max-h-80 space-y-3 overflow-y-auto">{messages.length === 0 && <p className="text-sm text-gray-600">Start the conversation.</p>}{messages.map((message) => { const author = getProfile(message.profiles); return <div key={message.id} className={`rounded-md p-3 ${message.parent_id ? "ml-5 border-l-2 border-emerald-200 bg-emerald-50" : "bg-gray-50"}`}><p className="text-xs text-gray-500">@{author?.username ?? "member"} · {formatDate(message.created_at)}</p>{message.content.trim() && <p className="mt-1 text-sm text-gray-700">{message.content}</p>}{message.image_url && <img src={message.image_url} alt="Attached to this message" className="mt-2 max-h-64 w-full rounded-md object-cover" />}<button className="mt-2 text-xs font-medium text-emerald-700" onClick={() => setReplyTo(message)}>Reply</button></div>; })}</div>{replyTo && <p className="mb-2 text-xs text-gray-600">Replying to a message <button className="text-red-600" onClick={() => setReplyTo(null)}>Cancel</button></p>}<form onSubmit={sendMessage} className="flex flex-wrap gap-2"><label className="inline-flex h-10 cursor-pointer items-center justify-center rounded-md border border-gray-300 px-3 text-sm text-gray-700 hover:bg-gray-50"><ImagePlus className="mr-2 h-4 w-4" />Image<input type="file" accept={imageAccept} className="sr-only" onChange={(event) => setMessageImage(event.target.files?.[0] ?? null)} /></label><input value={messageText} onChange={(event) => setMessageText(event.target.value)} placeholder="Write a message" className="min-w-[8rem] flex-1 rounded-md border border-gray-300 px-3 py-2" />{messageImage && <span className="flex w-full items-center gap-1 text-xs text-gray-600">{messageImage.name}<button type="button" aria-label="Remove message image" onClick={() => setMessageImage(null)}><X className="h-4 w-4" /></button></span>}<Button type="submit" size="icon" aria-label="Send message"><Send className="h-4 w-4" /></Button></form></CardContent></Card>}
           </aside>
         </div>
       </div>
