@@ -179,6 +179,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <GoogleTranslate />
         <Routes>
           <Route path="/auth" element={<Auth />} />
           <Route path="*" element={<ProtectedRoutes />} />
