@@ -1164,11 +1164,7 @@ const App: FC = () => {
               Begin exploring <span style={styles.buttonSpan}>→</span>
             </button>
             <div style={styles.discoveryRibbon}><span>✦</span> Four themes · fifteen regional stories · one shared heritage</div>
-            <div style={styles.heroStats}>
-              <span className="hero-stat"><b style={styles.heroStatsB}>04</b> cultural themes</span>
-              <span className="hero-stat"><b style={styles.heroStatsB}>15</b> regional stories</span>
-              <span className="hero-stat"><b style={styles.heroStatsB}>01</b> shared heritage</span>
-            </div>
+            
           </section>
         )}
 
